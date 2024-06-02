@@ -1,13 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 
 [System.Serializable]
 public class AxleInfo {
-    public WheelCollider leftWheel; // коллайдеры
-    public WheelCollider rightWheel; // колес
-    public bool motor; // вращение колес
-    public bool steering; // повороты колес
-    public bool brake; // ручной тормоз
+    public WheelCollider leftWheel;
+    public WheelCollider rightWheel;
+    public bool motor; 
+    public bool steering; 
+    public bool brake; 
 }
 
 public class CarController : MonoBehaviour {
@@ -15,18 +16,17 @@ public class CarController : MonoBehaviour {
     [SerializeField] private Rigidbody rigidBody;
     [SerializeField] private float maxMotorTorque;
     [SerializeField] private float maxSteeringAngle;
-    [SerializeField] private float maxbrake;
+    [SerializeField] private float maxBrake;
+    [SerializeField] private float driftFactor = 0.9f; 
+    [SerializeField] private float normalFactor = 1.0f; 
+    
     private float _vertical;
     private float _horizontal;
     private bool _brake;
+   //bool isDrifting = false; 
 
-
-    private void Awake() {
-        Screen.sleepTimeout = SleepTimeout.NeverSleep;
-    }
-
-
-    // нахождение визуальных колес и манипулирование ими
+    private void Awake() { Screen.sleepTimeout = SleepTimeout.NeverSleep; }
+  
     private void ApplyLocalPositionToVisuals(WheelCollider collider) {
         if (collider.transform.childCount == 0) {
             return;
@@ -54,8 +54,8 @@ public class CarController : MonoBehaviour {
 
             if (axleInfo.brake) {
                 if (_brake) {
-                    axleInfo.leftWheel.brakeTorque = maxbrake;
-                    axleInfo.rightWheel.brakeTorque = maxbrake;
+                    axleInfo.leftWheel.brakeTorque = maxBrake;
+                    axleInfo.rightWheel.brakeTorque = maxBrake;
                 }
                 else {
                     axleInfo.leftWheel.brakeTorque = 0;
@@ -72,7 +72,54 @@ public class CarController : MonoBehaviour {
 
     private void Update() {
         PlayerCarControl();
+        ApplyDrift();
+        // var wheelSidewaysFriction = axleInfos[0].leftWheel.sidewaysFriction;
+        // wheelSidewaysFriction.stiffness = driftFactor; 
+
+        // var leftWheelSidewaysFriction = axleInfos[0].leftWheel.sidewaysFriction;
+        // leftWheelSidewaysFriction.stiffness = 0.5f;
+        //
+        // axleInfos[0].leftWheel.sidewaysFriction = leftWheelSidewaysFriction;
+
+
     }
+    
+    
+    
+    private void ApplyDrift() { 
+        foreach (AxleInfo axleInfo in axleInfos) { 
+            if (IsDrifting()) {
+                Debug.Log("IsDrifting ");
+                
+                var wheelSidewaysFriction = axleInfo.leftWheel.sidewaysFriction;
+                wheelSidewaysFriction.stiffness = driftFactor; 
+                
+                wheelSidewaysFriction = axleInfo.rightWheel.sidewaysFriction;
+                wheelSidewaysFriction.stiffness = driftFactor;
+            } 
+            else { 
+                var wheelSidewaysFriction = axleInfo.leftWheel.sidewaysFriction;
+                wheelSidewaysFriction.stiffness = normalFactor; 
+                
+                wheelSidewaysFriction = axleInfo.rightWheel.sidewaysFriction;
+                wheelSidewaysFriction.stiffness = normalFactor;
+            } 
+        } 
+    }
+
+    private bool IsDrifting() {
+        bool isDrifting = Mathf.Abs(_horizontal) > 0.1f; 
+        //Debug.Log("horizontal " + Mathf.Abs(_horizontal));
+        // foreach (AxleInfo axleInfo in axleInfos) {
+        //     axleInfo.leftWheel.GetGroundHit(out var wheelHit); 
+        //     float sidewaysSlip = Mathf.Abs(wheelHit.sidewaysSlip); 
+        //     if (sidewaysSlip > 0.2f) { 
+        //         isDrifting = true; 
+        //     } 
+        // }
+
+        return isDrifting;
+    } 
 
     private void PlayerCarControl() {
         _vertical = Input.GetAxis("Vertical");      

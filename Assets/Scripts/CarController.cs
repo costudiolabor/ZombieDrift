@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Serialization;
 
 [System.Serializable]
-public class AxleInfo {
+public class Wheels {
     public WheelCollider leftWheel;
     public WheelCollider rightWheel;
     public bool motor; 
@@ -12,7 +12,7 @@ public class AxleInfo {
 }
 
 public class CarController : MonoBehaviour {
-    [SerializeField] private List<AxleInfo> axleInfos;
+    [SerializeField] private List<Wheels> axleInfos;
     [SerializeField] private Rigidbody rigidBody;
     [SerializeField] private float maxMotorTorque;
     [SerializeField] private float maxSteeringAngle;
@@ -41,32 +41,60 @@ public class CarController : MonoBehaviour {
     private void FixedUpdate() {
         float motor = maxMotorTorque * _vertical;       
         float steering = maxSteeringAngle * _horizontal; 
-        foreach (AxleInfo axleInfo in axleInfos) {
-            if (axleInfo.steering) {
-                axleInfo.leftWheel.steerAngle = steering;
-                axleInfo.rightWheel.steerAngle = steering;
+        //foreach (AxleInfo axleInfo in axleInfos) {
+        
+        //front
+        Wheels wheels = axleInfos[0];
+            if (wheels.steering) {
+                wheels.leftWheel.steerAngle = steering;
+                wheels.rightWheel.steerAngle = steering;
             }
 
-            if (axleInfo.motor) {
-                axleInfo.leftWheel.motorTorque = motor;
-                axleInfo.rightWheel.motorTorque = motor;
+            if (wheels.motor) {
+                wheels.leftWheel.motorTorque = motor;
+                wheels.rightWheel.motorTorque = motor;
             }
 
-            if (axleInfo.brake) {
+            if (wheels.brake) {
                 if (_brake) {
-                    axleInfo.leftWheel.brakeTorque = maxBrake;
-                    axleInfo.rightWheel.brakeTorque = maxBrake;
+                    wheels.leftWheel.brakeTorque = maxBrake;
+                    wheels.rightWheel.brakeTorque = maxBrake;
                 }
                 else {
-                    axleInfo.leftWheel.brakeTorque = 0;
-                    axleInfo.rightWheel.brakeTorque = 0;
+                    wheels.leftWheel.brakeTorque = 0;
+                    wheels.rightWheel.brakeTorque = 0;
+                }
+            }
+            ApplyLocalPositionToVisuals(wheels.leftWheel);
+            ApplyLocalPositionToVisuals(wheels.rightWheel);
+            
+            //rear
+            wheels = axleInfos[1];
+            if (wheels.steering) {
+                wheels.leftWheel.steerAngle = -steering;
+                wheels.rightWheel.steerAngle = -steering;
+            }
+
+            if (wheels.motor) {
+                wheels.leftWheel.motorTorque = motor;
+                wheels.rightWheel.motorTorque = motor;
+            }
+
+            if (wheels.brake) {
+                if (_brake) {
+                    wheels.leftWheel.brakeTorque = maxBrake;
+                    wheels.rightWheel.brakeTorque = maxBrake;
+                }
+                else {
+                    wheels.leftWheel.brakeTorque = 0;
+                    wheels.rightWheel.brakeTorque = 0;
                 }
             }
 
             //_Rpm = axleInfo.rightWheel.rpm; // округление и перевод в int
-            ApplyLocalPositionToVisuals(axleInfo.leftWheel);
-            ApplyLocalPositionToVisuals(axleInfo.rightWheel);
-        }
+            ApplyLocalPositionToVisuals(wheels.leftWheel);
+            ApplyLocalPositionToVisuals(wheels.rightWheel);
+       // }
     }
 
 
@@ -87,7 +115,7 @@ public class CarController : MonoBehaviour {
     
     
     private void ApplyDrift() { 
-        foreach (AxleInfo axleInfo in axleInfos) { 
+        foreach (Wheels axleInfo in axleInfos) { 
             if (IsDrifting()) {
                 Debug.Log("IsDrifting ");
                 
@@ -108,7 +136,9 @@ public class CarController : MonoBehaviour {
     }
 
     private bool IsDrifting() {
-        bool isDrifting = Mathf.Abs(_horizontal) > 0.1f; 
+        bool isDrifting = Mathf.Abs(_horizontal) > 0.1f;
+       // Debug.Log(Mathf.Abs(_horizontal));
+            
         //Debug.Log("horizontal " + Mathf.Abs(_horizontal));
         // foreach (AxleInfo axleInfo in axleInfos) {
         //     axleInfo.leftWheel.GetGroundHit(out var wheelHit); 

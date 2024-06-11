@@ -24,4 +24,6 @@ public class Car : MonoBehaviour {
         Debug.DrawRay(transform.position, _moveForceVector.normalized * 3);
         Debug.DrawRay(transform.position, transform.forward * 3, Color.blue);
     }
+    
+    
 }

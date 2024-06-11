@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class CarControl : MonoBehaviour {
@@ -6,7 +5,7 @@ public class CarControl : MonoBehaviour {
     [SerializeField] private View destroyCar; 
     private IInputControllable inputControl = new InputPC();
     [SerializeField] private Drive drive;
-    private const float accel = 1.0f;
+    [SerializeField] private float accel = 1.0f;
     
     private void Awake() {
         Subscribe();

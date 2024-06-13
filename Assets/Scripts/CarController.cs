@@ -1,15 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-[System.Serializable]
-public class Wheels {
-    public WheelCollider leftWheel;
-    public WheelCollider rightWheel;
-    public bool motor; 
-    public bool steering; 
-    public bool brake; 
-}
-
 public class CarController : MonoBehaviour {
     [SerializeField] private List<Wheels> axleInfos;
     [SerializeField] private Rigidbody rigidBody;
@@ -24,6 +15,14 @@ public class CarController : MonoBehaviour {
     private bool _brake;
    //bool isDrifting = false; 
 
+   public class Wheels {
+       public WheelCollider leftWheel;
+       public WheelCollider rightWheel;
+       public bool motor; 
+       public bool steering; 
+       public bool brake; 
+   }
+   
     private void Awake() { Screen.sleepTimeout = SleepTimeout.NeverSleep; }
   
     private void ApplyLocalPositionToVisuals(WheelCollider collider) {

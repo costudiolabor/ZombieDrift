@@ -12,12 +12,15 @@ public class Car : MonoBehaviour {
         _accelerationInput = Input.GetAxis("Vertical");
     }
 
+    public Vector2 GetAxis() => new Vector2(_steerInput * SteerAngle, MoveSpeed * _accelerationInput);
+
     private void FixedUpdate() {
         _moveForceVector = transform.forward * (MoveSpeed * _accelerationInput);
         if (_steerInput != 0)
             //transform.Rotate(Vector3.up * (_steerInput * rigidBody.linearVelocity.normalized.magnitude * SteerAngle));
             transform.Rotate(Vector3.up * (_steerInput * rigidBody.velocity.normalized.magnitude * SteerAngle));
         rigidBody.AddForce(_moveForceVector, ForceMode.Acceleration);
+        Debug.Log(rigidBody.velocity.normalized.magnitude);
     }
 
     private void OnDrawGizmos() {

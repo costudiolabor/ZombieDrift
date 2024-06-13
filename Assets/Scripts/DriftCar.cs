@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DriftCar : MonoBehaviour
-{
+public class DriftCar : MonoBehaviour {
     [SerializeField] private Rigidbody rigidBody;
     public float MoveSpeed = 50;
     public float SteerAngle = 20;
@@ -20,6 +19,13 @@ public class DriftCar : MonoBehaviour
     private float _horizontal;
     private bool _brake;
 
+    public class Wheels {
+        public WheelCollider leftWheel;
+        public WheelCollider rightWheel;
+        public bool motor; 
+        public bool steering; 
+        public bool brake; 
+    }
 
     private IEnumerator Start() {
         Wheels wheels = axleInfos[0];

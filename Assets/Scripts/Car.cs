@@ -20,7 +20,6 @@ public class Car : MonoBehaviour {
             //transform.Rotate(Vector3.up * (_steerInput * rigidBody.linearVelocity.normalized.magnitude * SteerAngle));
             transform.Rotate(Vector3.up * (_steerInput * rigidBody.velocity.normalized.magnitude * SteerAngle));
         rigidBody.AddForce(_moveForceVector, ForceMode.Acceleration);
-        Debug.Log(rigidBody.velocity.normalized.magnitude);
     }
 
     private void OnDrawGizmos() {

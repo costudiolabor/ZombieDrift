@@ -59,6 +59,20 @@ public class TestPerformance2 : MonoBehaviour, ITestPerformance2
       stopwatch.Stop();
       Debug.Log("TryInterface " + stopwatch.ElapsedMilliseconds + " ms ");
       stopwatch.Reset();
+     
+      
+      
+      stopwatch.Start();
+      for (i = 0; i < count; i++)
+      {
+         //testGo2 = gameObject.GetComponent<TestPerformance2>();
+         if (transform.GetComponent<TestPerformance2>()) {
+            // a = i;
+         }
+      }
+      stopwatch.Stop();
+      Debug.Log("transform.GetComponent " + stopwatch.ElapsedMilliseconds + " ms ");
+      stopwatch.Reset();
       
       
      
@@ -71,7 +85,7 @@ public class TestPerformance2 : MonoBehaviour, ITestPerformance2
          }
       }
       stopwatch.Stop();
-      Debug.Log("GetComponent " + stopwatch.ElapsedMilliseconds + " ms ");
+      Debug.Log("gameObject.GetComponent " + stopwatch.ElapsedMilliseconds + " ms ");
       stopwatch.Reset();
       
       
@@ -168,6 +182,12 @@ public class TestPerformance2 : MonoBehaviour, ITestPerformance2
 
 
    }
+   
+   
+   
+   
+   
+   
 
    public void SetValue() {
       

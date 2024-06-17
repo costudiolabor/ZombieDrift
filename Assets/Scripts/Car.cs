@@ -13,6 +13,7 @@ public class Car : MonoBehaviour {
     }
 
     public Vector2 GetAxis() => new Vector2(_steerInput * SteerAngle, MoveSpeed * _accelerationInput);
+    public Vector3 GetForceVector() => _moveForceVector;
 
     private void FixedUpdate() {
         _moveForceVector = transform.forward * (MoveSpeed * _accelerationInput);
@@ -25,6 +26,7 @@ public class Car : MonoBehaviour {
     private void OnDrawGizmos() {
         Debug.DrawRay(transform.position, _moveForceVector.normalized * 3);
         Debug.DrawRay(transform.position, transform.forward * 3, Color.blue);
+        Debug.DrawRay(transform.position, rigidBody.velocity * 3, Color.green);
     }
     
     

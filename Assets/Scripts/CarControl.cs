@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class CarControl : MonoBehaviour {
     [SerializeField] private Rigidbody rigidbodyCar;
@@ -8,6 +7,7 @@ public class CarControl : MonoBehaviour {
     [SerializeField] private Wheels wheels;
     [SerializeField] private DestroyWheels destroyWheels;
     [SerializeField] private VFXCar vfxCar;
+    [SerializeField] private Combo combo;
     private IInputControllable _inputControl = new InputPC();
 
     private void Awake() {
@@ -15,10 +15,6 @@ public class CarControl : MonoBehaviour {
         Subscribe();
     }
     private void FixedUpdate() { _inputControl .Update(); }
-    private void OnCollisionEnter(Collision collision) {
-        bool isWall = collision.gameObject.TryGetComponent(out Wall wall);
-        if (isWall) { DestroyCar(); }
-    }
     private void Subscribe() { _inputControl.InputControlEvent += OnInputControl; }
 
     private void OnInputControl(Vector2 axis) {
@@ -36,5 +32,18 @@ public class CarControl : MonoBehaviour {
         colliderCar.enabled = false;
         rigidbodyCar.isKinematic = true;
         destroyWheels.ShowDestroy(drive.GetForceVector());
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        bool isWall = collision.gameObject.TryGetComponent(out Wall wall);
+        if (isWall) {
+            DestroyCar();
+        }
+
+        bool isZombi = collision.gameObject.TryGetComponent(out ZombiClass zombi);
+        if (isZombi) {
+            combo.ResetSlider();
+            zombi.gameObject.SetActive(false);
+        }
     }
 }

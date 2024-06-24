@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public interface IDamagable {
+public interface IDamageable {
     Vector3 position { get; }
     void Damage();
 }

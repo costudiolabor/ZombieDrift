@@ -13,8 +13,11 @@ public class StateSwitcher
    public void SetState<T>() where T : State {
 	   var type = typeof(T);
 
-	   if (type == currentType || !_states.TryGetValue(type, out var state))
+	   if (type == currentType)
 		   return;
+
+	   if (!_states.TryGetValue(type, out var state))
+		   throw new Exception($"State {type} not found in state machine");
 
 	   currentType = type;
 	   current?.Exit();

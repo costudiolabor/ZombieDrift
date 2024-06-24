@@ -74,5 +74,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03006ef7fa22004399d3fde7d3cdfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectSettings: {fileID: 11400000, guid: 06a5c6e108601bc4c84231817772e593, type: 2}
+  _projectConfig: {fileID: 11400000, guid: 06a5c6e108601bc4c84231817772e593, type: 2}
   rootCanvas: {fileID: 2990162597087632297, guid: b75e8221f616ae14484b0ef2d026c3ca, type: 3}

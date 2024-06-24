@@ -4,14 +4,14 @@ using Zenject;
 public class ProjectEntryPoint : IInitializable {
     private readonly ScenesLoader _scenesLoader;
     private readonly ProjectConfig _config;
-    private readonly ProgressService _progressService;
+    private readonly ProgressSystem _progressSystem;
 
     public ProjectEntryPoint(
         ScenesLoader scenesLoader,
         ProjectConfig config,
-        ProgressService progressService) {
+        ProgressSystem progressSystem) {
         _scenesLoader = scenesLoader;
-        _progressService = progressService;
+        _progressSystem = progressSystem;
         _config = config;
     }
     
@@ -27,7 +27,7 @@ public class ProjectEntryPoint : IInitializable {
     }
 
     private void LoadSavedData() {
-       _progressService.LoadFormCloud();
+       _progressSystem.LoadFormCloud();
     }
 
     private void SetUpProject() {

@@ -249,6 +249,7 @@ MonoBehaviour:
   _zombiesConfig: {fileID: 11400000, guid: 82d5064bad6e732419d6be1fcfcd7d9c, type: 2}
   _stagesConfig: {fileID: 11400000, guid: d31bc83fb42e2194c983b402f8c2d2e1, type: 2}
   _carsConfig: {fileID: 11400000, guid: 5c96cd51cc0aaa74f8f49d2214889708, type: 2}
+  _inputConfig: {fileID: 11400000, guid: fc400c77114c5834aa659ae3eaf6ae45, type: 2}
 --- !u!1 &1303314952
 GameObject:
   m_ObjectHideFlags: 0

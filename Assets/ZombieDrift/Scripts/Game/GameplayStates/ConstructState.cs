@@ -1,50 +1,49 @@
 using UnityEngine;
 
-public class PrepareState : State {
+public class ConstructState : State {
     private readonly ContentCreationService _contentCreationService;
-    private readonly StateSwitcher _stateSwitcher;
-    private readonly CameraSystem _cameraSystem;
+    private readonly PlayCache _gamePlayCache;
     private readonly GameProcess _gameProcess;
+    private readonly CameraSystem _cameraSystem;
+    private readonly StateSwitcher _stateSwitcher;
+    private readonly ProgressSystem _progressSystem;
     private readonly VehicleController _vehicleController;
-    private readonly CacheSystem _cacheSystem;
 
-    public PrepareState(
+    public ConstructState(
         StateSwitcher stateSwitcher,
         ContentCreationService contentCreationService,
         CameraSystem cameraSystem,
         GameProcess gameProcess,
+        ProgressSystem progressSystem,
         VehicleController vehicleController,
-        CacheSystem cacheSystem) : base(stateSwitcher) {
+        PlayCache gamePlayCache) : base(stateSwitcher) {
         _stateSwitcher = stateSwitcher;
         _contentCreationService = contentCreationService;
         _cameraSystem = cameraSystem;
         _gameProcess = gameProcess;
+        _progressSystem = progressSystem;
         _vehicleController = vehicleController;
-        _cacheSystem = cacheSystem;
+        _gamePlayCache = gamePlayCache;
     }
 
     public override void Enter() {
-        var stageIndex = _progressSystem.stageIndex;
-        var maps = _stagesConfig.stages[stageIndex].maps;
-        _cacheSystem.mapPrefabs = maps.ToList();
-        var mapPrefab = _cacheSystem.GetNextMap();
-        var carPrefab = _cacheSystem.carPrefab;
-        var carIndex = _progressSystem.currentCarIndex;
-        var car = _carsConfig.cars[carIndex];
-   
-
-        var gameplayData = CreateGameContent(mapPrefab, carPrefab);
-        _cacheSystem.gameplayData = gameplayData;
+        var gameplayData = CreateGameContent();
+        _gamePlayCache.gameplayData = gameplayData;
 
         SnapGameCamera(gameplayData.car.transform);
         InitializeGameplay(gameplayData);
         SwitchToGameplayState();
     }
 
-    private GameplayData CreateGameContent(Map mapPrefab, Car carPrefab) {
-        var map = _contentCreationService.CreateMap(mapPrefab);
+    private GameplayData CreateGameContent() {
+        var stageIndex = _progressSystem.stageIndex;
+        var mapIndex = _progressSystem.mapIndex;
+       
+        var carIndex = _progressSystem.currentCarIndex;
+       
+        var map = _contentCreationService.CreateMap(stageIndex, mapIndex);
         var zombies = _contentCreationService.CreateZombies(map.zombieSpawnPoints);
-        var car = _contentCreationService.CreateCar(carPrefab, map.startPoint);
+        var car = _contentCreationService.CreateCar(carIndex, map.startPoint);
 
         return new GameplayData(map, zombies, car);
     }

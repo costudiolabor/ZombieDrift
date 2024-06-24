@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af3a605eff91d5f4a85ffeecb21081ee, type: 3}
-  m_Name: StagesConfig
+  m_Script: {fileID: 11500000, guid: 72906959c49824a438b29e9e7dd04fc0, type: 3}
+  m_Name: KeyboardConfig
   m_EditorClassIdentifier: 
-  _stages:
-  - maps:
-    - {fileID: 6379611304309977965, guid: 12653d57f1e04e34e80dc8ca482320df, type: 3}
-    - {fileID: 5380572861800832726, guid: b48dad3576cee3b41874042a6795a902, type: 3}
+  _leftKeys: 1401000061000000
+  _right: 1401000064000000

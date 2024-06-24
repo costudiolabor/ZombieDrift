@@ -1,9 +1,11 @@
 using UnityEngine;
 
-public class Zombie : MonoBehaviour, IDamagable {
+public class Zombie : MonoBehaviour, IDamageable {
     [SerializeField] private Animator animator;
     [SerializeField] private Collider triggerCollider;
     [SerializeField] private Ragdoll ragdoll;
+    public Vector3 position => transform.position;
+    
     private ZombieAnimator _zombieAnimator;
 
     public void Awake() {
@@ -13,6 +15,7 @@ public class Zombie : MonoBehaviour, IDamagable {
         ragdoll.Initialize();
         ragdoll.isEnabled = false;
     }
+
 
     public void Damage() {
         _zombieAnimator.isEnabled = false;

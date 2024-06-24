@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 using Zenject;
 
 public class ProjectInstaller : MonoInstaller {
-    [FormerlySerializedAs("projectSettings")] [SerializeField] private ProjectConfig _projectConfig;
+    [SerializeField] private ProjectConfig _projectConfig;
     [SerializeField] private RootCanvas rootCanvas;
 
     public override void InstallBindings() {
@@ -15,7 +14,7 @@ public class ProjectInstaller : MonoInstaller {
     }
 
     private void InstallProgressService() {
-        Container.Bind<ProgressService>().AsSingle();
+        Container.Bind<ProgressSystem>().AsSingle();
     }
 
     private void CreateAndInstallRootCanvas() {

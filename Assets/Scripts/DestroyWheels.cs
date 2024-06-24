@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [Serializable]
@@ -24,7 +23,7 @@ public class DestroyWheels {
         //
         for (int i = 0; i < wheels.Length; i++) {
             wheels[i].parent = null;
-            Rigidbody rigidbodyWheel = wheels[i].AddComponent<Rigidbody>();
+            Rigidbody rigidbodyWheel = wheels[i].gameObject.AddComponent<Rigidbody>();
             rigidbodyWheel.AddForce(moveForceVector * force, ForceMode.Impulse);
         }
     }

@@ -2566,11 +2566,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -2613,7 +2613,7 @@ RectTransform:
   m_Children:
   - {fileID: 2007129623}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17664,7 +17664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7431372042116721541, guid: 4bcac2fd7dd429b42b89fc2c9765fb0d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7431372042116721541, guid: 4bcac2fd7dd429b42b89fc2c9765fb0d, type: 3}
       propertyPath: m_AnchorMin.x
@@ -17672,7 +17672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7431372042116721541, guid: 4bcac2fd7dd429b42b89fc2c9765fb0d, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7431372042116721541, guid: 4bcac2fd7dd429b42b89fc2c9765fb0d, type: 3}
       propertyPath: m_SizeDelta.x
@@ -17680,7 +17680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7431372042116721541, guid: 4bcac2fd7dd429b42b89fc2c9765fb0d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 59.429016
+      value: 59.428955
       objectReference: {fileID: 0}
     - target: {fileID: 7431372042116721541, guid: 4bcac2fd7dd429b42b89fc2c9765fb0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17716,7 +17716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7431372042116721541, guid: 4bcac2fd7dd429b42b89fc2c9765fb0d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1745
+      value: -65
       objectReference: {fileID: 0}
     - target: {fileID: 7431372042116721541, guid: 4bcac2fd7dd429b42b89fc2c9765fb0d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -40378,7 +40378,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 35.5, y: 0, z: 0}
 --- !u!114 &1398017551
 MonoBehaviour:

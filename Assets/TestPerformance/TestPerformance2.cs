@@ -181,6 +181,30 @@ public class TestPerformance2 : MonoBehaviour, ITestPerformance2
       stopwatch.Reset();
 
 
+      stopwatch.Start();
+      bool isTrue = true;
+      bool value = false;
+      
+      for (i = 0; i < count; i++) {
+         if (isTrue == true) value = true;
+      }
+      stopwatch.Stop();
+      //var fjdhjfd = value;
+      Debug.Log("bool If true " + stopwatch.ElapsedMilliseconds + " ms " + value + isTrue);
+      stopwatch.Reset();
+
+      
+      stopwatch.Start();
+      for (i = 0; i < count; i++)
+      {
+         script.isTrue = true;
+         // script.SetPosLambda();
+      }
+      stopwatch.Stop();
+      Debug.Log("script.isTrue " + stopwatch.ElapsedMilliseconds + " ms "+ script.isTrue);
+      stopwatch.Reset();
+
+      
    }
    
    

@@ -15,3 +15,5 @@ MonoBehaviour:
   _stages:
   - maps:
     - {fileID: 148961938950930356, guid: fb02fa2977998b44f99b93c971e0360a, type: 3}
+    - {fileID: 3205539967283593311, guid: 162b3a3ecc963a94f97e935646013ffd, type: 3}
+    - {fileID: 8772775112359261908, guid: f31cddd4a88ecac47985dafb54074c5f, type: 3}

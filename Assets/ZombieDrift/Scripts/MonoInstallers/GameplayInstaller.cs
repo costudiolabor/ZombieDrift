@@ -38,15 +38,23 @@ public class GameplayInstaller : MonoInstaller {
     }
 
     private void InstallGameplay() {
+        Container.Bind<MainMenuPresenter>().AsSingle();
+        Container.Bind<LosePresenter>().AsSingle();
+        Container.Bind<StagePresenter>().AsSingle();
+        Container.Bind<GetReadyPresenter>().AsSingle();
+        Container.Bind<HowToPlayPresenter>().AsSingle();
+        Container.Bind<MapClearPresenter>().AsSingle();
         Container.Bind<GameProcess>().AsSingle();
         Container.Bind<VehicleController>().AsSingle();
+        Container.Bind<VehicleDestroyer>().AsSingle();
+        Container.BindInterfacesAndSelfTo<BotNavigation>().AsSingle();
     }
 
     private void InstallServices() {
         Container.Bind<ContentCreationService>().AsSingle();
         Container.Bind<CameraSystem>().AsSingle();
         Container.Bind<PauseService>().AsSingle();
-        Container.Bind<PlayCache>().AsSingle();
+        Container.Bind<GameCache>().AsSingle();
     }
 
     private void InstallFactory() {
@@ -67,10 +75,12 @@ public class GameplayInstaller : MonoInstaller {
         Container.Bind<GameScenario>().AsSingle();
         Container.Bind<StateSwitcher>().AsSingle();
         Container.Bind<ConstructState>().AsSingle();
+        Container.Bind<MenuState>().AsSingle();
+        Container.Bind<GetReadyState>().AsSingle();
         Container.Bind<PlayState>().AsSingle();
         Container.Bind<WinState>().AsSingle();
         Container.Bind<LoseState>().AsSingle();
-        Container.Bind<RestartState>().AsSingle();
+        Container.Bind<RepairState>().AsSingle();
         Container.Bind<FinalizeState>().AsSingle();
     }
 }

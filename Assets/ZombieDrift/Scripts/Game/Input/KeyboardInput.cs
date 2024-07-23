@@ -7,8 +7,7 @@ public class KeyboardInput : IInput {
 	
 	private bool isLeftPressed => InputUtils.CheckIfAnyKeyPressed(_config.leftKeys);
 	private bool isRightPressed => InputUtils.CheckIfAnyKeyPressed(_config.rightKeys);
-	private bool isNothingPressed => !isLeftPressed && !isRightPressed;
-	private bool isAnyPressed => Input.anyKey;
+	private bool isAnyPressed => Input.anyKey && !(Input.GetMouseButton(0) || Input.GetMouseButton(1) || Input.GetMouseButton(2));
 	
 	private readonly InputConfig _config;
 	

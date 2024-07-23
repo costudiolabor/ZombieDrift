@@ -513,13 +513,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _motor: {fileID: 2215822847200294742}
-  maxSpeed: 15
-  moveSpeed: 40
-  steerAngle: 0.25
-  mass: 1000
-  drag: 0
-  angularDrag: 0.02
-  centerOfMass: {x: 0, y: -0.2, z: 0}
+  _maxSpeed: 15
+  _moveSpeed: 40
+  _steerAngle: 0.25
+  _mass: 1000
+  _drag: 0
+  _angularDrag: 0.02
+  _centerOfMass: {x: 0, y: -0.2, z: 0}
 --- !u!114 &2215822847200294742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,7 +547,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!33 &2225214549239808864
 MeshFilter:

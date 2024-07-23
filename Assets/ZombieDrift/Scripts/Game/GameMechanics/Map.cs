@@ -21,6 +21,8 @@ public class Map : MonoBehaviour {
   
   public Transform[] zombieSpawnPoints => _zombieSpawnPointses;
   public Transform startPoint => _startPoint;
+
+  public NavMeshSurface navMeshSurface => _navMeshSurface;
   
 
 #if UNITY_EDITOR

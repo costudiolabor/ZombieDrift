@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CarsConfig
   m_EditorClassIdentifier: 
   _cars:
-  - {fileID: 2215822847200294741, guid: 3f85e940d78efbb4f90a568ddcad08a2, type: 3}
+  - {fileID: 7676270143801436717, guid: bf0d3afe802c16b43b1c6b8abbc71155, type: 3}

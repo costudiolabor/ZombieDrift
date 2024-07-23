@@ -35,7 +35,7 @@ public class CarControl : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision collision) {
-        bool isWall = collision.gameObject.TryGetComponent(out Wall wall);
+        bool isWall = collision.gameObject.TryGetComponent(out Obstacle wall);
         if (isWall) {
             DestroyCar();
         }

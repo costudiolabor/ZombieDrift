@@ -20,10 +20,16 @@ public class Wheels {
     public void UpdateWheels(Vector2 axis) {
         _angle = axis.x * angleFrontWheel;
         for (int i = 0; i < wheelsFront.Length; i++) {
-            wheelsFront[i].localEulerAngles = new Vector3(0, _angle, 0);
-            _visualWheels[i].Rotate(Vector3.left, - axis.y * speedFrontWheel);
+       //     wheelsFront[i].localEulerAngles = new Vector3(0, _angle, 0);
+    //        wheelsFront[i].Rotate(Vector3.left, - axis.y * speedRearWheel, Space.Self);
+            //_visualWheels[i].Rotate(Vector3.left, - axis.y * speedFrontWheel);
         }
-        foreach (var wheel in wheelsRear) { wheel.Rotate(Vector3.left, - axis.y * speedRearWheel); }
+        foreach (var wheel in wheelsRear) { wheel.Rotate(Vector3.left, - axis.y * speedRearWheel, Space.Self); }
+
+        foreach (var wheel in wheelsFront) {
+            wheel.Rotate(Vector3.up, angleFrontWheel);
+            wheel.Rotate(Vector3.left, - axis.y * speedRearWheel, Space.Self);
+        }
       
         // if (_axis.y != 0) vfxCar.PlayParticles();
         // else vfxCar.StopParticles();

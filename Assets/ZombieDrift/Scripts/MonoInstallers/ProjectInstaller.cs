@@ -9,12 +9,11 @@ public class ProjectInstaller : MonoInstaller {
         InstallSceneLoader();
         InstallProgressService();
         CreateAndInstallRootCanvas();
-        
         InstallProjectEntryPoint();
     }
 
     private void InstallProgressService() {
-        Container.Bind<ProgressSystem>().AsSingle();
+        Container.Bind<SaveLoadSystem>().AsSingle();
     }
 
     private void CreateAndInstallRootCanvas() {

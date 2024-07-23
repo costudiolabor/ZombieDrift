@@ -2767,6 +2767,7 @@ GameObject:
   - component: {fileID: 8733131591022477457}
   - component: {fileID: 8733131591022477456}
   - component: {fileID: 8733131591022477459}
+  - component: {fileID: 8971888159218689878}
   m_Layer: 0
   m_Name: Zombie_Businessman_Male_01
   m_TagString: Untagged
@@ -2800,7 +2801,7 @@ Animator:
   m_GameObject: {fileID: 8733131591022477458}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b20a3c10714a6ac439af479e3273de65, type: 3}
-  m_Controller: {fileID: 9100000, guid: ead05b9b1f25c76468ffdfadd2e183d4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 88a40beeb974f454b9204139db392bfa, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2822,7 +2823,7 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.21861792
-  m_Height: 1.9162081
+  m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0.0077490807, y: 0.90251833, z: 0.01333034}
 --- !u!114 &8733131591022477459
@@ -2840,6 +2841,30 @@ MonoBehaviour:
   animator: {fileID: 8733131591022477457}
   triggerCollider: {fileID: 8733131591022477456}
   ragdoll: {fileID: 8733131589877463781}
+  _navMeshAgent: {fileID: 8971888159218689878}
+  _speedInterval: {x: 0.5, y: 4}
+--- !u!195 &8971888159218689878
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8733131591022477458}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.35
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.8
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 3
 --- !u!1 &8733131591048176182
 GameObject:
   m_ObjectHideFlags: 0

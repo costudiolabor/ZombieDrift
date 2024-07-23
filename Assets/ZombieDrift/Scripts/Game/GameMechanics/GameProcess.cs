@@ -2,20 +2,21 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameProcess {
-    public event Action<Vector3> EnemyHitEvent, ObstacleHitEvent; 
-    public event Action AllEnemiesDestroyedEvent; 
-    
-    private List<IDamageable> _damageableList;
-    private Car _car;
-  
-    public void Initialize(GameplayData data) {
-        _damageableList = new List<IDamageable>();
-       
-        foreach (var zombie in data.zombies)
-            _damageableList.Add(zombie);
+public class GameProcess : IGameEvents {
+    public event Action<Vector3> ObstacleHitEvent;
+    public event Action<Zombie> ZombieHitEvent;
+    public event Action AllEnemiesDestroyedEvent;
 
-        _car = data.car;
+    private List<Zombie> _damageableList;
+    private Car _car;
+
+    public void Initialize(Car car, Zombie[] zombies) {
+        _damageableList = new List<Zombie>(zombies);
+        SetCar(car);
+    }
+
+    public void SetCar(Car car) {
+        _car = car;
         _car.HitDamageableEvent += OnDamageableHit;
         _car.CarDestroyedEvent += OnObstacleHit;
     }
@@ -31,11 +32,11 @@ public class GameProcess {
         ObstacleHitEvent?.Invoke(obj);
     }
 
-    private void OnDamageableHit(IDamageable damageable) {
+    private void OnDamageableHit(Zombie damageable) {
         _damageableList.Remove(damageable);
-        EnemyHitEvent?.Invoke(damageable.position);
-        
-        if(_damageableList.Count == 0)
-           AllEnemiesDestroyedEvent?.Invoke();    
+        ZombieHitEvent?.Invoke(damageable);
+
+        if (_damageableList.Count == 0)
+            AllEnemiesDestroyedEvent?.Invoke();
     }
 }

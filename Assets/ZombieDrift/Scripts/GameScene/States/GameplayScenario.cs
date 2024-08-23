@@ -1,3 +1,5 @@
+using Project;
+
 namespace Gameplay {
     public class GameplayScenario {
         private readonly StateSwitcher _stateSwitcher;

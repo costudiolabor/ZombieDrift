@@ -1,86 +1,93 @@
+using Project;
 using UnityEngine;
 using Zenject;
 
-public class GameplayInstaller : MonoInstaller {
-    [SerializeField] private GameEntryPoint _entryPoint;
-    
-    [SerializeField] private ZombiesConfig _zombiesConfig;
-    [SerializeField] private StagesConfig _stagesConfig;
-    [SerializeField] private CarsConfig _carsConfig;
-    [SerializeField] private InputConfig _inputConfig;
+namespace Gameplay {
+    public class GameplayInstaller : MonoInstaller {
+        [SerializeField] private EntryPoint _entryPoint;
 
-    public override void InstallBindings() {
-        InstallGameplayEntryPoint();
-        InstallGameScenario();
-        InstallConfigs();
-        InstallFactory();
-        InstallServices();
-        InstallGameplay();
-        InstallInput();
-    }
+        [SerializeField] private ZombiesConfig _zombiesConfig;
+        [SerializeField] private StagesConfig _stagesConfig;
+        [SerializeField] private CarsConfig _carsConfig;
+        [SerializeField] private InputConfig _inputConfig;
+        [SerializeField] private ParticlesConfig _particlesConfig;
 
-    private void InstallInput() {
-        Container.Bind<ITickable>().To<IInput>().FromResolve();
-      
-        if (Application.isMobilePlatform)
-            InstallTouchInput();
-        else
-            InstallKeyboardInput();
-    }
+        public override void InstallBindings() {
+            InstallGameplayEntryPoint();
+            InstallGameScenario();
+            InstallConfigs();
+            InstallFactory();
+            InstallServices();
+            InstallGameplay();
+            InstallInput();
+        }
 
-    private void InstallKeyboardInput() { 
-        Container.Bind<InputConfig>().FromInstance(_inputConfig).AsSingle();
-        Container.Bind<IInput>().To<KeyboardInput>().AsSingle();
-    }
+        private void InstallInput() {
+            Container.Bind<ITickable>().To<IInput>().FromResolve();
 
-    private void InstallTouchInput() {
-        Container.Bind<IInput>().To<TouchInput>().AsSingle();
-    }
+            if (Application.isMobilePlatform)
+                InstallTouchInput();
+            else
+                InstallKeyboardInput();
+        }
 
-    private void InstallGameplay() {
-        Container.Bind<MainMenuPresenter>().AsSingle();
-        Container.Bind<LosePresenter>().AsSingle();
-        Container.Bind<StagePresenter>().AsSingle();
-        Container.Bind<GetReadyPresenter>().AsSingle();
-        Container.Bind<HowToPlayPresenter>().AsSingle();
-        Container.Bind<MapClearPresenter>().AsSingle();
-        Container.Bind<GameProcess>().AsSingle();
-        Container.Bind<VehicleController>().AsSingle();
-        Container.Bind<VehicleDestroyer>().AsSingle();
-        Container.BindInterfacesAndSelfTo<BotNavigation>().AsSingle();
-    }
+        private void InstallKeyboardInput() {
+            Container.Bind<InputConfig>().FromInstance(_inputConfig).AsSingle();
+            Container.Bind<IInput>().To<KeyboardInput>().AsSingle();
+        }
 
-    private void InstallServices() {
-        Container.Bind<ContentCreationService>().AsSingle();
-        Container.Bind<CameraSystem>().AsSingle();
-        Container.Bind<PauseService>().AsSingle();
-        Container.Bind<GameCache>().AsSingle();
-    }
+        private void InstallTouchInput() {
+            Container.Bind<IInput>().To<TouchInput>().AsSingle();
+        }
 
-    private void InstallFactory() {
-        Container.Bind<Factory>().AsSingle();
-    }
+        private void InstallGameplay() {
+            Container.Bind<MainMenuPresenter>().AsSingle();
+            Container.Bind<LosePresenter>().AsSingle();
+            Container.Bind<StageLabelPresenter>().AsSingle();
+            Container.Bind<GetReadyPresenter>().AsSingle();
+            Container.Bind<HowToPlayPresenter>().AsSingle();
+            Container.Bind<LevelComplete>().AsSingle();
+            Container.Bind<GameProcess>().AsSingle();
+            Container.Bind<VehicleController>().AsSingle();
+            Container.Bind<VehicleDestroyer>().AsSingle();
+            Container.BindInterfacesAndSelfTo<BotNavigation>().AsSingle();
+            Container.Bind<EnemyPointerSystem>().AsSingle();
+            Container.Bind<ParticlesPlayer>().AsSingle();
+            Container.Bind<ParticlesConfig>().FromInstance(_particlesConfig);
+        }
 
-    private void InstallGameplayEntryPoint() {
-        Container.BindInterfacesAndSelfTo<GameEntryPoint>().FromInstance(_entryPoint);
-    }
+        private void InstallServices() {
+            Container.Bind<ContentCreationService>().AsSingle();
+            Container.Bind<CameraSystem>().AsSingle();
+            Container.Bind<PauseService>().AsSingle();
+            Container.Bind<GameCache>().AsSingle();
+        }
 
-    private void InstallConfigs() {
-        Container.Bind<ZombiesConfig>().FromInstance(_zombiesConfig);
-        Container.Bind<CarsConfig>().FromInstance(_carsConfig);
-        Container.Bind<StagesConfig>().FromInstance(_stagesConfig);
-    }
+        private void InstallFactory() {
+            Container.Bind<Factory>().AsSingle();
+        }
 
-    private void InstallGameScenario() {
-        Container.Bind<GameScenario>().AsSingle();
-        Container.Bind<StateSwitcher>().AsSingle();
-        Container.Bind<ConstructState>().AsSingle();
-        Container.Bind<MenuState>().AsSingle();
-        Container.Bind<GetReadyState>().AsSingle();
-        Container.Bind<PlayState>().AsSingle();
-        Container.Bind<WinState>().AsSingle();
-        Container.Bind<LoseState>().AsSingle();
-        Container.Bind<RepairState>().AsSingle();
-        Container.Bind<FinalizeState>().AsSingle();
+        private void InstallGameplayEntryPoint() {
+            Container.BindInterfacesAndSelfTo<EntryPoint>().FromInstance(_entryPoint);
+        }
+
+        private void InstallConfigs() {
+            Container.Bind<ZombiesConfig>().FromInstance(_zombiesConfig);
+            Container.Bind<CarsConfig>().FromInstance(_carsConfig);
+            Container.Bind<StagesConfig>().FromInstance(_stagesConfig);
+        }
+
+        private void InstallGameScenario() {
+            Container.Bind<GameplayScenario>().AsSingle();
+            Container.BindInterfacesAndSelfTo<StateSwitcher>().AsSingle();
+            Container.Bind<ConstructState>().AsSingle();
+            Container.Bind<MenuState>().AsSingle();
+            Container.Bind<GetReadyState>().AsSingle();
+            Container.Bind<PlayState>().AsSingle();
+            Container.Bind<WinState>().AsSingle();
+            Container.Bind<LoseState>().AsSingle();
+            Container.Bind<RepairState>().AsSingle();
+            Container.Bind<FinalizeState>().AsSingle();
+        }
     }
 }

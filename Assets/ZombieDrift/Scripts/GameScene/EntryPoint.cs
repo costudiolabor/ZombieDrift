@@ -21,18 +21,18 @@ namespace Gameplay {
         private void Construct(
             GameplayScenario gameplayScenario,
             CameraSystem cameraSystem,
-            MainMenuPresenter mainMenuPresenter,
+            MenuPresenter menuPresenter,
             LosePresenter losePresenter,
-            StageLabelPresenter stageLabelPresenter,
+            StageLabel stageLabel,
             GetReadyPresenter getReadyPresenter,
             HowToPlayPresenter howToPlayPresenter,
             LevelComplete levelComplete,
             EnemyPointerSystem enemyPointerSystem) {
             cameraSystem.mainCamera = _mainCamera;
             cameraSystem.zoomCamera = _zoomCamera;
-            mainMenuPresenter.Initialize(_mainMenuView);
+            menuPresenter.Initialize(_mainMenuView);
             losePresenter.Initialize(_loseView);
-            stageLabelPresenter.Initialize(_stageView);
+            stageLabel.Initialize(_stageView);
             getReadyPresenter.Initialize(_getReadyView);
             howToPlayPresenter.Initialize(_howToPlayView);
             levelComplete.Initialize(_mapClearedView);

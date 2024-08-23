@@ -17,6 +17,7 @@ public class TouchInput : IInput {
         }
 
         if (Input.touchCount > 0) {
+	        Debug.Log("Any pressed");
             AnyPressedEvent?.Invoke();
             _isTouchedInLastFrame = true;
         }

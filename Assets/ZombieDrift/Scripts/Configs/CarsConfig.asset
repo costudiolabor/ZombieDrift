@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: CarsConfig
   m_EditorClassIdentifier: 
   _cars:
-  - {fileID: 6421066535242330801, guid: dcc5b9f5df171de42a516f0f03aad24e, type: 3}
+  - car: {fileID: 6421066535242330801, guid: dcc5b9f5df171de42a516f0f03aad24e, type: 3}
+    price: 667
+    selected: 1
+    isEnabled: 1

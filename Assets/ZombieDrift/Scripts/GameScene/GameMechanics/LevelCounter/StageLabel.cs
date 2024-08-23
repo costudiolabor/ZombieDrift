@@ -8,7 +8,7 @@ namespace Gameplay {
         All
     }
 
-    public class StageLabelPresenter {
+    public class StageLabel {
         private StageView _view;
 
         public void Initialize(StageView stageView) {

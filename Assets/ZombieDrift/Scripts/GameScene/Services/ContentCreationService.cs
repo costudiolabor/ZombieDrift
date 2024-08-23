@@ -36,7 +36,7 @@ namespace Gameplay {
             if (carIndex > _carsConfig.count - 1)
                 throw new Exception($"Stage with index {carIndex} out of bounds levelConfig");
 
-            var carPrefab = _carsConfig.cars[carIndex];
+            var carPrefab = _carsConfig.cars[carIndex].car;
             return _factory.CreateAndBind<Car>(carPrefab, parent, point.position, point.rotation);
         }
 

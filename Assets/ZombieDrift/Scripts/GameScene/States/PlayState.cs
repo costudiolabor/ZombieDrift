@@ -8,7 +8,7 @@ namespace Gameplay {
         private const int SHAKE_DURATION = 85;
 
         private readonly StateSwitcher _stateSwitcher;
-        private readonly StageLabelPresenter _stageLabelPresenter;
+        private readonly StageLabel _stageLabel;
         private readonly GameProcess _gameProcess;
         private readonly PauseService _pauseService;
         private readonly VehicleController _vehicleController;
@@ -19,7 +19,7 @@ namespace Gameplay {
         private readonly EnemyPointerSystem _enemyPointerSystem;
 
         public PlayState(StateSwitcher stateSwitcher,
-            StageLabelPresenter stageLabelPresenter,
+            StageLabel stageLabel,
             GameProcess gameProcess,
             PauseService pauseService,
             VehicleController vehicleController,
@@ -29,7 +29,7 @@ namespace Gameplay {
             ParticlesPlayer particlesPlayer,
             EnemyPointerSystem enemyPointerSystem) : base(stateSwitcher) {
             _stateSwitcher = stateSwitcher;
-            _stageLabelPresenter = stageLabelPresenter;
+            _stageLabel = stageLabel;
             _gameProcess = gameProcess;
             _pauseService = pauseService;
             _vehicleController = vehicleController;
@@ -41,7 +41,7 @@ namespace Gameplay {
         }
 
         public override void Enter() {
-            _stageLabelPresenter.presentState = StagePresentState.All;
+            _stageLabel.presentState = StagePresentState.All;
             _pauseService.SetPause(false);
 
             _vehicleController.Start();
@@ -54,7 +54,7 @@ namespace Gameplay {
         }
 
         public override void Exit() {
-            _stageLabelPresenter.presentState = StagePresentState.None;
+            _stageLabel.presentState = StagePresentState.None;
             _pauseService.SetPause(true);
 
             _vehicleController.Stop();

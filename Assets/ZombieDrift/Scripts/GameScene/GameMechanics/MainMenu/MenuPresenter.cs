@@ -2,7 +2,7 @@ using System;
 using Zenject;
 
 namespace Gameplay {
-    public class MainMenuPresenter {
+    public class MenuPresenter {
         public event Action StartGameEvent, GarageEvent;
         private MainMenuView _view;
 
@@ -24,7 +24,7 @@ namespace Gameplay {
         private void StartGameNotify() =>
             StartGameEvent?.Invoke();
 
-        ~MainMenuPresenter() {
+        ~MenuPresenter() {
             _view.StartGameClickedEvent -= StartGameNotify;
             _view.GarageClickedEvent -= GarageClickedNotify;
         }

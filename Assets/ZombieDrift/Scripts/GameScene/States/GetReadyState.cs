@@ -5,20 +5,20 @@ namespace Gameplay {
         private readonly StateSwitcher _stateSwitcher;
         private readonly GetReadyPresenter _getReadyPresenter;
         private readonly HowToPlayPresenter _howToPlayPresenter;
-        private readonly StageLabelPresenter _stageLabelPresenter;
+        private readonly StageLabel _stageLabel;
 
         public GetReadyState(StateSwitcher stateSwitcher,
             GetReadyPresenter getReadyPresenter,
             HowToPlayPresenter howToPlayPresenter,
-            StageLabelPresenter stageLabelPresenter) : base(stateSwitcher) {
+            StageLabel stageLabel) : base(stateSwitcher) {
             _stateSwitcher = stateSwitcher;
             _getReadyPresenter = getReadyPresenter;
             _howToPlayPresenter = howToPlayPresenter;
-            _stageLabelPresenter = stageLabelPresenter;
+            _stageLabel = stageLabel;
         }
 
         public override void Enter() {
-            _stageLabelPresenter.presentState = StagePresentState.All;
+            _stageLabel.presentState = StagePresentState.All;
             _howToPlayPresenter.enabled = true;
             _getReadyPresenter.enabled = true;
             _getReadyPresenter.GoToMenuEvent += SwitchToMainMenu;
@@ -26,7 +26,7 @@ namespace Gameplay {
         }
 
         public override void Exit() {
-            _stageLabelPresenter.presentState = StagePresentState.None;
+            _stageLabel.presentState = StagePresentState.None;
             _getReadyPresenter.enabled = false;
             _getReadyPresenter.GoToMenuEvent -= SwitchToMainMenu;
             _getReadyPresenter.GoToPlayEvent -= SwitchToPlayState;

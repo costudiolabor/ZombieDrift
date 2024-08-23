@@ -15,7 +15,7 @@ namespace Gameplay {
         private readonly SaveLoadSystem _saveLoadSystem;
         private readonly VehicleController _vehicleController;
         private readonly VehicleDestroyer _vehicleDestroyer;
-        private readonly StageLabelPresenter _stageLabelPresenter;
+        private readonly StageLabel _stageLabel;
 
         public ConstructState(
             StateSwitcher stateSwitcher,
@@ -25,7 +25,7 @@ namespace Gameplay {
             SaveLoadSystem saveLoadSystem,
             VehicleController vehicleController,
             VehicleDestroyer vehicleDestroyer,
-            StageLabelPresenter stageLabelPresenter,
+            StageLabel stageLabel,
             GameCache gameCache,
             BotNavigation botNavigation,
             EnemyPointerSystem enemyPointerSystem,
@@ -37,7 +37,7 @@ namespace Gameplay {
             _saveLoadSystem = saveLoadSystem;
             _vehicleController = vehicleController;
             _vehicleDestroyer = vehicleDestroyer;
-            _stageLabelPresenter = stageLabelPresenter;
+            _stageLabel = stageLabel;
             _gameCache = gameCache;
             _botNavigation = botNavigation;
             _enemyPointerSystem = enemyPointerSystem;
@@ -79,8 +79,8 @@ namespace Gameplay {
         }
 
         private void SetStageNumber(int stageIndex, int mapIndex, int mapsCount) {
-            _stageLabelPresenter.stageIndex = stageIndex;
-            _stageLabelPresenter.mapIndex = new Vector2Int(mapIndex, mapsCount);
+            _stageLabel.stageIndex = stageIndex;
+            _stageLabel.mapIndex = new Vector2Int(mapIndex, mapsCount);
         }
 
         private void SnapCameraToCar() {

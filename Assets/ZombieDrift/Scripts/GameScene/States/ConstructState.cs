@@ -5,7 +5,8 @@ namespace Gameplay {
 
     public class ConstructState : State {
         private readonly ContentCreationService _contentCreationService;
-        private readonly GameCache _gameCache;
+        private readonly ProjectCache _projectCache;
+        private readonly GameplayCache _gameplayCache;
         private readonly BotNavigation _botNavigation;
         private readonly EnemyPointerSystem _enemyPointerSystem;
         private readonly StagesConfig _stagesConfig;
@@ -26,10 +27,11 @@ namespace Gameplay {
             VehicleController vehicleController,
             VehicleDestroyer vehicleDestroyer,
             StageLabel stageLabel,
-            GameCache gameCache,
             BotNavigation botNavigation,
             EnemyPointerSystem enemyPointerSystem,
-            StagesConfig stagesConfig) : base(stateSwitcher) {
+            StagesConfig stagesConfig,
+            ProjectCache projectCache,
+            GameplayCache gameplayCache) : base(stateSwitcher) {
             _stateSwitcher = stateSwitcher;
             _contentCreationService = contentCreationService;
             _cameraSystem = cameraSystem;
@@ -38,21 +40,22 @@ namespace Gameplay {
             _vehicleController = vehicleController;
             _vehicleDestroyer = vehicleDestroyer;
             _stageLabel = stageLabel;
-            _gameCache = gameCache;
+            _projectCache = projectCache;
+            _gameplayCache = gameplayCache;
             _botNavigation = botNavigation;
             _enemyPointerSystem = enemyPointerSystem;
             _stagesConfig = stagesConfig;
         }
 
         public override void Enter() {
-            LoadFromCloudToCache();
+            LoadGameplayCache();
             CreateGameplayObjects();
             SnapCameraToCar();
             InitializeGameplay();
 
-            var mapsCount = _gameCache.mapsCount;
-            var mapIndex = _gameCache.mapIndex;
-            SetStageNumber(_gameCache.stageIndex, mapIndex, mapsCount);
+            var mapsCount = _gameplayCache.mapsCount;
+            var mapIndex = _gameplayCache.mapIndex;
+            SetStageNumber(_projectCache.stageIndex, mapIndex, mapsCount);
 
             if (mapIndex == 0)
                 SwitchToMenuState();
@@ -61,21 +64,19 @@ namespace Gameplay {
         }
 
         private void CreateGameplayObjects() {
-            var stageIndex = _gameCache.stageIndex;
-            var currentCarIndex = _gameCache.currentCarIndex;
-            var mapIndex = _gameCache.mapIndex;
+            var stageIndex = _projectCache.stageIndex;
+            var currentCarIndex = _projectCache.selectedCarIndex;
+            var mapIndex = _gameplayCache.mapIndex;
             var map = _contentCreationService.CreateMap(stageIndex, mapIndex);
             map.navMeshSurface.BuildNavMesh();
-            _gameCache.map = map;
-            _gameCache.car = _contentCreationService.CreateCar(currentCarIndex, _gameCache.map.startPoint);
-            _gameCache.zombies = _contentCreationService.CreateZombies(_gameCache.map.zombieSpawnPoints);
+            _gameplayCache.map = map;
+            _gameplayCache.car = _contentCreationService.CreateCar(currentCarIndex, map.startPoint);
+            _gameplayCache.zombies = _contentCreationService.CreateZombies(map.zombieSpawnPoints);
         }
 
-        private void LoadFromCloudToCache() {
-            var saveData = _saveLoadSystem.Load();
-            var stageIndex = saveData.stageIndex;
-            _gameCache.saveData1 = saveData;
-            _gameCache.mapsCount = _stagesConfig.stages[stageIndex].count;
+         private void LoadGameplayCache() {
+            var stageIndex = _projectCache.stageIndex;
+            _gameplayCache.mapsCount = _stagesConfig.stages[stageIndex].count;
         }
 
         private void SetStageNumber(int stageIndex, int mapIndex, int mapsCount) {
@@ -84,17 +85,17 @@ namespace Gameplay {
         }
 
         private void SnapCameraToCar() {
-            _cameraSystem.target = _gameCache.car.transform;
+            _cameraSystem.target = _gameplayCache.car.transform;
         }
 
         private void InitializeGameplay() {
-            var car = _gameCache.car;
+            var car = _gameplayCache.car;
             car.Initialize();
 
             _vehicleController.SetCar(car);
             _vehicleDestroyer.SetCar(car);
 
-            var zombiesArray = _gameCache.zombies;
+            var zombiesArray = _gameplayCache.zombies;
             _botNavigation.Initialize(zombiesArray, car.transform);
             _gameProcess.Initialize(car, zombiesArray);
             _enemyPointerSystem.SetNewData(zombiesArray, car.transform);

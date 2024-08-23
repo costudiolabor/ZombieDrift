@@ -4,19 +4,19 @@ namespace Gameplay {
 	public class LoseState : State {
 		private readonly StateSwitcher _stateSwitcher;
 		private readonly SaveLoadSystem _saveLoadSystem;
-		private readonly GameCache _gameCache;
+		private readonly GameplayCache _gameplayCache;
 		private readonly LosePresenter _losePresenter;
 		private readonly CameraSystem _cameraSystem;
 
 		public LoseState(
 				StateSwitcher stateSwitcher,
 				SaveLoadSystem saveLoadSystem,
-				GameCache gameCache,
+				GameplayCache gameplayCache,
 				LosePresenter losePresenter,
 				CameraSystem cameraSystem) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
 			_saveLoadSystem = saveLoadSystem;
-			_gameCache = gameCache;
+			_gameplayCache = gameplayCache;
 			_losePresenter = losePresenter;
 			_cameraSystem = cameraSystem;
 		}
@@ -42,7 +42,7 @@ namespace Gameplay {
 		}
 
 		private void SwitchToRestartState() {
-			_gameCache.mapIndex = 0;
+			_gameplayCache.mapIndex = 0;
 			_stateSwitcher.SetState<FinalizeState>();
 		}
 

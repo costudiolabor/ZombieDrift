@@ -5,16 +5,16 @@ namespace Gameplay {
 
 	public class FinalizeState : State {
 		private readonly StateSwitcher _stateSwitcher;
-		private readonly GameCache _gameCache;
+		private readonly GameplayCache _gameplayCache;
 		private readonly GameProcess _gameProcess;
 		private readonly EnemyPointerSystem _enemyPointerSystem;
 
 		public FinalizeState(StateSwitcher stateSwitcher,
-				GameCache gameCache,
+				GameplayCache gameplayCache,
 				GameProcess gameProcess,
 				EnemyPointerSystem enemyPointerSystem) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
-			_gameCache = gameCache;
+			_gameplayCache = gameplayCache;
 			_gameProcess = gameProcess;
 			_enemyPointerSystem = enemyPointerSystem;
 		}
@@ -27,9 +27,9 @@ namespace Gameplay {
 		}
 
 		public void DestroyGameObjects() {
-			var zombies = _gameCache.zombies;
-			var car = _gameCache.car;
-			var map = _gameCache.map;
+			var zombies = _gameplayCache.zombies;
+			var car = _gameplayCache.car;
+			var map = _gameplayCache.map;
 
 			foreach (var zombie in zombies)
 				Object.Destroy(zombie.gameObject);
@@ -37,9 +37,9 @@ namespace Gameplay {
 			Object.Destroy(car.gameObject);
 			Object.Destroy(map.gameObject);
 
-			_gameCache.zombies = null;
-			_gameCache.car = null;
-			_gameCache.map = null;
+			_gameplayCache.zombies = null;
+			_gameplayCache.car = null;
+			_gameplayCache.map = null;
 		}
 
 		private void SwitchToPrepare() =>

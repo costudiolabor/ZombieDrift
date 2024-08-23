@@ -6,13 +6,16 @@ namespace Project {
 		private readonly ScenesLoader _scenesLoader;
 		private readonly ProjectConfig _config;
 		private readonly SaveLoadSystem _saveLoadSystem;
+		private readonly ProjectCache _projectCache;
 
 		public ProjectEntryPoint(
 				ScenesLoader scenesLoader,
 				ProjectConfig config,
-				SaveLoadSystem saveLoadSystem) {
+				SaveLoadSystem saveLoadSystem,
+				ProjectCache projectCache) {
 			_scenesLoader = scenesLoader;
 			_saveLoadSystem = saveLoadSystem;
+			_projectCache = projectCache;
 			_config = config;
 		}
 
@@ -27,7 +30,7 @@ namespace Project {
 		}
 
 		private void LoadSavedData() =>
-				_saveLoadSystem.Load();
+				_projectCache.saveData = _saveLoadSystem.Load();
 
 
 		private void SetUpProject() =>

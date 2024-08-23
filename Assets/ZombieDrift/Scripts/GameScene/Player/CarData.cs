@@ -4,7 +4,7 @@ namespace Gameplay {
 	public class CarData {
 		public Car car;
 		public int price;
-		public bool selected;
+		public bool isSelected;
 		public bool isEnabled;
 	}
 }

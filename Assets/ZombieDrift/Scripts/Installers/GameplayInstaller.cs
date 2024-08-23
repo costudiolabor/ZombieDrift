@@ -20,6 +20,10 @@ namespace Gameplay {
 			InstallServices();
 			InstallGameplay();
 			InstallInput();
+			InstallGameplayCache();
+		}
+		private void InstallGameplayCache() {
+			Container.Bind<GameplayCache>().AsSingle();
 		}
 
 		private void InstallInput() {
@@ -61,7 +65,7 @@ namespace Gameplay {
 			Container.Bind<ContentCreationService>().AsSingle();
 			Container.Bind<CameraSystem>().AsSingle();
 			Container.Bind<PauseService>().AsSingle();
-			Container.Bind<GameCache>().AsSingle();
+		//	Container.Bind<GameCache>().AsSingle();
 		}
 
 		private void InstallFactory() {

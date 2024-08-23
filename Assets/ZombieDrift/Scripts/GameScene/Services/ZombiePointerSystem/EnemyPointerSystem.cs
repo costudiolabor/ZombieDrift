@@ -89,12 +89,11 @@ namespace Gameplay {
 			var vectorFromPlayerToTarget = target.position - playerPosition;
 			var rayFromPlayerToTarget = new Ray(playerPosition, vectorFromPlayerToTarget);
 
-			Debug.DrawRay(playerPosition, vectorFromPlayerToTarget);
-
 			float distanceToNearPlane = Mathf.Infinity;
 			for (var i = 0; i < 4; i++) {
 				if (!cameraFrustumPlanes[i].Raycast(rayFromPlayerToTarget, out var distance))
 					continue;
+
 				if (distance < distanceToNearPlane)
 					distanceToNearPlane = distance;
 			}
@@ -106,10 +105,12 @@ namespace Gameplay {
 			var pointerWorldPosition = rayFromPlayerToTarget.GetPoint(distanceToNearPlane);
 			var pointerScreenPoint = _camera.WorldToScreenPoint(pointerWorldPosition);
 			var playerScreenPoint = _camera.WorldToScreenPoint(playerPosition);
+
+			pointerScreenPoint.z = 0;
 			pointer.position = pointerScreenPoint;
-			/*var angle = Vector2.SignedAngle(Vector3.up, pointerScreenPoint);
-			Debug.Log(angle);
-			pointer.transform.rotation = Quaternion.AngleAxis(angle, Vector3.up);*/
+
+			int angle = (int)Vector2.SignedAngle(playerScreenPoint - pointerScreenPoint, new Vector3((float)Screen.width / 2, (float)Screen.height / 2) - new Vector3((float)Screen.width / 2, 0));
+			pointer.transform.rotation = Quaternion.AngleAxis(-angle, Vector3.forward);
 		}
 	}
 }

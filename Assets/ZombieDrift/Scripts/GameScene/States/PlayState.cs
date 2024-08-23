@@ -67,6 +67,9 @@ namespace Gameplay {
         }
 
         public override void Tick() {
+        }
+
+        public override void FixedTick() {
             _botNavigation.Tick();
             _enemyPointerSystem.Tick();
         }

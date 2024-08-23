@@ -2,11 +2,11 @@ using Project;
 
 namespace Gameplay {
     public class LevelComplete {
-        private readonly GameCache _gameCache;
+        private readonly GameplayCache _gameplayCache;
         private MapClearedView _view;
 
-        public LevelComplete(GameCache gameCache) {
-            _gameCache = gameCache;
+        public LevelComplete(GameplayCache gameplayCache) {
+            _gameplayCache = gameplayCache;
         }
 
         public bool enabled {
@@ -15,7 +15,7 @@ namespace Gameplay {
 
         public bool isMapLabelEnabled {
             set {
-                _view.mapText = $"Map {_gameCache.mapIndex + 1}/{_gameCache.mapsCount} cleared";
+                _view.mapText = $"Map {_gameplayCache.mapIndex + 1}/{_gameplayCache.mapsCount} cleared";
                 _view.isMapTextEnabled = value;
             }
         }

@@ -92,7 +92,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 73bde45ab02503a4980b56980b014e64, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 088dcc66531af8f40b94ddf94de4d3a4, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -3837,6 +3837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shopView: {fileID: 126507785}
+  _carParent: {fileID: 176616552}
 --- !u!4 &575924651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4939369723881772, guid: fe2c121e5f42d8846bbfb557b67dea39, type: 3}
@@ -5338,6 +5339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entryPoint: {fileID: 571715532}
+  _carsConfig: {fileID: 11400000, guid: 5c96cd51cc0aaa74f8f49d2214889708, type: 2}
 --- !u!1 &917852318
 GameObject:
   m_ObjectHideFlags: 0
@@ -10729,7 +10731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1355755749608645
 GameObject:
   m_ObjectHideFlags: 0

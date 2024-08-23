@@ -2,23 +2,29 @@ using System;
 using UnityEngine;
 
 namespace Gameplay {
-
     public class Car : MonoBehaviour /*, IFixedTickable*/ {
         public event Action<Zombie> HitDamageableEvent;
         public event Action<Vector3> CarDestroyedEvent;
 
-        [SerializeField] private RigidbodyMotor _motor;
+        [Header("DriveSettings")]
         [SerializeField] private float _maxSpeed = 15;
+
         [SerializeField] private float _moveSpeed = 40;
         [SerializeField] private float _steerAngle = 0.25f;
         [SerializeField] private float _mass = 1000;
         [SerializeField] private float _drag = 0;
         [SerializeField] private float _angularDrag = 0.02f;
         [SerializeField] private Vector3 _centerOfMass = new(0, -0.2f, 0);
+
+        [Header("Components")]
+        [SerializeField] private RigidbodyMotor _motor;
+
+        [SerializeField] private GameObject _carMesh;
         [SerializeField] private WheelBehaviour _wheelBehaviour;
         [SerializeField] private CarParticles _carParticles;
         [SerializeField] private WheelTrails _wheelTrails;
         public Rigidbody body => _motor.body;
+        public GameObject mesh => _carMesh;
 
         public bool isRunning {
             get => _isRunning;

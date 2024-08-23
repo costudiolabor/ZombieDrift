@@ -20607,7 +20607,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a6f090d55576994ab3cb2893c6a6256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _motor: {fileID: 6499282283045291292}
   _maxSpeed: 15
   _moveSpeed: 40
   _steerAngle: 0.2
@@ -20615,6 +20614,8 @@ MonoBehaviour:
   _drag: 0
   _angularDrag: 0.02
   _centerOfMass: {x: 0, y: -0.2, z: 0}
+  _motor: {fileID: 6499282283045291292}
+  _carMesh: {fileID: 0}
   _wheelBehaviour:
     _steerControlled:
     - {fileID: 7247237496771989049}

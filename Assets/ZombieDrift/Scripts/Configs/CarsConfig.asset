@@ -14,6 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cars:
   - car: {fileID: 6421066535242330801, guid: dcc5b9f5df171de42a516f0f03aad24e, type: 3}
-    price: 667
-    selected: 1
+    price: 100
+    isSelected: 0
+    isEnabled: 1
+  - car: {fileID: 7676270143801436717, guid: bf0d3afe802c16b43b1c6b8abbc71155, type: 3}
+    price: 200
+    isSelected: 0
+    isEnabled: 1
+  - car: {fileID: 7676270143801436717, guid: d7774653042de2843924420bba5de983, type: 3}
+    price: 300
+    isSelected: 0
+    isEnabled: 1
+  - car: {fileID: 7676270143801436717, guid: b9c18b3aacb6f9141b345e6597c5a7c9, type: 3}
+    price: 2000
+    isSelected: 0
     isEnabled: 1

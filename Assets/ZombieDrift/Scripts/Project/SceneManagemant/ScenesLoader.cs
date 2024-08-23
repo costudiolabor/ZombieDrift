@@ -8,8 +8,7 @@ namespace Project {
 
         public ScenesLoader(RootCanvas rootCanvas) =>
             _loading = rootCanvas.loading;
-
-
+        
         public void SwitchToShopScene() =>
             SwitchSceneWithAnimation(SceneNames.SHOP);
 
@@ -19,7 +18,7 @@ namespace Project {
         private async void SwitchSceneWithAnimation(string sceneName) {
             _loading.SetActive(true);
 
-         //   await SwitchTo(SceneNames.BOOT);
+            await SwitchTo(SceneNames.BOOT);
             await SwitchTo(sceneName);
 
             _loading.SetActive(false);

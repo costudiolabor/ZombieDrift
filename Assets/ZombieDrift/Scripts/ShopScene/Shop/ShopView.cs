@@ -25,10 +25,10 @@ namespace Shop {
             BuyEvent?.Invoke();
 
         private void TurnRightNotify() =>
-            SwitchLeftEvent?.Invoke();
+            SwitchRightEvent?.Invoke();
 
         private void TurnLeftNotify() =>
-            SwitchRightEvent?.Invoke();
+            SwitchLeftEvent?.Invoke();
 
         private void BackNotify() =>
             BackEvent?.Invoke();

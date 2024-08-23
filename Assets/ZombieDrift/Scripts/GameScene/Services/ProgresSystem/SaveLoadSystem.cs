@@ -35,7 +35,11 @@ namespace Project {
         }
         // отдельным классом сохранять*/
         public SaveData Load() {
-            return _data ?? new SaveData(){availableCars = new []{0}};
+            return _data ?? new SaveData() {
+                currentCarIndex = 1,
+                moneyCount = 345,
+                availableCars = new []{0,1}
+            };
         }
 
         public void Save(SaveData data) {

@@ -13,9 +13,9 @@ namespace Shop {
         private CarData _selected;
         private Transform _carSpawnTransform;
 
-        private int _selectedCarIndex, _carsCount;
+        private int _selectedCarIndex, _carsCount, _moneyCount;
         private readonly List<GameObject> _cars = new();
-        private HashSet<int> _availableCars = new();
+        private readonly HashSet<int> _purchasedCars = new();
 
         private GameObject _selectedCar;
 
@@ -31,7 +31,6 @@ namespace Shop {
             _carDataArray = carsConfig.cars;
             _projectCache = projectCache;
         }
-//todo Бабки отображать
 //todo если куплено скрывать кнопку купить покавывать кнопку выбрать
 //todo если куплено вибрано нихера не показывать
         // todo сохранять
@@ -45,20 +44,33 @@ namespace Shop {
             _view.WatchEvent += WatchAdd;
             _carSpawnTransform = carParent;
 
+            _selectedCarIndex = _projectCache.selectedCarIndex;
+            SetUnlockedCars();
             CreateAndHideAllCars();
+            Select();
+            RefreshMoneyCount();
+        }
+
+        private void SetUnlockedCars() {
+            _purchasedCars.UnionWith(_projectCache.purchasedCars);
+            foreach (var availableIndex in _purchasedCars)
+                _carDataArray[availableIndex].isPurchased = true;
+        }
+
+        private void RefreshMoneyCount() {
+            _moneyCount = _projectCache.moneyCount;
+            _view.money = $"${_moneyCount}";
         }
 
         private void CreateAndHideAllCars() {
-            _selectedCarIndex = _projectCache.selectedCarIndex;
             _carsCount = _carDataArray.Length;
-            _availableCars.UnionWith(_projectCache.availableCars);
-
             for (var i = 0; i < _carsCount; i++) {
                 var car = Object.Instantiate(_carDataArray[i].car.mesh, _carSpawnTransform);
                 car.SetActive(false);
+                var isCarIsPurchased = _carDataArray[i].isPurchased;
+             
                 _cars.Add(car);
             }
-            Select();
         }
 
         private void MoveRight() {
@@ -74,6 +86,7 @@ namespace Shop {
             _selectedCarIndex--;
             Select();
         }
+        
 
         private void Select() {
             if (_selectedCar != null)
@@ -89,7 +102,11 @@ namespace Shop {
             _selectedCar = null;
         }
 
+        private void MoveToDarkLayer(GameObject carObject) {
+        }
+
         private void BuyCar() {
+            //    if(_moneyCount>= )
         }
 
         private void WatchAdd() {

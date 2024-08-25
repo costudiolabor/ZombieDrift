@@ -24,7 +24,7 @@ namespace Project {
 			set => saveData.currentCarIndex = value;
 		}
 
-		public int[] availableCars {
+		public int[] purchasedCars {
 			get => saveData.availableCars;
 			set => saveData.availableCars = value;
 		}

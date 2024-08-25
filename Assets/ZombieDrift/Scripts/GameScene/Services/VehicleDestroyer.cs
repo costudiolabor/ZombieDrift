@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Gameplay {
 
     public class VehicleDestroyer {
-        private const string CAR_LAYER_NAME = "Car";
+        private const string CAR_LAYER_NAME = "Destroyable";
         private const float EXPLOSION_POWER = 300;
         private const float EXPLOSION_RADIUS = 1.5f;
         private const float OVERLAP_RADIUS = 0.7f;

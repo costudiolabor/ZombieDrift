@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9092669524133975282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 640
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 5380572861942065143}
   - component: {fileID: 5380572861942065140}
   - component: {fileID: 5380572861942065141}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallEast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5380572861975564376}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 5380572862259792636}
   - component: {fileID: 5380572862259792637}
   - component: {fileID: 8170795839972968966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallNorth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: 5380572862295927107}
   - component: {fileID: 5380572862295927104}
   - component: {fileID: 5380572862295927105}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5380572862379705876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enviorment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 5380572862585723073}
   - component: {fileID: 5380572862585723078}
   - component: {fileID: 5380572862585723079}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallWest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -939,7 +939,7 @@ GameObject:
   - component: {fileID: 5380572862596501892}
   - component: {fileID: 5380572862596501893}
   - component: {fileID: 5380572862596501895}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1124,7 +1124,7 @@ GameObject:
   - component: {fileID: 5380572862900977913}
   - component: {fileID: 5380572862900977918}
   - component: {fileID: 5380572862900977919}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallSouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1244,6 +1244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ground_Lines_04 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1595887374010402, guid: 6d9a60db38de31944b2c3658ace2163d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4510032871340302, guid: 6d9a60db38de31944b2c3658ace2163d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1309,6 +1313,10 @@ PrefabInstance:
     - target: {fileID: 1595887374010402, guid: 6d9a60db38de31944b2c3658ace2163d, type: 3}
       propertyPath: m_Name
       value: SM_Env_Ground_Lines_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595887374010402, guid: 6d9a60db38de31944b2c3658ace2163d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4510032871340302, guid: 6d9a60db38de31944b2c3658ace2163d, type: 3}
       propertyPath: m_RootOrder
@@ -1376,6 +1384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ground_Lines_04 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1595887374010402, guid: 6d9a60db38de31944b2c3658ace2163d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4510032871340302, guid: 6d9a60db38de31944b2c3658ace2163d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1442,6 +1454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ground_Lines_04 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1595887374010402, guid: 6d9a60db38de31944b2c3658ace2163d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4510032871340302, guid: 6d9a60db38de31944b2c3658ace2163d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1507,6 +1523,26 @@ PrefabInstance:
     - target: {fileID: 1493958680278758, guid: f126e6e202c519f4eb8aa8daf442d04b, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Container_Doors_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493958680278758, guid: f126e6e202c519f4eb8aa8daf442d04b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536988702982296, guid: f126e6e202c519f4eb8aa8daf442d04b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557133185223368, guid: f126e6e202c519f4eb8aa8daf442d04b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880323420319324, guid: f126e6e202c519f4eb8aa8daf442d04b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902207774205404, guid: f126e6e202c519f4eb8aa8daf442d04b, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4669943818003942, guid: f126e6e202c519f4eb8aa8daf442d04b, type: 3}
       propertyPath: m_RootOrder

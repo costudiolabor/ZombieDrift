@@ -14,9 +14,9 @@ TagManager:
   - Water
   - UI
   - Destroyable
-  - ShopDarkVehicle
-  - 
-  - 
+  - ShopNotPurchased
+  - ShopPurchased
+  - Navigation
   - 
   - 
   - 

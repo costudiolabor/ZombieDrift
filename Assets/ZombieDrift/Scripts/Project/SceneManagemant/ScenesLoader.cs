@@ -10,7 +10,7 @@ namespace Project {
             _loading = rootCanvas.loading;
         
         public void SwitchToShopScene() =>
-            SwitchSceneWithAnimation(SceneNames.SHOP);
+            SwitchSceneWithAnimation(SceneNames.GARAGE);
 
         public void SwitchToGameplayScene() =>
             SwitchSceneWithAnimation(SceneNames.GAMEPLAY);

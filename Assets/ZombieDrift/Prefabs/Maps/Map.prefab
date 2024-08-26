@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 6379611303846258503}
   - component: {fileID: 6379611303846258502}
   - component: {fileID: 6379611303846258505}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallNorth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 6379611304098875980}
   - component: {fileID: 6379611304098875983}
   - component: {fileID: 6379611304098875982}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallEast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6379611304132460003}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 6379611304585559103}
   - component: {fileID: 6379611304585559102}
   - component: {fileID: 6379611304585559100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 6379611304592668026}
   - component: {fileID: 6379611304592668029}
   - component: {fileID: 6379611304592668028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallWest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -718,7 +718,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6379611304804969391}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enviorment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 6379611304814560504}
   - component: {fileID: 6379611304814560507}
   - component: {fileID: 6379611304814560506}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,7 +863,7 @@ GameObject:
   - component: {fileID: 6379611305285348674}
   - component: {fileID: 6379611305285348677}
   - component: {fileID: 6379611305285348676}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallSouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1014,7 +1014,7 @@ GameObject:
   - component: {fileID: 6412449584214797757}
   - component: {fileID: 6403208867722041605}
   - component: {fileID: 6368255558631489701}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: SM_Bld_Church_Door_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1122,7 +1122,7 @@ GameObject:
   - component: {fileID: 6412638776743225859}
   - component: {fileID: 6402595992742883675}
   - component: {fileID: 6372056406867321053}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: SM_Bld_Church_Door_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1229,7 +1229,7 @@ GameObject:
   - component: {fileID: 6384023066721051517}
   - component: {fileID: 6412424199679780491}
   - component: {fileID: 6402162896905641887}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: SM_Bld_Church_Glass_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1318,7 +1318,7 @@ GameObject:
   - component: {fileID: 6371945488582169811}
   - component: {fileID: 123433837179801663}
   - component: {fileID: 6365590273553260305}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: SM_Bld_Church_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1442,13 +1442,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
   m_OverrideArea: 1
   m_Area: 1
-  m_OverrideGenerateLinks: 0
-  m_GenerateLinks: 0
   m_IgnoreFromBuild: 0
-  m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
 --- !u!1 &7691241889671513865
 GameObject:
@@ -1460,7 +1456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8791475471734024467}
   - component: {fileID: 8707931479046898781}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: NavMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1494,17 +1490,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
   m_AgentTypeID: 0
   m_CollectObjects: 0
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 512
   m_UseGeometry: 1
   m_DefaultArea: 0
-  m_GenerateLinks: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0

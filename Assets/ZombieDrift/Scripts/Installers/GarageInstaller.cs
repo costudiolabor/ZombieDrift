@@ -13,23 +13,30 @@ namespace Garage {
             InstallEntryPoint();
             InstallGarage();
             InstallStateMachine();
-
+            InstallFactory();
+            
         }
-        private void InstallStateMachine() {
-	        Container.Bind<StateSwitcher>().AsSingle();
-	        
-	        Container.Bind<GarageScenario>().AsSingle();
-	        Container.Bind<InitializeState>().AsSingle();
-	        Container.Bind<SelectionState>().AsSingle();
+
+        private void InstallFactory() {
+            Container.Bind<Factory>().AsSingle();
         }
 
         private void InstallEntryPoint() =>
             Container.BindInterfacesAndSelfTo<EntryPoint>().FromInstance(_entryPoint);
 
+        private void InstallStateMachine() {
+	        Container.BindInterfacesAndSelfTo<StateSwitcher>().AsSingle();
+	        
+	        Container.Bind<GarageScenario>().AsSingle();
+	        Container.Bind<InitializeState>().AsSingle();
+	        Container.Bind<GarageState>().AsSingle();
+        }
+
 
         private void InstallGarage() {
-	        Container.Bind<GarageItemsSwitcher>().AsSingle();
-            Container.Bind<GaragePresenter1>().AsSingle();
+	        Container.Bind<RotatablePodium>().AsSingle();
+	        Container.Bind<ItemsSwitcher>().AsSingle();
+            Container.Bind<Presenter>().AsSingle();
             Container.Bind<CarsConfig>().FromInstance(_carsConfig);
         }
     }

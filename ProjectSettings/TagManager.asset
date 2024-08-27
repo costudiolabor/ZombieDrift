@@ -14,8 +14,8 @@ TagManager:
   - Water
   - UI
   - Destroyable
-  - ShopNotPurchased
-  - ShopPurchased
+  - Locked
+  - Unlocked
   - Navigation
   - 
   - 

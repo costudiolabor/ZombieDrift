@@ -7,6 +7,6 @@ namespace Project {
         public int stageIndex;
         public int moneyCount;
         public int currentCarIndex;
-        public int[] availableCars = { 0 };
+        public int[] purchasedCarsIndexes = { 0 };
     }
 }

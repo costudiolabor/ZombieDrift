@@ -6,10 +6,10 @@ namespace Garage {
 		public GarageScenario(
 				StateSwitcher stateSwitcher,
 				InitializeState initializeState,
-				SelectionState selectionState) {
+				GarageState garageState) {
 			_stateSwitcher = stateSwitcher;
 			_stateSwitcher.AddState(initializeState);
-			_stateSwitcher.AddState(selectionState);
+			_stateSwitcher.AddState(garageState);
 		}
 
 		public void Start() =>

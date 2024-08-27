@@ -12,26 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a470b093b3970c4d86546607538b598, type: 3}
   m_Name: CarsConfig
   m_EditorClassIdentifier: 
-  _shopNotPurchasedLayerMask:
+  _lockedLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  _shopPurchasedLayerMask:
+  _purchasedLayerMask:
     serializedVersion: 2
     m_Bits: 256
   _cars:
   - car: {fileID: 6421066535242330801, guid: dcc5b9f5df171de42a516f0f03aad24e, type: 3}
     price: 100
-    isSelected: 0
-    isPurchased: 0
   - car: {fileID: 6421066535242330801, guid: 5cdafbe255a0205478fdeb61ba335eb4, type: 3}
     price: 200
-    isSelected: 0
-    isPurchased: 0
   - car: {fileID: 7676270143801436717, guid: d7774653042de2843924420bba5de983, type: 3}
     price: 300
-    isSelected: 0
-    isPurchased: 0
   - car: {fileID: 7676270143801436717, guid: b9c18b3aacb6f9141b345e6597c5a7c9, type: 3}
     price: 2000
-    isSelected: 0
-    isPurchased: 0

@@ -33,7 +33,7 @@ namespace Gameplay {
         }
 
         public Car CreateCar(int carIndex, Transform point, Transform parent = null) {
-            if (carIndex > _carsConfig.count - 1)
+            if (carIndex > _carsConfig.cars.Length - 1)
                 throw new Exception($"Stage with index {carIndex} out of bounds levelConfig");
 
             var carPrefab = _carsConfig.cars[carIndex].car;

@@ -7,6 +7,7 @@ namespace Gameplay {
         private readonly ContentCreationService _contentCreationService;
         private readonly ProjectCache _projectCache;
         private readonly GameplayCache _gameplayCache;
+        private readonly MoneyWallet _moneyWallet;
         private readonly BotNavigation _botNavigation;
         private readonly EnemyPointerSystem _enemyPointerSystem;
         private readonly StagesConfig _stagesConfig;
@@ -31,7 +32,8 @@ namespace Gameplay {
             EnemyPointerSystem enemyPointerSystem,
             StagesConfig stagesConfig,
             ProjectCache projectCache,
-            GameplayCache gameplayCache) : base(stateSwitcher) {
+            GameplayCache gameplayCache,
+            MoneyWallet moneyWallet) : base(stateSwitcher) {
             _stateSwitcher = stateSwitcher;
             _contentCreationService = contentCreationService;
             _cameraSystem = cameraSystem;
@@ -42,6 +44,7 @@ namespace Gameplay {
             _stageLabel = stageLabel;
             _projectCache = projectCache;
             _gameplayCache = gameplayCache;
+            _moneyWallet = moneyWallet;
             _botNavigation = botNavigation;
             _enemyPointerSystem = enemyPointerSystem;
             _stagesConfig = stagesConfig;
@@ -82,6 +85,7 @@ namespace Gameplay {
         private void SetStageNumber(int stageIndex, int mapIndex, int mapsCount) {
             _stageLabel.stageIndex = stageIndex;
             _stageLabel.mapIndex = new Vector2Int(mapIndex, mapsCount);
+            _stageLabel.moneyCount = _moneyWallet.count;
         }
 
         private void SnapCameraToCar() {

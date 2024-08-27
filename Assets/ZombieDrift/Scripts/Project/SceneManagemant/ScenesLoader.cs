@@ -3,31 +3,31 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Project {
-    public class ScenesLoader {
-        private GameObject _loading;
+	public class ScenesLoader {
+		private FadeLoadingView _loading;
 
-        public ScenesLoader(RootCanvas rootCanvas) =>
-            _loading = rootCanvas.loading;
-        
-        public void SwitchToShopScene() =>
-            SwitchSceneWithAnimation(SceneNames.GARAGE);
+		public ScenesLoader(RootCanvas rootCanvas) =>
+				_loading = rootCanvas.loading;
 
-        public void SwitchToGameplayScene() =>
-            SwitchSceneWithAnimation(SceneNames.GAMEPLAY);
+		public void SwitchToShopScene() =>
+				SwitchSceneWithAnimation(SceneNames.GARAGE);
 
-        private async void SwitchSceneWithAnimation(string sceneName) {
-            _loading.SetActive(true);
+		public void SwitchToGameplayScene() =>
+				SwitchSceneWithAnimation(SceneNames.GAMEPLAY);
 
-            await SwitchTo(SceneNames.BOOT);
-            await SwitchTo(sceneName);
+		private async void SwitchSceneWithAnimation(string sceneName) {
+			await _loading.FadeIn();
 
-            _loading.SetActive(false);
-        }
+			await SwitchTo(SceneNames.BOOT);
+			await SwitchTo(sceneName);
 
-        private async UniTask SwitchTo(string sceneName) {
-            var switchSceneAsyncOperation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
-            while (!switchSceneAsyncOperation.isDone)
-                await UniTask.Yield();
-        }
-    }
+			_loading.FadeOut();
+		}
+
+		private async UniTask SwitchTo(string sceneName) {
+			var switchSceneAsyncOperation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+			while (!switchSceneAsyncOperation.isDone)
+				await UniTask.Yield();
+		}
+	}
 }

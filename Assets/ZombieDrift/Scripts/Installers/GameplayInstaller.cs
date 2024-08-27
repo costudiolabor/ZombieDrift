@@ -22,9 +22,11 @@ namespace Gameplay {
 			InstallInput();
 			InstallGameplayCache();
 		}
-		private void InstallGameplayCache() {
-			Container.Bind<GameplayCache>().AsSingle();
-		}
+		private void InstallGameplayEntryPoint() =>
+				Container.BindInterfacesAndSelfTo<EntryPoint>().FromInstance(_entryPoint);
+		
+		private void InstallGameplayCache() =>
+				Container.Bind<GameplayCache>().AsSingle();
 
 		private void InstallInput() {
 			Container.Bind<ITickable>().To<IInput>().FromResolve();
@@ -33,7 +35,6 @@ namespace Gameplay {
 				InstallTouchInput();
 			else
 				InstallKeyboardInput();
-		
 		}
 
 		private void InstallKeyboardInput() {
@@ -41,9 +42,8 @@ namespace Gameplay {
 			Container.Bind<IInput>().To<KeyboardInput>().AsSingle();
 		}
 
-		private void InstallTouchInput() {
-			Container.Bind<IInput>().To<TouchInput>().AsSingle();
-		}
+		private void InstallTouchInput() =>
+				Container.Bind<IInput>().To<TouchInput>().AsSingle();
 
 		private void InstallGameplay() {
 			Container.Bind<MenuPresenter>().AsSingle();
@@ -65,16 +65,11 @@ namespace Gameplay {
 			Container.Bind<ContentCreationService>().AsSingle();
 			Container.Bind<CameraSystem>().AsSingle();
 			Container.Bind<PauseService>().AsSingle();
-		//	Container.Bind<GameCache>().AsSingle();
+			Container.Bind<MoneyWallet>().AsSingle();
 		}
 
-		private void InstallFactory() {
+		private void InstallFactory() =>
 			Container.Bind<Factory>().AsSingle();
-		}
-
-		private void InstallGameplayEntryPoint() {
-			Container.BindInterfacesAndSelfTo<EntryPoint>().FromInstance(_entryPoint);
-		}
 
 		private void InstallConfigs() {
 			Container.Bind<ZombiesConfig>().FromInstance(_zombiesConfig);

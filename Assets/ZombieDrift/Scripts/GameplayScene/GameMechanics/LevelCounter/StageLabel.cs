@@ -23,6 +23,10 @@ namespace Gameplay {
             set => _view.mapNumber = new Vector2Int(value.x + 1, value.y);
         }
 
+        public int moneyCount {
+	        set => _view.coinsText = value.ToString();
+        }
+
         public StagePresentState presentState {
             set {
                 switch (value) {

@@ -6,39 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="de5fc0b1-2905-4b1c-9891-21b72464e4be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Zenject-ReflectionBaking.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/Signals/Zenject-Signals.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Garage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Garage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/CarsConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/CarsConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts/CarsConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts/CarsConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Data/DataRecords.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Data/DataRecords.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ContentCreationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ContentCreationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ProgresSystem/ProjectCache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ProgresSystem/ProjectCache.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ProgresSystem/SaveLoadSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ProgresSystem/SaveLoadSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/EntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/GarageItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/GarageItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/GarageItemsSwitcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/GarageItemsSwitcher.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/GarageModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/GarageModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/GaragePresenter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/GaragePresenter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/GaragePresenter1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/GaragePresenter1.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/GarageView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/GarageView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/States.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/States/GarageScenario.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/States/GarageScenario.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/States/InitializeState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/States/InitializeState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/States/SelectionState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/States/SelectionState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Project/[RootCanvas].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Project/[RootCanvas].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Gameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameMechanics/LevelCounter/StageLabel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameMechanics/LevelCounter/StageLabel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameMechanics/LevelCounter/StageView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameMechanics/LevelCounter/StageView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/States/ConstructState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/States/ConstructState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/States/PlayState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/States/PlayState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/States/GarageState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/States/GarageState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Installers/GameplayInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Installers/GameplayInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Installers/GarageInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Installers/GarageInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/SceneManagemant/ScenesLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/SceneManagemant/ScenesLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/UI/RootCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/UI/RootCanvas.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +28,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Garage/RotatablePodium.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eb019d4a63d44ca7a73547c38156dec21dd000/ab/480d92d3/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eb019d4a63d44ca7a73547c38156dec21dd000/cd/f5b577e2/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eb019d4a63d44ca7a73547c38156dec21dd000/d3/f57c3e9e/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/LoadingScreen/FadeLoadingView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/MoneyWallet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ai.navigation/Runtime/NavMeshSurface.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine/Runtime/Behaviours/CinemachinePixelPerfect.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -122,10 +109,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="864">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22396">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="864" />
+      <option name="pid" value="22396" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -149,6 +136,7 @@
       <workItem from="1724618128919" duration="5407000" />
       <workItem from="1724660327340" duration="22980000" />
       <workItem from="1724707426568" duration="10001000" />
+      <workItem from="1724759562278" duration="10658000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,4 @@
 using System;
-
 using Cysharp.Threading.Tasks;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -7,7 +6,6 @@ using UnityEngine;
 namespace Gameplay {
 
    public class CameraSystem {
-
       public CinemachineCamera mainCamera {
          set {
             if (value == null)

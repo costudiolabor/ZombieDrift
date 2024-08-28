@@ -1,5 +1,5 @@
 public class ComboCounter {
-	public int comboCountCount => _comboCount;
+	public int comboCount => _comboCount;
 	
 	private int _comboCount;
 

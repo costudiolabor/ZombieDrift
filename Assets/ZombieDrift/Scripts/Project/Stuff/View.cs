@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class View : MonoBehaviour
 {
-    public bool isVisible {
+    public bool isActive {
         set => gameObject.SetActive(value);
     }
 }

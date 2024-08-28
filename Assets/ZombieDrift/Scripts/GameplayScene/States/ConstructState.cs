@@ -2,7 +2,6 @@ using Project;
 using UnityEngine;
 
 namespace Gameplay {
-
     public class ConstructState : State {
         private readonly ContentCreationService _contentCreationService;
         private readonly ProjectCache _projectCache;
@@ -17,7 +16,7 @@ namespace Gameplay {
         private readonly SaveLoadSystem _saveLoadSystem;
         private readonly VehicleController _vehicleController;
         private readonly VehicleDestroyer _vehicleDestroyer;
-        private readonly StageLabel _stageLabel;
+        private readonly GameplayHud _gameplayHud;
 
         public ConstructState(
             StateSwitcher stateSwitcher,
@@ -27,13 +26,14 @@ namespace Gameplay {
             SaveLoadSystem saveLoadSystem,
             VehicleController vehicleController,
             VehicleDestroyer vehicleDestroyer,
-            StageLabel stageLabel,
+            GameplayHud gameplayHud,
             BotNavigation botNavigation,
             EnemyPointerSystem enemyPointerSystem,
             StagesConfig stagesConfig,
             ProjectCache projectCache,
             GameplayCache gameplayCache,
-            MoneyWallet moneyWallet) : base(stateSwitcher) {
+            MoneyWallet moneyWallet
+        ) : base(stateSwitcher) {
             _stateSwitcher = stateSwitcher;
             _contentCreationService = contentCreationService;
             _cameraSystem = cameraSystem;
@@ -41,7 +41,7 @@ namespace Gameplay {
             _saveLoadSystem = saveLoadSystem;
             _vehicleController = vehicleController;
             _vehicleDestroyer = vehicleDestroyer;
-            _stageLabel = stageLabel;
+            _gameplayHud = gameplayHud;
             _projectCache = projectCache;
             _gameplayCache = gameplayCache;
             _moneyWallet = moneyWallet;
@@ -66,6 +66,7 @@ namespace Gameplay {
                 SwitchToHowToPlayState();
         }
 
+
         private void CreateGameplayObjects() {
             var stageIndex = _projectCache.stageIndex;
             var currentCarIndex = _projectCache.selectedCarIndex;
@@ -77,15 +78,15 @@ namespace Gameplay {
             _gameplayCache.zombies = _contentCreationService.CreateZombies(map.zombieSpawnPoints);
         }
 
-         private void LoadGameplayCache() {
+        private void LoadGameplayCache() {
             var stageIndex = _projectCache.stageIndex;
             _gameplayCache.mapsCount = _stagesConfig.stages[stageIndex].count;
         }
 
         private void SetStageNumber(int stageIndex, int mapIndex, int mapsCount) {
-            _stageLabel.stageIndex = stageIndex;
-            _stageLabel.mapIndex = new Vector2Int(mapIndex, mapsCount);
-            _stageLabel.moneyCount = _moneyWallet.count;
+            _gameplayHud.stageIndex = stageIndex;
+            _gameplayHud.mapIndex = new Vector2Int(mapIndex, mapsCount);
+            _gameplayHud.moneyCount = _moneyWallet.count;
         }
 
         private void SnapCameraToCar() {

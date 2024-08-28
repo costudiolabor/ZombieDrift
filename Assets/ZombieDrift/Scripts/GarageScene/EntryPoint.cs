@@ -5,6 +5,7 @@ namespace Garage {
     public class EntryPoint : MonoBehaviour, IInitializable {
         [SerializeField] private GarageView _garageView;
         [SerializeField] private Transform _carParent;
+        [SerializeField] private ParticleSystem _buyParticles;
 
         private GarageScenario _garageScenario;
         private Presenter _garagePresenter;
@@ -13,11 +14,11 @@ namespace Garage {
         public void Construct(
             GarageScenario garageScenario,
             Presenter garagePresenter,
-            RotatablePodium rotatablePodium) {
+            Podium podium) {
             _garageScenario = garageScenario;
             _garagePresenter = garagePresenter;
             _garagePresenter.Initialize(_garageView);
-            rotatablePodium.Initialize(_carParent);
+            podium.Initialize(_carParent, _buyParticles);
         }
 
         public void Initialize() =>

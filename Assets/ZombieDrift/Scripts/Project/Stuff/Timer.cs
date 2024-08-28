@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
-using Zenject;
 
-public class Timer  {
+public class Timer {
     public event Action TickEvent, AlarmEvent;
     public TimeSpan current => TimeSpan.FromSeconds(_totalSeconds);
     public float currentSeconds => _totalSeconds;
@@ -22,7 +21,7 @@ public class Timer  {
     }
 
     public void Start() {
-        Reset();
+        ResetElapsedTime();
         Run();
     }
 
@@ -30,16 +29,37 @@ public class Timer  {
         _isRunning = false;
         _isAlarmed = false;
         _isRepeatEnabled = false;
-        Reset();
+        ResetElapsedTime();
     }
 
     public void Pause() =>
         _isRunning = false;
 
+// Run method only for unpause. To Start timer Use Start, StartWithAlarm and StartWithRepeatAlarm methods
     public void Run() =>
         _isRunning = true;
 
-    public void Reset() =>
+//For update timer call Tick() method from external Update()
+    public void Tick() {
+        if (!_isRunning)
+            return;
+
+        _totalSeconds += Time.deltaTime;
+
+        TickNotify();
+        var isAlarmHappened = _isAlarmed && _totalSeconds >= _alarmSeconds;
+
+        if (!isAlarmHappened)
+            return;
+
+        AlarmNotify();
+        if (_isRepeatEnabled)
+            ResetElapsedTime();
+        else
+            AlarmReset();
+    }
+
+    public void ResetElapsedTime() =>
         _totalSeconds = 0;
 
     private void SetAlarm(float alarmSeconds) {
@@ -47,29 +67,13 @@ public class Timer  {
         _alarmSeconds = alarmSeconds;
     }
 
-    public void Tick() {
-        if (!_isRunning) return;
-        _totalSeconds += Time.deltaTime;
-
-        TickNotify();
-
-        var isAlarmHappened = _isAlarmed && _totalSeconds >= _alarmSeconds;
-        if (!isAlarmHappened) return;
-
-        AlarmNotify();
-        if (!_isRepeatEnabled)
-            AlarmReset();
-        else
-            Reset();
-    }
-
-    private void AlarmNotify() =>
-        AlarmEvent?.Invoke();
-
     private void AlarmReset() {
         _isAlarmed = false;
         Pause();
     }
+
+    private void AlarmNotify() =>
+        AlarmEvent?.Invoke();
 
     private void TickNotify() =>
         TickEvent?.Invoke();

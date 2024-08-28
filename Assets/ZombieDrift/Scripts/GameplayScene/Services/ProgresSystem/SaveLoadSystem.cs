@@ -37,7 +37,7 @@ namespace Project {
         public SaveData Load() {
             return _data ?? new SaveData() {
                 currentCarIndex = 1,
-                moneyCount = 34500,
+                moneyCount = 200,
                 purchasedCarsIndexes = new []{1}
             };
         }

@@ -9,7 +9,7 @@ namespace Garage {
         private readonly StateSwitcher _stateSwitcher;
         private readonly CarsConfig _carsConfig;
         private readonly ProjectCache _projectCache;
-        private readonly RotatablePodium _rotatablePodium;
+        private readonly Podium _podium;
         private readonly ItemsSwitcher _itemsSwitcher;
         private readonly Factory _factory;
 
@@ -17,13 +17,13 @@ namespace Garage {
             StateSwitcher stateSwitcher,
             CarsConfig carsConfig,
             ProjectCache projectCache,
-            RotatablePodium rotatablePodium,
+            Podium podium,
             ItemsSwitcher itemsSwitcher,
             Factory factory) : base(stateSwitcher) {
             _stateSwitcher = stateSwitcher;
             _carsConfig = carsConfig;
             _projectCache = projectCache;
-            _rotatablePodium = rotatablePodium;
+            _podium = podium;
             _itemsSwitcher = itemsSwitcher;
             _factory = factory;
         }
@@ -40,7 +40,7 @@ namespace Garage {
             var garageItemList = new List<GarageItem>();
 
             for (var i = 0; i < carsCount; i++) {
-                var carModel = Object.Instantiate(configCarsArray[i].car.mesh, _rotatablePodium.spawnParent);
+                var carModel = Object.Instantiate(configCarsArray[i].car.mesh, _podium.spawnParent);
                 carModel.SetActive(false);
 
                 var isCarIsPurchased = _projectCache.purchasedCars.Contains(i);

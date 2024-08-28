@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Garage {
 	public class GarageState : State {
 		private readonly ScenesLoader _scenesLoader;
-		private readonly RotatablePodium _rotatablePodium;
+		private readonly Podium _podium;
 		private readonly ItemsSwitcher _itemsSwitcher;
 		private readonly Presenter _presenter;
 		private readonly ProjectCache _projectCache;
@@ -21,7 +21,7 @@ namespace Garage {
 		public GarageState(
 				StateSwitcher stateSwitcher,
 				ScenesLoader scenesLoader,
-				RotatablePodium rotatablePodium,
+				Podium podium,
 				ItemsSwitcher itemsSwitcher,
 				Presenter presenter,
 				ProjectCache projectCache,
@@ -29,7 +29,7 @@ namespace Garage {
 				MoneyWallet moneyWallet) : base(stateSwitcher) {
 			_purchasedLayerMask = config.purchasedLayerMask;
 			_scenesLoader = scenesLoader;
-			_rotatablePodium = rotatablePodium;
+			_podium = podium;
 			_itemsSwitcher = itemsSwitcher;
 			_presenter = presenter;
 			_projectCache = projectCache;
@@ -59,7 +59,7 @@ namespace Garage {
 		}
 
 		public override void FixedTick() {
-			_rotatablePodium.RotateAround();
+			_podium.RotateAround();
 		}
 
 		private void ChooseNext() =>
@@ -92,14 +92,13 @@ namespace Garage {
 
 			if (_moneyWallet.count < carPrice)
 				return;
-
 			_moneyWallet.SpendCoin(carPrice);
+			_podium.PlayBuyParticles();
 			UnlockCar(selectedItem.mesh);
 
 			_projectCache.purchasedCars.Add(currentIndex);
 			selectedCarIndex = currentIndex;
 			//Save money and selectedIndex
-
 			Select();
 		}
 

@@ -20,7 +20,7 @@ namespace Gameplay {
 				if (value == _enabled)
 					return;
 				_enabled = value;
-				_view.isVisible = value;
+				_view.isActive = value;
 			}
 		}
 

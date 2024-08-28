@@ -10,10 +10,10 @@ namespace Gameplay {
 			set => transform.position = value;
 			get => transform.position;
 		}
-		
-		public async void Show(string message, int showTime) {
+
+		public async void SetText(string message, int showTime) {
 			_textField.text = message;
-		
+
 			isActive = true;
 			await UniTask.Delay(showTime);
 			isActive = false;

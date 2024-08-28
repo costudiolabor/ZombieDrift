@@ -75,7 +75,7 @@ namespace Gameplay {
 
             Container.Bind<ComboSystem>().AsSingle();
 
-            Container.Bind<TextHintSystem>().AsSingle();
+            Container.BindInterfacesAndSelfTo<TextHintSystem>().AsSingle();
             Container.Bind<TextHintConfig>().FromInstance(_textHintConfig);
         }
 

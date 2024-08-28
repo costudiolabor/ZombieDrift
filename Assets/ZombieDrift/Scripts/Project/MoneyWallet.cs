@@ -4,9 +4,8 @@ namespace Project {
 
 		public int count => _projectCache.moneyCount;
 
-		public MoneyWallet(ProjectCache projectCache) {
-			_projectCache = projectCache;
-		}
+		public MoneyWallet(ProjectCache projectCache) =>
+				_projectCache = projectCache;
 
 		public void AddCoins(int value = 1) =>
 				_projectCache.moneyCount += value;

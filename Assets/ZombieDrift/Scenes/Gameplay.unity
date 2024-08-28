@@ -1476,6 +1476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d9debed0b93ea468554633cc1b39f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _camera: {fileID: 1682426855}
   _mainCamera: {fileID: 5068251755368561107}
   _zoomCamera: {fileID: 289556721}
   _mainMenuView: {fileID: 1466547419}
@@ -1485,7 +1486,6 @@ MonoBehaviour:
   _howToPlayView: {fileID: 532081165}
   _mapClearedView: {fileID: 1241579480}
   _pointersView: {fileID: 1060799074}
-  _camera: {fileID: 1682426855}
 --- !u!1 &980120000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3539,7 +3539,7 @@ Camera:
   far clip plane: 1000
   field of view: 55.49
   orthographic: 1
-  orthographic size: 3.5
+  orthographic size: 8.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

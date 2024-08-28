@@ -1,9 +1,10 @@
 using TMPro;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
+using Project;
 
 namespace Gameplay {
-	public class TextHint : View {
+	public class TextHint : AnimatedView {
 		[SerializeField] private TMP_Text _textField;
 
 		public Vector3 position {
@@ -11,7 +12,7 @@ namespace Gameplay {
 			get => transform.position;
 		}
 
-		public async void SetText(string message, int showTime) {
+		public async void Show(string message, int showTime) {
 			_textField.text = message;
 
 			isActive = true;

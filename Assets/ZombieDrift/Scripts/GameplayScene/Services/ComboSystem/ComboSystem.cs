@@ -1,34 +1,27 @@
-using System;
-
 namespace Gameplay {
     public class ComboSystem {
-        private const float COMBO_DELAY = 0.9f;
-            //  private const int MIN_COMBO_COUNT_FOR_NOTIFY = 2;
-
-        //   public event Action<int> ComboHappenedEvent;
-
+        public float comboDelay { get; set; } = 0.9f;
         private readonly Timer _timer;
-        private readonly ComboCounter _comboCounter;
+        private int _comboCount;
 
         public ComboSystem() {
-            _comboCounter = new ComboCounter();
             _timer = new Timer();
-            _timer.AlarmEvent += OnComboTimeSpend;
+            _timer.AlarmEvent += Reset;
         }
 
         public int IncreaseCombo() {
-            _comboCounter.Increase();
-            _timer.StartWithAlarm(COMBO_DELAY);
-            return _comboCounter.comboCount;
+            ++_comboCount;
+            _timer.StartWithAlarm(comboDelay);
+            return _comboCount;
         }
 
         public void Tick() =>
             _timer.Tick();
 
-        private void OnComboTimeSpend() =>
-            _comboCounter.Reset();
+        private void Reset() =>
+            _comboCount = 0;
 
         ~ComboSystem() =>
-            _timer.AlarmEvent -= OnComboTimeSpend;
+            _timer.AlarmEvent -= Reset;
     }
 }

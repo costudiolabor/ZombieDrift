@@ -29,7 +29,7 @@ namespace Gameplay {
 			var hint = _hintPool.GetFreeElement();
 			hint.position = position + _offset;
 
-			hint.SetText(hintText , _showTimeMilliseconds);
+			hint.Show(hintText , _showTimeMilliseconds);
 			var lookPos = hint.position - _camera.transform.position;
 			hint.transform.LookAt(lookPos);
 			/*

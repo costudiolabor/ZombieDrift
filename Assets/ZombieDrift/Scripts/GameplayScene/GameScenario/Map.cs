@@ -27,7 +27,7 @@ namespace Gameplay {
 
 
 #if UNITY_EDITOR
-		private void OnValidate() {
+		private void OnValidate1() {
 			var halfWallWidth = WALL_WIDTH / 2;
 
 			_wallSouth.localScale = new Vector3(WALL_WIDTH, 1, _mapHeight);

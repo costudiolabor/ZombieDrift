@@ -49,8 +49,11 @@ public class RigidbodyMotor : MonoBehaviour {
 
     public void FixedTick() {
         _moveForceVector = transform.forward * (moveSpeed);
-        if (_steerInput != 0)
-            transform.Rotate(Vector3.up * (_steerInput * rigidbodyVelocity.magnitude * steerAngle));
+        if (_steerInput != 0) {
+            var rotateVector = Vector3.up * (_steerInput * rigidbodyVelocity.magnitude * steerAngle);
+            transform.Rotate(rotateVector);
+            //transform.Rotate(Vector3.up * (_steerInput * rigidbodyVelocity.magnitude * steerAngle));
+        }
 
         if (rigidbodyVelocity.magnitude < maxSpeed)
             _rigidBody.AddForce(_moveForceVector, ForceMode.Acceleration);

@@ -6,6 +6,7 @@ namespace Garage {
         [SerializeField] private GarageView _garageView;
         [SerializeField] private Transform _carParent;
         [SerializeField] private ParticleSystem _buyParticles;
+        [SerializeField] private ParticleSystem _selectParticles;
 
         private GarageScenario _garageScenario;
         private Presenter _garagePresenter;
@@ -18,7 +19,7 @@ namespace Garage {
             _garageScenario = garageScenario;
             _garagePresenter = garagePresenter;
             _garagePresenter.Initialize(_garageView);
-            podium.Initialize(_carParent, _buyParticles);
+            podium.Initialize(_carParent, _buyParticles, _selectParticles);
         }
 
         public void Initialize() =>

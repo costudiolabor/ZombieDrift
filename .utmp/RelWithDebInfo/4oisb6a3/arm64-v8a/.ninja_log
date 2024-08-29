@@ -1,0 +1,10 @@
+# ninja log v5
+18	2697	7466690106962565	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	fc7cd2eca79a5f5
+9	2743	7466690107449519	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	cf3815440a129e60
+35	2751	7466690107525674	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	43cf675decd5733f
+29	2934	7466690108855754	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a5aeaf2ac35868a4
+13	2998	7466690109467981	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	e514f4d600e6f645
+1	3010	7466690110146665	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	d75ec19a0fddfab1
+23	3152	7466690111560935	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	95946c5501d2919a
+6	3279	7466690112854426	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	3a293eed754db29e
+3282	3880	7466690118847965	D:/Git/ZombieDrift/ZombieDrift/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4oisb6a3/obj/arm64-v8a/libgame.so	14b46bdc50d9a1ce

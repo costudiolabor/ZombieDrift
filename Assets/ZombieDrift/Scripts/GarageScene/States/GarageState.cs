@@ -105,6 +105,7 @@ namespace Garage {
 		private void Choose() {
 			if (!_projectCache.purchasedCars.Contains(currentIndex))
 				return;
+			_podium.PlaySelectParticles();
 			selectedCarIndex = currentIndex;
 			Select();
 		}

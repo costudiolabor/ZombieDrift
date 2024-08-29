@@ -6,465 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="de5fc0b1-2905-4b1c-9891-21b72464e4be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/163u3v6q/arm64-v8a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/163u3v6q/arm64-v8a/configure_fingerprint.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Corner_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Corner_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Intersection_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Intersection_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Small_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Small_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Small_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Small_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Small_End_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Small_End_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Square_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Square_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Yellow_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Yellow_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Yellow_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Yellow_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Yellow_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Lines_Yellow_03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Rail_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Environments/SM_Env_Ground_Rail_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Props/SM_Prop_Barrier_Concrete_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Props/SM_Prop_Barrier_Concrete_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Props/SM_Prop_Barrier_Concrete_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Props/SM_Prop_Barrier_Concrete_03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Props/SM_Prop_Pole_Barrier_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Props/SM_Prop_Pole_Barrier_04.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Props/SM_Prop_Pole_Large_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Props/SM_Prop_Pole_Large_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Props/SM_Prop_Pole_Large_Lights_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Prefabs/Props/SM_Prop_Pole_Large_Lights_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/FX_Direction_Arrow_01 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/FX_Direction_Arrow_01 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/FX_Direction_Arrows_Fast_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/FX_Direction_Arrows_Fast_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/FX_Direction_Arrows_Fast_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/FX_Direction_Arrows_Fast_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/FX_Light_Bugs_01 (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/FX_Light_Bugs_01 (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/FX_Light_Bugs_01 (5).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/FX_Light_Bugs_01 (5).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/FX_Vent_Steam_Line_01 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/FX_Vent_Steam_Line_01 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Bld_Warehouse_01 (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Bld_Warehouse_01 (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (14).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (14).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (35).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (35).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (36).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (36).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (37).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (37).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (38).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (38).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (39).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (39).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (40).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (40).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (41).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (41).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (42).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (42).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (44).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (44).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (54).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_01 (54).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Detail_Grate_01 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Detail_Grate_01 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Detail_Grate_01 (26).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Detail_Grate_01 (26).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Detail_Grate_03 (18).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Detail_Grate_03 (18).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_01 (10).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_01 (10).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_01 (11).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_01 (11).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_01 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_01 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_01 (5).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_01 (5).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_02 (12).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_02 (12).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_02 (13).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_02 (13).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_02 (14).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_02 (14).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (10).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (10).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (11).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (11).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (12).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (12).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (13).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (13).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (16).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (16).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (27).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (27).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (28).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (28).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (8).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (8).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (9).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_03 (9).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Corner_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Corner_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Corner_01 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Corner_01 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Intersection_01 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Intersection_01 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_01 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_01 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_01 (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_01 (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_02 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_02 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_02 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_02 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_02 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_02 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_02 (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_02 (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_02 (6).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_02 (6).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_End_01 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_End_01 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_End_01 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_End_01 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_End_01 (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_End_01 (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_End_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Small_End_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Square_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Square_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Square_01 (13).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Square_01 (13).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Square_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Square_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (10).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (10).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (11).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (11).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (12).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (12).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (13).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (13).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (14).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (14).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (15).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (15).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (16).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (16).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (6).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (6).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (8).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (8).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (9).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_02 (9).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_03 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_03 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_03 (5).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_Lines_Yellow_03 (5).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_TyreMark_01 (66).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_TyreMark_01 (66).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_TyreMark_01 (68).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_TyreMark_01 (68).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_TyreMark_01 (73).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_TyreMark_01 (73).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_TyreMark_01 (74).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_Ground_TyreMark_01 (74).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_PortEdge_Corner_Tyre_01 (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_PortEdge_Corner_Tyre_01 (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_PortEdge_Corner_Tyre_01 (5).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Env_PortEdge_Corner_Tyre_01 (5).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_02 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_02 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_02 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_02 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_02_Striped_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_02_Striped_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_03 (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_03 (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_04 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_04 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_04 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_04 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_04 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_04 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_04_Striped_02 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Concrete_04_Striped_02 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (11).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (11).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (12).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (12).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (57).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (57).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (58).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (58).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (59).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01 (59).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (19).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (19).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (20).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (20).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (21).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (21).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (22).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (22).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (23).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (23).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (26).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (26).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (32).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (32).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (33).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (33).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (37).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_02 (37).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_03 (50).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Cone_03 (50).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_CrashBarrel_01 (41).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_CrashBarrel_01 (41).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_CrashBarrel_01 (42).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_CrashBarrel_01 (42).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (17).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (17).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (18).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (18).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (19).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (19).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (20).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (20).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (22).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (22).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (44).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01 (44).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_HazzardSign_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_Bend_01 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_Bend_01 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_D_Bend_In_01 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_D_Bend_In_01 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_D_Bend_In_01 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_D_Bend_In_01 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_D_Straight_04 (13).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_D_Straight_04 (13).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_D_Straight_04 (5).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_D_Straight_04 (5).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_D_Straight_04 (6).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_D_Straight_04 (6).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_D_Straight_04 (7).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_D_Straight_04 (7).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_End_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_End_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_Straight_01 (6).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_Straight_01 (6).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_Straight_02 (5).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_Straight_02 (5).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_Straight_02 (6).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Rail_Straight_02 (6).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_01 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_01 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_01 (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_01 (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_04 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_04 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_04 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_04 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_04 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_04 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_04.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Sign_04.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_01 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_01 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_02 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_02 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_03 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_03 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_03 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_03 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackA_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackA_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackA_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackA_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackA_02 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackA_02 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackA_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackA_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackA_04 (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackA_04 (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackA_04 (5).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackA_04 (5).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackB_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackB_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackC_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackC_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackC_03.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackC_03.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackC_04 (6).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Barrier_Tyre_StackC_04 (6).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Doors_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Doors_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Large_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Large_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Large_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Large_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Large_Stack_05.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Large_Stack_05.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Small_Stack_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Small_Stack_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Stack_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Stack_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Stack_04.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Stack_04.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Stack_05.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Stack_05.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Stack_10.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Stack_10.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Stack_11.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Container_Stack_11.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pallet_01 (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pallet_01 (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pallet_Stack_01 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pallet_Stack_01 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pallet_Stack_02 (10).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pallet_Stack_02 (10).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pallet_Stack_02 (6).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pallet_Stack_02 (6).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_01 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_01 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_02 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_02 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_02 (13).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_02 (13).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_03 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_03 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_03 (6).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_03 (6).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_Large_01 (8).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_Large_01 (8).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_Large_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_Large_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_Large_02 (17).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_Large_02 (17).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_Large_02 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_Large_02 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_Large_02 (27).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_Large_02 (27).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_Large_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Papers_Large_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Barrier_03 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Barrier_03 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Barrier_03 (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Barrier_03 (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Barrier_03 (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Barrier_03 (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Barrier_03.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Barrier_03.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Barrier_04 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Barrier_04 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Barrier_04.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Barrier_04.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_01 (10).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_01 (10).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_01 (11).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_01 (11).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_01 (12).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_01 (12).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_01 (9).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_01 (9).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_Lights_01 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_Lights_01 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_Lights_01 2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_Lights_01 2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_Lights_01 3.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_Lights_01 3.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_Lights_01 4.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_Lights_01 4.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_Lights_01 5.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_Lights_01 5.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_Lights_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Pole_Large_Lights_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Sign_Checkpoint_01 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Sign_Checkpoint_01 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Sign_Checkpoint_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Sign_Checkpoint_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Sign_Checkpoint_Vertical_01 (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Sign_Checkpoint_Vertical_01 (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Sign_Checkpoint_Vertical_01 (6).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Prop_Sign_Checkpoint_Vertical_01 (6).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Veh_StraddleCarrier_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/SM_Veh_StraddleCarrier_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/Spotlight (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/Spotlight (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/Spotlight (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/Spotlight (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/Spotlight (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/Spotlight (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/Spotlight (5).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/Spotlight (5).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/Spotlight (6).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/Spotlight (6).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/Spotlight (7).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Scenes/Spotlight (7).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Zenject-ReflectionBaking.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/Signals/Zenject-Signals.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/tools/release/arm64-v8a/compile_commands.json" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/tools/release/arm64-v8a/compile_commands.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonParticleFX/Scenes/Demo_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonParticleFX/Scenes/Demo_01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Textures/Vehicles/PolygonStreetRacer_Truck_Tex_03_Port.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Textures/Vehicles/PolygonStreetRacer_Truck_Tex_03_Port.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Configs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Configs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Materials/RotatablePodium.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Materials/RotatablePodium.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Cars/InGame/Muscle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Cars/InGame/Muscle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Cars/InGame/Taxi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Cars/InGame/Taxi.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Project/[FPSCounter].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Project/[FPSCounter].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/ZombiePointer/Pointer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/ZombiePointer/Pointer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/CarsConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/CarsConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/FlyingRewardConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/FlyingRewardConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/KeyboardConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/KeyboardConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/ParticlesConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/ParticlesConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/ProjectConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/ProjectConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts/CarsConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts/CarsConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts/InputConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts/InputConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts/ProjectConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts/ProjectConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts/StagesConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts/StagesConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts/ZombiesConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/Scripts/ZombiesConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/StagesConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/StagesConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/TextHintConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/TextHintConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/ZombiesConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Configs/ZombiesConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Garage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Garage.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Input/TouchInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Input/TouchInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/EntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Scripts/Podium.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Scripts/Podium.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/States/GarageState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/States/GarageState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/LoadingScreen/FadeLoadingView.cs" root0="FORCE_HIGHLIGHTING" />
@@ -480,30 +48,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Anklbenz8",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\sdt\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\sdt\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\sdt\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\sdt\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\sdt\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\sdt\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\ZombieDrift-6.0.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\DriveToSurvive.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\mariukh\ZmbDRF\ZombieDrift\Builds" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -544,10 +113,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8108">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="8108" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -576,6 +145,7 @@
       <workItem from="1724844239240" duration="5465000" />
       <workItem from="1724878884421" duration="3745000" />
       <workItem from="1724941446449" duration="1217000" />
+      <workItem from="1724955702355" duration="3613000" />
     </task>
     <servers />
   </component>

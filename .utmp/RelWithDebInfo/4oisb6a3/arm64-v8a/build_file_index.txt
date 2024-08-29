@@ -1,0 +1,2 @@
+D:\Git\ZombieDrift\ZombieDrift\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+D:\Git\ZombieDrift\ZombieDrift\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

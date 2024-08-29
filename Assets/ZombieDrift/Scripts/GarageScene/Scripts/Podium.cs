@@ -5,11 +5,12 @@ namespace Garage {
         private const float ROTATION_SPEED_IN_DEGREES_PER_UPDATE = -0.3f;
         public Transform spawnParent => _parent;
         private Transform _parent;
-        private ParticleSystem _buyParticles;
+        private ParticleSystem _buyParticles, _selectParticles;
 
-        public void Initialize(Transform parentTransform, ParticleSystem buyParticles) {
+        public void Initialize(Transform parentTransform, ParticleSystem buyParticles, ParticleSystem selectParticles) {
             _parent = parentTransform;
             _buyParticles = buyParticles;
+            _selectParticles = selectParticles;
         }
 
         public void RotateAround() =>
@@ -17,5 +18,7 @@ namespace Garage {
 
         public void PlayBuyParticles() =>
             _buyParticles.Play();
+        public void PlaySelectParticles() =>
+            _selectParticles.Play();
     }
 }

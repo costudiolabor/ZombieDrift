@@ -37,8 +37,7 @@ public class FadeLoadingView : MonoBehaviour {
 		}
 		isEnabled = false;
 	}
-
-
+	
 #if UNITY_EDITOR
 	private void OnValidate() =>
 			fadeImage.color = color;

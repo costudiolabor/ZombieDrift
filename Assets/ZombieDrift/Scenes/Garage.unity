@@ -3071,7 +3071,6 @@ Transform:
   - {fileID: 204251007}
   - {fileID: 1819820590}
   - {fileID: 754468292}
-  - {fileID: 1671770528}
   - {fileID: 1184664532}
   - {fileID: 2106237992}
   - {fileID: 1814640290}
@@ -3834,8 +3833,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u041A\u0443\u043F\u043B\u0435\u043D\u043E"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4477,7 +4476,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 0.7794118, g: 0.83569974, b: 1, a: 1}
-  m_Intensity: 0.71
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5519,61 +5518,6 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1001 &1671770527
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 955003757}
-    m_Modifications:
-    - target: {fileID: 1164527105376704, guid: 83542f48604e7ea4fba4b0f45fa8c5d4, type: 3}
-      propertyPath: m_Name
-      value: SM_Prop_Turbo_01 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879170665626656, guid: 83542f48604e7ea4fba4b0f45fa8c5d4, type: 3}
-      propertyPath: m_RootOrder
-      value: 71
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879170665626656, guid: 83542f48604e7ea4fba4b0f45fa8c5d4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.509979
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879170665626656, guid: 83542f48604e7ea4fba4b0f45fa8c5d4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 24.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879170665626656, guid: 83542f48604e7ea4fba4b0f45fa8c5d4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 16.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879170665626656, guid: 83542f48604e7ea4fba4b0f45fa8c5d4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.81489694
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879170665626656, guid: 83542f48604e7ea4fba4b0f45fa8c5d4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.119134575
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879170665626656, guid: 83542f48604e7ea4fba4b0f45fa8c5d4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.53773135
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879170665626656, guid: 83542f48604e7ea4fba4b0f45fa8c5d4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.1805407
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 64409542940715588, guid: 83542f48604e7ea4fba4b0f45fa8c5d4, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 83542f48604e7ea4fba4b0f45fa8c5d4, type: 3}
---- !u!4 &1671770528 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4879170665626656, guid: 83542f48604e7ea4fba4b0f45fa8c5d4, type: 3}
-  m_PrefabInstance: {fileID: 1671770527}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1738058671
 GameObject:
   m_ObjectHideFlags: 0

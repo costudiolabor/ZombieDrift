@@ -23,7 +23,11 @@ MonoBehaviour:
     price: 100
   - car: {fileID: 6421066535242330801, guid: 5cdafbe255a0205478fdeb61ba335eb4, type: 3}
     price: 200
-  - car: {fileID: 7676270143801436717, guid: d7774653042de2843924420bba5de983, type: 3}
-    price: 300
-  - car: {fileID: 7676270143801436717, guid: b9c18b3aacb6f9141b345e6597c5a7c9, type: 3}
-    price: 2000
+  - car: {fileID: 3924639168025395000, guid: f81728550e5948d47b2789b65f7ffb5f, type: 3}
+    price: 50
+  - car: {fileID: 347168687700093659, guid: 4578a6e076eb4c146b8bbc86d019680f, type: 3}
+    price: 50
+  - car: {fileID: 5171205124666613345, guid: ff17847beef072344b3ae6b2324c2cf3, type: 3}
+    price: 50
+  - car: {fileID: 4928687114985831308, guid: fdc6cccc76f64cb4a9706dcfafa384fe, type: 3}
+    price: 50

@@ -40,7 +40,7 @@ public class RigidbodyMotor : MonoBehaviour {
     public Vector3 rigidbodyVelocity => _rigidBody.linearVelocity;
 
     private GUIStyle _guiStyle;
-    private Vector3 _moveForceVector;
+   // private Vector3 _moveForceVector;
     private float _steerInput, _accelerationInput;
 
     private void Awake() {
@@ -48,7 +48,9 @@ public class RigidbodyMotor : MonoBehaviour {
     }
 
     public void FixedTick() {
-        _moveForceVector = transform.forward * (moveSpeed);
+	    var moveVector = transform.forward * (moveSpeed);
+	    moveVector.y = 0;
+	   // _moveForceVector = moveVector; 
         if (_steerInput != 0) {
             var rotateVector = Vector3.up * (_steerInput * rigidbodyVelocity.magnitude * steerAngle);
             transform.Rotate(rotateVector);
@@ -56,6 +58,7 @@ public class RigidbodyMotor : MonoBehaviour {
         }
 
         if (rigidbodyVelocity.magnitude < maxSpeed)
-            _rigidBody.AddForce(_moveForceVector, ForceMode.Acceleration);
+            _rigidBody.AddForce(moveVector, ForceMode.Acceleration);
+        Debug.Log(rigidbodyVelocity.magnitude);
     }
 }

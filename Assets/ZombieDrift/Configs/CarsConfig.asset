@@ -23,3 +23,5 @@ MonoBehaviour:
     price: 100
   - car: {fileID: 6421066535242330801, guid: 5cdafbe255a0205478fdeb61ba335eb4, type: 3}
     price: 200
+  - car: {fileID: 4928687114985831308, guid: fdc6cccc76f64cb4a9706dcfafa384fe, type: 3}
+    price: 200

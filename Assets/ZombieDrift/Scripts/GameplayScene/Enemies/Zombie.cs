@@ -12,6 +12,7 @@ namespace Gameplay {
 		[SerializeField] private Ragdoll ragdoll;
 
 		[SerializeField] private NavMeshAgent _navMeshAgent;
+		[SerializeField] private ParticleSystem _groundCircleParticles;
 
 		/*[SerializeField] */
 		private Vector2 _speedInterval /*= new(3, 8)*/;
@@ -51,6 +52,7 @@ namespace Gameplay {
 
 		public void Damage() {
 			_zombieAnimator.isEnabled = false;
+			_groundCircleParticles.gameObject.SetActive(false);
 			isNavEnabled = false;
 			ragdoll.isEnabled = true;
 			triggerCollider.enabled = false;

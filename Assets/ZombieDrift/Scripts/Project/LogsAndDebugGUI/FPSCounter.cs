@@ -3,10 +3,10 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 enum ScreenPos {
-		LeftTop = 0,
-		RightTop = 1,
-		Center = 4
-	}
+	LeftTop = 0,
+	RightTop = 1,
+	Center = 4
+}
 
 public class FPSCounter : MonoBehaviour {
 
@@ -20,27 +20,27 @@ public class FPSCounter : MonoBehaviour {
 	public int averageFPS { get; private set; }
 
 	private Rect rect => screenPos switch {
-		ScreenPos.LeftTop => new Rect(0, 0, guiRectSize.x, guiRectSize.y),
-		ScreenPos.RightTop => new Rect(Screen.width - guiRectSize.x, 0, guiRectSize.x, guiRectSize.y),
-		ScreenPos.Center => new Rect((Screen.width - guiRectSize.x) / 2, (Screen.height - guiRectSize.y) / 2,
-			guiRectSize.x, guiRectSize.y),
-		_ => throw new ArgumentOutOfRangeException($"{screenPos.ToString()} not exist")
+			ScreenPos.LeftTop => new Rect(0, 0, guiRectSize.x, guiRectSize.y),
+			ScreenPos.RightTop => new Rect(Screen.width - guiRectSize.x, 0, guiRectSize.x, guiRectSize.y),
+			ScreenPos.Center => new Rect((Screen.width - guiRectSize.x) / 2, (Screen.height - guiRectSize.y) / 2,
+					guiRectSize.x, guiRectSize.y),
+			_ => throw new ArgumentOutOfRangeException($"{screenPos.ToString()} not exist")
 	};
 
 	private GUIStyle guiStyle => screenPos switch {
-		ScreenPos.LeftTop => new GUIStyle {
-			fontSize = fontSize, fontStyle = UnityEngine.FontStyle.Bold, normal = { textColor = color },
-			alignment = TextAnchor.UpperLeft
-		},
-		ScreenPos.RightTop => new GUIStyle {
-			fontSize = fontSize, fontStyle = UnityEngine.FontStyle.Bold, normal = { textColor = color },
-			alignment = TextAnchor.UpperRight
-		},
-		ScreenPos.Center => new GUIStyle {
-			fontSize = fontSize, fontStyle = UnityEngine.FontStyle.Bold, normal = { textColor = color },
-			alignment = TextAnchor.MiddleCenter
-		},
-		_ => throw new ArgumentOutOfRangeException()
+			ScreenPos.LeftTop => new GUIStyle {
+					fontSize = fontSize, fontStyle = UnityEngine.FontStyle.Bold, normal = {textColor = color},
+					alignment = TextAnchor.UpperLeft
+			},
+			ScreenPos.RightTop => new GUIStyle {
+					fontSize = fontSize, fontStyle = UnityEngine.FontStyle.Bold, normal = {textColor = color},
+					alignment = TextAnchor.UpperRight
+			},
+			ScreenPos.Center => new GUIStyle {
+					fontSize = fontSize, fontStyle = UnityEngine.FontStyle.Bold, normal = {textColor = color},
+					alignment = TextAnchor.MiddleCenter
+			},
+			_ => throw new ArgumentOutOfRangeException()
 	};
 
 	private GUIStyle _guiStyle;
@@ -48,8 +48,8 @@ public class FPSCounter : MonoBehaviour {
 	private int _fpsBufferIndex;
 
 	private void Awake() =>
-		_guiStyle = new GUIStyle
-			{ fontSize = fontSize, fontStyle = UnityEngine.FontStyle.Bold, normal = { textColor = color } };
+			_guiStyle = new GUIStyle
+					{fontSize = fontSize, fontStyle = UnityEngine.FontStyle.Bold, normal = {textColor = color}};
 
 	private void Update() {
 		if (_fpsBuffer == null || frameRange != _fpsBuffer.Length)

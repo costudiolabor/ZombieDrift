@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guiRectSize: {x: 300, y: 100}
-  frameRange: 60
+  frameRange: 200
   fontSize: 30
   color: {r: 0, g: 0.765115, b: 1, a: 1}
   screenPos: 1

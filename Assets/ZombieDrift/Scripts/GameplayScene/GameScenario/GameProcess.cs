@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Gameplay {
 
-    public class GameProcess : IGameEvents {
+    public class GameProcess {
         public event Action<Vector3> ObstacleHitEvent;
         public event Action<Zombie> ZombieHitEvent;
         public event Action AllEnemiesDestroyedEvent;

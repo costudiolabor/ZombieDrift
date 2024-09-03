@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2debd338a77b3c4cb0f0f3ce972efb9, type: 3}
   m_Name: ZombiesConfig
   m_EditorClassIdentifier: 
-  _speedIntervalMinMax: {x: 0.8, y: 1}
+  _speedIntervalMinMax: {x: 0.7, y: 1}
   _refreshTargetRate: 0.15
   _reactDistance: 8
   _zombies:

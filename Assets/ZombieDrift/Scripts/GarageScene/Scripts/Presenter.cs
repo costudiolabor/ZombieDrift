@@ -11,11 +11,11 @@ namespace Garage {
         public event Action BuyEvent, ChooseEvent, WatchEvent, PreviousClickedEvent, NextClickedEvent, BackEvent;
 
         public int price {
-            set => _view.carPriceText.text = $"${value}";
+            set => _view.carPriceText.text = $"{value}";
         }
 
         public int money {
-            set => _view.moneyCount.text = $"${value}";
+            set => _view.moneyCount.text = $"{value}";
         }
 
         public GarageItemState state {

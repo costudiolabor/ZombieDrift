@@ -13,6 +13,7 @@ namespace Garage {
         [SerializeField] private TMP_Text _carPriceText;
         [SerializeField] private TMP_Text _moneyCount;
         [SerializeField] private TMP_Text _purchasedLabel;
+        [SerializeField] private GameObject _priceParent;
 
         public Button leftButton => _leftButton;
         public Button rightButton => _rightButton;

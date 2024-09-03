@@ -28,8 +28,8 @@ namespace Gameplay {
                 throw new Exception($"Stage with index {stageIndex} out of bounds levelConfig");
 
             var mapPrefab = stage.maps[mapIndex];
-
-            return _factory.Create<Map>(mapPrefab, parent);
+            var mapRotation = mapPrefab.transform.rotation;
+            return _factory.Create<Map>(mapPrefab, parent, Vector3.zero, mapRotation);
         }
 
         public Car CreateCar(int carIndex, Transform point, Transform parent = null) {

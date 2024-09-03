@@ -19,5 +19,5 @@ MonoBehaviour:
   circleOffset: {x: 0, y: 0}
   flyingElementPrefab: {fileID: 3831748355429590175, guid: 92723dae8945d84468542cfbfc616ff5, type: 3}
   speed: 0.8
-  _poolAmount: 5
+  _poolAmount: 10
   itemsParentGameObjectName: CoinsParent

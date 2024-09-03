@@ -1,10 +1,19 @@
 # ninja log v5
 18	2697	7466690106962565	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	fc7cd2eca79a5f5
-9	2743	7466690107449519	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	cf3815440a129e60
-35	2751	7466690107525674	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	43cf675decd5733f
 29	2934	7466690108855754	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a5aeaf2ac35868a4
-13	2998	7466690109467981	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	e514f4d600e6f645
+9	2743	7466690107449519	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	cf3815440a129e60
 1	3010	7466690110146665	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	d75ec19a0fddfab1
+35	2751	7466690107525674	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	43cf675decd5733f
+13	2998	7466690109467981	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	e514f4d600e6f645
+3282	3880	7466690118847965	D:/Git/ZombieDrift/ZombieDrift/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4oisb6a3/obj/arm64-v8a/libgame.so	14b46bdc50d9a1ce
 23	3152	7466690111560935	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	95946c5501d2919a
 6	3279	7466690112854426	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	3a293eed754db29e
-3282	3880	7466690118847965	D:/Git/ZombieDrift/ZombieDrift/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4oisb6a3/obj/arm64-v8a/libgame.so	14b46bdc50d9a1ce
+55	2534	7470986091415422	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	fc7cd2eca79a5f5
+37	2565	7470986091871462	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	cf3815440a129e60
+63	2593	7470986092180786	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	43cf675decd5733f
+42	2669	7470986092854689	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	e514f4d600e6f645
+71	2698	7470986093173372	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a5aeaf2ac35868a4
+32	2803	7470986094203000	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	d75ec19a0fddfab1
+49	3094	7470986097173023	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	95946c5501d2919a
+25	3423	7470986100454799	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	3a293eed754db29e
+3423	4224	7470986108285138	D:/Git/ZombieDrift/ZombieDrift/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4oisb6a3/obj/arm64-v8a/libgame.so	14b46bdc50d9a1ce

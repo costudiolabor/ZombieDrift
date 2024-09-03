@@ -59,6 +59,5 @@ public class RigidbodyMotor : MonoBehaviour {
 
         if (rigidbodyVelocity.magnitude < maxSpeed)
             _rigidBody.AddForce(moveVector, ForceMode.Acceleration);
-        Debug.Log(rigidbodyVelocity.magnitude);
-    }
+       }
 }

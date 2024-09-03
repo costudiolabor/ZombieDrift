@@ -15,10 +15,10 @@ MonoBehaviour:
   _stages:
   - maps:
     - {fileID: 5380572861800832726, guid: 240033fae1eb6c348b9dac0413fe7550, type: 3}
-    - {fileID: 5380572861800832726, guid: 332f86bd57820fc46ac1de52a2f6e682, type: 3}
+    - {fileID: 5380572861800832726, guid: d4540ef86ad4e8e41a513018e569ef83, type: 3}
   - maps:
-    - {fileID: 6379611304309977965, guid: 12653d57f1e04e34e80dc8ca482320df, type: 3}
-    - {fileID: 5380572861800832726, guid: b48dad3576cee3b41874042a6795a902, type: 3}
+    - {fileID: 5380572861800832726, guid: d49bbe6d0b6af814d8fe2be0deda810a, type: 3}
+    - {fileID: 5380572861800832726, guid: 18dee7091b6706e4d945a4327bf525cb, type: 3}
   - maps:
-    - {fileID: 5380572861800832726, guid: 0952101551621714596701b4429db67e, type: 3}
-    - {fileID: 5380572861800832726, guid: b48dad3576cee3b41874042a6795a902, type: 3}
+    - {fileID: 5380572861800832726, guid: b9e3309dd902dee4e937700ca9d24db3, type: 3}
+    - {fileID: 5380572861800832726, guid: 64d4c9c4d1e1a1a4dac461bcdc6ff83b, type: 3}

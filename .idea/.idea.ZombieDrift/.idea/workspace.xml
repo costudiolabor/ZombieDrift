@@ -5,8 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de5fc0b1-2905-4b1c-9891-21b72464e4be" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Cars/InGame/Taxi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Cars/InGame/Taxi.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/163u3v6q/arm64-v8a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/163u3v6q/arm64-v8a/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Material_Glass_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Material_Glass_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Ocean.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Ocean.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Swamp_Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Swamp_Water.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Veh_Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Veh_Glass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Misc/PolygonMilitary_Camo_Netting_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Misc/PolygonMilitary_Camo_Netting_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Misc/PolygonMilitary_Mesh_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Misc/PolygonMilitary_Mesh_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Vehicles/PolygonMilitary_Mat_Air_Large_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Vehicles/PolygonMilitary_Mat_Air_Large_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Vehicles/PolygonMilitary_Mat_Air_Vehicles_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Vehicles/PolygonMilitary_Mat_Air_Vehicles_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Vehicles/PolygonMilitary_Mat_Air_Vehicles_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Vehicles/PolygonMilitary_Mat_Air_Vehicles_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Vehicles/PolygonMilitary_Mat_Helicopters_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Vehicles/PolygonMilitary_Mat_Helicopters_01_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Vehicles/PolygonMilitary_Mat_Helicopters_01_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Vehicles/PolygonMilitary_Mat_Helicopters_01_B.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Vehicles/PolygonMilitary_Mat_Land_Vehicles_10.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonMilitary/Materials/Vehicles/PolygonMilitary_Mat_Land_Vehicles_10.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/StagesConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/StagesConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02 4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02 4.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Particles/FX_MagicBlast_Ground_cyan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Particles/FX_MagicBlast_Ground_cyan.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/TextHint/TextHint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/TextHint/TextHint.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/ZombiePointer/Pointer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/ZombiePointer/Pointer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Gameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Garage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Garage.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Player/RigidbodyMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Player/RigidbodyMotor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +167,7 @@
       <workItem from="1724955702355" duration="5580000" />
       <workItem from="1725011840831" duration="2590000" />
       <workItem from="1725267028951" duration="2847000" />
+      <workItem from="1725378345320" duration="1192000" />
     </task>
     <servers />
   </component>

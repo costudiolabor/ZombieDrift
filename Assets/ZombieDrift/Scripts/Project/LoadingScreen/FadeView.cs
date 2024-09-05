@@ -1,12 +1,9 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.UI;
-
-public class FadeLoadingView : MonoBehaviour {
+public class FadeView : MonoBehaviour {
 	private const int DEFAULT_FADE_TIME = 20;
 	[SerializeField] private CanvasGroup canvasGroup;
-	[SerializeField] private Image fadeImage;
-	[SerializeField] private Color color;
+
 	private float alpha {
 		get => canvasGroup.alpha;
 		set => canvasGroup.alpha = value;
@@ -16,7 +13,9 @@ public class FadeLoadingView : MonoBehaviour {
 		set => gameObject.SetActive(value);
 	}
 
-	public async UniTask FadeIn(int timeMilliseconds = DEFAULT_FADE_TIME) {
+	public async UniTask Appear(int timeMilliseconds = DEFAULT_FADE_TIME) {
+		if (timeMilliseconds == 0)
+			timeMilliseconds = 1;
 		alpha = 0;
 		isEnabled = true;
 		var iteration = 1 / (float)timeMilliseconds;
@@ -27,7 +26,9 @@ public class FadeLoadingView : MonoBehaviour {
 		}
 	}
 
-	public async void FadeOut(int timeMilliseconds = DEFAULT_FADE_TIME) {
+	public async void Dissappear(int timeMilliseconds = DEFAULT_FADE_TIME) {
+		if (timeMilliseconds == 0)
+			timeMilliseconds = 1;
 		alpha = 1;
 
 		var iteration = 1 / (float)timeMilliseconds;
@@ -37,10 +38,4 @@ public class FadeLoadingView : MonoBehaviour {
 		}
 		isEnabled = false;
 	}
-	
-#if UNITY_EDITOR
-	private void OnValidate() =>
-			fadeImage.color = color;
-
-	#endif
 }

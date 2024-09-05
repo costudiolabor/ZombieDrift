@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace Project {
 	public class ScenesLoader {
-		private FadeLoadingView _loading;
+		private FadeView _loading;
 
 		public ScenesLoader(RootCanvas rootCanvas) =>
 				_loading = rootCanvas.loading;
@@ -15,12 +15,12 @@ namespace Project {
 				SwitchSceneWithAnimation(SceneNames.GAMEPLAY);
 
 		private async void SwitchSceneWithAnimation(string sceneName) {
-			await _loading.FadeIn();
+			await _loading.Appear();
 
 			await SwitchTo(SceneNames.BOOT);
 			await SwitchTo(sceneName);
 
-			_loading.FadeOut();
+			_loading.Dissappear();
 		}
 
 		private async UniTask SwitchTo(string sceneName) {

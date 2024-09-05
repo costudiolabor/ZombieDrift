@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8068bc1e9119aa248a1590a6200e5df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingScreen: {fileID: 1289290959877865229}
+  _screen: {fileID: 1289290959877865229}
   sceneFade: {fileID: 1126218367766695989}
 --- !u!1 &8321440639202240104
 GameObject:

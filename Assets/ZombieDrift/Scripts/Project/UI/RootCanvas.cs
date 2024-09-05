@@ -1,16 +1,14 @@
 using UnityEngine;
+
 public class RootCanvas : MonoBehaviour {
-    [SerializeField] private FadeLoadingView loadingScreen;
-    [SerializeField] private GameObject sceneFade;
+    [SerializeField] private FadeView _screen;
 
-    public FadeLoadingView loading => loadingScreen;
-    public GameObject fade => sceneFade;
+    public FadeView loading => _screen;
 
-    private void Awake() {
+
+    private void Awake() =>
         HideLoadingScreen();
-    }
 
-    public void HideLoadingScreen() {
-        loadingScreen.gameObject.SetActive(false);
-    }
+    public void HideLoadingScreen() =>
+        _screen.gameObject.SetActive(false);
 }

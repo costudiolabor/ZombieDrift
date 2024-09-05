@@ -1,4 +1,4 @@
 namespace Gameplay {
-    public class HowToPlayView : View {
+    public class HowToPlayView : FadeView {
     }
 }

@@ -6,7 +6,12 @@ namespace Gameplay {
         private HowToPlayView _view;
 
         public bool enabled {
-            set => _view.isActive = value;
+            set {
+                if (value)
+                    _view.Appear(0);
+                else
+                    _view.Dissappear(0);
+            }
         }
 
         public void Initialize(HowToPlayView view) =>
@@ -14,7 +19,8 @@ namespace Gameplay {
 
         public async void HideWithDelay() {
             await UniTask.Delay(HIDE_DELAY_MILLISECONDS);
-            enabled = false;
+
+            _view.Dissappear();
         }
     }
 }

@@ -8,7 +8,11 @@ namespace Gameplay {
         [SerializeField] private Transform _startPoint;
         [SerializeField] private Transform[] _zombieSpawnPointses;
 
-        public Transform[] zombieSpawnPoints => _zombieSpawnPointses;
+        public Transform[] zombieSpawnPoints {
+            get => _zombieSpawnPointses;
+            set => _zombieSpawnPointses = value;
+        }
+
         public Transform startPoint => _startPoint;
         public NavMeshSurface navMeshSurface => _navMeshSurface;
     }

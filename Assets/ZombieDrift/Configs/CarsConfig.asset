@@ -24,11 +24,11 @@ MonoBehaviour:
   - car: {fileID: 5359905678222414327, guid: 9174c7e59c4e4c24783113ce799247e7, type: 3}
     price: 10
   - car: {fileID: 6421066535242330801, guid: 5cdafbe255a0205478fdeb61ba335eb4, type: 3}
-    price: 10
+    price: 1000
   - car: {fileID: 3924639168025395000, guid: f81728550e5948d47b2789b65f7ffb5f, type: 3}
     price: 10
   - car: {fileID: 6421066535242330801, guid: dcc5b9f5df171de42a516f0f03aad24e, type: 3}
-    price: 10
+    price: 100
   - car: {fileID: 3569767250725457571, guid: 0d77648ef067a9743b9c139dbb520ed4, type: 3}
     price: 10
   - car: {fileID: 6151549275395355848, guid: f091d53a1ca390a4987c2380eee7aa4a, type: 3}
@@ -37,5 +37,7 @@ MonoBehaviour:
     price: 10
   - car: {fileID: 4928687114985831308, guid: fdc6cccc76f64cb4a9706dcfafa384fe, type: 3}
     price: 10
-  - car: {fileID: 4928687114985831308, guid: fdc6cccc76f64cb4a9706dcfafa384fe, type: 3}
-    price: 200
+  - car: {fileID: 347168687700093659, guid: 4578a6e076eb4c146b8bbc86d019680f, type: 3}
+    price: 10
+  - car: {fileID: 8025457191570552064, guid: 840583c32fb81364799db960aaccf288, type: 3}
+    price: 10

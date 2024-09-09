@@ -9,16 +9,16 @@ namespace Garage {
         [SerializeField] private ParticleSystem _selectParticles;
 
         private GarageScenario _garageScenario;
-        private Presenter _garagePresenter;
+        private GaragePresenter _garageGaragePresenter;
 
         [Inject]
         public void Construct(
             GarageScenario garageScenario,
-            Presenter garagePresenter,
+            GaragePresenter garageGaragePresenter,
             Podium podium) {
             _garageScenario = garageScenario;
-            _garagePresenter = garagePresenter;
-            _garagePresenter.Initialize(_garageView);
+            _garageGaragePresenter = garageGaragePresenter;
+            _garageGaragePresenter.Initialize(_garageView);
             podium.Initialize(_carParent, _buyParticles, _selectParticles);
         }
 

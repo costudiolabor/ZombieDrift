@@ -13,7 +13,10 @@ public class FadeView : MonoBehaviour {
 		set => gameObject.SetActive(value);
 	}
 
-	public async UniTask Appear(int timeMilliseconds = DEFAULT_FADE_TIME) {
+	public async void Appear(int timeMilliseconds = DEFAULT_FADE_TIME) =>
+		await AppearAsync(timeMilliseconds);
+
+	public async UniTask AppearAsync(int timeMilliseconds = DEFAULT_FADE_TIME) {
 		if (timeMilliseconds == 0)
 			timeMilliseconds = 1;
 		alpha = 0;
@@ -26,7 +29,7 @@ public class FadeView : MonoBehaviour {
 		}
 	}
 
-	public async void Dissappear(int timeMilliseconds = DEFAULT_FADE_TIME) {
+	public async void Disappear(int timeMilliseconds = DEFAULT_FADE_TIME) {
 		if (timeMilliseconds == 0)
 			timeMilliseconds = 1;
 		alpha = 1;
@@ -38,4 +41,5 @@ public class FadeView : MonoBehaviour {
 		}
 		isEnabled = false;
 	}
+	
 }

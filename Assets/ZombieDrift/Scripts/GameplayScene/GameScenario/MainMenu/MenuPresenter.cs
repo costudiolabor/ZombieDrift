@@ -7,7 +7,12 @@ namespace Gameplay {
         private MainMenuView _view;
 
         public bool enabled {
-            set => _view.isActive = value;
+            set {
+                if (value)
+                    _view.Appear();
+                else
+                    _view.Disappear();
+            }
         }
 
         private bool _enabled;
@@ -20,7 +25,7 @@ namespace Gameplay {
 
         private void GarageClickedNotify() =>
             GarageEvent?.Invoke();
-        
+
         private void StartGameNotify() =>
             StartGameEvent?.Invoke();
 

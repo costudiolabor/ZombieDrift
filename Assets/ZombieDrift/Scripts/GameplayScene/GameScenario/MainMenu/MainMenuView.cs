@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace Gameplay {
-    public class MainMenuView : View {
+    public class MainMenuView : FadeView {
         public event Action StartGameClickedEvent, GarageClickedEvent;
 
         [SerializeField] private Button _startButton, _garageButton;

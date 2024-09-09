@@ -3,15 +3,16 @@ using System;
 namespace Garage {
     public enum GarageItemState {
         Locked = 0,
-        Purchased = 1,
-        Selected = 2
+        NotEnoughMoney = 1,
+        Purchased = 2,
+        Selected = 3
     }
 
-    public class Presenter {
+    public class GaragePresenter {
         public event Action BuyEvent, ChooseEvent, WatchEvent, PreviousClickedEvent, NextClickedEvent, BackEvent;
 
-        public int price {
-            set => _view.carPriceText.text = $"{value}";
+        public int carPrice {
+            set => _view.carPriceText.text = $"Купить за {value}";
         }
 
         public int money {
@@ -22,24 +23,34 @@ namespace Garage {
             set {
                 switch (value) {
                     case GarageItemState.Locked:
-                        _view.buyButtonEnabled = true;
-                        _view.watchVideoButtonEnabled = true;
-                        _view.carPriceTextEnabled = true;
-                        _view.selectButtonEnabled = false;
-                        _view.purchasedLabelEnabled = false;
+                        _view.isBuyControlActive = true;
+                        _view.isBuyControlInteractable = true;
+                        _view.isWatchControlActive = true;
+                        _view.isSelectControlEnabled = false;
+                        _view.isSelectedControlActive = false;
+                        _view.isLockVisible = true;
+                        break;
+                    case GarageItemState.NotEnoughMoney:
+                        _view.isBuyControlActive = true;
+                        _view.isBuyControlInteractable = false;
+                        _view.isWatchControlActive = true;
+                        _view.isSelectControlEnabled = false;
+                        _view.isSelectedControlActive = false;
+                        _view.isLockVisible = true;
                         break;
                     case GarageItemState.Purchased:
-                        _view.buyButtonEnabled = false;
-                        _view.watchVideoButtonEnabled = false;
-                        _view.carPriceTextEnabled = false;
-                        _view.selectButtonEnabled = true;
+                        _view.isBuyControlActive = false;
+                        _view.isWatchControlActive = false;
+                        _view.isSelectedControlActive = false;
+                        _view.isSelectControlEnabled = true;
+                        _view.isLockVisible = false;
                         break;
                     case GarageItemState.Selected:
-                        _view.buyButtonEnabled = false;
-                        _view.selectButtonEnabled = false;
-                        _view.watchVideoButtonEnabled = false;
-                        _view.carPriceTextEnabled = false;
-                        _view.purchasedLabelEnabled = true;
+                        _view.isBuyControlActive = false;
+                        _view.isSelectControlEnabled = false;
+                        _view.isWatchControlActive = false;
+                        _view.isSelectedControlActive = true;
+                        _view.isLockVisible = false;
                         break;
                     default:
                         throw new ArgumentOutOfRangeException(nameof(value), value, null);
@@ -77,7 +88,7 @@ namespace Garage {
         private void SelectNotify() =>
             ChooseEvent?.Invoke();
 
-        ~Presenter() {
+        ~GaragePresenter() {
             _view.leftButton.onClick.RemoveListener(TurnLeftNotify);
             _view.rightButton.onClick.RemoveListener(TurnRightNotify);
             _view.buyButton.onClick.RemoveListener(BuyNotify);

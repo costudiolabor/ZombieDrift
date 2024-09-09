@@ -15,12 +15,12 @@ namespace Project {
 				SwitchSceneWithAnimation(SceneNames.GAMEPLAY);
 
 		private async void SwitchSceneWithAnimation(string sceneName) {
-			await _loading.Appear();
+			await _loading.AppearAsync();
 
 			await SwitchTo(SceneNames.BOOT);
 			await SwitchTo(sceneName);
 
-			_loading.Dissappear();
+			_loading.Disappear();
 		}
 
 		private async UniTask SwitchTo(string sceneName) {

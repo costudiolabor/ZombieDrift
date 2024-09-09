@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 namespace Garage {
     public class GarageView : MonoBehaviour {
+        private const float BUY_NOT_INTERACTABLE_ALPHA = 0.4f;
+        
         [SerializeField] private Button _leftButton;
         [SerializeField] private Button _rightButton;
         [SerializeField] private Button _buyButton;
@@ -13,7 +15,8 @@ namespace Garage {
         [SerializeField] private TMP_Text _carPriceText;
         [SerializeField] private TMP_Text _moneyCount;
         [SerializeField] private TMP_Text _purchasedLabel;
-        [SerializeField] private GameObject _priceParent;
+        [SerializeField] private GameObject _buyControl, _watchControl, _selectControl, _selectedControl, _lock;
+        [SerializeField] private CanvasGroup _buyButtonCanvasGroup;
 
         public Button leftButton => _leftButton;
         public Button rightButton => _rightButton;
@@ -25,32 +28,30 @@ namespace Garage {
         public TMP_Text moneyCount => _moneyCount;
         public TMP_Text purchasedLabel => _purchasedLabel;
 
-        public bool leftButtonEnabled {
-            set => leftButton.gameObject.SetActive(value);
+        public bool isLockVisible {
+            set => _lock.SetActive(value);
         }
-        public bool rightButtonEnabled {
-            set => rightButton.gameObject.SetActive(value);
+
+        public bool isBuyControlActive {
+            set => _buyControl.gameObject.SetActive(value);
         }
-        public bool buyButtonEnabled {
-            set => buyButton.gameObject.SetActive(value);
+        public bool isBuyControlInteractable {
+            set {
+                _buyButtonCanvasGroup.alpha = value ? 1 :BUY_NOT_INTERACTABLE_ALPHA;
+                _buyButtonCanvasGroup.interactable = value;
+            }
         }
-        public bool selectButtonEnabled {
-            set => selectButton.gameObject.SetActive(value);
+
+        public bool isSelectControlEnabled {
+            set => _selectControl.gameObject.SetActive(value);
         }
-        public bool watchVideoButtonEnabled {
-            set => watchVideoButton.gameObject.SetActive(value);
+
+        public bool isWatchControlActive {
+            set => _watchControl.gameObject.SetActive(value);
         }
-        public bool backButtonEnabled {
-            set => backButton.gameObject.SetActive(value);
-        }
-        public bool carPriceTextEnabled {
-            set => carPriceText.gameObject.SetActive(value);
-        }
-        public bool moneyCountEnabled {
-            set => moneyCount.gameObject.SetActive(value);
-        }
-        public bool purchasedLabelEnabled {
-            set => purchasedLabel.gameObject.SetActive(value);
+
+        public bool isSelectedControlActive {
+            set => _selectedControl.gameObject.SetActive(value);
         }
     }
 }

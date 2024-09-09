@@ -10,7 +10,7 @@ namespace Gameplay {
                 if (value)
                     _view.Appear(0);
                 else
-                    _view.Dissappear(0);
+                    _view.Disappear(0);
             }
         }
 
@@ -20,7 +20,7 @@ namespace Gameplay {
         public async void HideWithDelay() {
             await UniTask.Delay(HIDE_DELAY_MILLISECONDS);
 
-            _view.Dissappear();
+            _view.Disappear();
         }
     }
 }

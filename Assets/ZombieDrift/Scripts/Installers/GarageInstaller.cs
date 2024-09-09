@@ -33,7 +33,7 @@ namespace Garage {
 			Container.Bind<MoneyWallet>().AsSingle();
 			Container.Bind<Podium>().AsSingle();
 			Container.Bind<ItemsSwitcher>().AsSingle();
-			Container.Bind<Presenter>().AsSingle();
+			Container.Bind<GaragePresenter>().AsSingle();
 			Container.Bind<CarsConfig>().FromInstance(_carsConfig);
 		}
 	}

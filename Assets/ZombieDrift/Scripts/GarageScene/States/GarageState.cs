@@ -3,117 +3,123 @@ using Project;
 using UnityEngine;
 
 namespace Garage {
-	public class GarageState : State {
-		private readonly ScenesLoader _scenesLoader;
-		private readonly Podium _podium;
-		private readonly ItemsSwitcher _itemsSwitcher;
-		private readonly Presenter _presenter;
-		private readonly ProjectCache _projectCache;
-		private readonly MoneyWallet _moneyWallet;
-		private int selectedCarIndex {
-			set => _projectCache.selectedCarIndex = value;
-			get => _projectCache.selectedCarIndex;
-		}
-		private GarageItem selectedItem => _itemsSwitcher.selected;
-		private int currentIndex => _itemsSwitcher.currentIndex;
-		private readonly LayerMask _purchasedLayerMask;
+    public class GarageState : State {
+        private readonly ScenesLoader _scenesLoader;
+        private readonly Podium _podium;
+        private readonly ItemsSwitcher _itemsSwitcher;
+        private readonly GaragePresenter _garagePresenter;
+        private readonly ProjectCache _projectCache;
+        private readonly MoneyWallet _moneyWallet;
 
-		public GarageState(
-				StateSwitcher stateSwitcher,
-				ScenesLoader scenesLoader,
-				Podium podium,
-				ItemsSwitcher itemsSwitcher,
-				Presenter presenter,
-				ProjectCache projectCache,
-				CarsConfig config,
-				MoneyWallet moneyWallet) : base(stateSwitcher) {
-			_purchasedLayerMask = config.purchasedLayerMask;
-			_scenesLoader = scenesLoader;
-			_podium = podium;
-			_itemsSwitcher = itemsSwitcher;
-			_presenter = presenter;
-			_projectCache = projectCache;
-			_moneyWallet = moneyWallet;
-		}
+        private int selectedCarIndex {
+            set => _projectCache.selectedCarIndex = value;
+            get => _projectCache.selectedCarIndex;
+        }
 
-		public override void Enter() {
-			_presenter.NextClickedEvent += ChooseNext;
-			_presenter.BackEvent += GotoGameScene;
-			_presenter.BuyEvent += BuyCar;
-			_presenter.ChooseEvent += Choose;
-			_presenter.PreviousClickedEvent += ChoosePrevious;
+        private GarageItem selectedItem => _itemsSwitcher.selected;
+        private int currentIndex => _itemsSwitcher.currentIndex;
+        private readonly LayerMask _purchasedLayerMask;
 
-			_itemsSwitcher.BeforeSelectEvent += Deselect;
-			_itemsSwitcher.SelectedChangedEvent += Select;
-			_itemsSwitcher.Select(selectedCarIndex);
-		}
+        public GarageState(
+            StateSwitcher stateSwitcher,
+            ScenesLoader scenesLoader,
+            Podium podium,
+            ItemsSwitcher itemsSwitcher,
+            GaragePresenter garagePresenter,
+            ProjectCache projectCache,
+            CarsConfig config,
+            MoneyWallet moneyWallet) : base(stateSwitcher) {
+            _purchasedLayerMask = config.purchasedLayerMask;
+            _scenesLoader = scenesLoader;
+            _podium = podium;
+            _itemsSwitcher = itemsSwitcher;
+            _garagePresenter = garagePresenter;
+            _projectCache = projectCache;
+            _moneyWallet = moneyWallet;
+        }
 
-		public override void Exit() {
-			_itemsSwitcher.BeforeSelectEvent -= Deselect;
-			_itemsSwitcher.SelectedChangedEvent -= Select;
-			_presenter.PreviousClickedEvent -= ChoosePrevious;
-			_presenter.NextClickedEvent -= ChooseNext;
-			_presenter.BackEvent -= GotoGameScene;
-			_presenter.BuyEvent -= BuyCar;
-			_presenter.ChooseEvent -= Choose;
-		}
+        public override void Enter() {
+            _garagePresenter.NextClickedEvent += ChooseNext;
+            _garagePresenter.BackEvent += GotoGameScene;
+            _garagePresenter.BuyEvent += BuyCar;
+            _garagePresenter.ChooseEvent += Choose;
+            _garagePresenter.PreviousClickedEvent += ChoosePrevious;
 
-		public override void FixedTick() {
-			_podium.RotateAround();
-		}
+            _itemsSwitcher.BeforeSelectEvent += Deselect;
+            _itemsSwitcher.SelectedChangedEvent += Select;
+            _itemsSwitcher.Select(selectedCarIndex);
+        }
 
-		private void ChooseNext() =>
-				_itemsSwitcher.MoveNext();
+        public override void Exit() {
+            _itemsSwitcher.BeforeSelectEvent -= Deselect;
+            _itemsSwitcher.SelectedChangedEvent -= Select;
+            _garagePresenter.PreviousClickedEvent -= ChoosePrevious;
+            _garagePresenter.NextClickedEvent -= ChooseNext;
+            _garagePresenter.BackEvent -= GotoGameScene;
+            _garagePresenter.BuyEvent -= BuyCar;
+            _garagePresenter.ChooseEvent -= Choose;
+        }
 
-		private void ChoosePrevious() =>
-				_itemsSwitcher.MovePrevious();
+        public override void FixedTick() {
+            _podium.RotateAround();
+        }
 
-		private void Select() {
-			selectedItem.mesh.SetActive(true);
-			_presenter.price = selectedItem.price;
-			_presenter.money = _moneyWallet.count;
+        private void ChooseNext() =>
+            _itemsSwitcher.MoveNext();
 
-			var isCarPurchased = _projectCache.purchasedCars.Contains(currentIndex);
-			var isChosen = currentIndex == selectedCarIndex;
+        private void ChoosePrevious() =>
+            _itemsSwitcher.MovePrevious();
 
-			if (isChosen)
-				_presenter.state = GarageItemState.Selected;
-			else if (isCarPurchased)
-				_presenter.state = GarageItemState.Purchased;
-			else
-				_presenter.state = GarageItemState.Locked;
-		}
+        private void Select() {
+            selectedItem.mesh.SetActive(true);
+            var carPrice = selectedItem.price;
+            var moneyCount = _moneyWallet.count;
 
-		private void Deselect() =>
-				selectedItem.mesh.SetActive(false);
+            var isCarPurchased = _projectCache.purchasedCars.Contains(currentIndex);
+            var isChosen = currentIndex == selectedCarIndex;
+            _garagePresenter.money = moneyCount;
+            _garagePresenter.carPrice = carPrice;
 
-		private void BuyCar() {
-			var carPrice = selectedItem.price;
+            if (isChosen)
+                _garagePresenter.state = GarageItemState.Selected;
+            else if (isCarPurchased)
+                _garagePresenter.state = GarageItemState.Purchased;
+            else if (moneyCount >= carPrice)
+                _garagePresenter.state = GarageItemState.Locked;
+            else
+                _garagePresenter.state = GarageItemState.NotEnoughMoney;
+        }
 
-			if (_moneyWallet.count < carPrice)
-				return;
-			_moneyWallet.SpendCoin(carPrice);
-			_podium.PlayBuyParticles();
-			UnlockCar(selectedItem.mesh);
+        private void Deselect() =>
+            selectedItem.mesh.SetActive(false);
 
-			_projectCache.purchasedCars.Add(currentIndex);
-			selectedCarIndex = currentIndex;
-			//Save money and selectedIndex
-			Select();
-		}
+        private void BuyCar() {
+            var carPrice = selectedItem.price;
 
-		private void Choose() {
-			if (!_projectCache.purchasedCars.Contains(currentIndex))
-				return;
-			_podium.PlaySelectParticles();
-			selectedCarIndex = currentIndex;
-			Select();
-		}
+            if (_moneyWallet.count < carPrice)
+                return;
+            _moneyWallet.SpendCoin(carPrice);
+            _podium.PlayBuyParticles();
+            UnlockCar(selectedItem.mesh);
 
-		private void UnlockCar(GameObject car) =>
-				Utils.MoveAllChildrenToLayer(car.transform, _purchasedLayerMask);
+            _projectCache.purchasedCars.Add(currentIndex);
+            selectedCarIndex = currentIndex;
+            //Save money and selectedIndex
+            Select();
+        }
 
-		private void GotoGameScene() =>
-				_scenesLoader.SwitchToGameplayScene();
-	}
+        private void Choose() {
+            if (!_projectCache.purchasedCars.Contains(currentIndex))
+                return;
+            _podium.PlaySelectParticles();
+            selectedCarIndex = currentIndex;
+            Select();
+        }
+
+        private void UnlockCar(GameObject car) =>
+            Utils.MoveAllChildrenToLayer(car.transform, _purchasedLayerMask);
+
+        private void GotoGameScene() =>
+            _scenesLoader.SwitchToGameplayScene();
+    }
 }

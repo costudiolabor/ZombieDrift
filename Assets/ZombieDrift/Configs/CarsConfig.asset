@@ -22,33 +22,44 @@ MonoBehaviour:
   - car: {fileID: 9121382191187427775, guid: cf9c36ef83bdda3459db603b75b8ff9c, type: 3}
     price: 10
     comboMultiplier: 1
+    comboDelay: 0
   - car: {fileID: 5359905678222414327, guid: 9174c7e59c4e4c24783113ce799247e7, type: 3}
     price: 10
-    comboMultiplier: 1.3
+    comboMultiplier: 0.3
+    comboDelay: 0
   - car: {fileID: 6421066535242330801, guid: 5cdafbe255a0205478fdeb61ba335eb4, type: 3}
     price: 1000
-    comboMultiplier: 1.8
+    comboMultiplier: 0
+    comboDelay: 0.2
   - car: {fileID: 3924639168025395000, guid: f81728550e5948d47b2789b65f7ffb5f, type: 3}
     price: 10
-    comboMultiplier: 2.3
+    comboMultiplier: 0.4
+    comboDelay: 0
   - car: {fileID: 6421066535242330801, guid: dcc5b9f5df171de42a516f0f03aad24e, type: 3}
     price: 100
-    comboMultiplier: 2.8
+    comboMultiplier: 0.5
+    comboDelay: 0
   - car: {fileID: 3569767250725457571, guid: 0d77648ef067a9743b9c139dbb520ed4, type: 3}
     price: 10
-    comboMultiplier: 3.3
+    comboMultiplier: 0
+    comboDelay: 0.3
   - car: {fileID: 6151549275395355848, guid: f091d53a1ca390a4987c2380eee7aa4a, type: 3}
     price: 10
-    comboMultiplier: 3.8
-  - car: {fileID: 5171205124666613345, guid: ff17847beef072344b3ae6b2324c2cf3, type: 3}
-    price: 10
-    comboMultiplier: 4.3
-  - car: {fileID: 4928687114985831308, guid: fdc6cccc76f64cb4a9706dcfafa384fe, type: 3}
-    price: 10
-    comboMultiplier: 4.8
+    comboMultiplier: 0
+    comboDelay: 0.5
   - car: {fileID: 347168687700093659, guid: 4578a6e076eb4c146b8bbc86d019680f, type: 3}
     price: 10
-    comboMultiplier: 5.2
+    comboMultiplier: 0.7
+    comboDelay: 0
+  - car: {fileID: 5171205124666613345, guid: ff17847beef072344b3ae6b2324c2cf3, type: 3}
+    price: 10
+    comboMultiplier: 0
+    comboDelay: 0.5
+  - car: {fileID: 4928687114985831308, guid: fdc6cccc76f64cb4a9706dcfafa384fe, type: 3}
+    price: 10
+    comboMultiplier: 0
+    comboDelay: 0.5
   - car: {fileID: 8025457191570552064, guid: 840583c32fb81364799db960aaccf288, type: 3}
     price: 10
     comboMultiplier: 6
+    comboDelay: 0

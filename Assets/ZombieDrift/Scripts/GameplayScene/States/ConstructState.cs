@@ -32,7 +32,8 @@ namespace Gameplay {
 				ProjectCache projectCache,
 				GameplayCache gameplayCache,
 				MoneyWallet moneyWallet,
-				ComboSystem comboSystem
+				ComboSystem comboSystem,
+				CarsConfig carsConfig
 		) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
 			_contentCreationService = contentCreationService;
@@ -68,6 +69,7 @@ namespace Gameplay {
 		}
 		private void ResetCombo() =>
 				_comboSystem.Reset();
+		
 		private void CreateGameplayObjects() {
 			var stageIndex = _projectCache.stageIndex;
 			var currentCarIndex = _projectCache.selectedCarIndex;

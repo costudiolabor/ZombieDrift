@@ -13,6 +13,7 @@ namespace Gameplay {
         [SerializeField] private ParticlesConfig _particlesConfig;
         [SerializeField] private FlyingRewardConfig _flyingRewardConfig;
         [SerializeField] private TextHintConfig _textHintConfig;
+        [SerializeField] private ComboConfig _comboConfig;
 
         public override void InstallBindings() {
             InstallGameplayEntryPoint();
@@ -74,6 +75,7 @@ namespace Gameplay {
             Container.Bind<FlyingRewardConfig>().FromInstance(_flyingRewardConfig);
 
             Container.Bind<ComboSystem>().AsSingle();
+            Container.Bind<ComboConfig>().FromInstance(_comboConfig);
 
             Container.BindInterfacesAndSelfTo<TextHintSystem>().AsSingle();
             Container.Bind<TextHintConfig>().FromInstance(_textHintConfig);

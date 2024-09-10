@@ -11,7 +11,7 @@ namespace Gameplay {
 		private readonly GameplayCache _gameplayCache;
 		private readonly LevelComplete _levelComplete;
 		private readonly CameraSystem _cameraSystem;
-		private readonly ParticlesPlayer _particlesPlayer;
+	
 		private bool isStageComplete => _gameplayCache.mapIndex + 1 > _gameplayCache.mapsCount - 1;
 
 		public WinState(StateSwitcher stateSwitcher,
@@ -19,19 +19,20 @@ namespace Gameplay {
 				ProjectCache projectCache,
 				GameplayCache gameplayCache,
 				LevelComplete levelComplete,
-				CameraSystem cameraSystem,
-				ParticlesPlayer particlesPlayer) : base(stateSwitcher) {
+				CameraSystem cameraSystem
+				) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
 			_saveLoadSystem = saveLoadSystem;
 			_projectCache = projectCache;
 			_gameplayCache = gameplayCache;
 			_levelComplete = levelComplete;
 			_cameraSystem = cameraSystem;
-			_particlesPlayer = particlesPlayer;
+		
 		}
 
 		public override async void Enter() {
 			_cameraSystem.isZoomed = true;
+			
 			if (isStageComplete) {
 
 				await ShowClearedLabelWithDelay();
@@ -47,9 +48,8 @@ namespace Gameplay {
 			SwitchToPrepareState();
 		}
 
-		public override void Exit() {
-			_cameraSystem.isZoomed = false;
-		}
+		public override void Exit() =>
+				_cameraSystem.isZoomed = false;
 
 		private async UniTask ShowMapClearedWithDelay() {
 			_levelComplete.enabled = true;
@@ -72,8 +72,7 @@ namespace Gameplay {
 			_gameplayCache.mapIndex = 0;
 		}
 
-		private void SwitchToPrepareState() {
-			_stateSwitcher.SetState<FinalizeState>();
-		}
+		private void SwitchToPrepareState() =>
+				_stateSwitcher.SetState<FinalizeState>();
 	}
 }

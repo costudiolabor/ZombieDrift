@@ -2096,6 +2096,7 @@ MonoBehaviour:
   _particlesConfig: {fileID: 11400000, guid: 08f6ff6a1cf33f14692790c69df8bdf8, type: 2}
   _flyingRewardConfig: {fileID: 11400000, guid: 64b4023b0488fd949bda51ef0ac713b5, type: 2}
   _textHintConfig: {fileID: 11400000, guid: a74207f5c5628bd46aa9a95311ed19a0, type: 2}
+  _comboConfig: {fileID: 11400000, guid: c86ae0ed4923b7d48905ecea73b0a1fd, type: 2}
 --- !u!224 &1350506757 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1523873850967584824, guid: c7fa1419c486abe4a92bf2a227bf72bc, type: 3}

@@ -51,6 +51,8 @@ namespace Garage {
                 var garageData = new GarageItem() {
                     mesh = carModel,
                     price = configCarsArray[i].price,
+                    comboDelay = configCarsArray[i].comboDelay,
+                    comboMultiplier = configCarsArray[i].comboMultiplier
                 };
                 garageItemList.Add(garageData);
             }

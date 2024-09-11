@@ -45,7 +45,7 @@ MonoBehaviour:
     comboDelay: 0.3
   - car: {fileID: 6151549275395355848, guid: f091d53a1ca390a4987c2380eee7aa4a, type: 3}
     price: 10
-    comboMultiplier: 0
+    comboMultiplier: 0.3
     comboDelay: 0.5
   - car: {fileID: 347168687700093659, guid: 4578a6e076eb4c146b8bbc86d019680f, type: 3}
     price: 10

@@ -1,34 +1,34 @@
 using UnityEngine;
 namespace Gameplay {
 	public class ComboSystem {
-		public float carMultiplier { get; set; }
+		private const int MIN_COMBO_COUNT_FOR_NOTIFY = 2;
+
+		public float comboMultiplier { get; set; }
+		public float comboDelay { get; set; }
 		public int count => _count;
 
 		private readonly Timer _timer;
-		private readonly int _minComboCountForNotify;
-		private readonly float _comboLifeTime;
 
 		private int _count;
 
-		public ComboSystem(ComboConfig comboConfig) {
+		public ComboSystem() {
 			_timer = new Timer();
 			_timer.AlarmEvent += Reset;
-
-			_minComboCountForNotify = comboConfig.minComboCountForNotify;
-			_comboLifeTime = comboConfig.comboLifeTime;
 		}
 
 		public int IncreaseAndTryGetReward() {
 			var comboCount = IncreaseCombo();
-			if (comboCount < _minComboCountForNotify)
-				return 0;
+			Debug.Log(comboMultiplier);
+			Debug.Log(comboDelay);
 
-			return Mathf.RoundToInt(comboCount * carMultiplier);
+			return comboCount >= MIN_COMBO_COUNT_FOR_NOTIFY
+					? Mathf.RoundToInt(comboCount * comboMultiplier)
+					: 0;
 		}
 
 		private int IncreaseCombo() {
 			++_count;
-			_timer.StartWithAlarm(_comboLifeTime);
+			_timer.StartWithAlarm(comboDelay);
 			return _count;
 		}
 

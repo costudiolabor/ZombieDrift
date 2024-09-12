@@ -8,6 +8,7 @@ namespace Gameplay {
 		private readonly GameplayCache _gameplayCache;
 		private readonly MoneyWallet _moneyWallet;
 		private readonly ComboSystem _comboSystem;
+		private readonly CarsConfig _carsConfig;
 		private readonly BotNavigation _botNavigation;
 		private readonly EnemyPointerSystem _enemyPointerSystem;
 		private readonly StagesConfig _stagesConfig;
@@ -46,13 +47,14 @@ namespace Gameplay {
 			_gameplayCache = gameplayCache;
 			_moneyWallet = moneyWallet;
 			_comboSystem = comboSystem;
+			_carsConfig = carsConfig;
 			_botNavigation = botNavigation;
 			_enemyPointerSystem = enemyPointerSystem;
 			_stagesConfig = stagesConfig;
 		}
 
 		public override void Enter() {
-			ResetCombo();
+			CalculateCombo();
 			LoadGameplayCache();
 			CreateGameplayObjects();
 			SnapCameraToCar();
@@ -67,9 +69,23 @@ namespace Gameplay {
 			else
 				SwitchToHowToPlayState();
 		}
-		private void ResetCombo() =>
-				_comboSystem.Reset();
 		
+		private void CalculateCombo() {
+			var purchasedCars = _projectCache.purchasedCars;
+			float comboMultiplier = 0;
+			float comboDelay = 0;
+			
+			foreach (var carIndex in purchasedCars) {
+				var purchasedCar = _carsConfig.cars[carIndex];
+				comboMultiplier += purchasedCar.comboMultiplier;
+				comboDelay += purchasedCar.comboDelay;
+			}
+			
+			_comboSystem.comboMultiplier = comboMultiplier;
+			_comboSystem.comboDelay = comboDelay;
+			_comboSystem.Reset();
+		}
+
 		private void CreateGameplayObjects() {
 			var stageIndex = _projectCache.stageIndex;
 			var currentCarIndex = _projectCache.selectedCarIndex;

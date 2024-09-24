@@ -15,5 +15,7 @@ EditorBuildSettings:
     path: Assets/ZombieDrift/Scenes/Garage.unity
     guid: b29531fa223050241a46ba1f1e4223cb
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 155032a8bf62f994895cab65acb6e433, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: c19e8fcb684ae814e9d1d85d155c9ee9, type: 2}
   m_UseUCBPForAssetBundles: 0

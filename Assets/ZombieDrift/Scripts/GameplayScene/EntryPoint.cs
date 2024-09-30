@@ -12,7 +12,7 @@ namespace Gameplay {
         [SerializeField] private GameplayHudView _gameHudView;
         [SerializeField] private GetReadyView _getReadyView;
         [SerializeField] private HowToPlayView _howToPlayView;
-        [SerializeField] private MapClearedView _mapClearedView;
+        [SerializeField] private WinView winView;
 
         [SerializeField] private PointersView _pointersView;
         private GameplayScenario _gameplayScenario;
@@ -26,7 +26,7 @@ namespace Gameplay {
             GameplayHud gameplayHud,
             GetReadyPresenter getReadyPresenter,
             HowToPlayPresenter howToPlayPresenter,
-            LevelComplete levelComplete,
+            LevelCompletePresenter levelCompletePresenter,
             EnemyPointerSystem enemyPointerSystem,
             TextHintSystem textHintSystem,
             FlyingRewardSystem flyingRewardSystem) {
@@ -37,7 +37,7 @@ namespace Gameplay {
             gameplayHud.Initialize(_gameHudView);
             getReadyPresenter.Initialize(_getReadyView);
             howToPlayPresenter.Initialize(_howToPlayView);
-            levelComplete.Initialize(_mapClearedView);
+            levelCompletePresenter.Initialize(winView);
 
             enemyPointerSystem.Initialize(_pointersView, _camera);
             flyingRewardSystem.Initialize(_camera, _gameHudView.rewardTargetTransform);

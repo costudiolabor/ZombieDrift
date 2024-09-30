@@ -1,4 +1,7 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using Zenject;
 
 namespace Project {
@@ -22,20 +25,29 @@ namespace Project {
 		public void Initialize() =>
 				Run();
 
-		public void Run() {
+		public async void Run() {
 			LoadSavedData();
 			SetUpProject();
 			CreateLog();
+			await SetSystemLocale();
+
 			SwitchToGameplayScene();
+		}
+
+		private async UniTask SetSystemLocale() {
+			await LocalizationSettings.InitializationOperation;
+
+			var language = Application.systemLanguage;
+			var localeIdentifier = new LocaleIdentifier(language);
+
+			LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale(localeIdentifier);
 		}
 
 		private void LoadSavedData() =>
 				_projectCache.saveData = _saveLoadSystem.Load();
 
-
 		private void SetUpProject() =>
 				Application.targetFrameRate = _config.targetFramerate;
-
 
 		private void CreateLog() {
 			if (_config.isFpsEnabled) {

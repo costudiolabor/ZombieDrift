@@ -54,7 +54,7 @@ namespace Gameplay {
             Container.Bind<GameplayHud>().AsSingle();
             Container.Bind<GetReadyPresenter>().AsSingle();
             Container.Bind<HowToPlayPresenter>().AsSingle();
-            Container.Bind<LevelComplete>().AsSingle();
+            Container.Bind<LevelCompletePresenter>().AsSingle();
             Container.Bind<GameProcess>().AsSingle();
             Container.Bind<VehicleController>().AsSingle();
             Container.Bind<VehicleDestroyer>().AsSingle();

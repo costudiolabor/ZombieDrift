@@ -69,6 +69,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 6684281387246944285
+  - m_Id: 2134124243087360
+    m_Localized: Kombo x {0}
+    m_Metadata:
+      m_Items:
+      - rid: 6684281387246944285
+  - m_Id: 2183713746743296
+    m_Localized: Devam etmek
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
@@ -79,3 +88,4 @@ MonoBehaviour:
         m_SharedEntries:
         - id: 3814197981184
         - id: 3509427269632
+        - id: 2134124243087360

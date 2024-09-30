@@ -1,69 +1,66 @@
 using System.Collections.Generic;
-using System.Linq;
 using Gameplay;
 using Project;
 using UnityEngine;
 
 namespace Garage {
-    public class InitializeState : State {
-        private readonly StateSwitcher _stateSwitcher;
-        private readonly CarsConfig _carsConfig;
-        private readonly ProjectCache _projectCache;
-        private readonly Podium _podium;
-        private readonly ItemsSwitcher _itemsSwitcher;
-        private readonly Factory _factory;
+	public class InitializeState : State {
+		private readonly StateSwitcher _stateSwitcher;
+		private readonly CarsConfig _carsConfig;
+		private readonly ProjectCache _projectCache;
+		private readonly Podium _podium;
+		private readonly ItemsSwitcher _itemsSwitcher;
 
-        public InitializeState(
-            StateSwitcher stateSwitcher,
-            CarsConfig carsConfig,
-            ProjectCache projectCache,
-            Podium podium,
-            ItemsSwitcher itemsSwitcher,
-            Factory factory) : base(stateSwitcher) {
-            _stateSwitcher = stateSwitcher;
-            _carsConfig = carsConfig;
-            _projectCache = projectCache;
-            _podium = podium;
-            _itemsSwitcher = itemsSwitcher;
-            _factory = factory;
-        }
 
-        public override void Enter() {
-            CreateAllModels();
-            SwitchToSelectionState();
-        }
+		public InitializeState(
+				StateSwitcher stateSwitcher,
+				CarsConfig carsConfig,
+				ProjectCache projectCache,
+				Podium podium,
+				ItemsSwitcher itemsSwitcher) : base(stateSwitcher) {
+			_stateSwitcher = stateSwitcher;
+			_carsConfig = carsConfig;
+			_projectCache = projectCache;
+			_podium = podium;
+			_itemsSwitcher = itemsSwitcher;
+		}
 
-        private void CreateAllModels() {
-            var configCarsArray = _carsConfig.cars;
-            var carsCount = configCarsArray.Length;
+		public override void Enter() {
+			CreateAllModels();
+			SwitchToSelectionState();
+		}
 
-            var garageItemList = new List<GarageItem>();
+		private void CreateAllModels() {
+			var configCarsArray = _carsConfig.cars;
+			var carsCount = configCarsArray.Length;
 
-            for (var i = 0; i < carsCount; i++) {
-                var carModel = Object.Instantiate(configCarsArray[i].car.mesh, _podium.spawnParent);
-                carModel.SetActive(false);
+			var garageItemList = new List<GarageItem>();
 
-                var isCarIsPurchased = _projectCache.purchasedCars.Contains(i);
+			for (var i = 0; i < carsCount; i++) {
+				var carModel = Object.Instantiate(configCarsArray[i].car.mesh, _podium.spawnParent);
+				carModel.SetActive(false);
 
-                if (!isCarIsPurchased)
-                    LockCar(carModel);
+				var isCarIsPurchased = _projectCache.purchasedCars.Contains(i);
 
-                var garageData = new GarageItem() {
-                    mesh = carModel,
-                    price = configCarsArray[i].price,
-                    comboDelay = configCarsArray[i].comboDelay,
-                    comboMultiplier = configCarsArray[i].comboMultiplier
-                };
-                garageItemList.Add(garageData);
-            }
+				if (!isCarIsPurchased)
+					LockCar(carModel);
 
-            _itemsSwitcher.SetData(garageItemList.ToArray());
-        }
+				var garageData = new GarageItem() {
+						mesh = carModel,
+						price = configCarsArray[i].price,
+						comboDelay = configCarsArray[i].comboDelay,
+						comboMultiplier = configCarsArray[i].comboMultiplier
+				};
+				garageItemList.Add(garageData);
+			}
 
-        private void LockCar(GameObject car) =>
-            Utils.MoveAllChildrenToLayer(car.transform, _carsConfig.lockedLayerMask);
+			_itemsSwitcher.SetData(garageItemList.ToArray());
+		}
 
-        private void SwitchToSelectionState() =>
-            _stateSwitcher.SetState<GarageState>();
-    }
+		private void LockCar(GameObject car) =>
+				Utils.MoveAllChildrenToLayer(car.transform, _carsConfig.lockedLayerMask);
+
+		private void SwitchToSelectionState() =>
+				_stateSwitcher.SetState<GarageState>();
+	}
 }

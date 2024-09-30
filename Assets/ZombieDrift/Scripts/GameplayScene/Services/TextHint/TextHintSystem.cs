@@ -1,11 +1,9 @@
 using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
 using Project;
 using UnityEngine;
-using Zenject;
 
 namespace Gameplay {
-	public class TextHintSystem /*: IFixedTickable*/ {
+	public class TextHintSystem {
 		private const string PARTICLES_PARENT_NAME = "HintParent";
 
 		private readonly PoolObjects<TextHint> _hintPool;
@@ -25,32 +23,14 @@ namespace Gameplay {
 		public void Initialize(Camera mainCamera) =>
 				_camera = mainCamera;
 
-		public /*async*/ void ShowHint(Vector3 position, string hintText) {
+		public void ShowHint(Vector3 position, string hintText) {
 			var hint = _hintPool.GetFreeElement();
 			hint.position = position + _offset;
 
-			hint.Show(hintText , _showTimeMilliseconds);
+			hint.Show(hintText, _showTimeMilliseconds);
 			var lookPos = hint.position - _camera.transform.position;
 			hint.transform.LookAt(lookPos);
-			/*
-			_activeHints.Add(hint);
 
-			hint.isActive = true;
-			await UniTask.Delay(_showTimeMilliseconds);
-			hint.isActive = false;
-
-			_activeHints.Remove(hint);
-		*/
 		}
-
-		/*public void FixedTick() {
-			if (_activeHints.Count == 0)
-				return;
-
-			foreach (var hint in _activeHints) {
-				var lookPos = hint.position - _camera.transform.position;
-				hint.transform.LookAt(_camera.transform.position);
-			}
-		}*/
 	}
 }

@@ -28,7 +28,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1048343900160
-    m_Key: garageKey
+    m_Key: continuKey
     m_Metadata:
       m_Items: []
   - m_Id: 1130564841472
@@ -52,7 +52,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3509427269632
-    m_Key: mapCleraedKey
+    m_Key: mapClearedKey
     m_Metadata:
       m_Items: []
   - m_Id: 3814197981184
@@ -61,6 +61,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4301207007232
     m_Key: skullsMultiplierKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2134124243087360
+    m_Key: comboKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2183713746743296
+    m_Key: continueKey
     m_Metadata:
       m_Items: []
   m_Metadata:

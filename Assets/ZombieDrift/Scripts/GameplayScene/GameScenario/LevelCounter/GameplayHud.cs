@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Gameplay {
     public enum StagePresentState {
@@ -10,9 +11,11 @@ namespace Gameplay {
 
     public class GameplayHud  {
         private GameplayHudView _view;
+        
         private int _moneyCount;
+        
         public void Initialize(GameplayHudView gameplayHudView) {
-            _view = gameplayHudView;
+	        _view = gameplayHudView;
         }
 
         public int stageIndex {
@@ -30,9 +33,6 @@ namespace Gameplay {
             }
             get => _moneyCount;
         }
-
-        public Transform coinsTargetTransform => _view.rewardTargetTransform;
-
         public StagePresentState presentState {
             set {
                 switch (value) {

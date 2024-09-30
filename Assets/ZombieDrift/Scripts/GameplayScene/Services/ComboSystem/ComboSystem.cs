@@ -18,8 +18,6 @@ namespace Gameplay {
 
 		public int IncreaseAndTryGetReward() {
 			var comboCount = IncreaseCombo();
-			Debug.Log(comboMultiplier);
-			Debug.Log(comboDelay);
 
 			return comboCount >= MIN_COMBO_COUNT_FOR_NOTIFY
 					? Mathf.RoundToInt(comboCount * comboMultiplier)

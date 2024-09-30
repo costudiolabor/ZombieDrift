@@ -1,14 +1,15 @@
 using UnityEngine;
 using Project;
+using UnityEngine.Localization;
 
 namespace Gameplay {
 	public class GameplayState : State {
 		private const float SHAKE_AMPLITUDE = 0.5f;
 		private const int SHAKE_DURATION = 85;
 
-		//    private const int MIN_COMBO_COUNT_FOR_NOTIFY = 2;
-		//       private const int COMBO_MULTIPLIER = 5;
-		//       private const float COMBO_ACTIVE_TIME = 0.9f;
+		private const string LOCALIZE_TABLE = "StringsTable";
+		private const string COMBO_HINT_LOCAL_KEY = "comboKey";
+		private readonly LocalizedString _comboLocalizedString;
 
 		private readonly StateSwitcher _stateSwitcher;
 		private readonly GameplayHud _gameplayHud;
@@ -24,6 +25,7 @@ namespace Gameplay {
 		private readonly FlyingRewardSystem _flyingRewardSystem;
 		private readonly ComboSystem _comboSystem;
 		private readonly TextHintSystem _textHintSystem;
+
 
 		public GameplayState(StateSwitcher stateSwitcher,
 				GameplayHud gameplayHud,
@@ -53,9 +55,11 @@ namespace Gameplay {
 			_flyingRewardSystem = flyingRewardSystem;
 			_comboSystem = comboSystem;
 			_textHintSystem = textHintSystem;
+
+			_comboLocalizedString = new LocalizedString(LOCALIZE_TABLE, COMBO_HINT_LOCAL_KEY);
 		}
 
-		public override void Enter() {
+		public override async void Enter() {
 			_gameplayHud.presentState = StagePresentState.All;
 			_pauseService.SetPause(false);
 
@@ -69,6 +73,10 @@ namespace Gameplay {
 			_gameProcess.ObstacleHitEvent += OnCarHitObstacle;
 			_gameProcess.AllEnemiesDestroyedEvent += SwitchToWinState;
 			_gameProcess.ZombieHitEvent += OnEnemyHit;
+
+
+			//var comboPrefix = await   LocalizationSettings.StringDatabase.GetLocalizedStringAsync(COMBO_HINT_KEY);
+
 		}
 
 		public override void Exit() {
@@ -118,10 +126,11 @@ namespace Gameplay {
 			var rewardAmount = _comboSystem.IncreaseAndTryGetReward();
 			if (rewardAmount == 0)
 				return;
-			
+
 			_flyingRewardSystem.SpawnInSphere(hitPosition, rewardAmount);
 			_moneyWallet.AddCoins(rewardAmount);
-			_textHintSystem.ShowHint(hitPosition, $"Комбо x{_comboSystem.count}");
+
+			_textHintSystem.ShowHint(hitPosition, _comboLocalizedString.GetLocalizedString(_comboSystem.count));
 		}
 
 		private void OnFlyingRewardArrived() =>

@@ -1,3 +1,6 @@
+using System;
+using Cysharp.Threading.Tasks;
+using GamePush;
 using Unity.Cinemachine;
 using UnityEngine;
 using Zenject;
@@ -48,5 +51,16 @@ namespace Gameplay {
 
         public void Initialize() =>
             _gameplayScenario.Start();
+        
+        //---- Кослыть для теста
+        private async void Start() {
+	        await UniTask.Delay(2000);
+	        GP_Ads.OnRewardedReward += OnRewarded;
+	        GP_Ads.ShowRewarded();
+        }
+        private void OnRewarded(string arg0) {
+	        Debug.Log("По идее должа быть показана реклама!");
+        }
+        // --- костыть для теста
     }
 }

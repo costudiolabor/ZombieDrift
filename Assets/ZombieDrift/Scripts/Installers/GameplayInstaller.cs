@@ -99,6 +99,7 @@ namespace Gameplay {
             Container.Bind<LoseState>().AsSingle();
             Container.Bind<RepairState>().AsSingle();
             Container.Bind<FinalizeState>().AsSingle();
+
         }
     }
 }

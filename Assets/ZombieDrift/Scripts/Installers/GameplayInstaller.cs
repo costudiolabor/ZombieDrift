@@ -13,6 +13,7 @@ namespace Gameplay {
         [SerializeField] private ParticlesConfig _particlesConfig;
         [SerializeField] private FlyingRewardConfig _flyingRewardConfig;
         [SerializeField] private TextHintConfig _textHintConfig;
+      
 
         public override void InstallBindings() {
             InstallGameplayEntryPoint();

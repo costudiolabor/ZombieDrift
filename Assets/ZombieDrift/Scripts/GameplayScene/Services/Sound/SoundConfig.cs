@@ -3,23 +3,15 @@ using UnityEngine;
 namespace Project {
     [CreateAssetMenu(menuName = "Configs/SoundConfig", fileName = "SoundConfig", order = 0)]
     public class SoundConfig : ScriptableObject {
-        [SerializeField] private Sound sound;
-        [SerializeField] private int poolAmount;
+        [SerializeField] private Sound _soundPrefab;
+        [SerializeField] private int _poolAmount;
 
-        [SerializeField] private AudioClip
-            woodHit,
-            steelHit,
-            skeletonHit,
-            wallHit,
-            paddleHit;
+        [SerializeField] private AudioClip[] _zombieSounds;
+        [SerializeField] private AudioClip[] _hitSoundsArray;
 
-        public AudioClip woodHitClip => woodHit;
-        public AudioClip steelHitClip => steelHit;
-        public AudioClip skeletonHitClip => skeletonHit;
-        public AudioClip wallHitClip => wallHit;
-        public AudioClip paddleHitClip => paddleHit;
-
-        public Sound soundPrefab => sound;
-        public int soundsPoolAmount => poolAmount;
+        public AudioClip[] zombieSounds => _zombieSounds;
+        public AudioClip[] hitSoundsArray => _hitSoundsArray;
+        public Sound soundPrefab => _soundPrefab;
+        public int poolAmount => _poolAmount;
     }
 }

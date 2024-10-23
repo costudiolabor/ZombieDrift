@@ -2,12 +2,14 @@ using UnityEngine;
 
 namespace Project {
     public class SoundsPlayer {
-        private const float MIN_PINCH = 0.8f;
-        private const float MAX_PINCH = 1.2f;
+        private const float MIN_PINCH = 0.9f;
+        private const float MAX_PINCH = 1.1f;
 
         private readonly SoundConfig _soundConfig;
-        private PoolObjects<Sound> _poolOfSound;
+        private PoolObjects<Sound> _poolOfSounds;
         private Transform _soundsParent;
+
+        private AudioClip[] _hitSoundsArray;
 
         private float randomPinchValue => Random.Range(MIN_PINCH, MAX_PINCH);
 
@@ -16,32 +18,24 @@ namespace Project {
 
         public void Initialize() {
             _soundsParent = new GameObject(nameof(_soundsParent)).transform;
-            _poolOfSound = new PoolObjects<Sound>(_soundConfig.soundPrefab, _soundConfig.soundsPoolAmount, true, _soundsParent);
+            _poolOfSounds = new PoolObjects<Sound>(_soundConfig.soundPrefab, _soundConfig.poolAmount, canExpand: true, _soundsParent);
         }
 
-        public void PlayWoodHit() {
-            var sound = _poolOfSound.GetFreeElement();
-            sound.PlayAndDisable(_soundConfig.woodHitClip, randomPinchValue);
-        }
+        public void PlayZombieHitSound(Vector3 position) {
+            var hitSoundsArray = _soundConfig.hitSoundsArray;
 
-        public void PlaySteelHit() {
-            var sound = _poolOfSound.GetFreeElement();
-            sound.PlayAndDisable(_soundConfig.steelHitClip, randomPinchValue);
-        }
+            if (hitSoundsArray.Length == 0)
+                return;
 
-        public void PlayPaddleHit() {
-            var sound = _poolOfSound.GetFreeElement();
-            sound.PlayAndDisable(_soundConfig.paddleHitClip, randomPinchValue);
-        }
+            int randomIndex = Random.Range(0, hitSoundsArray.Length);
+            var audioClip = hitSoundsArray[randomIndex];
 
-        public void PlaySkeletonHit() {
-            var sound = _poolOfSound.GetFreeElement();
-            sound.PlayAndDisable(_soundConfig.skeletonHitClip, randomPinchValue);
+            var sound = _poolOfSounds.GetFreeElement();
+            
+            sound.PlayAtPosition(position, audioClip, randomPinchValue);
         }
-
-        public void PlayWallHit() {
-            var sound = _poolOfSound.GetFreeElement();
-            sound.PlayAndDisable(_soundConfig.wallHitClip, randomPinchValue);
-        }
+        
+        
+        
     }
 }

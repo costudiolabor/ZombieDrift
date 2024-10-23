@@ -54,6 +54,7 @@ namespace Gameplay {
         
         //---- Кослыть для теста
         private async void Start() {
+         
 	        await UniTask.Delay(2000);
 	        GP_Ads.OnRewardedReward += OnRewarded;
 	        GP_Ads.ShowRewarded();

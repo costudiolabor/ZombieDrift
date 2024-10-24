@@ -6,15 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="de5fc0b1-2905-4b1c-9891-21b72464e4be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Font/MisterBrush SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Font/MisterBrush SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Font/Raleway-SemiBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Font/Raleway-SemiBold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Garage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Garage.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/EntryPoint.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/Sound/Sound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/Sound/Sound.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/Sound/SoundConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/Sound/SoundConfig.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/Sound/SoundsPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/Sound/SoundsPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/States/GameplayState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/States/GameplayState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Installers/GameplayInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Installers/GameplayInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Stab_Knife_00.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Stab_Knife_00.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Stab_Knife_01.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Stab_Knife_01.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Stab_Knife_02.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Stab_Knife_02.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Zombie_00.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Zombie_00.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Zombie_01.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Zombie_01.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Zombie_02.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Zombie_02.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Zombie_03.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Zombie_03.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Zombie_04.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Sounds/Zombie_04.mp3.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +43,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5faa62b9c9ca40fcac5a83d9f9a8a3f318600/8e/a22899fc/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eb019d4a63d44ca7a73547c38156dec21dd000/2f/af620c18/SplashScreen.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8a522b806eac9bb894e6e4c5fe87f353457535e769447e79c6b396beecb5d0/System.Threading.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Unity/PosByCam/Assets/Scripts/ProjectionFinder/CenterFinder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/LoadingScreen/FadeView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/MoneyWallet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ai.navigation/Runtime/NavMeshSurface.cs" root0="SKIP_HIGHLIGHTING" />
@@ -112,10 +132,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1092">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18732">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="1092" />
+      <option name="pid" value="18732" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -161,6 +181,7 @@
       <workItem from="1729583123808" duration="10844000" />
       <workItem from="1729713705657" duration="27000" />
       <workItem from="1729713757762" duration="6022000" />
+      <workItem from="1729755670279" duration="9519000" />
     </task>
     <servers />
   </component>

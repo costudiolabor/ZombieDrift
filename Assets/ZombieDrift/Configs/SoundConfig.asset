@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16508bb6efcf7534eb8ef932e72221e2, type: 3}
+  m_Name: SoundConfig
+  m_EditorClassIdentifier: 
+  _soundPrefab: {fileID: 3600266624948595675, guid: fbd0d4d38ef75654a9a37c672caa7ec1, type: 3}
+  _poolAmount: 4
+  _voiceFrecuencyMinMax: {x: 0, y: 0}
+  _zombieVoices: []
+  _hitSoundsArray:
+  - {fileID: 8300000, guid: cd086ad36d51e604e8aba211e5980e1a, type: 3}
+  - {fileID: 8300000, guid: 366e9a851d42c8c4b9e001d4fe374f93, type: 3}
+  - {fileID: 8300000, guid: b1862173834628d439cc9139ce847bfe, type: 3}
+  _carChashArray:
+  - {fileID: 8300000, guid: e44ed244b44544b4eb39d33c00cea399, type: 3}

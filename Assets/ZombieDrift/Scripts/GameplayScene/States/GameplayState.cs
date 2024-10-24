@@ -25,6 +25,7 @@ namespace Gameplay {
 		private readonly FlyingRewardSystem _flyingRewardSystem;
 		private readonly ComboSystem _comboSystem;
 		private readonly TextHintSystem _textHintSystem;
+		private readonly SoundsPlayer _soundsPlayer;
 
 
 		public GameplayState(StateSwitcher stateSwitcher,
@@ -40,7 +41,8 @@ namespace Gameplay {
 				MoneyWallet moneyWallet,
 				FlyingRewardSystem flyingRewardSystem,
 				ComboSystem comboSystem,
-				TextHintSystem textHintSystem) : base(stateSwitcher) {
+				TextHintSystem textHintSystem,
+				SoundsPlayer soundsPlayer) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
 			_gameplayHud = gameplayHud;
 			_gameProcess = gameProcess;
@@ -55,6 +57,7 @@ namespace Gameplay {
 			_flyingRewardSystem = flyingRewardSystem;
 			_comboSystem = comboSystem;
 			_textHintSystem = textHintSystem;
+			_soundsPlayer = soundsPlayer;
 
 			_comboLocalizedString = new LocalizedString(LOCALIZE_TABLE, COMBO_HINT_LOCAL_KEY);
 		}
@@ -100,19 +103,23 @@ namespace Gameplay {
 		}
 
 		private async void OnEnemyHit(Zombie zombie) {
-			_particlesPlayer.PlayZombieHit(zombie.position);
+			var hitPosition = zombie.position;
+			
+			_soundsPlayer.PlayZombieHitSoundAtPosition(hitPosition);
+			_particlesPlayer.PlayZombieHit(hitPosition);
 			_botNavigation.RemoveKilledZombie(zombie);
 			_enemyPointerSystem.Remove(zombie);
 
 			_moneyWallet.AddCoins();
-			_flyingRewardSystem.SpawnInSphere(zombie.position, 1);
+			_flyingRewardSystem.SpawnInSphere(hitPosition, 1);
 
-			TryGetComboReward(zombie.position);
+			TryGetComboReward(hitPosition);
 
 			await _cameraSystem.Shake(SHAKE_AMPLITUDE, SHAKE_DURATION);
 		}
 
 		private void OnCarHitObstacle(Vector3 point) {
+			_soundsPlayer.PlayCarCrashSoundAtPosition(point);
 			_particlesPlayer.PlayObstacleHit(point);
 			_vehicleDestroyer.DestroyFormPoint(point);
 			SwitchToLoseState();

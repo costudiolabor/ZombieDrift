@@ -2417,6 +2417,7 @@ MonoBehaviour:
   _particlesConfig: {fileID: 11400000, guid: 08f6ff6a1cf33f14692790c69df8bdf8, type: 2}
   _flyingRewardConfig: {fileID: 11400000, guid: 64b4023b0488fd949bda51ef0ac713b5, type: 2}
   _textHintConfig: {fileID: 11400000, guid: a74207f5c5628bd46aa9a95311ed19a0, type: 2}
+  _soundConfig: {fileID: 11400000, guid: 45aa46fbca47ed24fb3953326ccef71d, type: 2}
 --- !u!1 &1381556661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,11 +3047,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.001
   far clip plane: 1000
   field of view: 55.49
   orthographic: 1
-  orthographic size: 3.5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

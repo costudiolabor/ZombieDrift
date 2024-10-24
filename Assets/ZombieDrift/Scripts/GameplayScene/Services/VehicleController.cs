@@ -1,8 +1,15 @@
+using UnityEngine;
+
 namespace Gameplay {
 
     public class VehicleController {
+        public float normalizedVelocity => _car.velocity / _car.maxVelocity;
+        public float wheelsAxisHorizontal => _axisHorizontal;
+        public Vector3 carPosition => _car.transform.position;
+        
         private readonly IInput _input;
         private Car _car;
+        private float _axisHorizontal;
 
         public VehicleController(IInput input) =>
             _input = input;
@@ -20,7 +27,10 @@ namespace Gameplay {
             _car.isRunning = false;
         }
 
-        private void OnTurn(float axisHorizontal) =>
-            _car.turnHorizontalAxis = axisHorizontal;
+        private void OnTurn(float axisHorizontal) {
+            _axisHorizontal = axisHorizontal;
+            Debug.Log(_axisHorizontal);
+            _car.turnHorizontalAxis = _axisHorizontal;
+        }
     }
 }

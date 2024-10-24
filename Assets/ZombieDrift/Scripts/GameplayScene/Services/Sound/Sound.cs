@@ -4,34 +4,50 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace Project {
-	public class Sound : MonoBehaviour {
-		[SerializeField] private AudioSource _audioSource;
-	
+    public class Sound : MonoBehaviour {
+        [SerializeField] private AudioSource _audioSource;
 
-		public async void PlayAtPosition(Vector3 position, AudioClip clip, float pitch = 1, float volume = 1) {
+        public Vector3 position {
+            get => transform.position;
+            set => transform.position = value;
+        }
 
-			transform.position = position;
-			var clipLengthMilliseconds = (clip.length / Mathf.Abs(_audioSource.pitch)) * 1000;
+        public float loopedPitch {
+            get => _audioSource.pitch;
+            set => _audioSource.pitch = value;
+        }
 
-			Play(clip, pitch, volume);
-			await UniTask.Delay((int)clipLengthMilliseconds);
-			Stop();
+        public void PlayAndDisableAtPosition(Vector3 pos, AudioClip clip, float pitch = 1) {
+            position = pos;
+            PlayAndDisable(clip, pitch);
+        }
 
-		}
+        public async void PlayAndDisable(AudioClip clip, float pitch = 1) {
+            var clipLengthMilliseconds = (clip.length / Mathf.Abs(_audioSource.pitch)) * 1000;
 
-		private void Play(AudioClip clip, float pitch = 1, float volume = 1) {
-			_audioSource.pitch = pitch;
-			_audioSource.clip = clip;
-			_audioSource.Play();
-		}
+            Play(clip, pitch);
+            await UniTask.Delay((int)clipLengthMilliseconds);
+            StopAndDisable();
+        }
 
-		private void Stop() {
-			_audioSource.Stop();
-			_audioSource.clip = null;
-			_audioSource.loop = false;
-			_audioSource.pitch = 1;
+        public void PlayLooped(AudioClip clip, float pitch = 1) {
+            _audioSource.loop = true;
+            Play(clip, pitch);
+        }
 
-			gameObject.SetActive(false);
-		}
-	}
+        public void StopAndDisable() {
+            _audioSource.Stop();
+            _audioSource.clip = null;
+            _audioSource.loop = false;
+            _audioSource.pitch = 1;
+
+            gameObject.SetActive(false);
+        }
+
+        private void Play(AudioClip clip, float pitch = 1) {
+            _audioSource.pitch = pitch;
+            _audioSource.clip = clip;
+            _audioSource.Play();
+        }
+    }
 }

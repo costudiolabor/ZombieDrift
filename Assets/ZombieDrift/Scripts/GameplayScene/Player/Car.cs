@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 namespace Gameplay {
-    public class Car : MonoBehaviour /*, IFixedTickable*/ {
+    public class Car : MonoBehaviour  {
         public event Action<Zombie> HitDamageableEvent;
         public event Action<Vector3> CarDestroyedEvent;
 
@@ -25,6 +25,10 @@ namespace Gameplay {
         [SerializeField] private WheelTrails _wheelTrails;
         public Rigidbody body => _motor.body;
         public GameObject mesh => _carMesh;
+        public float velocity => _motor.rigidbodyVelocity;
+        
+        public float maxVelocity => _maxSpeed;
+        private float _horizontalAxis;
 
         public bool isRunning {
             get => _isRunning;
@@ -36,9 +40,11 @@ namespace Gameplay {
         }
 
         public float turnHorizontalAxis {
+            get => _horizontalAxis;
             set {
-                _wheelBehaviour.wheelTurn = value;
-                _motor.steerTurn = value;
+                _horizontalAxis = value;
+                _wheelBehaviour.wheelTurn = _horizontalAxis;
+                _motor.steerTurn = _horizontalAxis;
             }
         }
 
@@ -46,7 +52,7 @@ namespace Gameplay {
 
         public void Initialize() {
             _motor.maxSpeed = _maxSpeed;
-            _motor.moveSpeed = _moveSpeed;
+            _motor.acceleration = _moveSpeed;
             _motor.steerAngle = _steerAngle;
             _motor.centerOfMass = _centerOfMass;
             _motor.drag = _drag;

@@ -4,7 +4,7 @@ public class RigidbodyMotor : MonoBehaviour {
     [SerializeField] private Rigidbody _rigidBody;
     public Rigidbody body => _rigidBody;
     public float maxSpeed { get; set; }
-    public float moveSpeed { get; set; }
+    public float acceleration { get; set; }
     public float steerAngle { get; set; }
 
     public float mass {
@@ -26,21 +26,13 @@ public class RigidbodyMotor : MonoBehaviour {
         get => _rigidBody.centerOfMass;
         set => _rigidBody.centerOfMass = value;
     }
-
-    /*public bool isRun {
-        get => _accelerationInput > 0;
-        set => _accelerationInput = value ? 1 : 0;
-    }*/
-
     public float steerTurn {
         get => _steerInput;
         set => _steerInput = value;
     }
 
-    public Vector3 rigidbodyVelocity => _rigidBody.linearVelocity;
+    public float rigidbodyVelocity => _rigidBody.linearVelocity.magnitude;
 
-    private GUIStyle _guiStyle;
-   // private Vector3 _moveForceVector;
     private float _steerInput, _accelerationInput;
 
     private void Awake() {
@@ -48,16 +40,17 @@ public class RigidbodyMotor : MonoBehaviour {
     }
 
     public void FixedTick() {
-	    var moveVector = transform.forward * (moveSpeed);
-	    moveVector.y = 0;
-	   // _moveForceVector = moveVector; 
+        var moveVector = transform.forward * (acceleration);
+        moveVector.y = 0;
+        // _moveForceVector = moveVector; 
         if (_steerInput != 0) {
-            var rotateVector = Vector3.up * (_steerInput * rigidbodyVelocity.magnitude * steerAngle);
+            var rotateVector = Vector3.up * (_steerInput * rigidbodyVelocity * steerAngle);
             transform.Rotate(rotateVector);
             //transform.Rotate(Vector3.up * (_steerInput * rigidbodyVelocity.magnitude * steerAngle));
         }
 
-        if (rigidbodyVelocity.magnitude < maxSpeed)
+        if (rigidbodyVelocity < maxSpeed)
             _rigidBody.AddForce(moveVector, ForceMode.Acceleration);
-       }
+        
+    }
 }

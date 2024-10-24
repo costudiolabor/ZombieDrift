@@ -16,6 +16,17 @@ namespace Project {
 
             CreatePool(poolAmount);
         }
+        
+        public T GetFreeElement() {
+            if (HasFreeElement(out var element)) {
+                element.gameObject.SetActive(true);
+                return element;
+            }
+
+            if (_canExpand)
+                return CreateElement(true);
+            throw new Exception($"â ïóëå çàêîí÷èëèñü {typeof(T)}");
+        }
 
         private void CreatePool(int poolAmount) {
             _pool = new List<T>();
@@ -31,25 +42,16 @@ namespace Project {
             return createdObj;
         }
 
-        public bool HasFreeElement(out T element) {
+        private bool HasFreeElement(out T element) {
+            element = null;
             foreach (var obj in _pool) {
                 if (!obj.gameObject.activeInHierarchy) {
                     element = obj;
-                    element.gameObject.SetActive(true);
                     return true;
                 }
             }
 
-            element = null;
             return false;
-        }
-
-        public T GetFreeElement() {
-            if (HasFreeElement(out var element))
-                return element;
-            if (_canExpand)
-                return CreateElement(true);
-            throw new Exception($"â ïóëå çàêîí÷èëèñü {typeof(T)}");
         }
     }
 }

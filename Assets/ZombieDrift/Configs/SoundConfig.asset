@@ -17,8 +17,12 @@ MonoBehaviour:
   _voiceFrecuencyMinMax: {x: 0, y: 0}
   _zombieVoices: []
   _hitSoundsArray:
-  - {fileID: 8300000, guid: cd086ad36d51e604e8aba211e5980e1a, type: 3}
-  - {fileID: 8300000, guid: 366e9a851d42c8c4b9e001d4fe374f93, type: 3}
-  - {fileID: 8300000, guid: b1862173834628d439cc9139ce847bfe, type: 3}
+  - {fileID: 8300000, guid: b86c4aac37bfb2e4e9ef881340125fb4, type: 3}
+  - {fileID: 8300000, guid: e0a5b73b7d293d6468938e7ede75f5c1, type: 3}
+  - {fileID: 8300000, guid: aa4cea512ea161140b9d9c6f8cbe13db, type: 3}
   _carChashArray:
-  - {fileID: 8300000, guid: e44ed244b44544b4eb39d33c00cea399, type: 3}
+  - {fileID: 8300000, guid: 507898d38999ffc408dd71aa42267648, type: 3}
+  - {fileID: 8300000, guid: 874bf07b4283bab44a342f5f6dcc5d27, type: 3}
+  - {fileID: 8300000, guid: cf54686098695a24aae575f9cf13c6fc, type: 3}
+  _carEngineClip: {fileID: 8300000, guid: 58039d0dad0b7b544b804da1e1a0f3a6, type: 3}
+  _tyresClip: {fileID: 8300000, guid: c8d86b9eee2fb6643aa17abbc1c67e78, type: 3}

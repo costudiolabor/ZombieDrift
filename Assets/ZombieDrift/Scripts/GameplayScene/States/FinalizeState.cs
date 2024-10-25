@@ -8,15 +8,18 @@ namespace Gameplay {
 		private readonly GameplayCache _gameplayCache;
 		private readonly GameProcess _gameProcess;
 		private readonly EnemyPointerSystem _enemyPointerSystem;
+		private readonly ZombieStorage _zombieStorage;
 
 		public FinalizeState(StateSwitcher stateSwitcher,
 				GameplayCache gameplayCache,
 				GameProcess gameProcess,
-				EnemyPointerSystem enemyPointerSystem) : base(stateSwitcher) {
+				EnemyPointerSystem enemyPointerSystem,
+				ZombieStorage zombieStorage) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
 			_gameplayCache = gameplayCache;
 			_gameProcess = gameProcess;
 			_enemyPointerSystem = enemyPointerSystem;
+			_zombieStorage = zombieStorage;
 		}
 
 		public override void Enter() {
@@ -27,17 +30,21 @@ namespace Gameplay {
 		}
 
 		public void DestroyGameObjects() {
-			var zombies = _gameplayCache.zombies;
+			//var zombies = _gameplayCache.zombies;
+		
+			_zombieStorage.DestroyAll();
+			
 			var car = _gameplayCache.car;
 			var map = _gameplayCache.map;
 
-			foreach (var zombie in zombies)
-				Object.Destroy(zombie.gameObject);
+		//	foreach (var zombie in zombies)
+		//		Object.Destroy(zombie.gameObject);
 
+		
 			Object.Destroy(car.gameObject);
 			Object.Destroy(map.gameObject);
 
-			_gameplayCache.zombies = null;
+		//	_gameplayCache.zombies = null;
 			_gameplayCache.car = null;
 			_gameplayCache.map = null;
 		}

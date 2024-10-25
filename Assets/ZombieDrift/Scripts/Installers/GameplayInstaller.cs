@@ -65,6 +65,7 @@ namespace Gameplay {
 			Container.Bind<EnemyPointerSystem>().AsSingle();
 			Container.Bind<ParticlesPlayer>().AsSingle();
 			Container.Bind<ParticlesConfig>().FromInstance(_particlesConfig);
+			Container.Bind<ZombieStorage>().AsSingle();
 		}
 
 		private void InstallServices() {

@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace Gameplay {
     public class BotNavigation {
+        public Transform target { get; set; }
+    
         private readonly float _positionRefreshRate;
         private readonly float _reactDistance;
-
-        public Transform target { get; set; }
-
-        private List<Zombie> _zombies;
+        
+        private IReadOnlyCollection<Zombie> _zombies;
         private float _totalSeconds;
         private bool _isRunning;
 
@@ -18,8 +18,9 @@ namespace Gameplay {
             _reactDistance = zombiesConfig.navigationReactDistance;
         }
 
-        public void Initialize(IEnumerable<Zombie> zombies, Transform targetTransform) {
-            _zombies = zombies.ToList();
+        public void Initialize(IReadOnlyCollection<Zombie> zombies, Transform targetTransform) {
+            //_zombies = zombies.ToList();
+            _zombies = zombies;
             target = targetTransform;
         }
 
@@ -42,9 +43,9 @@ namespace Gameplay {
             RefreshPosition();
         }
 
-        public void RemoveKilledZombie(Zombie killedZombie) {
+        /*public void RemoveKilledZombie(Zombie killedZombie) {
             _zombies.Remove(killedZombie);
-        }
+        }*/
 
         private void SetZombiesRunning(bool isRun) {
             foreach (var zombie in _zombies)

@@ -2,5 +2,5 @@
 
 public interface IDamageable {
     Vector3 position { get; }
-    void Damage();
+    void Deactivate();
 }

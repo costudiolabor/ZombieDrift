@@ -50,7 +50,7 @@ namespace Gameplay {
 			ragdoll.isEnabled = false;
 		}
 
-		public void Damage() {
+		public void Deactivate() {
 			_zombieAnimator.isEnabled = false;
 			_groundCircleParticles.gameObject.SetActive(false);
 			isNavEnabled = false;

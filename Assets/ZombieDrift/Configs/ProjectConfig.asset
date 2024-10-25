@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2bec6bb4eade134da902a5509e1d274, type: 3}
   m_Name: ProjectConfig
   m_EditorClassIdentifier: 
-  _isDebugEnable: 1
+  _isDebugEnable: 0
   _isFpsEnabled: 1
   _targetFramerate: 500
   _rootCanvasPrefab: {fileID: 2990162597087632297, guid: b75e8221f616ae14484b0ef2d026c3ca, type: 3}

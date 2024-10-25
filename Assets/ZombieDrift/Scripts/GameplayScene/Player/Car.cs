@@ -77,7 +77,7 @@ namespace Gameplay {
             if (!other.TryGetComponent<Zombie>(out var damageable))
                 return;
 
-            damageable.Damage();
+       //     damageable.Damage();
             HitDamageableEvent?.Invoke(damageable);
         }
 

@@ -97,7 +97,8 @@ namespace Gameplay {
             _botNavigation.Tick();
             _enemyPointerSystem.Tick();
             _comboSystem.TimerRefresh();
-            _soundsPlayer.UpdateEngine(_vehicleController.carPosition, _vehicleController.normalizedVelocity, _vehicleController.wheelsAxisHorizontal);
+            _soundsPlayer.UpdateEngine(_vehicleController.carPosition, _vehicleController.normalizedVelocity, Mathf.Abs(_vehicleController.wheelsAxisHorizontal));
+          
         }
 
         private async void OnEnemyHit(Zombie zombie) {
@@ -105,7 +106,7 @@ namespace Gameplay {
 
             _soundsPlayer.PlayZombieHitSoundAtPosition(hitPosition);
             _particlesPlayer.PlayZombieHit(hitPosition);
-            _botNavigation.RemoveKilledZombie(zombie);
+         //   _botNavigation.RemoveKilledZombie(zombie);
             _enemyPointerSystem.Remove(zombie);
 
             _moneyWallet.AddCoins();

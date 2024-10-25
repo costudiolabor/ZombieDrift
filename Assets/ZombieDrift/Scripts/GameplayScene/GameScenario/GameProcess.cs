@@ -5,15 +5,18 @@ using UnityEngine;
 namespace Gameplay {
 
     public class GameProcess {
-        public event Action<Vector3> ObstacleHitEvent;
+	    private readonly BotNavigation _botNavigation;
+	    public event Action<Vector3> ObstacleHitEvent;
         public event Action<Zombie> ZombieHitEvent;
         public event Action AllEnemiesDestroyedEvent;
 
-        private List<Zombie> _damageableList;
+        //private List<Zombie> _damageableList;
         private Car _car;
-
-        public void Initialize(Car car, Zombie[] zombies) {
-            _damageableList = new List<Zombie>(zombies);
+        private ZombieStorage _zombieStorage;
+        
+        public void Initialize(Car car, ZombieStorage zombies/*Zombie[] zombies*/) {
+          //  _damageableList = new List<Zombie>(zombies);
+           _zombieStorage = zombies;
             SetCar(car);
         }
 
@@ -27,7 +30,7 @@ namespace Gameplay {
             _car.HitDamageableEvent -= OnDamageableHit;
             _car.CarDestroyedEvent -= OnObstacleHit;
             _car = null;
-            _damageableList = null;
+            //_damageableList = null;
         }
 
         private void OnObstacleHit(Vector3 obj) {
@@ -35,10 +38,12 @@ namespace Gameplay {
         }
 
         private void OnDamageableHit(Zombie damageable) {
-            _damageableList.Remove(damageable);
+            //_damageableList.Remove(damageable);
+            _zombieStorage.Deactivate(damageable);
             ZombieHitEvent?.Invoke(damageable);
 
-            if (_damageableList.Count == 0)
+            //if (_damageableList.Count == 0)
+            if (_zombieStorage.Count == 0)
                 AllEnemiesDestroyedEvent?.Invoke();
         }
     }

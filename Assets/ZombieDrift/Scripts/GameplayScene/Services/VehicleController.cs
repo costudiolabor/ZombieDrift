@@ -2,35 +2,34 @@ using UnityEngine;
 
 namespace Gameplay {
 
-    public class VehicleController {
-        public float normalizedVelocity => _car.velocity / _car.maxVelocity;
-        public float wheelsAxisHorizontal => _axisHorizontal;
-        public Vector3 carPosition => _car.transform.position;
-        
-        private readonly IInput _input;
-        private Car _car;
-        private float _axisHorizontal;
+	public class VehicleController {
+		public float normalizedVelocity => _car.velocity / _car.maxVelocity;
+		public float wheelsAxisHorizontal => _axisHorizontal;
+		public Vector3 carPosition => _car.transform.position;
 
-        public VehicleController(IInput input) =>
-            _input = input;
+		private readonly IInput _input;
+		private Car _car;
+		private float _axisHorizontal;
 
-        public void SetCar(Car car) =>
-            _car = car;
+		public VehicleController(IInput input) =>
+				_input = input;
 
-        public void Start() {
-            _input.HorizontalAxisChangedEvent += OnTurn;
-            _car.isRunning = true;
-        }
+		public void SetCar(Car car) =>
+				_car = car;
 
-        public void Stop() {
-            _input.HorizontalAxisChangedEvent -= OnTurn;
-            _car.isRunning = false;
-        }
+		public void Start() {
+			_input.HorizontalAxisChangedEvent += OnTurn;
+			_car.isRunning = true;
+		}
 
-        private void OnTurn(float axisHorizontal) {
-            _axisHorizontal = axisHorizontal;
-            Debug.Log(_axisHorizontal);
-            _car.turnHorizontalAxis = _axisHorizontal;
-        }
-    }
+		public void Stop() {
+			_input.HorizontalAxisChangedEvent -= OnTurn;
+			_car.isRunning = false;
+		}
+
+		private void OnTurn(float axisHorizontal) {
+			_axisHorizontal = axisHorizontal;
+			_car.turnHorizontalAxis = _axisHorizontal;
+		}
+	}
 }

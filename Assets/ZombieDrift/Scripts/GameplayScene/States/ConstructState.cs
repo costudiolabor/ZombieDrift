@@ -1,3 +1,4 @@
+using System.Linq;
 using Project;
 using UnityEngine;
 
@@ -9,7 +10,8 @@ namespace Gameplay {
 		private readonly MoneyWallet _moneyWallet;
 		private readonly ComboSystem _comboSystem;
 		private readonly CarsConfig _carsConfig;
-		private readonly BotNavigation _botNavigation;
+		private readonly ZombieStorage _zombieStorage;
+		private readonly BotNavigation _botSystem;
 		private readonly EnemyPointerSystem _enemyPointerSystem;
 		private readonly StagesConfig _stagesConfig;
 		private readonly GameProcess _gameProcess;
@@ -27,14 +29,15 @@ namespace Gameplay {
 				VehicleController vehicleController,
 				VehicleDestroyer vehicleDestroyer,
 				GameplayHud gameplayHud,
-				BotNavigation botNavigation,
+				BotNavigation botSystem,
 				EnemyPointerSystem enemyPointerSystem,
 				StagesConfig stagesConfig,
 				ProjectCache projectCache,
 				GameplayCache gameplayCache,
 				MoneyWallet moneyWallet,
 				ComboSystem comboSystem,
-				CarsConfig carsConfig
+				CarsConfig carsConfig,
+				ZombieStorage zombieStorage
 		) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
 			_contentCreationService = contentCreationService;
@@ -48,7 +51,8 @@ namespace Gameplay {
 			_moneyWallet = moneyWallet;
 			_comboSystem = comboSystem;
 			_carsConfig = carsConfig;
-			_botNavigation = botNavigation;
+			_zombieStorage = zombieStorage;
+			_botSystem = botSystem;
 			_enemyPointerSystem = enemyPointerSystem;
 			_stagesConfig = stagesConfig;
 		}
@@ -69,18 +73,18 @@ namespace Gameplay {
 			else
 				SwitchToHowToPlayState();
 		}
-		
+
 		private void CalculateCombo() {
 			var purchasedCars = _projectCache.purchasedCars;
 			float comboMultiplier = 0;
 			float comboDelay = 0;
-			
+
 			foreach (var carIndex in purchasedCars) {
 				var purchasedCar = _carsConfig.cars[carIndex];
 				comboMultiplier += purchasedCar.comboMultiplier;
 				comboDelay += purchasedCar.comboDelay;
 			}
-			
+
 			_comboSystem.comboMultiplier = comboMultiplier;
 			_comboSystem.comboDelay = comboDelay;
 			_comboSystem.Reset();
@@ -94,7 +98,10 @@ namespace Gameplay {
 			map.navMeshSurface.BuildNavMesh();
 			_gameplayCache.map = map;
 			_gameplayCache.car = _contentCreationService.CreateCar(currentCarIndex, map.startPoint);
-			_gameplayCache.zombies = _contentCreationService.CreateZombies(map.zombieSpawnPoints);
+			//_gameplayCache.zombies = _contentCreationService.CreateZombies(map.zombieSpawnPoints);
+			var zombies = _contentCreationService.CreateZombies(map.zombieSpawnPoints);
+			_zombieStorage.AddNewRange(zombies);
+			//
 		}
 
 		private void LoadGameplayCache() {
@@ -118,10 +125,10 @@ namespace Gameplay {
 			_vehicleController.SetCar(car);
 			_vehicleDestroyer.SetCar(car);
 
-			var zombiesArray = _gameplayCache.zombies;
-			_botNavigation.Initialize(zombiesArray, car.transform);
-			_gameProcess.Initialize(car, zombiesArray);
-			_enemyPointerSystem.SetNewData(zombiesArray, car.transform);
+		//	var zombiesArray = _gameplayCache.zombies;
+			_botSystem.Initialize(_zombieStorage, car.transform);
+			_gameProcess.Initialize(car, _zombieStorage);
+			_enemyPointerSystem.SetNewData(_zombieStorage.ToArray(), car.transform);
 		}
 
 		private void SwitchToMenuState() =>

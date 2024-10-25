@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 	public class GUILog : MonoBehaviour {
-		[SerializeField] private int fontSize = 17, messagesCount = 100;
+		[SerializeField] private int fontSize = 17, messagesCount = 10;
 		[SerializeField] private Color color = Color.yellow;
 
 		private readonly Queue _myLogQueue = new Queue();

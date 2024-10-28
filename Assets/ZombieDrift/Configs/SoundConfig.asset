@@ -14,8 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _soundPrefab: {fileID: 3600266624948595675, guid: fbd0d4d38ef75654a9a37c672caa7ec1, type: 3}
   _poolAmount: 4
-  _voiceFrecuencyMinMax: {x: 0, y: 0}
-  _zombieVoices: []
+  _voiceFrecuencyMinMax: {x: 800, y: 3000}
+  _zombieVoicesArray:
+  - {fileID: 8300000, guid: c2d695a7c515935469d5732a83f6de88, type: 3}
+  - {fileID: 8300000, guid: 06a7f994f76d59448b7f901d96656c97, type: 3}
+  - {fileID: 8300000, guid: 133f816c44682c24ab45d85f374decfe, type: 3}
+  - {fileID: 8300000, guid: 476a01b7a9034f34098d330b9e930820, type: 3}
+  - {fileID: 8300000, guid: 4726ac19cff02d641aca8fce9d996589, type: 3}
+  - {fileID: 8300000, guid: e22b316622bc9004ea74dadaaf476b6d, type: 3}
   _hitSoundsArray:
   - {fileID: 8300000, guid: b86c4aac37bfb2e4e9ef881340125fb4, type: 3}
   - {fileID: 8300000, guid: e0a5b73b7d293d6468938e7ede75f5c1, type: 3}

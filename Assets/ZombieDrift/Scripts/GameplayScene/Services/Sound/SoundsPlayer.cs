@@ -1,4 +1,8 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using Cysharp.Threading.Tasks;
+using Gameplay;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -17,6 +21,8 @@ namespace Project {
 
 		private float randomPinchValue => Random.Range(MIN_PINCH, MAX_PINCH);
 
+		private bool _zombieVoicesPlaying;
+
 		public SoundsPlayer(SoundConfig soundConfig) =>
 				_soundConfig = soundConfig;
 
@@ -24,6 +30,10 @@ namespace Project {
 			_soundsParent = new GameObject(POOL_SOUNDS_PARENT_NAME).transform;
 			_poolOfSounds = new PoolObjects<Sound>(_soundConfig.soundPrefab, _soundConfig.poolAmount, canExpand: true, _soundsParent);
 		}
+
+		/*public void SetZombies(IReadOnlyCollection<Zombie> zombies) {
+			_zombies = zombies;
+		}*/
 
 		public void PlayZombieHitSoundAtPosition(Vector3 position) {
 			var hitSoundsArray = _soundConfig.hitSoundsArray;
@@ -33,6 +43,35 @@ namespace Project {
 		public void PlayCarCrashSoundAtPosition(Vector3 position) {
 			var soundsArray = _soundConfig.carCrashArray;
 			PlayRandomSoundAtPosition(position, soundsArray, 1);
+		}
+
+		public async void StartZombieVoices(IReadOnlyCollection<Zombie> zombies) {
+			_zombieVoicesPlaying = true;
+			
+			var soundsArray = _soundConfig.zombieVoicesArray;
+			var frequency = _soundConfig.voiceFrequencyMinMax;
+
+			while (_zombieVoicesPlaying) {
+				var activeZombieCount = zombies.Count;
+				
+				Debug.Log(zombies.Count);
+
+				if (activeZombieCount == 0) {
+					StopZombieVoices();
+					return;
+				}
+
+				int randomIndex = Random.Range(0, activeZombieCount);
+				var randomZombie = zombies.ElementAt(randomIndex);
+				var randomZombiePosition = randomZombie.transform.position;
+
+				PlayRandomSoundAtPosition(randomZombiePosition, soundsArray, 1);
+				var randomDelay = Random.Range(frequency.x, frequency.y);
+				await UniTask.Delay(randomDelay);
+			}
+		}
+		public void StopZombieVoices() {
+			_zombieVoicesPlaying = false;
 		}
 
 		public void StartCarSounds() {

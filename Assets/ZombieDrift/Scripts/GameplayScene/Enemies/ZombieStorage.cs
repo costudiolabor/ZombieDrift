@@ -7,10 +7,8 @@ namespace Gameplay {
 	public class ZombieStorage : IReadOnlyCollection<Zombie> {
 		private List<Zombie> _activeZombies;
 		private Zombie[] _allZombies;
-
+		//ActiveCount
 		public int Count => _activeZombies.Count;
-		
-
 		public void AddNewRange(Zombie[] range) {
 			_activeZombies = range.ToList();
 			_allZombies = range;

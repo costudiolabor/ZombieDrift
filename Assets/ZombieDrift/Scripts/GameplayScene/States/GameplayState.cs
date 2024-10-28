@@ -26,7 +26,8 @@ namespace Gameplay {
         private readonly ComboSystem _comboSystem;
         private readonly TextHintSystem _textHintSystem;
         private readonly SoundsPlayer _soundsPlayer;
-        
+        private readonly ZombieStorage _zombieStorage;
+
         public GameplayState(StateSwitcher stateSwitcher,
             GameplayHud gameplayHud,
             GameProcess gameProcess,
@@ -41,7 +42,8 @@ namespace Gameplay {
             FlyingRewardSystem flyingRewardSystem,
             ComboSystem comboSystem,
             TextHintSystem textHintSystem,
-            SoundsPlayer soundsPlayer) : base(stateSwitcher) {
+            SoundsPlayer soundsPlayer,
+            ZombieStorage zombieStorage) : base(stateSwitcher) {
             _stateSwitcher = stateSwitcher;
             _gameplayHud = gameplayHud;
             _gameProcess = gameProcess;
@@ -57,6 +59,7 @@ namespace Gameplay {
             _comboSystem = comboSystem;
             _textHintSystem = textHintSystem;
             _soundsPlayer = soundsPlayer;
+            _zombieStorage = zombieStorage;
 
             _comboLocalizedString = new LocalizedString(LOCALIZE_TABLE, COMBO_HINT_LOCAL_KEY);
         }
@@ -69,6 +72,7 @@ namespace Gameplay {
             _botNavigation.Start();
             _enemyPointerSystem.enabled = true;
             _soundsPlayer.StartCarSounds();
+            _soundsPlayer.StartZombieVoices(_zombieStorage);
 
             //     _comboCounter.comboDelay = COMBO_ACTIVE_TIME;
             _flyingRewardSystem.CollectedEvent += OnFlyingRewardArrived;
@@ -86,6 +90,7 @@ namespace Gameplay {
             _botNavigation.Stop();
             _enemyPointerSystem.enabled = false;
             _soundsPlayer.StopCarSounds();
+            _soundsPlayer.StopZombieVoices();
 
             _flyingRewardSystem.CollectedEvent -= OnFlyingRewardArrived;
             _gameProcess.ObstacleHitEvent -= OnCarHitObstacle;

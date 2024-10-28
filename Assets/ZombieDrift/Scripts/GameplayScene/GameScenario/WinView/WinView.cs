@@ -9,7 +9,7 @@ namespace Gameplay {
 
 		[SerializeField] private TMP_Text _mapClearedCaption;
 		[SerializeField] private Button _continueButton;
-
+	
 		public string mapText {
 			set => _mapClearedCaption.text = value;
 		}

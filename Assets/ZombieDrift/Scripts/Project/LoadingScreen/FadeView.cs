@@ -11,6 +11,7 @@ public class FadeView : MonoBehaviour {
 
 	private bool isEnabled {
 		set => gameObject.SetActive(value);
+		get => gameObject.activeInHierarchy;
 	}
 
 	public async void Appear(int timeMilliseconds = DEFAULT_FADE_TIME) =>

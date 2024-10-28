@@ -6,19 +6,24 @@ using Zenject;
 
 namespace Project {
 	public class ProjectEntryPoint : IInitializable {
+		private const string POOL_SOUNDS_PARENT_NAME = "SoundsParent";
+		
 		private readonly ScenesLoader _scenesLoader;
 		private readonly ProjectConfig _config;
 		private readonly SaveLoadSystem _saveLoadSystem;
 		private readonly ProjectCache _projectCache;
+		private readonly UiSoundsPlayer _uiSoundsPlayer;
 
 		public ProjectEntryPoint(
 				ScenesLoader scenesLoader,
 				ProjectConfig config,
 				SaveLoadSystem saveLoadSystem,
-				ProjectCache projectCache) {
+				ProjectCache projectCache,
+				UiSoundsPlayer uiSoundsPlayer) {
 			_scenesLoader = scenesLoader;
 			_saveLoadSystem = saveLoadSystem;
 			_projectCache = projectCache;
+			_uiSoundsPlayer = uiSoundsPlayer;
 			_config = config;
 		}
 
@@ -30,8 +35,14 @@ namespace Project {
 			SetUpProject();
 			CreateLog();
 			await SetSystemLocale();
+			InitializeUiSounds();
 
 			SwitchToGameplayScene();
+		}
+		private void InitializeUiSounds() {
+			var soundsParent = new GameObject(POOL_SOUNDS_PARENT_NAME).transform;
+			Object.DontDestroyOnLoad(soundsParent);
+			_uiSoundsPlayer.Initialize(soundsParent);
 		}
 
 		private async UniTask SetSystemLocale() {

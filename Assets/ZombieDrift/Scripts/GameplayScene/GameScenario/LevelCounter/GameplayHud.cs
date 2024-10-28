@@ -1,4 +1,5 @@
 using System;
+using Project;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -10,10 +11,14 @@ namespace Gameplay {
     }
 
     public class GameplayHud  {
-        private GameplayHudView _view;
+	    private readonly UiSoundsPlayer _uiSoundsPlayer;
+	    private GameplayHudView _view;
         
         private int _moneyCount;
-        
+
+        public GameplayHud(UiSoundsPlayer uiSoundsPlayer) {
+	        _uiSoundsPlayer = uiSoundsPlayer;
+        }
         public void Initialize(GameplayHudView gameplayHudView) {
 	        _view = gameplayHudView;
         }
@@ -27,12 +32,21 @@ namespace Gameplay {
         }
 
         public int moneyCount {
-            set {
+	        set {
                 _view.coinsText = value.ToString();
                 _moneyCount = value;
             }
-            get => _moneyCount;
+	        /*get {
+		     
+		        return _moneyCount;
+	        }*/
         }
+
+        public void IncreaseMoneyCount(int count = 1) {
+	        moneyCount = _moneyCount + count;
+	        _uiSoundsPlayer.PlayCoinSound();
+        }
+        
         public StagePresentState presentState {
             set {
                 switch (value) {

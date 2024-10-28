@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: KeyboardConfig
   m_EditorClassIdentifier: 
   _leftKeys: 1401000061000000
-  _right: 1401000064000000
+  _right: 1301000064000000

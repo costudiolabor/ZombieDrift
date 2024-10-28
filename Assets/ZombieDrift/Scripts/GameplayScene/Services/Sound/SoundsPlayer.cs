@@ -16,9 +16,6 @@ namespace Project {
 		private PoolObjects<Sound> _poolOfSounds;
 		private Transform _soundsParent;
 		private Sound _engineSound, _tyresSound;
-
-		private AudioClip[] _hitSoundsArray;
-
 		private float randomPinchValue => Random.Range(MIN_PINCH, MAX_PINCH);
 
 		private bool _zombieVoicesPlaying;
@@ -30,11 +27,7 @@ namespace Project {
 			_soundsParent = new GameObject(POOL_SOUNDS_PARENT_NAME).transform;
 			_poolOfSounds = new PoolObjects<Sound>(_soundConfig.soundPrefab, _soundConfig.poolAmount, canExpand: true, _soundsParent);
 		}
-
-		/*public void SetZombies(IReadOnlyCollection<Zombie> zombies) {
-			_zombies = zombies;
-		}*/
-
+		
 		public void PlayZombieHitSoundAtPosition(Vector3 position) {
 			var hitSoundsArray = _soundConfig.hitSoundsArray;
 			PlayRandomSoundAtPosition(position, hitSoundsArray, randomPinchValue);
@@ -54,8 +47,6 @@ namespace Project {
 			while (_zombieVoicesPlaying) {
 				var activeZombieCount = zombies.Count;
 				
-				Debug.Log(zombies.Count);
-
 				if (activeZombieCount == 0) {
 					StopZombieVoices();
 					return;

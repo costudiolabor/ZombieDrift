@@ -17,7 +17,7 @@ namespace Project {
 		private async void SwitchSceneWithAnimation(string sceneName) {
 			await _loading.AppearAsync();
 
-			await SwitchTo(SceneNames.BOOT);
+		//	await SwitchTo(SceneNames.BOOT);
 			await SwitchTo(sceneName);
 
 			_loading.Disappear();

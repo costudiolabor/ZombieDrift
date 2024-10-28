@@ -58,6 +58,8 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
+			Debug.Log("Construct");
+
 			CalculateCombo();
 			LoadGameplayCache();
 			CreateGameplayObjects();

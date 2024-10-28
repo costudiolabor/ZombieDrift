@@ -1,11 +1,9 @@
-using Cysharp.Threading.Tasks;
 using Project;
+using UnityEngine;
 using UnityEngine.Localization;
 
 namespace Gameplay {
 	public class WinState : State {
-		private const int MAP_CHANGE_DELAY_MILLISECONDS = 2000;
-
 		private const string LOCALIZE_TABLE = "StringsTable";
 		private const string MAP_CLEARED_LOCAL_KEY = "mapClearedKey";
 		private const string STAGE_CLEARED_KEY = "clearedKey";
@@ -19,7 +17,6 @@ namespace Gameplay {
 		private readonly GameplayCache _gameplayCache;
 		private readonly LevelCompletePresenter _levelCompletePresenter;
 		private readonly CameraSystem _cameraSystem;
-
 		private bool isStageComplete => _gameplayCache.mapIndex + 1 > _gameplayCache.mapsCount - 1;
 
 		public WinState(StateSwitcher stateSwitcher,
@@ -41,6 +38,8 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
+			Debug.Log("Win");
+
 			_cameraSystem.isZoomed = true;
 			_levelCompletePresenter.ContinueEvent += SwitchToPrepareState;
 			var winMessage = isStageComplete

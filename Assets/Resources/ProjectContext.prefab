@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9164543721068105614}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &848465496805311830
 MonoBehaviour:
@@ -76,3 +76,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectConfig: {fileID: 11400000, guid: 06a5c6e108601bc4c84231817772e593, type: 2}
   rootCanvas: {fileID: 2990162597087632297, guid: b75e8221f616ae14484b0ef2d026c3ca, type: 3}
+  _uiSoundConfig: {fileID: 11400000, guid: 686248078a48c344d98900098632504f, type: 2}

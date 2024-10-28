@@ -5,6 +5,7 @@ namespace Project {
 	public class ProjectInstaller : MonoInstaller {
 		[SerializeField] private ProjectConfig _projectConfig;
 		[SerializeField] private RootCanvas rootCanvas;
+		[SerializeField] private UiSoundConfig _uiSoundConfig;
 
 		public override void InstallBindings() {
 			InstallSceneLoader();
@@ -12,6 +13,11 @@ namespace Project {
 			CreateAndInstallRootCanvas();
 			InstallProjectEntryPoint();
 			InstallCache();
+			InstallUiSounds();
+		}
+		private void InstallUiSounds() {
+			Container.Bind<UiSoundsPlayer>().AsSingle();
+			Container.Bind<UiSoundConfig>().FromInstance(_uiSoundConfig);
 		}
 		private void InstallCache() {
 			Container.Bind<ProjectCache>().AsSingle();

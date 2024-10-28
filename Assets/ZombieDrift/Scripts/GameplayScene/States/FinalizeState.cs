@@ -23,6 +23,8 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
+			Debug.Log("Final");
+
 			_gameProcess.Finish();
 			_enemyPointerSystem.Clear();
 			DestroyGameObjects();

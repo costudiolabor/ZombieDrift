@@ -1,11 +1,16 @@
 using System;
+using Project;
 using Zenject;
 
 namespace Gameplay {
     public class MenuPresenter {
-        public event Action StartGameEvent, GarageEvent;
+	    private readonly UiSoundsPlayer _uiSoundsPlayer;
+	    public event Action StartGameEvent, GarageEvent;
         private MainMenuView _view;
 
+        public MenuPresenter(UiSoundsPlayer uiSoundsPlayer) {
+	        _uiSoundsPlayer = uiSoundsPlayer;
+        }
         public bool enabled {
             set {
                 if (value)
@@ -23,8 +28,10 @@ namespace Gameplay {
             _view.GarageClickedEvent += GarageClickedNotify;
         }
 
-        private void GarageClickedNotify() =>
-            GarageEvent?.Invoke();
+        private void GarageClickedNotify() {
+	        _uiSoundsPlayer.PlayClickSound();
+	        GarageEvent?.Invoke();
+        }
 
         private void StartGameNotify() =>
             StartGameEvent?.Invoke();

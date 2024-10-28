@@ -1,4 +1,5 @@
 using Project;
+using UnityEngine;
 
 namespace Gameplay {
 	public class MenuState : State {
@@ -11,7 +12,8 @@ namespace Gameplay {
 				StateSwitcher stateSwitcher,
 				MenuPresenter menuPresenter,
 				GameplayHud gameplayHud,
-				ScenesLoader scenesLoader) : base(stateSwitcher) {
+				ScenesLoader scenesLoader
+		) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
 			_menuPresenter = menuPresenter;
 			_gameplayHud = gameplayHud;
@@ -19,6 +21,8 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
+			Debug.Log("Menu");
+			
 			_gameplayHud.presentState = StagePresentState.StageOnly;
 			_menuPresenter.enabled = true;
 			_menuPresenter.StartGameEvent += SwitchToPlayState;
@@ -26,6 +30,7 @@ namespace Gameplay {
 		}
 
 		public override void Exit() {
+			Debug.Log("Exit Menu");
 			_gameplayHud.presentState = StagePresentState.None;
 			_menuPresenter.enabled = false;
 			_menuPresenter.StartGameEvent -= SwitchToPlayState;

@@ -1,4 +1,5 @@
 using Project;
+using UnityEngine;
 
 namespace Gameplay {
     public class GetReadyState : State {
@@ -18,6 +19,8 @@ namespace Gameplay {
         }
 
         public override void Enter() {
+	        Debug.Log("GetReady");
+
             _gameplayHud.presentState = StagePresentState.All;
             _howToPlayPresenter.enabled = true;
             _getReadyPresenter.enabled = true;

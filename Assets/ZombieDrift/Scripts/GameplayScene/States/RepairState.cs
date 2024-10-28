@@ -39,6 +39,8 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
+			Debug.Log("Repair");
+
 			DestroyCarObject();
 			CreateAndInitializeNewCar();
 			SwitchToGameplayState();

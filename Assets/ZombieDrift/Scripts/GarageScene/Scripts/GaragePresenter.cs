@@ -1,4 +1,5 @@
 using System;
+using Project;
 using UnityEngine;
 
 namespace Garage {
@@ -10,8 +11,13 @@ namespace Garage {
 	}
 
 	public class GaragePresenter {
+		private readonly UiSoundsPlayer _uiSoundsPlayer;
 		public event Action BuyEvent, ChooseEvent, WatchEvent, PreviousClickedEvent, NextClickedEvent, BackEvent;
 
+		public GaragePresenter(UiSoundsPlayer uiSoundsPlayer) {
+			_uiSoundsPlayer = uiSoundsPlayer;
+		}
+		
 		public int carPrice {
 			set => _view.carPriceText.text = $"Купить за {value}";
 		}
@@ -88,20 +94,28 @@ namespace Garage {
 			_view.backButton.onClick.AddListener(BackNotify);
 		}
 
-		private void WatchNotify() =>
-				WatchEvent?.Invoke();
+		private void WatchNotify() {
+			_uiSoundsPlayer.PlayClickSound();
+			WatchEvent?.Invoke();
+		}
 
 		private void BuyNotify() =>
 				BuyEvent?.Invoke();
 
-		private void TurnRightNotify() =>
-				NextClickedEvent?.Invoke();
+		private void TurnRightNotify() {
+			_uiSoundsPlayer.PlayClickSound();
+			NextClickedEvent?.Invoke();
+		}
 
-		private void TurnLeftNotify() =>
-				PreviousClickedEvent?.Invoke();
+		private void TurnLeftNotify() {
+			_uiSoundsPlayer.PlayClickSound();
+			PreviousClickedEvent?.Invoke();
+		}
 
-		private void BackNotify() =>
-				BackEvent?.Invoke();
+		private void BackNotify() {
+			_uiSoundsPlayer.PlayClickSound();
+			BackEvent?.Invoke();
+		}
 
 		private void SelectNotify() =>
 				ChooseEvent?.Invoke();

@@ -1,13 +1,23 @@
 using System;
+using Project;
 using Zenject;
 
 namespace Gameplay {
     public class LosePresenter {
-        public event Action RestartEvent, RepairEvent;
+	    private readonly UiSoundsPlayer _uiSoundsPlayer;
+	    public event Action RestartEvent, RepairEvent;
         private LoseView _view;
 
+        public LosePresenter(UiSoundsPlayer uiSoundsPlayer) {
+	        _uiSoundsPlayer = uiSoundsPlayer;
+        }
+        
         public bool enabled {
-            set => _view.isActive = value;
+	        set {
+		        if(value)
+			        _uiSoundsPlayer.PlayLoseSound();;
+		        _view.isActive = value;
+	        }
         }
 
         public void Initialize(LoseView view) {
@@ -16,11 +26,15 @@ namespace Gameplay {
             _view.RepairClickedEvent += RepairNotify;
         }
 
-        private void RepairNotify() =>
-            RepairEvent?.Invoke();
+        private void RepairNotify() {
+	        _uiSoundsPlayer.PlayRepairSound();;
+	        RepairEvent?.Invoke();
+        }
 
-        private void RestartNotify() =>
-            RestartEvent?.Invoke();
+        private void RestartNotify() {
+	        _uiSoundsPlayer.PlayClickSound();
+	        RestartEvent?.Invoke();
+        }
 
         ~LosePresenter() {
             _view.RestartClickedEvent -= RestartNotify;

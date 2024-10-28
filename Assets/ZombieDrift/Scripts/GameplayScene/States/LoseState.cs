@@ -1,4 +1,5 @@
 using Project;
+using UnityEngine;
 
 namespace Gameplay {
 	public class LoseState : State {
@@ -22,31 +23,32 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
+			Debug.Log("Lose");
+
 			CameraActions();
 
 			_losePresenter.enabled = true;
-			_losePresenter.RepairEvent += SwitchToPrepareState;
+			_losePresenter.RepairEvent += SwitchToRepairState;
 			_losePresenter.RestartEvent += SwitchToRestartState;
 		}
-
+		
+		public override void Exit() {
+			_losePresenter.enabled = false;
+			_losePresenter.RepairEvent -= SwitchToRepairState;
+			_losePresenter.RestartEvent -= SwitchToRestartState;
+			_cameraSystem.isZoomed = false;
+		}
+		
 		private async void CameraActions() {
 			await _cameraSystem.Shake(1, 250);
 			_cameraSystem.isZoomed = true;
 		}
-
-		public override void Exit() {
-			_losePresenter.enabled = false;
-			_losePresenter.RepairEvent -= SwitchToRestartState;
-			_losePresenter.RestartEvent -= SwitchToPrepareState;
-			_cameraSystem.isZoomed = false;
-		}
-
 		private void SwitchToRestartState() {
 			_gameplayCache.mapIndex = 0;
 			_stateSwitcher.SetState<FinalizeState>();
 		}
 
-		private void SwitchToPrepareState() {
+		private void SwitchToRepairState() {
 			_stateSwitcher.SetState<RepairState>();
 		}
 	}

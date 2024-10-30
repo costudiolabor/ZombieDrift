@@ -1,15 +1,22 @@
+using System;
 using Gameplay;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.UI;
 
-public class GameplayHudView : View, IFlyingTarget {
+public interface IGameplayHudActions {
+	event Action PauseClickedEvent;
+}
+public class GameplayHudView : View, IFlyingTarget, IGameplayHudActions {
+	public event Action PauseClickedEvent;
+
 	[SerializeField] private TMP_Text _stageNumberText;
 	[SerializeField] private TMP_Text _mapNumberText;
 	[SerializeField] private TMP_Text _coinsText;
 	[SerializeField] private Transform _rewardTarget;
+	[SerializeField] private Button _pauseButton;
 	[SerializeField] private LocalizedString _stageCaption;
-
 	private int _stageNumber;
 
 	public int stageNumber {
@@ -35,14 +42,21 @@ public class GameplayHudView : View, IFlyingTarget {
 		get => _coinsText.text;
 	}
 
-	public bool isCoinsVisible {
-		set => _coinsText.enabled = value;
+	public bool isPauseButtonVisible {
+		set => _pauseButton.gameObject.SetActive(value);
 	}
+
 	public Transform rewardTargetTransform => _rewardTarget;
 
-	private void OnEnable() =>
-			_stageCaption.StringChanged += PrintStageNumber;
+	private void PauseNotify() =>
+			PauseClickedEvent?.Invoke();
 
-	private void OnDisable() =>
-			_stageCaption.StringChanged -= PrintStageNumber;
+	private void OnEnable() {
+		_stageCaption.StringChanged += PrintStageNumber;
+		_pauseButton.onClick.AddListener(PauseNotify);
+	}
+	private void OnDisable() {
+		_stageCaption.StringChanged -= PrintStageNumber;
+		_pauseButton.onClick.RemoveListener(PauseNotify);
+	}
 }

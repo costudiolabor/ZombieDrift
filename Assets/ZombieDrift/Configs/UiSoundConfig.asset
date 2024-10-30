@@ -18,6 +18,6 @@ MonoBehaviour:
   _winAudioClip: {fileID: 8300000, guid: 29d70f587fd6cbf4398c8d9f65cbac7c, type: 3}
   _loseAudioClip: {fileID: 8300000, guid: 999ff923145eaf64395b5ed579bb7587, type: 3}
   _carSelectAudioClip: {fileID: 0}
-  _carBuyAudioClip: {fileID: 0}
+  _carBuyAudioClip: {fileID: 8300000, guid: 6d23a7fa11cabf046bc97bd7dee48337, type: 3}
   _coinAudioClip: {fileID: 8300000, guid: 549e13fde6b1b7f488bd5fba3edded0e, type: 3}
   _repairAudioClip: {fileID: 8300000, guid: 0babf33efd452644399f0a4cd823e3fa, type: 3}

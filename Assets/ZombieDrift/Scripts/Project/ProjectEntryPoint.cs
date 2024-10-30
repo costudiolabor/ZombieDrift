@@ -12,18 +12,18 @@ namespace Project {
 		private readonly ProjectConfig _config;
 		private readonly SaveLoadSystem _saveLoadSystem;
 		private readonly ProjectCache _projectCache;
-		private readonly UiSoundsPlayer _uiSoundsPlayer;
+		private readonly UiSounds _uiSounds;
 
 		public ProjectEntryPoint(
 				ScenesLoader scenesLoader,
 				ProjectConfig config,
 				SaveLoadSystem saveLoadSystem,
 				ProjectCache projectCache,
-				UiSoundsPlayer uiSoundsPlayer) {
+				UiSounds uiSounds) {
 			_scenesLoader = scenesLoader;
 			_saveLoadSystem = saveLoadSystem;
 			_projectCache = projectCache;
-			_uiSoundsPlayer = uiSoundsPlayer;
+			_uiSounds = uiSounds;
 			_config = config;
 		}
 
@@ -42,7 +42,7 @@ namespace Project {
 		private void InitializeUiSounds() {
 			var soundsParent = new GameObject(POOL_SOUNDS_PARENT_NAME).transform;
 			Object.DontDestroyOnLoad(soundsParent);
-			_uiSoundsPlayer.Initialize(soundsParent);
+			_uiSounds.Initialize(soundsParent);
 		}
 
 		private async UniTask SetSystemLocale() {
@@ -74,6 +74,5 @@ namespace Project {
 
 		private void SwitchToGameplayScene() =>
 				_scenesLoader.SwitchToGameplayScene();
-
 	}
 }

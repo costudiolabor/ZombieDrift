@@ -54,7 +54,8 @@ namespace Gameplay {
 		private void InstallGameplay() {
 			Container.Bind<MenuPresenter>().AsSingle();
 			Container.Bind<LosePresenter>().AsSingle();
-			Container.Bind<GameplayHud>().AsSingle();
+			Container.Bind<GameplayHudPresenter>().AsSingle();
+			Container.Bind<PausePresenter>().AsSingle();
 			Container.Bind<GetReadyPresenter>().AsSingle();
 			Container.Bind<HowToPlayPresenter>().AsSingle();
 			Container.Bind<LevelCompletePresenter>().AsSingle();
@@ -73,7 +74,7 @@ namespace Gameplay {
 			Container.Bind<CameraSystem>().AsSingle();
 			Container.Bind<PauseService>().AsSingle();
 			Container.Bind<MoneyWallet>().AsSingle();
-
+			
 			Container.BindInterfacesAndSelfTo<FlyingRewardSystem>().AsSingle().NonLazy();
 			Container.Bind<FlyingRewardConfig>().FromInstance(_flyingRewardConfig);
 
@@ -99,6 +100,7 @@ namespace Gameplay {
 			Container.Bind<MenuState>().AsSingle();
 			Container.Bind<GetReadyState>().AsSingle();
 			Container.Bind<GameplayState>().AsSingle();
+			Container.Bind<PauseState>().AsSingle();
 			Container.Bind<WinState>().AsSingle();
 			Container.Bind<LoseState>().AsSingle();
 			Container.Bind<RepairState>().AsSingle();
@@ -106,7 +108,7 @@ namespace Gameplay {
 		}
 
 		private void InstallSoundSystem() {
-			Container.Bind<SoundsPlayer>().AsSingle();
+			Container.Bind<GameplaySounds>().AsSingle();
 			Container.Bind<SoundConfig>().FromInstance(_soundConfig);
 		}
 	}

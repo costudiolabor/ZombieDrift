@@ -71,6 +71,14 @@ MonoBehaviour:
     m_Key: continueKey
     m_Metadata:
       m_Items: []
+  - m_Id: 12948201588551680
+    m_Key: pausedKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12948513011429376
+    m_Key: soundKey
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

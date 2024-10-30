@@ -5,25 +5,25 @@ namespace Gameplay {
 	public class MenuState : State {
 		private readonly StateSwitcher _stateSwitcher;
 		private readonly MenuPresenter _menuPresenter;
-		private readonly GameplayHud _gameplayHud;
+		private readonly GameplayHudPresenter _gameplayHudPresenter;
 		private readonly ScenesLoader _scenesLoader;
 
 		public MenuState(
 				StateSwitcher stateSwitcher,
 				MenuPresenter menuPresenter,
-				GameplayHud gameplayHud,
+				GameplayHudPresenter gameplayHudPresenter,
 				ScenesLoader scenesLoader
 		) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
 			_menuPresenter = menuPresenter;
-			_gameplayHud = gameplayHud;
+			_gameplayHudPresenter = gameplayHudPresenter;
 			_scenesLoader = scenesLoader;
 		}
 
 		public override void Enter() {
 			Debug.Log("Menu");
 			
-			_gameplayHud.presentState = StagePresentState.StageOnly;
+			_gameplayHudPresenter.presentState = StagePresentState.StageOnly;
 			_menuPresenter.enabled = true;
 			_menuPresenter.StartGameEvent += SwitchToPlayState;
 			_menuPresenter.GarageEvent += SwitchToGarageState;
@@ -31,7 +31,7 @@ namespace Gameplay {
 
 		public override void Exit() {
 			Debug.Log("Exit Menu");
-			_gameplayHud.presentState = StagePresentState.None;
+			_gameplayHudPresenter.presentState = StagePresentState.None;
 			_menuPresenter.enabled = false;
 			_menuPresenter.StartGameEvent -= SwitchToPlayState;
 			_menuPresenter.GarageEvent -= SwitchToGarageState;

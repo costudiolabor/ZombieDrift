@@ -1,53 +1,59 @@
 using Project;
 using UnityEngine;
-using UnityEngine.Localization;
 
 namespace Gameplay {
 	public class PauseState : State {
-		private const string LOCALIZE_TABLE = "StringsTable";
-		private const string MAP_CLEARED_LOCAL_KEY = "mapClearedKey";
-		private const string STAGE_CLEARED_KEY = "clearedKey";
-
-		private readonly LocalizedString _mapClearedLocalizedString;
-		private readonly LocalizedString _stageClearedLocalizedString;
-
 		private readonly StateSwitcher _stateSwitcher;
+		private readonly PausePresenter _pausePresenter;
+		private readonly UiSounds _uiSounds;
+		private readonly GameplaySounds _gameplaySounds;
 		private readonly SaveLoadSystem _saveLoadSystem;
-		private readonly ProjectCache _projectCache;
-		private readonly GameplayCache _gameplayCache;
-		private readonly LevelCompletePresenter _levelCompletePresenter;
-		private readonly CameraSystem _cameraSystem;
-		private bool isStageComplete => _gameplayCache.mapIndex + 1 > _gameplayCache.mapsCount - 1;
+		private readonly PauseService _pauseService;
 
 		public PauseState(StateSwitcher stateSwitcher,
+				PausePresenter pausePresenter,
+				UiSounds uiSounds,
+				GameplaySounds gameplaySounds,
 				SaveLoadSystem saveLoadSystem,
-				ProjectCache projectCache,
-				GameplayCache gameplayCache,
-				LevelCompletePresenter levelCompletePresenter,
-				CameraSystem cameraSystem
+				PauseService pauseService
+				
 		) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
+			_pausePresenter = pausePresenter;
+			_uiSounds = uiSounds;
+			_gameplaySounds = gameplaySounds;
 			_saveLoadSystem = saveLoadSystem;
-			_projectCache = projectCache;
-			_gameplayCache = gameplayCache;
-			_levelCompletePresenter = levelCompletePresenter;
-			_cameraSystem = cameraSystem;
-
-			_mapClearedLocalizedString = new LocalizedString(LOCALIZE_TABLE, MAP_CLEARED_LOCAL_KEY);
-			_stageClearedLocalizedString = new LocalizedString(LOCALIZE_TABLE, STAGE_CLEARED_KEY);
+			_pauseService = pauseService;
 		}
 
 		public override void Enter() {
 			Debug.Log("Pause");
-
-			_levelCompletePresenter.ContinueEvent += SwitchToPrepareState;
+			_pauseService.SetPause(true); 
+			
+			_pausePresenter.enabled = true;
+			_pausePresenter.viewEvents.isMute = _saveLoadSystem.LoadMuteStateFromPrefs();
+			_pausePresenter.viewEvents.ContinueEvent += SwitchToGameplay;
+			_pausePresenter.viewEvents.MuteChangedEvent += ChangeMute;
 		}
 
 		public override void Exit() {
-			_levelCompletePresenter.ContinueEvent -= SwitchToPrepareState;
+			_pauseService.SetPause(false); 
+			
+			_pausePresenter.enabled = false;
+			_pausePresenter.viewEvents.ContinueEvent -= SwitchToGameplay;
+			_pausePresenter.viewEvents.MuteChangedEvent -= ChangeMute;
 		}
 
-		private void SwitchToPrepareState() =>
-				_stateSwitcher.SetState<FinalizeState>();
+		private void ChangeMute() {
+			var currentMuteState = _saveLoadSystem.LoadMuteStateFromPrefs();
+			var isMuted = !currentMuteState;
+			_saveLoadSystem.SaveMuteStateFromPrefs(isMuted);
+			_pausePresenter.viewEvents.isMute = isMuted;
+			_uiSounds.isMute = isMuted;
+			_gameplaySounds.isMute = isMuted;
+		}
+
+		private void SwitchToGameplay() =>
+				_stateSwitcher.SetState<GameplayState>();
 	}
 }

@@ -7,10 +7,12 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Project {
-	public class SoundsPlayer {
+	public class GameplaySounds {
 		private const string POOL_SOUNDS_PARENT_NAME = "SoundsParent";
 		private const float MIN_PINCH = 0.9f;
 		private const float MAX_PINCH = 1.1f;
+
+		public bool isMute { get; set; }
 
 		private readonly SoundConfig _soundConfig;
 		private PoolObjects<Sound> _poolOfSounds;
@@ -20,14 +22,14 @@ namespace Project {
 
 		private bool _zombieVoicesPlaying;
 
-		public SoundsPlayer(SoundConfig soundConfig) =>
+		public GameplaySounds(SoundConfig soundConfig) =>
 				_soundConfig = soundConfig;
 
 		public void Initialize() {
 			_soundsParent = new GameObject(POOL_SOUNDS_PARENT_NAME).transform;
 			_poolOfSounds = new PoolObjects<Sound>(_soundConfig.soundPrefab, _soundConfig.poolAmount, canExpand: true, _soundsParent);
 		}
-		
+
 		public void PlayZombieHitSoundAtPosition(Vector3 position) {
 			var hitSoundsArray = _soundConfig.hitSoundsArray;
 			PlayRandomSoundAtPosition(position, hitSoundsArray, randomPinchValue);
@@ -40,13 +42,13 @@ namespace Project {
 
 		public async void StartZombieVoices(IReadOnlyCollection<Zombie> zombies) {
 			_zombieVoicesPlaying = true;
-			
+
 			var soundsArray = _soundConfig.zombieVoicesArray;
 			var frequency = _soundConfig.voiceFrequencyMinMax;
 
 			while (_zombieVoicesPlaying) {
 				var activeZombieCount = zombies.Count;
-				
+
 				if (activeZombieCount == 0) {
 					StopZombieVoices();
 					return;
@@ -73,6 +75,21 @@ namespace Project {
 			_tyresSound.PlayLooped(_soundConfig.tyresClip, 1);
 		}
 
+		public void UpdateCarSounds(Vector3 position, float normalizedSpeed, float wheelAxis) {
+			_engineSound.position = position;
+			_engineSound.volume = isMute
+					? 0
+					: 1;
+			
+			_engineSound.loopedPitch = normalizedSpeed;
+
+			_tyresSound.position = position;
+			//Half tyres volume from engine, another half from wheelAxis
+			_tyresSound.volume = isMute
+					? 0
+					: (normalizedSpeed + wheelAxis) * 0.5f;
+		}
+
 		public void StopCarSounds() {
 			_tyresSound.StopAndDisable();
 			_tyresSound = null;
@@ -81,20 +98,8 @@ namespace Project {
 			_engineSound = null;
 		}
 
-		public void UpdateEngine(Vector3 position, float normalizedSpeed, float wheelAxis) {
-			if (_engineSound == null)
-				throw new Exception("Engine sound is null");
-			_engineSound.position = position;
-			_engineSound.loopedPitch = normalizedSpeed;
-
-			_tyresSound.position = position;
-
-			//Half tyres volume from engine, another half from wheelAxis
-			_tyresSound.volume = (normalizedSpeed + wheelAxis) * 0.5f;
-		}
-
 		private void PlayRandomSoundAtPosition(Vector3 position, AudioClip[] soundsArray, float pitch) {
-			if (soundsArray.Length == 0)
+			if (soundsArray.Length == 0 || isMute)
 				return;
 
 			int randomIndex = Random.Range(0, soundsArray.Length);

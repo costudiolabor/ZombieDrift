@@ -11,11 +11,11 @@ namespace Garage {
 	}
 
 	public class GaragePresenter {
-		private readonly UiSoundsPlayer _uiSoundsPlayer;
+		private readonly UiSounds _uiSounds;
 		public event Action BuyEvent, ChooseEvent, WatchEvent, PreviousClickedEvent, NextClickedEvent, BackEvent;
 
-		public GaragePresenter(UiSoundsPlayer uiSoundsPlayer) {
-			_uiSoundsPlayer = uiSoundsPlayer;
+		public GaragePresenter(UiSounds uiSounds) {
+			_uiSounds = uiSounds;
 		}
 		
 		public int carPrice {
@@ -95,30 +95,34 @@ namespace Garage {
 		}
 
 		private void WatchNotify() {
-			_uiSoundsPlayer.PlayClickSound();
 			WatchEvent?.Invoke();
+			_uiSounds.PlayClickSound();
 		}
 
-		private void BuyNotify() =>
-				BuyEvent?.Invoke();
+		private void BuyNotify() {
+			BuyEvent?.Invoke();
+			_uiSounds.PlayBuySound();
+		}
 
 		private void TurnRightNotify() {
-			_uiSoundsPlayer.PlayClickSound();
 			NextClickedEvent?.Invoke();
+			_uiSounds.PlayClickSound();
 		}
 
 		private void TurnLeftNotify() {
-			_uiSoundsPlayer.PlayClickSound();
 			PreviousClickedEvent?.Invoke();
+			_uiSounds.PlayClickSound();
 		}
 
 		private void BackNotify() {
-			_uiSoundsPlayer.PlayClickSound();
 			BackEvent?.Invoke();
+			_uiSounds.PlayClickSound();
 		}
 
-		private void SelectNotify() =>
-				ChooseEvent?.Invoke();
+		private void SelectNotify() {
+			ChooseEvent?.Invoke();
+			_uiSounds.PlayRepairSound();
+		}
 
 		~GaragePresenter() {
 			_view.leftButton.onClick.RemoveListener(TurnLeftNotify);

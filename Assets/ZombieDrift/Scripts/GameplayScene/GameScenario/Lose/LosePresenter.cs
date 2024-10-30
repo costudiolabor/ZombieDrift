@@ -4,18 +4,18 @@ using Zenject;
 
 namespace Gameplay {
     public class LosePresenter {
-	    private readonly UiSoundsPlayer _uiSoundsPlayer;
+	    private readonly UiSounds _uiSounds;
 	    public event Action RestartEvent, RepairEvent;
         private LoseView _view;
 
-        public LosePresenter(UiSoundsPlayer uiSoundsPlayer) {
-	        _uiSoundsPlayer = uiSoundsPlayer;
+        public LosePresenter(UiSounds uiSounds) {
+	        _uiSounds = uiSounds;
         }
         
         public bool enabled {
 	        set {
 		        if(value)
-			        _uiSoundsPlayer.PlayLoseSound();;
+			        _uiSounds.PlayLoseSound();;
 		        _view.isActive = value;
 	        }
         }
@@ -27,12 +27,12 @@ namespace Gameplay {
         }
 
         private void RepairNotify() {
-	        _uiSoundsPlayer.PlayRepairSound();;
+	        _uiSounds.PlayRepairSound();;
 	        RepairEvent?.Invoke();
         }
 
         private void RestartNotify() {
-	        _uiSoundsPlayer.PlayClickSound();
+	        _uiSounds.PlayClickSound();
 	        RestartEvent?.Invoke();
         }
 

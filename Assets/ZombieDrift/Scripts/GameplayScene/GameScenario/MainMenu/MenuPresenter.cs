@@ -4,12 +4,12 @@ using Zenject;
 
 namespace Gameplay {
     public class MenuPresenter {
-	    private readonly UiSoundsPlayer _uiSoundsPlayer;
+	    private readonly UiSounds _uiSounds;
 	    public event Action StartGameEvent, GarageEvent;
         private MainMenuView _view;
 
-        public MenuPresenter(UiSoundsPlayer uiSoundsPlayer) {
-	        _uiSoundsPlayer = uiSoundsPlayer;
+        public MenuPresenter(UiSounds uiSounds) {
+	        _uiSounds = uiSounds;
         }
         public bool enabled {
             set {
@@ -29,7 +29,7 @@ namespace Gameplay {
         }
 
         private void GarageClickedNotify() {
-	        _uiSoundsPlayer.PlayClickSound();
+	        _uiSounds.PlayClickSound();
 	        GarageEvent?.Invoke();
         }
 

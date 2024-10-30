@@ -11,6 +11,7 @@ namespace Gameplay {
 		private readonly ComboSystem _comboSystem;
 		private readonly CarsConfig _carsConfig;
 		private readonly ZombieStorage _zombieStorage;
+		private readonly PauseService _pauseService;
 		private readonly BotNavigation _botSystem;
 		private readonly EnemyPointerSystem _enemyPointerSystem;
 		private readonly StagesConfig _stagesConfig;
@@ -19,7 +20,8 @@ namespace Gameplay {
 		private readonly StateSwitcher _stateSwitcher;
 		private readonly VehicleController _vehicleController;
 		private readonly VehicleDestroyer _vehicleDestroyer;
-		private readonly GameplayHud _gameplayHud;
+		private readonly FlyingRewardSystem _flyingRewardSystem;
+		private readonly GameplayHudPresenter _gameplayHudPresenter;
 
 		public ConstructState(
 				StateSwitcher stateSwitcher,
@@ -28,7 +30,8 @@ namespace Gameplay {
 				GameProcess gameProcess,
 				VehicleController vehicleController,
 				VehicleDestroyer vehicleDestroyer,
-				GameplayHud gameplayHud,
+				FlyingRewardSystem flyingRewardSystem,
+				GameplayHudPresenter gameplayHudPresenter,
 				BotNavigation botSystem,
 				EnemyPointerSystem enemyPointerSystem,
 				StagesConfig stagesConfig,
@@ -37,7 +40,8 @@ namespace Gameplay {
 				MoneyWallet moneyWallet,
 				ComboSystem comboSystem,
 				CarsConfig carsConfig,
-				ZombieStorage zombieStorage
+				ZombieStorage zombieStorage,
+				PauseService pauseService
 		) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
 			_contentCreationService = contentCreationService;
@@ -45,13 +49,15 @@ namespace Gameplay {
 			_gameProcess = gameProcess;
 			_vehicleController = vehicleController;
 			_vehicleDestroyer = vehicleDestroyer;
-			_gameplayHud = gameplayHud;
+			_flyingRewardSystem = flyingRewardSystem;
+			_gameplayHudPresenter = gameplayHudPresenter;
 			_projectCache = projectCache;
 			_gameplayCache = gameplayCache;
 			_moneyWallet = moneyWallet;
 			_comboSystem = comboSystem;
 			_carsConfig = carsConfig;
 			_zombieStorage = zombieStorage;
+			_pauseService = pauseService;
 			_botSystem = botSystem;
 			_enemyPointerSystem = enemyPointerSystem;
 			_stagesConfig = stagesConfig;
@@ -65,6 +71,7 @@ namespace Gameplay {
 			CreateGameplayObjects();
 			SnapCameraToCar();
 			InitializeGameplay();
+			InitializePause();
 
 			var mapsCount = _gameplayCache.mapsCount;
 			var mapIndex = _gameplayCache.mapIndex;
@@ -74,6 +81,10 @@ namespace Gameplay {
 				SwitchToMenuState();
 			else
 				SwitchToHowToPlayState();
+		}
+		private void InitializePause() {
+			_pauseService.Register(_vehicleController);
+			_pauseService.Register(_flyingRewardSystem);
 		}
 
 		private void CalculateCombo() {
@@ -112,9 +123,9 @@ namespace Gameplay {
 		}
 
 		private void SetStageNumber(int stageIndex, int mapIndex, int mapsCount) {
-			_gameplayHud.stageIndex = stageIndex;
-			_gameplayHud.mapIndex = new Vector2Int(mapIndex, mapsCount);
-			_gameplayHud.moneyCount = _moneyWallet.count;
+			_gameplayHudPresenter.stageIndex = stageIndex;
+			_gameplayHudPresenter.mapIndex = new Vector2Int(mapIndex, mapsCount);
+			_gameplayHudPresenter.moneyCount = _moneyWallet.count;
 		}
 
 		private void SnapCameraToCar() =>

@@ -10,6 +10,7 @@ namespace Gameplay {
             MenuState menuState,
             GetReadyState getReadyState,
             GameplayState gameplayState,
+            PauseState pauseState,
             WinState winState,
             LoseState loseState,
             RepairState repairState,
@@ -19,6 +20,7 @@ namespace Gameplay {
             _stateSwitcher.AddState(menuState);
             _stateSwitcher.AddState(getReadyState);
             _stateSwitcher.AddState(gameplayState);
+            _stateSwitcher.AddState(pauseState);
             _stateSwitcher.AddState(winState);
             _stateSwitcher.AddState(loseState);
             _stateSwitcher.AddState(repairState);

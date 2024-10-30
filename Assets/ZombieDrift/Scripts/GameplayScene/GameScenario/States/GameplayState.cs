@@ -9,12 +9,10 @@ namespace Gameplay {
 
 		private const string LOCALIZE_TABLE = "StringsTable";
 		private const string COMBO_HINT_LOCAL_KEY = "comboKey";
-		private readonly LocalizedString _comboLocalizedString;
 
 		private readonly StateSwitcher _stateSwitcher;
-		private readonly GameplayHud _gameplayHud;
+		private readonly GameplayHudPresenter _gameplayHudPresenter;
 		private readonly GameProcess _gameProcess;
-		private readonly PauseService _pauseService;
 		private readonly VehicleController _vehicleController;
 		private readonly VehicleDestroyer _vehicleDestroyer;
 		private readonly CameraSystem _cameraSystem;
@@ -25,13 +23,14 @@ namespace Gameplay {
 		private readonly FlyingRewardSystem _flyingRewardSystem;
 		private readonly ComboSystem _comboSystem;
 		private readonly TextHintSystem _textHintSystem;
-		private readonly SoundsPlayer _soundsPlayer;
+		private readonly GameplaySounds _gameplaySounds;
 		private readonly ZombieStorage _zombieStorage;
 
+		private readonly LocalizedString _comboLocalizedString;
+
 		public GameplayState(StateSwitcher stateSwitcher,
-				GameplayHud gameplayHud,
+				GameplayHudPresenter gameplayHudPresenter,
 				GameProcess gameProcess,
-				PauseService pauseService,
 				VehicleController vehicleController,
 				VehicleDestroyer vehicleDestroyer,
 				CameraSystem cameraSystem,
@@ -42,12 +41,11 @@ namespace Gameplay {
 				FlyingRewardSystem flyingRewardSystem,
 				ComboSystem comboSystem,
 				TextHintSystem textHintSystem,
-				SoundsPlayer soundsPlayer,
+				GameplaySounds gameplaySounds,
 				ZombieStorage zombieStorage) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
-			_gameplayHud = gameplayHud;
+			_gameplayHudPresenter = gameplayHudPresenter;
 			_gameProcess = gameProcess;
-			_pauseService = pauseService;
 			_vehicleController = vehicleController;
 			_vehicleDestroyer = vehicleDestroyer;
 			_cameraSystem = cameraSystem;
@@ -58,23 +56,22 @@ namespace Gameplay {
 			_flyingRewardSystem = flyingRewardSystem;
 			_comboSystem = comboSystem;
 			_textHintSystem = textHintSystem;
-			_soundsPlayer = soundsPlayer;
+			_gameplaySounds = gameplaySounds;
 			_zombieStorage = zombieStorage;
-
 			_comboLocalizedString = new LocalizedString(LOCALIZE_TABLE, COMBO_HINT_LOCAL_KEY);
 		}
 
 		public override void Enter() {
 			Debug.Log("Gameplay");
-			
-			_gameplayHud.presentState = StagePresentState.All;
-			_pauseService.SetPause(false);
+
+			_gameplayHudPresenter.presentState = StagePresentState.AllWithPause;
+			_gameplayHudPresenter.viewActions.PauseClickedEvent += SwitchToPauseState;
 
 			_vehicleController.Start();
 			_botNavigation.Start();
 			_enemyPointerSystem.enabled = true;
-			_soundsPlayer.StartCarSounds();
-			_soundsPlayer.StartZombieVoices(_zombieStorage);
+			_gameplaySounds.StartCarSounds();
+			_gameplaySounds.StartZombieVoices(_zombieStorage);
 
 			//     _comboCounter.comboDelay = COMBO_ACTIVE_TIME;
 			_flyingRewardSystem.CollectedEvent += OnFlyingRewardArrived;
@@ -85,14 +82,15 @@ namespace Gameplay {
 		}
 
 		public override void Exit() {
-			_gameplayHud.presentState = StagePresentState.None;
-			_pauseService.SetPause(true);
+			_gameplayHudPresenter.presentState = StagePresentState.None;
+			_gameplayHudPresenter.viewActions.PauseClickedEvent -= SwitchToPauseState;
 
 			_vehicleController.Stop();
 			_botNavigation.Stop();
 			_enemyPointerSystem.enabled = false;
-			_soundsPlayer.StopCarSounds();
-			_soundsPlayer.StopZombieVoices();
+
+			_gameplaySounds.StopCarSounds();
+			_gameplaySounds.StopZombieVoices();
 
 			_flyingRewardSystem.CollectedEvent -= OnFlyingRewardArrived;
 			_gameProcess.ObstacleHitEvent -= OnCarHitObstacle;
@@ -104,14 +102,13 @@ namespace Gameplay {
 			_botNavigation.Tick();
 			_enemyPointerSystem.Tick();
 			_comboSystem.TimerRefresh();
-			_soundsPlayer.UpdateEngine(_vehicleController.carPosition, _vehicleController.normalizedVelocity, Mathf.Abs(_vehicleController.wheelsAxisHorizontal));
-
+			_gameplaySounds.UpdateCarSounds(_vehicleController.carPosition, _vehicleController.normalizedVelocity, Mathf.Abs(_vehicleController.wheelsAxisHorizontal));
 		}
 
 		private async void OnEnemyHit(Zombie zombie) {
 			var hitPosition = zombie.position;
 
-			_soundsPlayer.PlayZombieHitSoundAtPosition(hitPosition);
+			_gameplaySounds.PlayZombieHitSoundAtPosition(hitPosition);
 			_particlesPlayer.PlayZombieHit(hitPosition);
 			//   _botNavigation.RemoveKilledZombie(zombie);
 			_enemyPointerSystem.Remove(zombie);
@@ -125,7 +122,7 @@ namespace Gameplay {
 		}
 
 		private void OnCarHitObstacle(Vector3 point) {
-			_soundsPlayer.PlayCarCrashSoundAtPosition(point);
+			_gameplaySounds.PlayCarCrashSoundAtPosition(point);
 			_particlesPlayer.PlayObstacleHit(point);
 			_vehicleDestroyer.DestroyFormPoint(point);
 			SwitchToLoseState();
@@ -147,12 +144,12 @@ namespace Gameplay {
 		}
 
 		private void OnFlyingRewardArrived() =>
-				_gameplayHud.IncreaseMoneyCount();
-
+				_gameplayHudPresenter.IncreaseMoneyCount();
 		private void SwitchToWinState() =>
 				_stateSwitcher.SetState<WinState>();
-
 		private void SwitchToLoseState() =>
 				_stateSwitcher.SetState<LoseState>();
+		private void SwitchToPauseState() =>
+				_stateSwitcher.SetState<PauseState>();
 	}
 }

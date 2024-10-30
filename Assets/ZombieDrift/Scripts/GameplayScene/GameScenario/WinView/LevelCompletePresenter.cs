@@ -2,19 +2,19 @@ using System;
 using Project;
 namespace Gameplay {
 	public class LevelCompletePresenter {
-		private readonly UiSoundsPlayer _uiSoundsPlayer;
+		private readonly UiSounds _uiSounds;
 		public event Action ContinueEvent;
 
 		private WinView _view;
 
-		public LevelCompletePresenter(UiSoundsPlayer uiSoundsPlayer) {
-			_uiSoundsPlayer = uiSoundsPlayer;
+		public LevelCompletePresenter(UiSounds uiSounds) {
+			_uiSounds = uiSounds;
 		}
 
 		public bool enabled {
 			set {
 				if (value)
-					_uiSoundsPlayer.PlayWinSound();
+					_uiSounds.PlayWinSound();
 				_view.isActive = value;
 			}
 		}
@@ -28,7 +28,7 @@ namespace Gameplay {
 			_view.ContinueButtonClickedEvent += ContinueNotify;
 		}
 		private void ContinueNotify() {
-			_uiSoundsPlayer.PlayClickSound();
+			_uiSounds.PlayClickSound();
 			ContinueEvent?.Invoke();
 		}
 	}

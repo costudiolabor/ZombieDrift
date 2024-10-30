@@ -7,7 +7,7 @@ using Zenject;
 using Random = UnityEngine.Random;
 
 namespace Gameplay {
-    public class FlyingRewardSystem : IFixedTickable {
+    public class FlyingRewardSystem : IFixedTickable, IPauseSensitive {
         public event Action CollectedEvent, AllCollectedEvent;
 
         private readonly FlyingRewardConfig _config;
@@ -15,7 +15,8 @@ namespace Gameplay {
         private readonly PoolObjects<FlyingElement> _flyingItemsPool;
         private Camera _mainCamera;
         private Transform _destinationTransform;
-
+        private bool _isPaused;
+        
         public FlyingRewardSystem(FlyingRewardConfig config) {
             _config = config;
             var parent = new GameObject(_config.itemsParentName).transform;
@@ -55,7 +56,10 @@ namespace Gameplay {
         }
 
         public void FixedTick() {
-            if (_flyingList.Count <= 0)
+	        if(_isPaused)
+		        return;
+	        
+	        if (_flyingList.Count <= 0)
                 return;
             Fly();
         }
@@ -82,6 +86,9 @@ namespace Gameplay {
         private Vector3 GetDestinationPosition() {
             var destinationPosition = _destinationTransform.position;
             return _mainCamera.ScreenToWorldPoint(new Vector3(destinationPosition.x, destinationPosition.y, _mainCamera.nearClipPlane));
+        }
+        public void SetPause(bool isPaused) {
+	        _isPaused = isPaused;
         }
     }
 }

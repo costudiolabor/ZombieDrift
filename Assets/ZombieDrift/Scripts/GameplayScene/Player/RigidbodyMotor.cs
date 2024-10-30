@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RigidbodyMotor : MonoBehaviour {
+public class RigidbodyMotor : MonoBehaviour, IPauseSensitive {
     [SerializeField] private Rigidbody _rigidBody;
     public Rigidbody body => _rigidBody;
     public float maxSpeed { get; set; }
@@ -34,6 +34,7 @@ public class RigidbodyMotor : MonoBehaviour {
     public float rigidbodyVelocity => _rigidBody.linearVelocity.magnitude;
 
     private float _steerInput, _accelerationInput;
+    private Vector3 _velocityBeforePause;
 
     private void Awake() {
         _rigidBody.centerOfMass = centerOfMass;
@@ -42,15 +43,26 @@ public class RigidbodyMotor : MonoBehaviour {
     public void FixedTick() {
         var moveVector = transform.forward * (acceleration);
         moveVector.y = 0;
-        // _moveForceVector = moveVector; 
+
         if (_steerInput != 0) {
             var rotateVector = Vector3.up * (_steerInput * rigidbodyVelocity * steerAngle);
             transform.Rotate(rotateVector);
-            //transform.Rotate(Vector3.up * (_steerInput * rigidbodyVelocity.magnitude * steerAngle));
+           
         }
 
         if (rigidbodyVelocity < maxSpeed)
             _rigidBody.AddForce(moveVector, ForceMode.Acceleration);
-        
+    }
+
+    public void SetPause(bool isPaused) {
+	    if (isPaused) {
+		    _velocityBeforePause = _rigidBody.linearVelocity;
+		    _rigidBody.isKinematic = true;
+	    }
+	    else {
+		    _rigidBody.isKinematic = false;
+		    _rigidBody.linearVelocity = _velocityBeforePause;
+	    }
+	    
     }
 }

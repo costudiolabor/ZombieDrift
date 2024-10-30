@@ -6,22 +6,22 @@ namespace Gameplay {
         private readonly StateSwitcher _stateSwitcher;
         private readonly GetReadyPresenter _getReadyPresenter;
         private readonly HowToPlayPresenter _howToPlayPresenter;
-        private readonly GameplayHud _gameplayHud;
+        private readonly GameplayHudPresenter _gameplayHudPresenter;
 
         public GetReadyState(StateSwitcher stateSwitcher,
             GetReadyPresenter getReadyPresenter,
             HowToPlayPresenter howToPlayPresenter,
-            GameplayHud gameplayHud) : base(stateSwitcher) {
+            GameplayHudPresenter gameplayHudPresenter) : base(stateSwitcher) {
             _stateSwitcher = stateSwitcher;
             _getReadyPresenter = getReadyPresenter;
             _howToPlayPresenter = howToPlayPresenter;
-            _gameplayHud = gameplayHud;
+            _gameplayHudPresenter = gameplayHudPresenter;
         }
 
         public override void Enter() {
 	        Debug.Log("GetReady");
 
-            _gameplayHud.presentState = StagePresentState.All;
+            _gameplayHudPresenter.presentState = StagePresentState.All;
             _howToPlayPresenter.enabled = true;
             _getReadyPresenter.enabled = true;
             _getReadyPresenter.GoToMenuEvent += SwitchToMainMenu;
@@ -29,7 +29,7 @@ namespace Gameplay {
         }
 
         public override void Exit() {
-            _gameplayHud.presentState = StagePresentState.None;
+            _gameplayHudPresenter.presentState = StagePresentState.None;
             _getReadyPresenter.enabled = false;
             _getReadyPresenter.GoToMenuEvent -= SwitchToMainMenu;
             _getReadyPresenter.GoToPlayEvent -= SwitchToPlayState;

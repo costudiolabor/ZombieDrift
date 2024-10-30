@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Gameplay {
 
-	public class VehicleController {
+	public class VehicleController : IPauseSensitive {
 		public float normalizedVelocity => _car.velocity / _car.maxVelocity;
 		public float wheelsAxisHorizontal => _axisHorizontal;
 		public Vector3 carPosition => _car.transform.position;
@@ -30,6 +30,9 @@ namespace Gameplay {
 		private void OnTurn(float axisHorizontal) {
 			_axisHorizontal = axisHorizontal;
 			_car.turnHorizontalAxis = _axisHorizontal;
+		}
+		public void SetPause(bool isPaused) {
+			_car.SetPause(isPaused);
 		}
 	}
 }

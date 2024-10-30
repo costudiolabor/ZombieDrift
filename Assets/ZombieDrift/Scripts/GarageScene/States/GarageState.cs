@@ -10,6 +10,7 @@ namespace Garage {
 		private readonly GaragePresenter _garagePresenter;
 		private readonly ProjectCache _projectCache;
 		private readonly MoneyWallet _moneyWallet;
+				//	private readonly UiSounds _uiSounds;
 
 		private int selectedCarIndex {
 			set => _projectCache.selectedCarIndex = value;
@@ -28,7 +29,8 @@ namespace Garage {
 				GaragePresenter garagePresenter,
 				ProjectCache projectCache,
 				CarsConfig config,
-				MoneyWallet moneyWallet) : base(stateSwitcher) {
+				MoneyWallet moneyWallet,
+				UiSounds uiSounds) : base(stateSwitcher) {
 			_purchasedLayerMask = config.purchasedLayerMask;
 			_scenesLoader = scenesLoader;
 			_podium = podium;
@@ -36,6 +38,7 @@ namespace Garage {
 			_garagePresenter = garagePresenter;
 			_projectCache = projectCache;
 			_moneyWallet = moneyWallet;
+			//_uiSounds = uiSounds;
 		}
 
 		public override void Enter() {
@@ -63,11 +66,13 @@ namespace Garage {
 		public override void FixedTick() =>
 				_podium.RotateAround();
 
-		private void ChooseNext() =>
-				_itemsSwitcher.MoveNext();
+		private void ChooseNext() {
+			_itemsSwitcher.MoveNext();
+		}
 
-		private void ChoosePrevious() =>
-				_itemsSwitcher.MovePrevious();
+		private void ChoosePrevious() {
+			_itemsSwitcher.MovePrevious();
+		}
 
 		private void Select() {
 			selectedItem.mesh.SetActive(true);

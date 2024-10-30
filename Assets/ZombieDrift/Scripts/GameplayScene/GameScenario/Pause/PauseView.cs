@@ -1,31 +1,36 @@
 using System;
-using UI;
 using UnityEngine;
 using UnityEngine.UI;
+namespace Gameplay {
+	public interface IPauseViewEvents {
+		event Action ContinueEvent, MuteChangedEvent;
+		bool isMute { set; }
+	}
 
-public class PauseView :View {
-    public event Action ContinueEvent;
-    public event Action<bool> MuteChangedEvent;
+	public class PauseView : View, IPauseViewEvents {
+		public event Action ContinueEvent, MuteChangedEvent;
+		[SerializeField] private Image _muteImage, _unmuteImage;
+		[SerializeField] private Button _continueButton, _muteButton;
 
-    [SerializeField] private ExtendedToggle _toggle;
-    [SerializeField] private Button _button;
+		public bool isMute {
+			set {
+				_unmuteImage.enabled = !value;
+				_muteImage.enabled = value;
+			}
+		}
+		private void ContinueNotify() =>
+				ContinueEvent?.Invoke();
 
-    public bool isMute {
-        set => _toggle.SetIsOnWithoutNotify(value);
-    }
-    
-    private void ContinueNotify() =>
-        ContinueEvent?.Invoke();
+		private void MuteUnmuteNotify() =>
+				MuteChangedEvent?.Invoke();
 
-    private void MuteValueChangedNotify(bool isOn) =>
-        MuteChangedEvent?.Invoke(isOn);
-    
-    private void OnEnable() {
-        _toggle.onValueChanged.AddListener(MuteValueChangedNotify);
-        _button.onClick.AddListener(ContinueNotify);
-    }
-    private void OnDisable() {
-        _toggle.onValueChanged.RemoveListener(MuteValueChangedNotify);
-        _button.onClick.RemoveListener(ContinueNotify);
-    }
+		private void OnEnable() {
+			_muteButton.onClick.AddListener(MuteUnmuteNotify);
+			_continueButton.onClick.AddListener(ContinueNotify);
+		}
+		private void OnDisable() {
+			_muteButton.onClick.RemoveListener(MuteUnmuteNotify);
+			_continueButton.onClick.RemoveListener(ContinueNotify);
+		}
+	}
 }

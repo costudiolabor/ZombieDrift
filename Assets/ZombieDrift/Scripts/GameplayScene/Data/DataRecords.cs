@@ -1,12 +1,8 @@
-using Gameplay;
-
 namespace Project {
-    public record GameplayData(Map map, Zombie[] zombies, Car car);
-
-    public record SaveData() {
-        public int stageIndex;
-        public int moneyCount;
-        public int currentCarIndex;
-        public int[] purchasedCarsIndexes = { 0 };
-    }
+	public record SaveData() {
+		public int stageIndex;
+		public int moneyCount;
+		public int currentCarIndex;
+		public int[] purchasedCarsIndexes = {0};
+	}
 }

@@ -13,6 +13,7 @@ namespace Gameplay {
 		[SerializeField] private MainMenuView _mainMenuView;
 		[SerializeField] private LoseView _loseView;
 		[SerializeField] private GameplayHudView _gameHudView;
+		[SerializeField] private PauseView _pauseView;
 		[SerializeField] private GetReadyView _getReadyView;
 		[SerializeField] private HowToPlayView _howToPlayView;
 		[SerializeField] private WinView winView;
@@ -26,29 +27,37 @@ namespace Gameplay {
 				CameraSystem cameraSystem,
 				MenuPresenter menuPresenter,
 				LosePresenter losePresenter,
-				GameplayHud gameplayHud,
+				GameplayHudPresenter gameplayHudPresenter,
+				PausePresenter pausePresenter,
 				GetReadyPresenter getReadyPresenter,
 				HowToPlayPresenter howToPlayPresenter,
 				LevelCompletePresenter levelCompletePresenter,
 				EnemyPointerSystem enemyPointerSystem,
 				TextHintSystem textHintSystem,
 				FlyingRewardSystem flyingRewardSystem,
-				SoundsPlayer soundsPlayer) {
+				GameplaySounds gameplaySounds,
+				UiSounds uiSounds,
+				SaveLoadSystem saveLoadSystem) {
 			cameraSystem.mainCamera = _mainCamera;
 			cameraSystem.zoomCamera = _zoomCamera;
 			menuPresenter.Initialize(_mainMenuView);
 			losePresenter.Initialize(_loseView);
-			gameplayHud.Initialize(_gameHudView);
+			gameplayHudPresenter.Initialize(_gameHudView);
+			pausePresenter.Initialize(_pauseView);
 			getReadyPresenter.Initialize(_getReadyView);
 			howToPlayPresenter.Initialize(_howToPlayView);
 			levelCompletePresenter.Initialize(winView);
-
+			
 			enemyPointerSystem.Initialize(_pointersView, _camera);
 			flyingRewardSystem.Initialize(_camera, _gameHudView.rewardTargetTransform);
 			textHintSystem.Initialize(_camera);
 
-			soundsPlayer.Initialize();
+			gameplaySounds.Initialize();
 
+			var isMute = saveLoadSystem.LoadMuteStateFromPrefs();
+			uiSounds.isMute = isMute;
+			gameplaySounds.isMute = isMute;
+			
 			_gameplayScenario = gameplayScenario;
 		}
 

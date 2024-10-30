@@ -6,14 +6,14 @@ namespace Gameplay {
 	    public event Action GoToMenuEvent, GoToPlayEvent;
 	    
 	    
-	    private readonly UiSoundsPlayer _uiSoundsPlayer;
+	    private readonly UiSounds _uiSounds;
         private readonly IInput _input;
         private GetReadyView _view;
         public bool enabled {
 	        set => _view.isActive = value;
         }
-        public GetReadyPresenter(IInput input, UiSoundsPlayer uiSoundsPlayer) {
-	        _uiSoundsPlayer = uiSoundsPlayer; 
+        public GetReadyPresenter(IInput input, UiSounds uiSounds) {
+	        _uiSounds = uiSounds; 
 	        _input = input;
         }
         
@@ -23,7 +23,7 @@ namespace Gameplay {
 	        _input.AnyPressedEvent += GoToPlayNotify;
         }
         private void GoToMenuNotify() {
-	        _uiSoundsPlayer.PlayClickSound();
+	        _uiSounds.PlayClickSound();
 	        GoToMenuEvent?.Invoke();
         }
 

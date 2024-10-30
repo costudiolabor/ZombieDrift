@@ -16,7 +16,7 @@ namespace Project {
 			InstallUiSounds();
 		}
 		private void InstallUiSounds() {
-			Container.Bind<UiSoundsPlayer>().AsSingle();
+			Container.Bind<UiSounds>().AsSingle();
 			Container.Bind<UiSoundConfig>().FromInstance(_uiSoundConfig);
 		}
 		private void InstallCache() {

@@ -9,17 +9,20 @@ namespace Gameplay {
 		private readonly GameProcess _gameProcess;
 		private readonly EnemyPointerSystem _enemyPointerSystem;
 		private readonly ZombieStorage _zombieStorage;
+		private readonly PauseService _pauseService;
 
 		public FinalizeState(StateSwitcher stateSwitcher,
 				GameplayCache gameplayCache,
 				GameProcess gameProcess,
 				EnemyPointerSystem enemyPointerSystem,
-				ZombieStorage zombieStorage) : base(stateSwitcher) {
+				ZombieStorage zombieStorage,
+				PauseService pauseService) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
 			_gameplayCache = gameplayCache;
 			_gameProcess = gameProcess;
 			_enemyPointerSystem = enemyPointerSystem;
 			_zombieStorage = zombieStorage;
+			_pauseService = pauseService;
 		}
 
 		public override void Enter() {
@@ -27,7 +30,10 @@ namespace Gameplay {
 
 			_gameProcess.Finish();
 			_enemyPointerSystem.Clear();
+			_pauseService.Clear();
+			
 			DestroyGameObjects();
+			
 			SwitchToPrepare();
 		}
 

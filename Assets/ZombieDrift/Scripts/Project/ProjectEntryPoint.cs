@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using SaveLoadSystemNamespace;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
@@ -7,23 +8,23 @@ using Zenject;
 namespace Project {
 	public class ProjectEntryPoint : IInitializable {
 		private const string POOL_SOUNDS_PARENT_NAME = "SoundsParent";
-		
+
 		private readonly ScenesLoader _scenesLoader;
 		private readonly ProjectConfig _config;
-		private readonly SaveLoadSystem _saveLoadSystem;
-		private readonly ProjectCache _projectCache;
+		private readonly Progress _progress;
 		private readonly UiSounds _uiSounds;
+		private readonly SaveLoadSystem _saveLoadSystem;
 
 		public ProjectEntryPoint(
 				ScenesLoader scenesLoader,
 				ProjectConfig config,
-				SaveLoadSystem saveLoadSystem,
-				ProjectCache projectCache,
-				UiSounds uiSounds) {
+				Progress progress,
+				UiSounds uiSounds,
+				SaveLoadSystem saveLoadSystem) {
 			_scenesLoader = scenesLoader;
-			_saveLoadSystem = saveLoadSystem;
-			_projectCache = projectCache;
+			_progress = progress;
 			_uiSounds = uiSounds;
+			_saveLoadSystem = saveLoadSystem;
 			_config = config;
 		}
 
@@ -55,8 +56,8 @@ namespace Project {
 		}
 
 		private void LoadSavedData() =>
-				_projectCache.saveData = _saveLoadSystem.Load();
-
+				_saveLoadSystem.RestoreObject(SaveType.PlayerPrefs, _progress);
+		
 		private void SetUpProject() =>
 				Application.targetFrameRate = _config.targetFramerate;
 
@@ -71,7 +72,7 @@ namespace Project {
 				Object.DontDestroyOnLoad(guiLog);
 			}
 		}
-
+		
 		private void SwitchToGameplayScene() =>
 				_scenesLoader.SwitchToGameplayScene();
 	}

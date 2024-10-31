@@ -1,5 +1,5 @@
 namespace Project {
-	public record SaveData() {
+	public record ProgressData() {
 		public int stageIndex;
 		public int moneyCount;
 		public int currentCarIndex;

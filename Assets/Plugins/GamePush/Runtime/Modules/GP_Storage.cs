@@ -70,7 +70,7 @@ namespace GamePush
 
         private static void StorageSetValue(string key, object value)
         {
-            if (value.GetType() == typeof(int))
+	        if (value.GetType() == typeof(int))
             {
                 GP_StorageSetNumber(key, (int)value);
                 return;

@@ -3,7 +3,7 @@ using Project;
 namespace Gameplay {
 	public class PausePresenter {
 		private readonly UiSounds _uiSounds;
-		public IPauseViewEvents viewEvents => _view;
+		public IPauseViewEvents view => _view;
 
 		private PauseView _view;
 

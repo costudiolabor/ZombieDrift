@@ -8,13 +8,13 @@ namespace Garage {
 		private readonly Podium _podium;
 		private readonly ItemsSwitcher _itemsSwitcher;
 		private readonly GaragePresenter _garagePresenter;
-		private readonly ProjectCache _projectCache;
+		private readonly Progress _progress;
 		private readonly MoneyWallet _moneyWallet;
 				//	private readonly UiSounds _uiSounds;
 
 		private int selectedCarIndex {
-			set => _projectCache.selectedCarIndex = value;
-			get => _projectCache.selectedCarIndex;
+			set => _progress.selectedCarIndex = value;
+			get => _progress.selectedCarIndex;
 		}
 
 		private GarageItem selectedItem => _itemsSwitcher.selected;
@@ -27,7 +27,7 @@ namespace Garage {
 				Podium podium,
 				ItemsSwitcher itemsSwitcher,
 				GaragePresenter garagePresenter,
-				ProjectCache projectCache,
+				Progress progress,
 				CarsConfig config,
 				MoneyWallet moneyWallet,
 				UiSounds uiSounds) : base(stateSwitcher) {
@@ -36,7 +36,7 @@ namespace Garage {
 			_podium = podium;
 			_itemsSwitcher = itemsSwitcher;
 			_garagePresenter = garagePresenter;
-			_projectCache = projectCache;
+			_progress = progress;
 			_moneyWallet = moneyWallet;
 			//_uiSounds = uiSounds;
 		}
@@ -79,7 +79,7 @@ namespace Garage {
 			var carPrice = selectedItem.price;
 			var moneyCount = _moneyWallet.count;
 
-			var isCarPurchased = _projectCache.purchasedCars.Contains(currentIndex);
+			var isCarPurchased = _progress.purchasedCars.Contains(currentIndex);
 			var isChosen = currentIndex == selectedCarIndex;
 			_garagePresenter.money = moneyCount;
 			_garagePresenter.carPrice = carPrice;
@@ -108,14 +108,14 @@ namespace Garage {
 			_podium.PlayBuyParticles();
 			UnlockCar(selectedItem.mesh);
 
-			_projectCache.purchasedCars.Add(currentIndex);
+			_progress.purchasedCars.Add(currentIndex);
 			selectedCarIndex = currentIndex;
 			//Save money and selectedIndex
 			Select();
 		}
 
 		private void Choose() {
-			if (!_projectCache.purchasedCars.Contains(currentIndex))
+			if (!_progress.purchasedCars.Contains(currentIndex))
 				return;
 			_podium.PlaySelectParticles();
 			selectedCarIndex = currentIndex;

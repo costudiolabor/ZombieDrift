@@ -1,5 +1,6 @@
 using Project;
 using UnityEngine;
+using SaveLoadSystemNamespace;
 
 namespace Gameplay {
 	public class LoseState : State {

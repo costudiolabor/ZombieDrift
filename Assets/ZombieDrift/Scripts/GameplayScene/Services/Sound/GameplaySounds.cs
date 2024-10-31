@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
@@ -11,7 +10,6 @@ namespace Project {
 		private const string POOL_SOUNDS_PARENT_NAME = "SoundsParent";
 		private const float MIN_PINCH = 0.9f;
 		private const float MAX_PINCH = 1.1f;
-
 		public bool isMute { get; set; }
 
 		private readonly SoundConfig _soundConfig;

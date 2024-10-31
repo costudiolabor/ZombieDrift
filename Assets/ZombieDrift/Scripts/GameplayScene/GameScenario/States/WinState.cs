@@ -1,4 +1,5 @@
 using Project;
+using SaveLoadSystemNamespace;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -13,7 +14,7 @@ namespace Gameplay {
 
 		private readonly StateSwitcher _stateSwitcher;
 		private readonly SaveLoadSystem _saveLoadSystem;
-		private readonly ProjectCache _projectCache;
+		private readonly Progress _progress;
 		private readonly GameplayCache _gameplayCache;
 		private readonly LevelCompletePresenter _levelCompletePresenter;
 		private readonly CameraSystem _cameraSystem;
@@ -21,14 +22,14 @@ namespace Gameplay {
 
 		public WinState(StateSwitcher stateSwitcher,
 				SaveLoadSystem saveLoadSystem,
-				ProjectCache projectCache,
+				Progress progress,
 				GameplayCache gameplayCache,
 				LevelCompletePresenter levelCompletePresenter,
 				CameraSystem cameraSystem
 		) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
 			_saveLoadSystem = saveLoadSystem;
-			_projectCache = projectCache;
+			_progress = progress;
 			_gameplayCache = gameplayCache;
 			_levelCompletePresenter = levelCompletePresenter;
 			_cameraSystem = cameraSystem;
@@ -48,13 +49,18 @@ namespace Gameplay {
 
 			if (isStageComplete) {
 				IncreaseStage();
-				_saveLoadSystem.Save(_projectCache.saveData);
+				SaveProgress();
 			}
 			else {
 				_gameplayCache.mapIndex++;
 			}
 
 			ShowClearedView(winMessage);
+		}
+		private void SaveProgress() {
+			#if(!UNITY_EDITOR && UNITY_WEBG)
+				_saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
+			#endif
 		}
 
 		public override void Exit() {
@@ -72,7 +78,7 @@ namespace Gameplay {
 			_levelCompletePresenter.enabled = false;
 		}
 		private void IncreaseStage() {
-			_projectCache.stageIndex++;
+			_progress.stageIndex++;
 			_gameplayCache.mapIndex = 0;
 		}
 		private void SwitchToPrepareState() =>

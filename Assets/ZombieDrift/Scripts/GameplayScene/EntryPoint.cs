@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using GamePush;
 using Project;
+using SaveLoadSystemNamespace;
 using Unity.Cinemachine;
 using UnityEngine;
 using Zenject;
@@ -37,6 +38,7 @@ namespace Gameplay {
 				FlyingRewardSystem flyingRewardSystem,
 				GameplaySounds gameplaySounds,
 				UiSounds uiSounds,
+				GameSettings gameSettings,
 				SaveLoadSystem saveLoadSystem) {
 			cameraSystem.mainCamera = _mainCamera;
 			cameraSystem.zoomCamera = _zoomCamera;
@@ -54,9 +56,9 @@ namespace Gameplay {
 
 			gameplaySounds.Initialize();
 
-			var isMute = saveLoadSystem.LoadMuteStateFromPrefs();
-			uiSounds.isMute = isMute;
-			gameplaySounds.isMute = isMute;
+			saveLoadSystem.RestoreObject(SaveType.PlayerPrefs, gameSettings);
+			uiSounds.isMute = gameSettings.isMute;
+			gameplaySounds.isMute = gameSettings.isMute;
 			
 			_gameplayScenario = gameplayScenario;
 		}

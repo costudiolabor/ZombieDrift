@@ -1,3 +1,4 @@
+using SaveLoadSystemNamespace;
 using UnityEngine;
 using Zenject;
 
@@ -9,22 +10,26 @@ namespace Project {
 
 		public override void InstallBindings() {
 			InstallSceneLoader();
-			InstallProgressService();
+		//	InstallProgressService();
 			CreateAndInstallRootCanvas();
 			InstallProjectEntryPoint();
 			InstallCache();
 			InstallUiSounds();
+			InstallSaveLoadSystem();
+			InstallGameSettings();
+		}
+		private void InstallGameSettings() {
+			Container.Bind<GameSettings>().AsSingle();
+		}
+		private void InstallSaveLoadSystem() {
+			Container.Bind<SaveLoadSystem>().AsSingle();
 		}
 		private void InstallUiSounds() {
 			Container.Bind<UiSounds>().AsSingle();
 			Container.Bind<UiSoundConfig>().FromInstance(_uiSoundConfig);
 		}
 		private void InstallCache() {
-			Container.Bind<ProjectCache>().AsSingle();
-		}
-
-		private void InstallProgressService() {
-			Container.Bind<SaveLoadSystem>().AsSingle();
+			Container.Bind<Progress>().AsSingle();
 		}
 
 		private void CreateAndInstallRootCanvas() {

@@ -1,19 +1,19 @@
 namespace Project {
 	public class MoneyWallet {
-		private readonly ProjectCache _projectCache;
+		private readonly Progress _progress;
 
-		public int count => _projectCache.moneyCount;
+		public int count => _progress.moneyCount;
 
-		public MoneyWallet(ProjectCache projectCache) =>
-				_projectCache = projectCache;
+		public MoneyWallet(Progress progress) =>
+				_progress = progress;
 
 		public void AddCoins(int value = 1) =>
-				_projectCache.moneyCount += value;
+				_progress.moneyCount += value;
 
 		public void SpendCoin(int value) {
-			var moneyCountAfterSpend = _projectCache.moneyCount - value;
+			var moneyCountAfterSpend = _progress.moneyCount - value;
 			if (moneyCountAfterSpend > 0)
-				_projectCache.moneyCount = moneyCountAfterSpend;
+				_progress.moneyCount = moneyCountAfterSpend;
 		}
 	}
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Gameplay {
 	public class ConstructState : State {
 		private readonly ContentCreationService _contentCreationService;
-		private readonly ProjectCache _projectCache;
+		private readonly Progress _progress;
 		private readonly GameplayCache _gameplayCache;
 		private readonly MoneyWallet _moneyWallet;
 		private readonly ComboSystem _comboSystem;
@@ -35,7 +35,7 @@ namespace Gameplay {
 				BotNavigation botSystem,
 				EnemyPointerSystem enemyPointerSystem,
 				StagesConfig stagesConfig,
-				ProjectCache projectCache,
+				Progress progress,
 				GameplayCache gameplayCache,
 				MoneyWallet moneyWallet,
 				ComboSystem comboSystem,
@@ -51,7 +51,7 @@ namespace Gameplay {
 			_vehicleDestroyer = vehicleDestroyer;
 			_flyingRewardSystem = flyingRewardSystem;
 			_gameplayHudPresenter = gameplayHudPresenter;
-			_projectCache = projectCache;
+			_progress = progress;
 			_gameplayCache = gameplayCache;
 			_moneyWallet = moneyWallet;
 			_comboSystem = comboSystem;
@@ -75,7 +75,7 @@ namespace Gameplay {
 
 			var mapsCount = _gameplayCache.mapsCount;
 			var mapIndex = _gameplayCache.mapIndex;
-			SetStageNumber(_projectCache.stageIndex, mapIndex, mapsCount);
+			SetStageNumber(_progress.stageIndex, mapIndex, mapsCount);
 
 			if (mapIndex == 0)
 				SwitchToMenuState();
@@ -88,7 +88,7 @@ namespace Gameplay {
 		}
 
 		private void CalculateCombo() {
-			var purchasedCars = _projectCache.purchasedCars;
+			var purchasedCars = _progress.purchasedCars;
 			float comboMultiplier = 0;
 			float comboDelay = 0;
 
@@ -104,8 +104,8 @@ namespace Gameplay {
 		}
 
 		private void CreateGameplayObjects() {
-			var stageIndex = _projectCache.stageIndex;
-			var currentCarIndex = _projectCache.selectedCarIndex;
+			var stageIndex = _progress.stageIndex;
+			var currentCarIndex = _progress.selectedCarIndex;
 			var mapIndex = _gameplayCache.mapIndex;
 			var map = _contentCreationService.CreateMap(stageIndex, mapIndex);
 			map.navMeshSurface.BuildNavMesh();
@@ -118,7 +118,7 @@ namespace Gameplay {
 		}
 
 		private void LoadGameplayCache() {
-			var stageIndex = _projectCache.stageIndex;
+			var stageIndex = _progress.stageIndex;
 			_gameplayCache.mapsCount = _stagesConfig.stages[stageIndex].count;
 		}
 

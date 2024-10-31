@@ -6,7 +6,7 @@ namespace Gameplay {
 	public class RepairState : State {
 		private readonly StateSwitcher _stateSwitcher;
 		private readonly GameplayCache _gameplayCache;
-		private readonly ProjectCache _projectCache;
+		private readonly Progress _progress;
 		private readonly VehicleDestroyer _vehicleDestroyer;
 		private readonly VehicleController _vehicleController;
 		private readonly ContentCreationService _contentCreationService;
@@ -18,7 +18,7 @@ namespace Gameplay {
 		public RepairState(
 				StateSwitcher stateSwitcher,
 				GameplayCache gameplayCache,
-				ProjectCache projectCache,
+				Progress progress,
 				VehicleDestroyer vehicleDestroyer,
 				VehicleController vehicleController,
 				ContentCreationService contentCreationService,
@@ -27,7 +27,7 @@ namespace Gameplay {
 				BotNavigation botNavigation,
 				EnemyPointerSystem enemyPointerSystem) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
-			_projectCache = projectCache;
+			_progress = progress;
 			_gameplayCache = gameplayCache;
 			_vehicleDestroyer = vehicleDestroyer;
 			_vehicleController = vehicleController;
@@ -53,7 +53,7 @@ namespace Gameplay {
 
 		private void CreateAndInitializeNewCar() {
 			var map = _gameplayCache.map;
-			var car = _contentCreationService.CreateCar(_projectCache.selectedCarIndex, map.startPoint);
+			var car = _contentCreationService.CreateCar(_progress.selectedCarIndex, map.startPoint);
 			var startPose = map.startPoint;
 			car.transform.position = startPose.position;
 			car.transform.rotation = startPose.rotation;

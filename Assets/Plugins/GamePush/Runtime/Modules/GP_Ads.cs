@@ -2,12 +2,13 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
-
+using Zenject;
 
 namespace GamePush
 {
     public class GP_Ads : GP_Module
     {
+	    
         private static void ConsoleLog(string log) => GP_Logger.ModuleLog(log, ModuleName.Ads);
 
         public static event UnityAction OnAdsStart;
@@ -329,6 +330,6 @@ namespace GamePush
         private void CallAdsStickyClose() => OnStickyClose?.Invoke();
         private void CallAdsStickyRefresh() => OnStickyRefresh?.Invoke();
         private void CallAdsStickyRender() => OnStickyRender?.Invoke();
-
+        
     }
 }

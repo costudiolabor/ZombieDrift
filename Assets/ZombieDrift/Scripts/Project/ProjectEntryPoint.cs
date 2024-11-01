@@ -1,4 +1,6 @@
+using Ads;
 using Cysharp.Threading.Tasks;
+using GamePush.Initialization;
 using SaveLoadSystemNamespace;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -14,17 +16,20 @@ namespace Project {
 		private readonly Progress _progress;
 		private readonly UiSounds _uiSounds;
 		private readonly SaveLoadSystem _saveLoadSystem;
+		private readonly AdsSystem _adsSystem;
 
 		public ProjectEntryPoint(
 				ScenesLoader scenesLoader,
 				ProjectConfig config,
 				Progress progress,
 				UiSounds uiSounds,
-				SaveLoadSystem saveLoadSystem) {
+				SaveLoadSystem saveLoadSystem,
+				AdsSystem adsSystem) {
 			_scenesLoader = scenesLoader;
 			_progress = progress;
 			_uiSounds = uiSounds;
 			_saveLoadSystem = saveLoadSystem;
+			_adsSystem = adsSystem;
 			_config = config;
 		}
 
@@ -32,6 +37,12 @@ namespace Project {
 				Run();
 
 		public async void Run() {
+
+#if UNITY_WEBG
+ #endif
+			GP_Initialization.Execute();
+			_adsSystem.type = AdsType.GamePush;
+
 			LoadSavedData();
 			SetUpProject();
 			CreateLog();

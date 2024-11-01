@@ -1,5 +1,3 @@
-using Cysharp.Threading.Tasks;
-using GamePush;
 using Project;
 using SaveLoadSystemNamespace;
 using Unity.Cinemachine;
@@ -66,7 +64,7 @@ namespace Gameplay {
 		public void Initialize() =>
 				_gameplayScenario.Start();
 
-		//---- Кослыть для теста
+		/*//---- Кослыть для теста
 		private async void Start() {
 
 			await UniTask.Delay(2000);
@@ -76,6 +74,6 @@ namespace Gameplay {
 		private void OnRewarded(string arg0) {
 			Debug.Log("По идее должа быть показана реклама!");
 		}
-		// --- костыть для теста
+		// --- костыть для теста*/
 	}
 }

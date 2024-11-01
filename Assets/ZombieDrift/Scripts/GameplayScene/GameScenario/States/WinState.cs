@@ -58,9 +58,7 @@ namespace Gameplay {
 			ShowClearedView(winMessage);
 		}
 		private void SaveProgress() {
-			#if(!UNITY_EDITOR && UNITY_WEBG)
-				_saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
-			#endif
+			_saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
 		}
 
 		public override void Exit() {

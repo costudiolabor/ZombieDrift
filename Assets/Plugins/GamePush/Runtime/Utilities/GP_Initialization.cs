@@ -15,8 +15,8 @@ namespace GamePush.Initialization
         [DllImport("__Internal")]
         private static extern void GP_UnityReady();
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-        private static void Execute()
+    //    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        public static void Execute()
         {
 #if !UNITY_EDITOR && UNITY_WEBGL
              GP_UnityReady();

@@ -1,3 +1,4 @@
+using Ads;
 using SaveLoadSystemNamespace;
 using UnityEngine;
 using Zenject;
@@ -16,7 +17,11 @@ namespace Project {
 			InstallCache();
 			InstallUiSounds();
 			InstallSaveLoadSystem();
+			InstallAdsSystem();
 			InstallGameSettings();
+		}
+		private void InstallAdsSystem() {
+			Container.Bind<AdsSystem>().AsSingle();
 		}
 		private void InstallGameSettings() {
 			Container.Bind<GameSettings>().AsSingle();

@@ -26,8 +26,6 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
-			Debug.Log("Final");
-
 			_gameProcess.Finish();
 			_enemyPointerSystem.Clear();
 			_pauseService.Clear();
@@ -37,22 +35,15 @@ namespace Gameplay {
 			SwitchToPrepare();
 		}
 
-		public void DestroyGameObjects() {
-			//var zombies = _gameplayCache.zombies;
-		
+		private void DestroyGameObjects() {
 			_zombieStorage.DestroyAll();
 			
 			var car = _gameplayCache.car;
 			var map = _gameplayCache.map;
 
-		//	foreach (var zombie in zombies)
-		//		Object.Destroy(zombie.gameObject);
-
-		
 			Object.Destroy(car.gameObject);
 			Object.Destroy(map.gameObject);
 
-		//	_gameplayCache.zombies = null;
 			_gameplayCache.car = null;
 			_gameplayCache.map = null;
 		}

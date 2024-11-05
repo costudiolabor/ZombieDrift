@@ -25,8 +25,8 @@ namespace Ads {
 		public UniTask<bool> ShowFullscreen() {
 			return _currentStrategy.ShowFullscreen();
 		}
-		public UniTask<bool> ShowReward() {
-			return _currentStrategy.ShowFullscreen();
+		public UniTask<bool> ShowRewardVideo() {
+			return _currentStrategy.ShowRewardVideo();
 		}
 	}
 }

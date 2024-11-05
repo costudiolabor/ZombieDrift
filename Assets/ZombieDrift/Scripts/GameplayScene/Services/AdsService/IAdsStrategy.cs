@@ -11,6 +11,6 @@ namespace Ads {
 		public bool isRewardedAvailable { get; }
 
 		public UniTask<bool> ShowFullscreen();
-		public UniTask<bool> ShowReward();
+		public UniTask<bool> ShowRewardVideo();
 	}
 }

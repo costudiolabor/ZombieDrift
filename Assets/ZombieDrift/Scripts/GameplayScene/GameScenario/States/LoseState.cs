@@ -1,3 +1,4 @@
+using System;
 using Ads;
 using Project;
 using UnityEngine;
@@ -31,14 +32,14 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
-			Debug.Log("Lose");
-
+		
 			CameraActions();
 
 			_saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
 
 			_losePresenter.enabled = true;
 			_losePresenter.RepairEvent += OnRepairClicked;
+		
 			_losePresenter.RestartEvent += SwitchToRestartState;
 		}
 
@@ -55,7 +56,9 @@ namespace Gameplay {
 		}
 
 		private async void OnRepairClicked() {
-			var rewardCollected = await _adsSystem.ShowFullscreen();
+			var rewardCollected = await _adsSystem.ShowRewardVideo();
+		    
+			Debug.Log($"After repair clicked reward is collected ? {rewardCollected}");
 			if (rewardCollected) {
 				SwitchToRepairState();
 			}

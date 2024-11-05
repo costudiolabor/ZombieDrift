@@ -31,7 +31,6 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
-			Debug.Log("Pause");
 			_pauseService.SetPause(true);
 
 			_pausePresenter.enabled = true;

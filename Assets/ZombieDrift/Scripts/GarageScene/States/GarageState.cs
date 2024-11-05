@@ -1,16 +1,21 @@
+using Ads;
 using Gameplay;
 using Project;
+using SaveLoadSystemNamespace;
 using UnityEngine;
 
 namespace Garage {
 	public class GarageState : State {
+		private const int WATCH_VIDEO_REWARD_AMOUNT = 200;
+
 		private readonly ScenesLoader _scenesLoader;
 		private readonly Podium _podium;
 		private readonly ItemsSwitcher _itemsSwitcher;
 		private readonly GaragePresenter _garagePresenter;
 		private readonly Progress _progress;
 		private readonly MoneyWallet _moneyWallet;
-				//	private readonly UiSounds _uiSounds;
+		private readonly SaveLoadSystem _saveLoadSystem;
+		private readonly AdsSystem _adsSystem;
 
 		private int selectedCarIndex {
 			set => _progress.selectedCarIndex = value;
@@ -30,7 +35,9 @@ namespace Garage {
 				Progress progress,
 				CarsConfig config,
 				MoneyWallet moneyWallet,
-				UiSounds uiSounds) : base(stateSwitcher) {
+				SaveLoadSystem saveLoadSystem,
+				AdsSystem adsSystem
+		) : base(stateSwitcher) {
 			_purchasedLayerMask = config.purchasedLayerMask;
 			_scenesLoader = scenesLoader;
 			_podium = podium;
@@ -38,7 +45,8 @@ namespace Garage {
 			_garagePresenter = garagePresenter;
 			_progress = progress;
 			_moneyWallet = moneyWallet;
-			//_uiSounds = uiSounds;
+			_saveLoadSystem = saveLoadSystem;
+			_adsSystem = adsSystem;
 		}
 
 		public override void Enter() {
@@ -47,6 +55,7 @@ namespace Garage {
 			_garagePresenter.BuyEvent += BuyCar;
 			_garagePresenter.ChooseEvent += Choose;
 			_garagePresenter.PreviousClickedEvent += ChoosePrevious;
+			_garagePresenter.WatchEvent += WatchRewardVideo;
 
 			_itemsSwitcher.BeforeSelectEvent += Deselect;
 			_itemsSwitcher.SelectedChangedEvent += Select;
@@ -61,6 +70,15 @@ namespace Garage {
 			_garagePresenter.BackEvent -= GotoGameScene;
 			_garagePresenter.BuyEvent -= BuyCar;
 			_garagePresenter.ChooseEvent -= Choose;
+			_garagePresenter.WatchEvent -= WatchRewardVideo;
+		}
+		private async void WatchRewardVideo() {
+			var watchingSuccess = await _adsSystem.ShowRewardVideo();
+			if (!watchingSuccess)
+				return;
+			_moneyWallet.AddCoins(WATCH_VIDEO_REWARD_AMOUNT);
+			_saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
+			RefreshMoneyCount();
 		}
 
 		public override void FixedTick() =>
@@ -77,23 +95,28 @@ namespace Garage {
 		private void Select() {
 			selectedItem.mesh.SetActive(true);
 			var carPrice = selectedItem.price;
-			var moneyCount = _moneyWallet.count;
-
+			
 			var isCarPurchased = _progress.purchasedCars.Contains(currentIndex);
 			var isChosen = currentIndex == selectedCarIndex;
-			_garagePresenter.money = moneyCount;
 			_garagePresenter.carPrice = carPrice;
 			_garagePresenter.comboMultiplier = selectedItem.comboMultiplier;
 			_garagePresenter.comboDelay = selectedItem.comboDelay;
-
+			
 			if (isChosen)
 				_garagePresenter.state = GarageItemState.Selected;
 			else if (isCarPurchased)
 				_garagePresenter.state = GarageItemState.Purchased;
-			else if (moneyCount >= carPrice)
+			else if (_moneyWallet.count >= carPrice)
 				_garagePresenter.state = GarageItemState.Locked;
 			else
 				_garagePresenter.state = GarageItemState.NotEnoughMoney;
+
+			//Save money and selectedIndex
+			RefreshMoneyCount();
+			SaveProgress();
+		}
+		private void RefreshMoneyCount() {
+			_garagePresenter.money = _moneyWallet.count;
 		}
 
 		private void Deselect() =>
@@ -110,7 +133,6 @@ namespace Garage {
 
 			_progress.purchasedCars.Add(currentIndex);
 			selectedCarIndex = currentIndex;
-			//Save money and selectedIndex
 			Select();
 		}
 
@@ -121,6 +143,9 @@ namespace Garage {
 			selectedCarIndex = currentIndex;
 			Select();
 		}
+
+		private void SaveProgress() =>
+				_saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
 
 		private void UnlockCar(GameObject car) =>
 				Utils.MoveAllChildrenToLayer(car.transform, _purchasedLayerMask);

@@ -62,8 +62,6 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
-			Debug.Log("Gameplay");
-
 			_gameplayHudPresenter.presentState = StagePresentState.AllWithPause;
 			_gameplayHudPresenter.viewActions.PauseClickedEvent += SwitchToPauseState;
 

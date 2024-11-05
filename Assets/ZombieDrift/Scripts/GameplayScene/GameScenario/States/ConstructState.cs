@@ -64,8 +64,6 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
-			Debug.Log("Construct");
-
 			CalculateCombo();
 			LoadGameplayCache();
 			CreateGameplayObjects();
@@ -119,7 +117,7 @@ namespace Gameplay {
 
 		private void LoadGameplayCache() {
 			var stageIndex = _progress.stageIndex;
-			
+
 			//--- !!!---- Цикличность
 			if (stageIndex > _stagesConfig.stages.Length) {
 				_progress.stageIndex = 0;
@@ -144,7 +142,7 @@ namespace Gameplay {
 
 			_vehicleController.SetCar(car);
 			_vehicleDestroyer.SetCar(car);
-			
+
 			_botSystem.Initialize(_zombieStorage, car.transform);
 			_gameProcess.Initialize(car, _zombieStorage);
 			_enemyPointerSystem.SetNewData(_zombieStorage.ToArray(), car.transform);

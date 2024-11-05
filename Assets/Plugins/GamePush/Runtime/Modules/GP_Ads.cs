@@ -6,11 +6,9 @@ using Zenject;
 
 namespace GamePush
 {
-    public class GP_Ads : GP_Module
-    {
+    public class GP_Ads : GP_Module {
 	    
         private static void ConsoleLog(string log) => GP_Logger.ModuleLog(log, ModuleName.Ads);
-
         public static event UnityAction OnAdsStart;
         public static event UnityAction<bool> OnAdsClose;
         public static event UnityAction OnFullscreenStart;
@@ -43,6 +41,8 @@ namespace GamePush
             _onFullscreenStart = onFullscreenStart;
             _onFullscreenClose = onFullscreenClose;
 
+
+            
 #if !UNITY_EDITOR && UNITY_WEBGL
              GP_Ads_ShowFullscreen();
 #else

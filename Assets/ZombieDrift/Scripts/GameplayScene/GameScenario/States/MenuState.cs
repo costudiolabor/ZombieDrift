@@ -21,16 +21,13 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
-			Debug.Log("Menu");
-			
-			_gameplayHudPresenter.presentState = StagePresentState.StageOnly;
+		_gameplayHudPresenter.presentState = StagePresentState.StageOnly;
 			_menuPresenter.enabled = true;
 			_menuPresenter.StartGameEvent += SwitchToPlayState;
 			_menuPresenter.GarageEvent += SwitchToGarageState;
 		}
 
 		public override void Exit() {
-			Debug.Log("Exit Menu");
 			_gameplayHudPresenter.presentState = StagePresentState.None;
 			_menuPresenter.enabled = false;
 			_menuPresenter.StartGameEvent -= SwitchToPlayState;

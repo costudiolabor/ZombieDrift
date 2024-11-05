@@ -39,8 +39,6 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
-			Debug.Log("Win");
-
 			_cameraSystem.isZoomed = true;
 			_levelCompletePresenter.ContinueEvent += SwitchToPrepareState;
 			var winMessage = isStageComplete
@@ -57,14 +55,14 @@ namespace Gameplay {
 
 			ShowClearedView(winMessage);
 		}
-		private void SaveProgress() {
-			_saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
-		}
 
 		public override void Exit() {
 			_levelCompletePresenter.ContinueEvent -= SwitchToPrepareState;
 			_cameraSystem.isZoomed = false;
 			CloseClearedView();
+		}
+		private void SaveProgress() {
+			_saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
 		}
 
 		private void ShowClearedView(string message) {

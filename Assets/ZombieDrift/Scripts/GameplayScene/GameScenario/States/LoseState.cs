@@ -1,7 +1,5 @@
-using System;
 using Ads;
 using Project;
-using UnityEngine;
 using SaveLoadSystemNamespace;
 
 namespace Gameplay {
@@ -32,20 +30,19 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
-		
+
 			CameraActions();
 
 			_saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
 
 			_losePresenter.enabled = true;
 			_losePresenter.RepairEvent += OnRepairClicked;
-		
 			_losePresenter.RestartEvent += SwitchToRestartState;
 		}
 
 		public override void Exit() {
 			_losePresenter.enabled = false;
-			_losePresenter.RepairEvent -= SwitchToRepairState;
+			_losePresenter.RepairEvent -= OnRepairClicked;
 			_losePresenter.RestartEvent -= SwitchToRestartState;
 			_cameraSystem.isZoomed = false;
 		}
@@ -57,8 +54,7 @@ namespace Gameplay {
 
 		private async void OnRepairClicked() {
 			var rewardCollected = await _adsSystem.ShowRewardVideo();
-		    
-			Debug.Log($"After repair clicked reward is collected ? {rewardCollected}");
+
 			if (rewardCollected) {
 				SwitchToRepairState();
 			}

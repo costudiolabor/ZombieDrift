@@ -8,6 +8,8 @@ namespace Project {
 		private const string SAVE_KEY = "Progress_Key";
 		public string objectKey { get; } = SAVE_KEY;
 		public HashSet<int> purchasedCars => _purchasedCars;
+
+		public int comboMultiplier => purchasedCars.Count;
 		public int stageIndex {
 			get => _progressData.stageIndex;
 			set => _progressData.stageIndex = value;

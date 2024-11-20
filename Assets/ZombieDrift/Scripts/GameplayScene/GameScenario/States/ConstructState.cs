@@ -85,19 +85,10 @@ namespace Gameplay {
 			_pauseService.Register(_flyingRewardSystem);
 		}
 
+		
 		private void CalculateCombo() {
 			var purchasedCars = _progress.purchasedCars;
-			float comboMultiplier = 0;
-			float comboDelay = 0;
-
-			foreach (var carIndex in purchasedCars) {
-				var purchasedCar = _carsConfig.cars[carIndex];
-				comboMultiplier += purchasedCar.comboMultiplier;
-				comboDelay += purchasedCar.comboDelay;
-			}
-
-			_comboSystem.comboMultiplier = comboMultiplier;
-			_comboSystem.comboDelay = comboDelay;
+			_comboSystem.comboMultiplier = purchasedCars.Count;
 			_comboSystem.Reset();
 		}
 
@@ -109,16 +100,14 @@ namespace Gameplay {
 			map.navMeshSurface.BuildNavMesh();
 			_gameplayCache.map = map;
 			_gameplayCache.car = _contentCreationService.CreateCar(currentCarIndex, map.startPoint);
-			//_gameplayCache.zombies = _contentCreationService.CreateZombies(map.zombieSpawnPoints);
 			var zombies = _contentCreationService.CreateZombies(map.zombieSpawnPoints);
 			_zombieStorage.AddNewRange(zombies);
-			//
 		}
 
 		private void LoadGameplayCache() {
 			var stageIndex = _progress.stageIndex;
 
-			//--- !!!---- Цикличность
+			//--- !!!---- Цикличность Когда уровни закончатся начнутся в сначала
 			if (stageIndex > _stagesConfig.stages.Length) {
 				_progress.stageIndex = 0;
 				stageIndex = 0;

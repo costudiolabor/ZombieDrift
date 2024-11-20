@@ -84,23 +84,19 @@ namespace Garage {
 		public override void FixedTick() =>
 				_podium.RotateAround();
 
-		private void ChooseNext() {
-			_itemsSwitcher.MoveNext();
-		}
+		private void ChooseNext() =>
+				_itemsSwitcher.MoveNext();
 
-		private void ChoosePrevious() {
-			_itemsSwitcher.MovePrevious();
-		}
+		private void ChoosePrevious() =>
+				_itemsSwitcher.MovePrevious();
 
 		private void Select() {
 			selectedItem.mesh.SetActive(true);
 			var carPrice = selectedItem.price;
-			
+
 			var isCarPurchased = _progress.purchasedCars.Contains(currentIndex);
 			var isChosen = currentIndex == selectedCarIndex;
 			_garagePresenter.carPrice = carPrice;
-			_garagePresenter.comboMultiplier = selectedItem.comboMultiplier;
-			_garagePresenter.comboDelay = selectedItem.comboDelay;
 			
 			if (isChosen)
 				_garagePresenter.state = GarageItemState.Selected;
@@ -113,12 +109,15 @@ namespace Garage {
 
 			//Save money and selectedIndex
 			RefreshMoneyCount();
+			RefreshComboMultiplier();
 			SaveProgress();
 		}
-		private void RefreshMoneyCount() {
-			_garagePresenter.money = _moneyWallet.count;
-		}
-
+		private void RefreshComboMultiplier() =>
+				_garagePresenter.comboMultiplier = _progress.comboMultiplier;
+		
+		private void RefreshMoneyCount() =>
+				_garagePresenter.moneyCount = _moneyWallet.count;
+		
 		private void Deselect() =>
 				selectedItem.mesh.SetActive(false);
 

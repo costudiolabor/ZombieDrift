@@ -79,6 +79,14 @@ MonoBehaviour:
     m_Key: soundKey
     m_Metadata:
       m_Items: []
+  - m_Id: 16290105784954880
+    m_Key: buyKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16290985141760000
+    m_Key: comboMultiplierKey
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -16,7 +16,7 @@ namespace Garage {
 		[SerializeField] private TMP_Text _carPriceText;
 		[SerializeField] private TMP_Text _moneyCount;
 		[SerializeField] private TMP_Text _comboMultiplier;
-		[SerializeField] private TMP_Text _comboDelay;
+		//[SerializeField] private TMP_Text _comboDelay;
 		
 		[SerializeField] private GameObject _buyControl, _watchControl, _selectControl, _selectedControl, _lock;
 		[SerializeField] private CanvasGroup _buyButtonCanvasGroup;
@@ -30,7 +30,7 @@ namespace Garage {
 		public TMP_Text carPriceText => _carPriceText;
 		public TMP_Text moneyCount => _moneyCount;
 		public TMP_Text comboMultiplier => _comboMultiplier;
-		public TMP_Text comboDelay => _comboDelay;
+	//	public TMP_Text comboDelay => _comboDelay;
 		
 		public bool isLockVisible {
 			set => _lock.SetActive(value);
@@ -50,10 +50,6 @@ namespace Garage {
 			set => _comboMultiplier.gameObject.SetActive(value);
 		}
 		
-		public bool isComboDelayEnabled {
-			set => _comboDelay.gameObject.SetActive(value);
-		}
-
 		public bool isSelectControlEnabled {
 			set => _selectControl.gameObject.SetActive(value);
 		}

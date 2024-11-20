@@ -6,7 +6,5 @@ namespace Gameplay {
     public class CarData {
         public Car car;
         public int price;
-        public float comboMultiplier;
-        public float comboDelay;
     }
 }

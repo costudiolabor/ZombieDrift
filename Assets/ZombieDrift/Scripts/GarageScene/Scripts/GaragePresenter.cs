@@ -1,6 +1,6 @@
 using System;
 using Project;
-using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Garage {
 	public enum GarageItemState {
@@ -11,32 +11,31 @@ namespace Garage {
 	}
 
 	public class GaragePresenter {
-		private readonly UiSounds _uiSounds;
+		private const string LOCALIZE_TABLE = "StringsTable";
+		private const string BUY_LOCAL_KEY = "buyKey";
+		private const string COMBO_MULTIPLIER_LOCAL_KEY = "comboMultiplierKey";
+
 		public event Action BuyEvent, ChooseEvent, WatchEvent, PreviousClickedEvent, NextClickedEvent, BackEvent;
+		private readonly UiSounds _uiSounds;
+		private readonly LocalizedString _buyLocalizedString;
+		private readonly LocalizedString _comboMultiplierLocalizedString;
 
 		public GaragePresenter(UiSounds uiSounds) {
 			_uiSounds = uiSounds;
-		}
-		
-		public int carPrice {
-			set => _view.carPriceText.text = $"Купить за {value}";
+			_buyLocalizedString = new LocalizedString(LOCALIZE_TABLE, BUY_LOCAL_KEY);
+			_comboMultiplierLocalizedString = new LocalizedString(LOCALIZE_TABLE, COMBO_MULTIPLIER_LOCAL_KEY);
 		}
 
-		public int money {
+		public int carPrice {
+			set => _view.carPriceText.text = _buyLocalizedString.GetLocalizedString(value);
+		}
+
+		public int moneyCount {
 			set => _view.moneyCount.text = $"{value}";
 		}
 
 		public float comboMultiplier {
-			set {
-				_view.comboMultiplier.text = $"Combo Multiplier + {value}";
-				_view.isComboMultiplierEnabled = value != 0;
-			}
-		}
-		public float comboDelay {
-			set {
-				_view.comboDelay.text = $"Combo Delay + {value} sec";
-				_view.isComboDelayEnabled = value != 0;
-			}
+			set => _view.comboMultiplier.text = _comboMultiplierLocalizedString.GetLocalizedString(value);
 		}
 
 		public GarageItemState state {

@@ -86,6 +86,16 @@ MonoBehaviour:
     m_Localized: Sesler
     m_Metadata:
       m_Items: []
+  - m_Id: 16290105784954880
+    m_Localized: "sat\u0131n al {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6684281387246944285
+  - m_Id: 16290985141760000
+    m_Localized: "Kombo \xE7arpan\u0131 x{0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6684281387246944285
   references:
     version: 2
     RefIds:
@@ -97,3 +107,5 @@ MonoBehaviour:
         - id: 3814197981184
         - id: 3509427269632
         - id: 2134124243087360
+        - id: 16290105784954880
+        - id: 16290985141760000

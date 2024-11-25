@@ -30,10 +30,9 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
+			ShowCameraActions();
 
-			CameraActions();
-
-			_saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
+			SaveGame();
 
 			_losePresenter.enabled = true;
 			_losePresenter.RepairEvent += OnRepairClicked;
@@ -47,17 +46,24 @@ namespace Gameplay {
 			_cameraSystem.isZoomed = false;
 		}
 
-		private async void CameraActions() {
+		private void SaveGame() {
+			_saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
+		}
+
+		private async void ShowCameraActions() {
 			await _cameraSystem.Shake(1, 250);
 			_cameraSystem.isZoomed = true;
 		}
 
 		private async void OnRepairClicked() {
+			_losePresenter.isRestartInteractable = false;
+		
 			var rewardCollected = await _adsSystem.ShowRewardVideo();
 
-			if (rewardCollected) {
+			if (rewardCollected) 
 				SwitchToRepairState();
-			}
+			
+			_losePresenter.isRestartInteractable = true;
 		}
 
 		private void SwitchToRestartState() {

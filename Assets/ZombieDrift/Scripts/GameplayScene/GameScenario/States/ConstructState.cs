@@ -64,7 +64,7 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
-			CalculateCombo();
+			CalculateCurrentComboMultiplier();
 			LoadGameplayCache();
 			CreateGameplayObjects();
 			SnapCameraToCar();
@@ -84,9 +84,8 @@ namespace Gameplay {
 			_pauseService.Register(_vehicleController);
 			_pauseService.Register(_flyingRewardSystem);
 		}
-
 		
-		private void CalculateCombo() {
+		private void CalculateCurrentComboMultiplier() {
 			var purchasedCars = _progress.purchasedCars;
 			_comboSystem.comboMultiplier = purchasedCars.Count;
 			_comboSystem.Reset();

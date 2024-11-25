@@ -6,28 +6,62 @@
   <component name="ChangeListManager">
     <list default="true" id="de5fc0b1-2905-4b1c-9891-21b72464e4be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Assets-Shared.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Assets-Shared.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-English (en).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-English (en).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Russian (Russia) (ru-RU).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Russian (Russia) (ru-RU).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Turkish (Turkey) (tr-TR).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Turkish (Turkey) (tr-TR).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/StringsTable Shared Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/StringsTable Shared Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/StringsTable_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/StringsTable_en.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/StringsTable_ru-RU.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/StringsTable_ru-RU.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/StringsTable_tr-TR.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/StringsTable_tr-TR.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/CarsConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/CarsConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonTown/Materials/Misc/Window_Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonTown/Materials/Misc/Window_Glass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/StagesConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/StagesConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Font/MisterBrush SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Font/MisterBrush SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Font/Raleway-SemiBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Font/Raleway-SemiBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Garage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Garage.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Materials/Ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Cars/InGame/HatchSafety.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Cars/InGame/HatchSafety.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map01.1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map01.1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02.1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02.1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/MapTemplate.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/MapTemplate.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Mapz02 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Mapz02 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Mapz02 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Mapz02 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Mapz02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Mapz02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Bollard_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Bollard_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Concrete_03.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Concrete_03.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Concrete_Mini.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Concrete_Mini.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Concrete_Striped_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Concrete_Striped_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Concrete_Striped_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Concrete_Striped_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Rail_D_Bend_In_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Rail_D_Bend_In_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Rail_Straight_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Rail_Straight_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Rail_Straight_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Rail_Straight_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Roadblock_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Roadblock_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Truck_Trailer_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Barrier_Truck_Trailer_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Container_Large_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Container_Large_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Container_Mid_Red.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Container_Mid_Red.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Destoyable/Barrier_Cone_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Destoyable/Barrier_Cone_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Destoyable/Barrier_CrashBarrel_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Destoyable/Barrier_CrashBarrel_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Pole.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Pole.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Pole_Barrier.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Pole_Barrier.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/SM_Env_Ground_ParkingLines_01 (6).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/SM_Env_Ground_ParkingLines_01 (6).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Z_Scene.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Z_Scene.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/Lose/LosePresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/Lose/LosePresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/Lose/LoseView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/Lose/LoseView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/ConstructState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/ConstructState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Player/CarData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Player/CarData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ComboSystem/ComboSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ComboSystem/ComboSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ProgresSystem/Progress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ProgresSystem/Progress.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Scripts/GarageItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Scripts/GarageItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Scripts/GaragePresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Scripts/GaragePresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Scripts/GarageView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/Scripts/GarageView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/States/GarageState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/States/GarageState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/States/InitializeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GarageScene/States/InitializeState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/LoseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/LoseState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +72,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d694e2e93fe948178a30d8884c0d089127e00/2d/b472d760/ParticleSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eb019d4a63d44ca7a73547c38156dec21dd000/e6/68cebfd5/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Courses/ECS_syndicate/SourceCode/SourceCode/ecs-survivors-viewers-l9-start/ecs-survivors-viewers-l9-start/src/ecs-survivors/Assets/Code/Gameplay/Windows/BaseWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Courses/ECS_syndicate/SourceCode/SourceCode/ecs-survivors-viewers-l9-start/ecs-survivors-viewers-l9-start/src/ecs-survivors/Assets/Code/Gameplay/Windows/Configs/WindowConfig.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Courses/ECS_syndicate/SourceCode/SourceCode/ecs-survivors-viewers-l9-start/ecs-survivors-viewers-l9-start/src/ecs-survivors/Assets/Code/Gameplay/Windows/IWindowService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Courses/ECS_syndicate/SourceCode/SourceCode/ecs-survivors-viewers-l9-start/ecs-survivors-viewers-l9-start/src/ecs-survivors/Assets/Code/Gameplay/Windows/WindowId.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/GameSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/GameSettingsData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/AdsService/AdsSystem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -208,6 +244,7 @@
       <workItem from="1730793400500" duration="9603000" />
       <workItem from="1730977871056" duration="2919000" />
       <workItem from="1731067423418" duration="4600000" />
+      <workItem from="1732566063031" duration="2479000" />
     </task>
     <servers />
   </component>

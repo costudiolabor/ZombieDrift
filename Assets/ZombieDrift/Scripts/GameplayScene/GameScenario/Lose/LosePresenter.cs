@@ -1,6 +1,5 @@
 using System;
 using Project;
-using Zenject;
 
 namespace Gameplay {
     public class LosePresenter {
@@ -8,6 +7,9 @@ namespace Gameplay {
 	    public event Action RestartEvent, RepairEvent;
         private LoseView _view;
 
+        public bool isRestartInteractable {
+	        set => _view.isRestartInteractable = value;
+        }
         public LosePresenter(UiSounds uiSounds) {
 	        _uiSounds = uiSounds;
         }
@@ -15,7 +17,7 @@ namespace Gameplay {
         public bool enabled {
 	        set {
 		        if(value)
-			        _uiSounds.PlayLoseSound();;
+			        _uiSounds.PlayLoseSound();
 		        _view.isActive = value;
 	        }
         }

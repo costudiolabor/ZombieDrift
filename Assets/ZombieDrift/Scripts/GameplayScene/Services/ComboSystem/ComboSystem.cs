@@ -1,8 +1,8 @@
 using UnityEngine;
 namespace Gameplay {
 	public class ComboSystem {
-		private const int MIN_COMBO_COUNT_FOR_NOTIFY = 2;
-		private const float DEFAULT_COMBO_DELAY = 0.5f;
+		private const int MIN_COMBO_COUNT_FOR_NOTIFY = 3;
+		private const float DEFAULT_COMBO_DELAY = 0.7f;
 
 		public float comboMultiplier { get; set; }
 		public float comboDelay { get; set; } = DEFAULT_COMBO_DELAY;

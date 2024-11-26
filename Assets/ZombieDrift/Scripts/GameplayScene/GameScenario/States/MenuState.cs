@@ -1,3 +1,4 @@
+using Ads;
 using Project;
 using UnityEngine;
 
@@ -7,17 +8,20 @@ namespace Gameplay {
 		private readonly MenuPresenter _menuPresenter;
 		private readonly GameplayHudPresenter _gameplayHudPresenter;
 		private readonly ScenesLoader _scenesLoader;
+		private readonly AdsSystem _adsSystem;
 
 		public MenuState(
 				StateSwitcher stateSwitcher,
 				MenuPresenter menuPresenter,
 				GameplayHudPresenter gameplayHudPresenter,
-				ScenesLoader scenesLoader
+				ScenesLoader scenesLoader,
+				AdsSystem adsSystem
 		) : base(stateSwitcher) {
 			_stateSwitcher = stateSwitcher;
 			_menuPresenter = menuPresenter;
 			_gameplayHudPresenter = gameplayHudPresenter;
 			_scenesLoader = scenesLoader;
+			_adsSystem = adsSystem;
 		}
 
 		public override void Enter() {
@@ -34,8 +38,10 @@ namespace Gameplay {
 			_menuPresenter.GarageEvent -= SwitchToGarageState;
 		}
 
-		private void SwitchToGarageState() =>
-				_scenesLoader.SwitchToShopScene();
+		private void SwitchToGarageState() {
+			_adsSystem.ShowFullscreen();
+			_scenesLoader.SwitchToShopScene();
+		}
 
 		private void SwitchToPlayState() =>
 				_stateSwitcher.SetState<GetReadyState>();

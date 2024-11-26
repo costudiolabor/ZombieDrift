@@ -107,7 +107,7 @@ namespace Gameplay {
 			var stageIndex = _progress.stageIndex;
 
 			//--- !!!---- Цикличность Когда уровни закончатся начнутся в сначала
-			if (stageIndex > _stagesConfig.stages.Length) {
+			if (stageIndex >= _stagesConfig.stages.Length) {
 				_progress.stageIndex = 0;
 				stageIndex = 0;
 			}

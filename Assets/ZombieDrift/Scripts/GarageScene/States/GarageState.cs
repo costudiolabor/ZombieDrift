@@ -149,7 +149,9 @@ namespace Garage {
 		private void UnlockCar(GameObject car) =>
 				Utils.MoveAllChildrenToLayer(car.transform, _purchasedLayerMask);
 
-		private void GotoGameScene() =>
-				_scenesLoader.SwitchToGameplayScene();
+		private void GotoGameScene() {
+			_adsSystem.ShowFullscreen();
+			_scenesLoader.SwitchToGameplayScene();
+		}
 	}
 }

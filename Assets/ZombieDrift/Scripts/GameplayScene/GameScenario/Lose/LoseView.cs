@@ -7,8 +7,8 @@ namespace Gameplay {
         public event Action RestartClickedEvent, RepairClickedEvent;
         [SerializeField] private Button _repairButton, _restartButton;
 
-        public bool isRestartInteractable {
-            set => _restartButton.interactable = value;
+        public bool isRepairInteractable {
+            set => _repairButton.interactable = value;
         }
 
         private void OnEnable() {

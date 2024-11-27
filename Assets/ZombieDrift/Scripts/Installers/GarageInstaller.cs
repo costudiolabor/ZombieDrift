@@ -8,12 +8,18 @@ namespace Garage {
 	public class GarageInstaller : MonoInstaller {
 		[SerializeField] private EntryPoint _entryPoint;
 		[SerializeField] private CarsConfig _carsConfig;
+		[SerializeField] private TextHintConfig _textHintConfig;
 
 		public override void InstallBindings() {
 			InstallEntryPoint();
 			InstallGarage();
 			InstallStateMachine();
 			InstallFactory();
+			InstallTextHint();
+		}
+		private void InstallTextHint() {
+			Container.Bind<TextHintSystem>().AsSingle();
+			Container.Bind<TextHintConfig>().FromInstance(_textHintConfig);
 		}
 
 		private void InstallFactory() =>

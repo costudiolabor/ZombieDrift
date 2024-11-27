@@ -55,14 +55,14 @@ namespace Gameplay {
         }
 
         private async void OnRepairClicked() {
-            _losePresenter.isRestartInteractable = false;
+            _losePresenter.isRepairInteractable = false;
 
             var rewardCollected = await _adsSystem.ShowRewardVideo();
 
             if (rewardCollected)
                 SwitchToRepairState();
 
-            _losePresenter.isRestartInteractable = true;
+            _losePresenter.isRepairInteractable = true;
         }
 
         private void OnStartFromScratchClicked() {

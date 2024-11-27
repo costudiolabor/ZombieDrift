@@ -6,6 +6,7 @@ namespace Gameplay {
 	public class GameplayState : State {
 		private const float SHAKE_AMPLITUDE = 0.5f;
 		private const int SHAKE_DURATION = 85;
+		private const int MAX_FLYING_COINS = 4;
 
 		private const string LOCALIZE_TABLE = "StringsTable";
 		private const string COMBO_HINT_LOCAL_KEY = "comboKey";
@@ -127,15 +128,15 @@ namespace Gameplay {
 		}
 
 		private void TryGetComboReward(Vector3 hitPosition) {
-			//       var comboCount = _comboCounter.IncreaseCombo();
-			//    if (comboCount < MIN_COMBO_COUNT_FOR_NOTIFY)
-			//          return;
-			//       var rewardAmount = comboCount * COMBO_MULTIPLIER;
+
 			var rewardAmount = _comboSystem.IncreaseAndTryGetReward();
 			if (rewardAmount == 0)
 				return;
 
-			_flyingRewardSystem.SpawnInSphere(hitPosition, rewardAmount);
+			//Ограничичваем число монет которые генерятся после сбития - чтобы не летело с каждого по 10 монет - но и визуально
+			var flyingCoinsCount = Mathf.Min(MAX_FLYING_COINS, rewardAmount);
+
+			_flyingRewardSystem.SpawnInSphere(hitPosition, flyingCoinsCount);
 			_moneyWallet.AddCoins(rewardAmount);
 
 			_textHintSystem.ShowHint(hitPosition, _comboLocalizedString.GetLocalizedString(_comboSystem.count));

@@ -7,6 +7,7 @@ using UnityEngine;
 namespace Garage {
 	public class GarageState : State {
 		private const int WATCH_VIDEO_REWARD_AMOUNT = 200;
+		private const string COMBO_MULTIPLIER_INCREASE_MESSAGE = "Combo +1";
 
 		private readonly ScenesLoader _scenesLoader;
 		private readonly Podium _podium;
@@ -16,6 +17,7 @@ namespace Garage {
 		private readonly MoneyWallet _moneyWallet;
 		private readonly SaveLoadSystem _saveLoadSystem;
 		private readonly AdsSystem _adsSystem;
+		private readonly TextHintSystem _textHintSystem;
 
 		private int selectedCarIndex {
 			set => _progress.selectedCarIndex = value;
@@ -36,7 +38,9 @@ namespace Garage {
 				CarsConfig config,
 				MoneyWallet moneyWallet,
 				SaveLoadSystem saveLoadSystem,
-				AdsSystem adsSystem
+				AdsSystem adsSystem,
+				TextHintSystem textHintSystem
+				
 		) : base(stateSwitcher) {
 			_purchasedLayerMask = config.purchasedLayerMask;
 			_scenesLoader = scenesLoader;
@@ -47,6 +51,7 @@ namespace Garage {
 			_moneyWallet = moneyWallet;
 			_saveLoadSystem = saveLoadSystem;
 			_adsSystem = adsSystem;
+			_textHintSystem = textHintSystem;
 		}
 
 		public override void Enter() {
@@ -106,10 +111,7 @@ namespace Garage {
 				_garagePresenter.state = GarageItemState.Locked;
 			else
 				_garagePresenter.state = GarageItemState.NotEnoughMoney;
-
-			//Save money and selectedIndex
-			RefreshMoneyCount();
-			RefreshComboMultiplier();
+			
 			SaveProgress();
 		}
 		private void RefreshComboMultiplier() =>
@@ -127,18 +129,21 @@ namespace Garage {
 			if (_moneyWallet.count < carPrice)
 				return;
 			_moneyWallet.SpendCoin(carPrice);
-			_podium.PlayBuyParticles();
+			_podium.PlayBuyEffects();
+			_textHintSystem.ShowHint(_podium.spawnParent.position, $"-{carPrice} \n COMBO_MULTIPLIER_INCREASE_MESSAGE" );
 			UnlockCar(selectedItem.mesh);
 
 			_progress.purchasedCars.Add(currentIndex);
 			selectedCarIndex = currentIndex;
 			Select();
+			RefreshMoneyCount();
+			RefreshComboMultiplier();
 		}
 
 		private void Choose() {
 			if (!_progress.purchasedCars.Contains(currentIndex))
 				return;
-			_podium.PlaySelectParticles();
+			_podium.PlaySelectEffects();
 			selectedCarIndex = currentIndex;
 			Select();
 		}

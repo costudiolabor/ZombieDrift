@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Gameplay;
+using UnityEngine;
 using Zenject;
 
 namespace Garage {
@@ -7,18 +8,19 @@ namespace Garage {
         [SerializeField] private Transform _carParent;
         [SerializeField] private ParticleSystem _buyParticles;
         [SerializeField] private ParticleSystem _selectParticles;
+        [SerializeField] private Camera _mainCamera;
 
         private GarageScenario _garageScenario;
-        private GaragePresenter _garageGaragePresenter;
 
         [Inject]
         public void Construct(
             GarageScenario garageScenario,
             GaragePresenter garageGaragePresenter,
+            TextHintSystem textHintSystem,
             Podium podium) {
             _garageScenario = garageScenario;
-            _garageGaragePresenter = garageGaragePresenter;
-            _garageGaragePresenter.Initialize(_garageView);
+            garageGaragePresenter.Initialize(_garageView);
+            textHintSystem.Initialize(_mainCamera);
             podium.Initialize(_carParent, _buyParticles, _selectParticles);
         }
 

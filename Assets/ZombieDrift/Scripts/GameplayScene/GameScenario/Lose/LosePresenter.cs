@@ -7,8 +7,8 @@ namespace Gameplay {
 	    public event Action RestartEvent, RepairEvent;
         private LoseView _view;
 
-        public bool isRestartInteractable {
-	        set => _view.isRestartInteractable = value;
+        public bool isRepairInteractable {
+	        set => _view.isRepairInteractable = value;
         }
         public LosePresenter(UiSounds uiSounds) {
 	        _uiSounds = uiSounds;

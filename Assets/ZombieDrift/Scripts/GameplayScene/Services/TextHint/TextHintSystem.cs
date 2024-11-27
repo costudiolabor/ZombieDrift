@@ -11,8 +11,7 @@ namespace Gameplay {
 		private readonly Vector3 _offset;
 
 		private Camera _camera;
-		private readonly List<TextHint> _activeHints = new();
-
+	
 		public TextHintSystem(TextHintConfig config) {
 			var particlesParent = new GameObject(PARTICLES_PARENT_NAME);
 			_showTimeMilliseconds = config.showTimeMillisecondsMilliseconds;

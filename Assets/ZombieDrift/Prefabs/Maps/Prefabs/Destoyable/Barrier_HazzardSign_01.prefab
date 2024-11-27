@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6592314513088994400}
   - component: {fileID: 6583106679992243260}
   - component: {fileID: 6623824752930610480}
-  - component: {fileID: 529547639883593146}
   m_Layer: 0
   m_Name: Barrier_HazzardSign_01
   m_TagString: Untagged
@@ -110,15 +109,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43260227074003626, guid: 9e19ee4be8ee5de41b02586cd820b8f3, type: 2}
---- !u!114 &529547639883593146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6560666759879039504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c90e6770853bdb48a285a76e34606e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

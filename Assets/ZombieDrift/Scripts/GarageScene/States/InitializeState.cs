@@ -11,7 +11,6 @@ namespace Garage {
 		private readonly Podium _podium;
 		private readonly ItemsSwitcher _itemsSwitcher;
 
-
 		public InitializeState(
 				StateSwitcher stateSwitcher,
 				CarsConfig carsConfig,

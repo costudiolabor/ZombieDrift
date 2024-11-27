@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stages:
   - maps:
-    - {fileID: 5380572861800832726, guid: 3f2986500ef9e0a48afd278ea81237a1, type: 3}
+    - {fileID: 5380572861800832726, guid: 504b3d0d7197a7c43b2046dc3d358f71, type: 3}
     - {fileID: 5380572861800832726, guid: d47e8b0185ae3f14c832693756873256, type: 3}
   - maps:
     - {fileID: 5380572861800832726, guid: b126a46776b584a4bbbd177e9f701e02, type: 3}
@@ -40,4 +40,7 @@ MonoBehaviour:
     - {fileID: 5380572861800832726, guid: bd74d25d912ce8c4390bfd8eb5fc61a5, type: 3}
   - maps:
     - {fileID: 5380572861800832726, guid: 2e7b758fedf93d248a3c5d4e73696941, type: 3}
-    - {fileID: 5380572861800832726, guid: bd74d25d912ce8c4390bfd8eb5fc61a5, type: 3}
+    - {fileID: 5380572861800832726, guid: 220966e348c97ed408ab2c19cdee85e5, type: 3}
+  - maps:
+    - {fileID: 5380572861800832726, guid: d2b451addd9057c4083aaf3dd47220d2, type: 3}
+    - {fileID: 5380572861800832726, guid: 220966e348c97ed408ab2c19cdee85e5, type: 3}

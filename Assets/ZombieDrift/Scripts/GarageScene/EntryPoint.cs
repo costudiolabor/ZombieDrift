@@ -8,7 +8,6 @@ namespace Garage {
         [SerializeField] private Transform _carParent;
         [SerializeField] private ParticleSystem _buyParticles;
         [SerializeField] private ParticleSystem _selectParticles;
-        [SerializeField] private Camera _mainCamera;
 
         private GarageScenario _garageScenario;
 
@@ -16,11 +15,9 @@ namespace Garage {
         public void Construct(
             GarageScenario garageScenario,
             GaragePresenter garageGaragePresenter,
-            TextHintSystem textHintSystem,
             Podium podium) {
             _garageScenario = garageScenario;
             garageGaragePresenter.Initialize(_garageView);
-            textHintSystem.Initialize(_mainCamera);
             podium.Initialize(_carParent, _buyParticles, _selectParticles);
         }
 

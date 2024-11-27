@@ -1535,11 +1535,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2342961914952565199, guid: 28c30bda61c049445a7524e9822e5c81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -238.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2342961914952565199, guid: 28c30bda61c049445a7524e9822e5c81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -32.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2342961914952565199, guid: 28c30bda61c049445a7524e9822e5c81, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1575,11 +1575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6558481831751222126, guid: 28c30bda61c049445a7524e9822e5c81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -92.95
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6558481831751222126, guid: 28c30bda61c049445a7524e9822e5c81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6558481831751222126, guid: 28c30bda61c049445a7524e9822e5c81, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2400,7 +2400,6 @@ MonoBehaviour:
   _carParent: {fileID: 176616552}
   _buyParticles: {fileID: 1158402992}
   _selectParticles: {fileID: 1563782119}
-  _mainCamera: {fileID: 160024066}
 --- !u!1 &593152580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3398,7 +3397,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _entryPoint: {fileID: 571715532}
   _carsConfig: {fileID: 11400000, guid: 5c96cd51cc0aaa74f8f49d2214889708, type: 2}
-  _textHintConfig: {fileID: 11400000, guid: a74207f5c5628bd46aa9a95311ed19a0, type: 2}
 --- !u!1 &896605824
 GameObject:
   m_ObjectHideFlags: 0

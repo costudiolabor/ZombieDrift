@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23023966606916878}
   - component: {fileID: 5616341670240814950}
   - component: {fileID: 579258021389237669}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Barrier_Concrete_01_Striped_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

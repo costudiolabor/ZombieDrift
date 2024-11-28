@@ -544,9 +544,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a6f090d55576994ab3cb2893c6a6256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxSpeed: 16
+  _maxSpeed: 11.9
   _moveSpeed: 40
-  _steerAngle: 0.2
+  _steerAngle: 0.25
   _mass: 1000
   _drag: 0
   _angularDrag: 0.02

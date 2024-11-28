@@ -24,6 +24,7 @@ namespace Ads {
 			_fullscreenSource.TrySetResult(success);
 		}
 		private void OnRewardedStart() {
+	
 			Debug.Log("ON REWARDED START");
 		}
 		private void OnFullscreenStart() {

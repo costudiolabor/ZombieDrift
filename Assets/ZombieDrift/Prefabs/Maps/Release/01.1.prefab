@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f202113287ffeb46b8c79263424cdfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _light: {fileID: 5380572862596501893}
   _zombieSpawnPointsParent: {fileID: 5380572861700111462}
   _navMeshSurface: {fileID: 1777701023938290047}
   _startPoint: {fileID: 5380572862102503704}
@@ -923,21 +924,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5380572861800832721}
     m_Modifications:
+    - target: {fileID: 464682756350861882, guid: 425bfef9ca3f8344185c0e0f8ed15f23, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 35.39023
+      objectReference: {fileID: 0}
     - target: {fileID: 7684182714540170658, guid: 425bfef9ca3f8344185c0e0f8ed15f23, type: 3}
       propertyPath: m_Name
       value: Frame5x5
       objectReference: {fileID: 0}
     - target: {fileID: 7684182714540170659, guid: 425bfef9ca3f8344185c0e0f8ed15f23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.022901535
       objectReference: {fileID: 0}
     - target: {fileID: 7684182714540170659, guid: 425bfef9ca3f8344185c0e0f8ed15f23, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.005521059
       objectReference: {fileID: 0}
     - target: {fileID: 7684182714540170659, guid: 425bfef9ca3f8344185c0e0f8ed15f23, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.005054474
       objectReference: {fileID: 0}
     - target: {fileID: 7684182714540170659, guid: 425bfef9ca3f8344185c0e0f8ed15f23, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1243,7 +1248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297577252315662413, guid: 5a6b14349546e6746bb8d8f1931e87f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5297577252315662413, guid: 5a6b14349546e6746bb8d8f1931e87f1, type: 3}
       propertyPath: m_LocalPosition.z

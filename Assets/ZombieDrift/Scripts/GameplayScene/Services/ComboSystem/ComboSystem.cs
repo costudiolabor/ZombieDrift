@@ -17,7 +17,7 @@ namespace Gameplay {
 			_timer.AlarmEvent += Reset;
 		}
 
-		public int IncreaseAndCurrentComboCount() {
+		public int GetIncreasedComboCount() {
 			var comboCount = IncreaseCombo();
 			return comboCount >= MIN_COMBO_COUNT_FOR_NOTIFY
 					? comboCount

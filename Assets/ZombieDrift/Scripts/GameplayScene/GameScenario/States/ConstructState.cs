@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Gameplay {
 	public class ConstructState : State {
+
 		private readonly ContentCreationService _contentCreationService;
 		private readonly Progress _progress;
 		private readonly GameplayCache _gameplayCache;
@@ -87,7 +88,8 @@ namespace Gameplay {
 		
 		private void CalculateCurrentComboMultiplier() {
 			var purchasedCars = _progress.purchasedCars;
-			_comboSystem.comboMultiplier = purchasedCars.Count;
+			//_comboSystem.comboMultiplier = purchasedCars.Count;
+			_gameplayCache.comboMultiplier = purchasedCars.Count;
 			_comboSystem.Reset();
 		}
 
@@ -99,7 +101,7 @@ namespace Gameplay {
 			map.navMeshSurface.BuildNavMesh();
 			_gameplayCache.map = map;
 			_gameplayCache.car = _contentCreationService.CreateCar(currentCarIndex, map.startPoint);
-			var zombies = _contentCreationService.CreateZombies(map.zombieSpawnPoints);
+			var zombies = _contentCreationService.CreateZombies(map.zombieSpawnPoints, map.transform);
 			_zombieStorage.AddNewRange(zombies);
 		}
 

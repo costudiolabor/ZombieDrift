@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStartMovingMinMax: {x: 100, y: 600}
   delayBeforeAppearMinMax: {x: 10, y: 200}
-  sphereRadius: 1
+  sphereRadius: 1.5
   sphereOffset: {x: 0, y: 1.5, z: 0}
   circleOffset: {x: 0, y: 0}
   flyingElementPrefab: {fileID: 3831748355429590175, guid: 92723dae8945d84468542cfbfc616ff5, type: 3}
   speed: 0.8
-  _poolAmount: 10
+  _poolAmount: 20
   itemsParentGameObjectName: CoinsParent

@@ -109,7 +109,6 @@ namespace Gameplay {
 
 			_gameplaySounds.PlayZombieHitSoundAtPosition(hitPosition);
 			_particlesPlayer.PlayZombieHit(hitPosition);
-			//   _botNavigation.RemoveKilledZombie(zombie);
 			_enemyPointerSystem.Remove(zombie);
 
 			_moneyWallet.AddCoins();
@@ -128,8 +127,7 @@ namespace Gameplay {
 		}
 
 		private void TryGetComboReward(Vector3 hitPosition) {
-
-			var rewardAmount = _comboSystem.IncreaseAndTryGetReward();
+			var rewardAmount = _comboSystem.IncreaseAndCurrentComboCount();
 			if (rewardAmount == 0)
 				return;
 

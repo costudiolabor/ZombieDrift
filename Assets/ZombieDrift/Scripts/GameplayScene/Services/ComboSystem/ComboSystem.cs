@@ -4,7 +4,7 @@ namespace Gameplay {
 		private const int MIN_COMBO_COUNT_FOR_NOTIFY = 3;
 		private const float DEFAULT_COMBO_DELAY = 1f;
 
-		public float comboMultiplier { get; set; }
+		//public float comboMultiplier { get; set; }
 		public float comboDelay { get; set; } = DEFAULT_COMBO_DELAY;
 		public int count => _count;
 
@@ -17,11 +17,11 @@ namespace Gameplay {
 			_timer.AlarmEvent += Reset;
 		}
 
-		public int IncreaseAndTryGetReward() {
+		public int IncreaseAndCurrentComboCount() {
 			var comboCount = IncreaseCombo();
-
 			return comboCount >= MIN_COMBO_COUNT_FOR_NOTIFY
-					? Mathf.RoundToInt(comboCount * comboMultiplier)
+					? comboCount
+					//? Mathf.RoundToInt(comboCount * comboMultiplier)
 					: 0;
 		}
 

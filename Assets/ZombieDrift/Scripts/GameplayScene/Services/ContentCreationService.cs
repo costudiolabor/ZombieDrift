@@ -48,7 +48,8 @@ namespace Gameplay {
 
             foreach (var point in points) {
                 var randomIndex = Random.Range(0, _zombiesConfig.count);
-                var zombie = _factory.Create(_zombiesConfig.zombies[randomIndex], parent, point.position, point.rotation);
+                var randomZombieDirection = Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
+                var zombie = _factory.Create(_zombiesConfig.zombies[randomIndex], parent, point.position, randomZombieDirection);
                 zombie.speedInterval = _zombiesConfig.speedIntervalMinMax;
                 zombies.Add(zombie);
             }

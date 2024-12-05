@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using Project;
 using UnityEngine;
 
@@ -25,27 +26,31 @@ namespace Gameplay {
 			_pauseService = pauseService;
 		}
 
-		public override void Enter() {
+		public override async void Enter() {
 			_gameProcess.Finish();
 			_enemyPointerSystem.Clear();
 			_pauseService.Clear();
 			
-			DestroyGameObjects();
+			await DestroyGameObjects();
 			
 			SwitchToPrepare();
 		}
 
-		private void DestroyGameObjects() {
+		private async UniTask DestroyGameObjects() {
 			_zombieStorage.DestroyAll();
 			
 			var car = _gameplayCache.car;
 			var map = _gameplayCache.map;
-
+			
 			Object.Destroy(car.gameObject);
 			Object.Destroy(map.gameObject);
 
 			_gameplayCache.car = null;
 			_gameplayCache.map = null;
+			
+			//для того чтобы корректно удалилися старый NavMeshSurface нужно подождать кадр
+			map.navMeshSurface.RemoveData();
+			await UniTask.DelayFrame(1);
 		}
 
 		private void SwitchToPrepare() =>

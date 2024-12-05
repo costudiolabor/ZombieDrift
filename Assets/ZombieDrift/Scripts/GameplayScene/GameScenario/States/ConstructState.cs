@@ -98,6 +98,7 @@ namespace Gameplay {
 			var currentCarIndex = _progress.selectedCarIndex;
 			var mapIndex = _gameplayCache.mapIndex;
 			var map = _contentCreationService.CreateMap(stageIndex, mapIndex);
+			
 			map.navMeshSurface.BuildNavMesh();
 			_gameplayCache.map = map;
 			_gameplayCache.car = _contentCreationService.CreateCar(currentCarIndex, map.startPoint);

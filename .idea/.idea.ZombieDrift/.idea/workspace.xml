@@ -6,18 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="de5fc0b1-2905-4b1c-9891-21b72464e4be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/FlyingRewardConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/FlyingRewardConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/UiSoundConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/UiSoundConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/StagesConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/StagesConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Font/MisterBrush SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Font/MisterBrush SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Font/Raleway-SemiBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Font/Raleway-SemiBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Release/06.2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Release/06.2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Release/07.2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Release/07.2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Release/08.1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Release/08.1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Release/08.2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Release/08.2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map01.1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map01.1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map01.2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map01.2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02.1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02.1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02.2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map02.2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map03.1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map03.1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map03.2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Map03.2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Mapz02 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Mapz02 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Obstacle/Barrier_Truck_Trailer_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Obstacle/Barrier_Truck_Trailer_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Obstacle/SM_Env_PortEdge_Corner_Tyre_01 (16).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Maps/Prefabs/Obstacle/SM_Env_PortEdge_Corner_Tyre_01 (16).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Gameplay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/ConstructState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/ConstructState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/GameplayState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/GameplayState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameplayCache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameplayCache.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ComboSystem/ComboSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ComboSystem/ComboSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/FinalizeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/FinalizeState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ContentCreationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ContentCreationService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,10 +146,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="15024">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="15024" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -210,6 +221,7 @@
       <workItem from="1732879587641" duration="1384000" />
       <workItem from="1733148530883" duration="2592000" />
       <workItem from="1733179100903" duration="2141000" />
+      <workItem from="1733422113134" duration="3273000" />
     </task>
     <servers />
   </component>
@@ -234,16 +246,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Map/Map.cs</url>
-          <line>25</line>
-          <properties documentPath="D:\Git\ZombieDrift\ZombieDrift\Assets\ZombieDrift\Scripts\GameplayScene\Map\Map.cs" initialLine="25" containingFunctionPresentation="Property 'lightDirection'" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#System.MulticastDelegate" memberName="delegates" />

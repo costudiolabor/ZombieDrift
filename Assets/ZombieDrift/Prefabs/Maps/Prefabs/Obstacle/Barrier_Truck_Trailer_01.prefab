@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1118822614799896765}
   - component: {fileID: 1126709081330533075}
   - component: {fileID: 2312450171648340011}
+  - component: {fileID: 2955401401362495095}
   m_Layer: 0
   m_Name: Barrier_Truck_Trailer_01
   m_TagString: Untagged
@@ -113,6 +114,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.8866408, y: 1.4911197, z: 10.075075}
   m_Center: {x: -0.0000000038457717, y: 0.763753, z: -3.1854086}
+--- !u!114 &2955401401362495095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149145943639401097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c90e6770853bdb48a285a76e34606e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1149555231113857149
 GameObject:
   m_ObjectHideFlags: 0

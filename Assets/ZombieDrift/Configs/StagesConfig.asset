@@ -17,7 +17,7 @@ MonoBehaviour:
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
     maps:
-    - {fileID: 5380572861800832726, guid: 3f2986500ef9e0a48afd278ea81237a1, type: 3}
+    - {fileID: 5380572861800832726, guid: 40251d6519d878445b84277b6bb41231, type: 3}
     - {fileID: 5380572861800832726, guid: d47e8b0185ae3f14c832693756873256, type: 3}
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}

@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: ShopNotPurchased
-    Event: 600
+    Event: 1000
     filterSettings:
       RenderQueueType: 0
       LayerMask:

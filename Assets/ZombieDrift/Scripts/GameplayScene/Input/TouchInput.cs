@@ -8,27 +8,44 @@ public class TouchInput : IInput {
     public event Action AnyPressedEvent;
     private bool touched => Input.touchCount > 0 && !TryHitHud(touchOne.position);
     private Touch touchOne => Input.touches[0];
+    private Touch touchTwo => Input.touches[1];
     private bool _isTouchedInLastFrame;
 
     public void Tick() {
+        /*
         if (_isTouchedInLastFrame) {
             HorizontalAxisChangedEvent?.Invoke(0);
             _isTouchedInLastFrame = false;
         }
+        */
+        if (!touched) {
+            HorizontalAxisChangedEvent?.Invoke(0);
+            return;
+        }
+        /*if (touched) {
+            //     _isTouchedInLastFrame = true;
+        }*/
+        
+        /*if (!touched) 
+            return;*/
 
-        if (touched) {
-            AnyPressedEvent?.Invoke();
-            _isTouchedInLastFrame = true;
+        AnyPressedEvent?.Invoke();
+        var horizontalCenter = Screen.width / 2;
+
+        //Было залипание если нажать два тача сразу и один отпусить
+        // решил поворачивать руль всегда по последнему нажанитю для этого проверяю время
+        Touch lastTouch = touchOne;
+
+        if (Input.touchCount == 2) {
+            lastTouch = touchOne.deltaTime < touchTwo.deltaTime
+                ? touchOne
+                : touchTwo;
         }
 
-        if (touched) {
-            var horizontalCenter = Screen.width / 2;
-
-            if (horizontalCenter > touchOne.position.x)
-                HorizontalAxisChangedEvent?.Invoke(-1);
-            else
-                HorizontalAxisChangedEvent?.Invoke(1);
-        }
+        if (horizontalCenter > lastTouch.position.x)
+            HorizontalAxisChangedEvent?.Invoke(-1);
+        else
+            HorizontalAxisChangedEvent?.Invoke(1);
     }
 
     private bool TryHitHud(Vector3 mousePosition) {

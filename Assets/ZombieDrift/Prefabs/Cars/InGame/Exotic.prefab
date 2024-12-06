@@ -1570,7 +1570,6 @@ GameObject:
   - component: {fileID: 3450726373849050824}
   - component: {fileID: 8822500312459827581}
   - component: {fileID: 6245681072419395499}
-  - component: {fileID: 2418775902659684768}
   m_Layer: 6
   m_Name: SM_Veh_Attach_Tyre_05
   m_TagString: Untagged
@@ -1646,27 +1645,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2418775902659684768
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2525796323446505578}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.48797786
-  m_Center: {x: 0.08188545, y: -0.00001760932, z: 0.0000038146977}
 --- !u!1 &2682070533831635705
 GameObject:
   m_ObjectHideFlags: 0

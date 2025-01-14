@@ -28,7 +28,7 @@ namespace Gameplay {
             _destinationTransform = destination;
         }
 
-        public void SpawnInSphere(Vector3 sphereCenter, int count) {
+        public void SpawnInSphere(Vector3 sphereCenter, int count=1) {
             for (var i = 0; i < count; i++) {
                 var randomPointInSphere = Random.insideUnitSphere * _config.radius + sphereCenter + _config.offsetInSphere;
                 CreateWithDelays(randomPointInSphere);

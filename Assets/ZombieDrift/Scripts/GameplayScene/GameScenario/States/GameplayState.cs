@@ -114,10 +114,10 @@ namespace Gameplay {
             _particlesPlayer.PlayZombieHit(hitPosition);
             _enemyPointerSystem.Remove(zombie);
 
-            var coinsReward = _gameplayCache.comboMultiplier;
+           // var coinsReward = _gameplayCache.comboMultiplier;
            // var flyingCoinsCount = Mathf.Min(MAX_FLYING_COINS, coinsReward);
-            _moneyWallet.AddCoins(coinsReward);
-            _flyingRewardSystem.SpawnInSphere(hitPosition, coinsReward);
+            _moneyWallet.AddCoins();
+            _flyingRewardSystem.SpawnInSphere(hitPosition);
 
             TryGetComboReward(hitPosition);
 

@@ -67,7 +67,7 @@ namespace Gameplay {
 
         private void OnStartFromScratchClicked() {
             _gameplayCache.mapIndex = 0;
-            _adsSystem.ShowFullscreen();
+        //    _adsSystem.ShowFullscreen();
             SwitchToRestartState();
         }
 

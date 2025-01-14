@@ -4,11 +4,18 @@ using Project;
 namespace Gameplay {
     public class LosePresenter {
 	    private readonly UiSounds _uiSounds;
-	    public event Action RestartEvent, RepairEvent;
+	    public event Action RestartEvent, RepairByAdsEvent, RepairByMoneyEvent;
         private LoseView _view;
 
-        public bool isRepairInteractable {
+        public bool isRepairByAdsInteractable {
 	        set => _view.isRepairInteractable = value;
+        }
+        public bool isRepairByMoneyInteractable {
+	        set => _view.isRepairByMoneyInteractable = value;
+        }
+
+        public int repairCost {
+	        set => _view.repairCost = value;
         }
         public LosePresenter(UiSounds uiSounds) {
 	        _uiSounds = uiSounds;
@@ -25,12 +32,18 @@ namespace Gameplay {
         public void Initialize(LoseView view) {
             _view = view;
             _view.RestartClickedEvent += RestartNotify;
-            _view.RepairClickedEvent += RepairNotify;
+            _view.RepairByAdsClickedEvent += RepairByAdsNotify;
+            _view.RepairByMoneyClickedEvent += RepairByMoneyNotify;
         }
 
-        private void RepairNotify() {
+        private void RepairByAdsNotify() {
 	        _uiSounds.PlayRepairSound();;
-	        RepairEvent?.Invoke();
+	        RepairByAdsEvent?.Invoke();
+        }
+        
+        private void RepairByMoneyNotify() {
+	        _uiSounds.PlayRepairSound();;
+	        RepairByMoneyEvent?.Invoke();
         }
 
         private void RestartNotify() {
@@ -40,7 +53,8 @@ namespace Gameplay {
 
         ~LosePresenter() {
             _view.RestartClickedEvent -= RestartNotify;
-            _view.RepairClickedEvent -= RepairNotify;
+            _view.RepairByAdsClickedEvent -= RepairByAdsNotify;
+            _view.RepairByMoneyClickedEvent -= RepairByMoneyNotify;
         }
     }
 }

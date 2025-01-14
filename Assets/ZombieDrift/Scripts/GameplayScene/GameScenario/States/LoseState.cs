@@ -1,16 +1,23 @@
 using Ads;
 using Project;
 using SaveLoadSystemNamespace;
+using UnityEngine;
 
 namespace Gameplay {
     public class LoseState : State {
+        private const int REPAIR_BASE_COST = 25; 
+        
         private readonly StateSwitcher _stateSwitcher;
         private readonly SaveLoadSystem _saveLoadSystem;
         private readonly GameplayCache _gameplayCache;
         private readonly LosePresenter _losePresenter;
         private readonly CameraSystem _cameraSystem;
         private readonly AdsSystem _adsSystem;
+        private readonly GameplayHudPresenter _gameplayHudPresenter;
         private readonly Progress _progress;
+        private readonly MoneyWallet _moneyWallet;
+
+        private int repairCost => REPAIR_BASE_COST * _gameplayCache.loseInCurrentStageCount;
 
         public LoseState(
             StateSwitcher stateSwitcher,
@@ -19,29 +26,43 @@ namespace Gameplay {
             LosePresenter losePresenter,
             CameraSystem cameraSystem,
             AdsSystem adsSystem,
-            Progress progress) : base(stateSwitcher) {
+            GameplayHudPresenter gameplayHudPresenter,
+            Progress progress,
+            MoneyWallet moneyWallet) : base(stateSwitcher) {
             _stateSwitcher = stateSwitcher;
             _saveLoadSystem = saveLoadSystem;
             _gameplayCache = gameplayCache;
             _losePresenter = losePresenter;
             _cameraSystem = cameraSystem;
             _adsSystem = adsSystem;
+            _gameplayHudPresenter = gameplayHudPresenter;
             _progress = progress;
+            _moneyWallet = moneyWallet;
         }
 
         public override void Enter() {
+            _gameplayCache.loseInCurrentStageCount++;
             ShowCameraActions();
-
             SaveGame();
-
+            
+           
+            _gameplayHudPresenter.presentState = StagePresentState.MoneyOnly;
+            
             _losePresenter.enabled = true;
-            _losePresenter.RepairEvent += OnRepairClicked;
+            _losePresenter.repairCost = repairCost;
+            _losePresenter.isRepairByMoneyInteractable = repairCost <= _moneyWallet.count;
+            _losePresenter.isRepairByAdsInteractable = true;
+            _losePresenter.RepairByAdsEvent += OnRepairByAdsClicked;
+            _losePresenter.RepairByMoneyEvent += OnRepairByMoneyClicked;
             _losePresenter.RestartEvent += OnStartFromScratchClicked;
         }
-
+        
         public override void Exit() {
+            _gameplayHudPresenter.presentState = StagePresentState.None;
+            
             _losePresenter.enabled = false;
-            _losePresenter.RepairEvent -= OnRepairClicked;
+            _losePresenter.RepairByAdsEvent -= OnRepairByAdsClicked;
+            _losePresenter.RepairByMoneyEvent -= OnRepairByMoneyClicked;
             _losePresenter.RestartEvent -= OnStartFromScratchClicked;
             _cameraSystem.isZoomed = false;
         }
@@ -54,23 +75,31 @@ namespace Gameplay {
             _cameraSystem.isZoomed = true;
         }
 
-        private async void OnRepairClicked() {
-            _losePresenter.isRepairInteractable = false;
+        private async void OnRepairByAdsClicked() {
+            _losePresenter.isRepairByAdsInteractable = false;
 
             var rewardCollected = await _adsSystem.ShowRewardVideo();
 
             if (rewardCollected)
                 SwitchToRepairState();
 
-            _losePresenter.isRepairInteractable = true;
+            _losePresenter.isRepairByAdsInteractable = true;
+        }
+
+        private void OnRepairByMoneyClicked() {
+            _moneyWallet.SpendCoin(repairCost);
+            _gameplayHudPresenter.moneyCount = _moneyWallet.count;
+            SaveGame();
+            SwitchToRepairState();
         }
 
         private void OnStartFromScratchClicked() {
             _gameplayCache.mapIndex = 0;
+            _gameplayCache.loseInCurrentStageCount = 0;
         //    _adsSystem.ShowFullscreen();
             SwitchToRestartState();
         }
-
+  
         private void SwitchToRestartState() =>
             _stateSwitcher.SetState<FinalizeState>();
 

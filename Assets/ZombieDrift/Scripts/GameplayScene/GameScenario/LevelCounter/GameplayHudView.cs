@@ -17,6 +17,7 @@ public class GameplayHudView : View, IFlyingTarget, IGameplayHudActions {
 	[SerializeField] private Transform _rewardTarget;
 	[SerializeField] private Button _pauseButton;
 	[SerializeField] private LocalizedString _stageCaption;
+	
 	private int _stageNumber;
 
 	public int stageNumber {
@@ -35,6 +36,10 @@ public class GameplayHudView : View, IFlyingTarget, IGameplayHudActions {
 
 	public bool isMapNumberVisible {
 		set => _mapNumberText.enabled = value;
+	}
+	
+	public bool isStageVisible {
+		set => _stageNumberText.enabled = value;
 	}
 
 	public string coinsText {

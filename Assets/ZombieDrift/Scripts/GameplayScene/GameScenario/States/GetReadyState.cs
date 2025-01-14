@@ -19,7 +19,7 @@ namespace Gameplay {
 		}
 
 		public override void Enter() {
-			_gameplayHudPresenter.presentState = StagePresentState.All;
+			_gameplayHudPresenter.presentState = StagePresentState.AllWithoutPause;
 			_howToPlayPresenter.enabled = true;
 			_getReadyPresenter.enabled = true;
 			_getReadyPresenter.GoToMenuEvent += SwitchToMainMenu;

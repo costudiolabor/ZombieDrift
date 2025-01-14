@@ -6,8 +6,9 @@ namespace Gameplay {
 	public enum StagePresentState {
 		None,
 		StageOnly,
+		AllWithoutPause,
 		All,
-		AllWithPause
+		MoneyOnly
 	}
 	public class GameplayHudPresenter {
 		public IGameplayHudActions viewActions => _view;
@@ -50,21 +51,31 @@ namespace Gameplay {
 						_view.isActive = false;
 						_view.isMapNumberVisible = false;
 						_view.isPauseButtonVisible = false;
+						_view.isStageVisible = false;
 						break;
 					case StagePresentState.StageOnly:
 						_view.isActive = true;
 						_view.isMapNumberVisible = false;
 						_view.isPauseButtonVisible = false;
+						_view.isStageVisible = true;
+						break;
+					case StagePresentState.AllWithoutPause:
+						_view.isActive = true;
+						_view.isMapNumberVisible = true;
+						_view.isPauseButtonVisible = false;
+						_view.isStageVisible = true;
 						break;
 					case StagePresentState.All:
 						_view.isActive = true;
 						_view.isMapNumberVisible = true;
-						_view.isPauseButtonVisible = false;
-						break;
-					case StagePresentState.AllWithPause:
-						_view.isActive = true;
-						_view.isMapNumberVisible = true;
 						_view.isPauseButtonVisible = true;
+						_view.isStageVisible = true;
+						break;
+					case StagePresentState.MoneyOnly:
+						_view.isActive = true;
+						_view.isMapNumberVisible = false;
+						_view.isPauseButtonVisible = false;
+						_view.isStageVisible = false;
 						break;
 					default:
 						throw new ArgumentOutOfRangeException(nameof(value), value, null);

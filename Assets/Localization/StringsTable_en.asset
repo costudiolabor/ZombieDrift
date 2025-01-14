@@ -44,7 +44,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2022412283904
-    m_Localized: Repair
+    m_Localized: Repair?
     m_Metadata:
       m_Items: []
   - m_Id: 2252130119680
@@ -96,6 +96,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 6684281387246944283
+  - m_Id: 40688384887218176
+    m_Localized: Watch
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

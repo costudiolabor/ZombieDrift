@@ -76,6 +76,7 @@ namespace Gameplay {
 		private void IncreaseStage() {
 			_progress.stageIndex++;
 			_gameplayCache.mapIndex = 0;
+			_gameplayCache.loseInCurrentStageCount = 0;
 		}
 		private void SwitchToPrepareState() =>
 				_stateSwitcher.SetState<FinalizeState>();

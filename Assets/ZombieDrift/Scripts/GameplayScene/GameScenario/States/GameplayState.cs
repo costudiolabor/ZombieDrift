@@ -65,7 +65,7 @@ namespace Gameplay {
         }
 
         public override void Enter() {
-            _gameplayHudPresenter.presentState = StagePresentState.AllWithPause;
+            _gameplayHudPresenter.presentState = StagePresentState.All;
             _gameplayHudPresenter.viewActions.PauseClickedEvent += SwitchToPauseState;
 
             _vehicleController.Start();

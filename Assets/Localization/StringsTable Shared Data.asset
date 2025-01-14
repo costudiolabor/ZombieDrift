@@ -87,6 +87,10 @@ MonoBehaviour:
     m_Key: comboMultiplierKey
     m_Metadata:
       m_Items: []
+  - m_Id: 40688384887218176
+    m_Key: watchKey
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

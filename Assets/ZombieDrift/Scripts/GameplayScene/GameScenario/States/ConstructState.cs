@@ -74,8 +74,11 @@ namespace Gameplay {
 
 			var mapsCount = _gameplayCache.mapsCount;
 			var mapIndex = _gameplayCache.mapIndex;
-			SetStageNumber(_progress.stageIndex, mapIndex, mapsCount);
-
+			
+			_gameplayHudPresenter.stageIndex = _progress.stageIndex;
+			_gameplayHudPresenter.mapIndex = new Vector2Int(mapIndex, mapsCount);
+			_gameplayHudPresenter.moneyCount = _moneyWallet.count;
+			
 			if (mapIndex == 0)
 				SwitchToMenuState();
 			else
@@ -116,12 +119,6 @@ namespace Gameplay {
 			}
 			//
 			_gameplayCache.mapsCount = _stagesConfig.stages[stageIndex].count;
-		}
-
-		private void SetStageNumber(int stageIndex, int mapIndex, int mapsCount) {
-			_gameplayHudPresenter.stageIndex = stageIndex;
-			_gameplayHudPresenter.mapIndex = new Vector2Int(mapIndex, mapsCount);
-			_gameplayHudPresenter.moneyCount = _moneyWallet.count;
 		}
 
 		private void SnapCameraToCar() =>

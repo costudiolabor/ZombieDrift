@@ -2495,7 +2495,7 @@ MonoBehaviour:
   _maxSpeed: 11.2
   _moveSpeed: 40
   _steerAngle: 0.22
-  _mass: 700
+  _mass: 1700
   _drag: 0
   _angularDrag: 0.02
   _centerOfMass: {x: 0, y: -0.2, z: 0}

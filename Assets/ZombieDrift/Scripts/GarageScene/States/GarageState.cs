@@ -53,10 +53,10 @@ namespace Garage {
 
 		public override void Enter() {
 			_garagePresenter.NextClickedEvent += ChooseNext;
+			_garagePresenter.PreviousClickedEvent += ChoosePrevious;
 			_garagePresenter.BackEvent += GotoGameScene;
 			_garagePresenter.BuyEvent += BuyCar;
 			_garagePresenter.ChooseEvent += Choose;
-			_garagePresenter.PreviousClickedEvent += ChoosePrevious;
 			_garagePresenter.WatchEvent += WatchRewardVideo;
 
 			_itemsSwitcher.BeforeSelectEvent += Deselect;
@@ -111,7 +111,7 @@ namespace Garage {
 			
 			RefreshMoneyCount();
 			RefreshComboMultiplier();
-			SaveProgress();
+			
 		}
 		private void RefreshComboMultiplier() =>
 				_garagePresenter.comboMultiplier = _progress.comboMultiplier;
@@ -135,6 +135,7 @@ namespace Garage {
 			_progress.purchasedCars.Add(currentIndex);
 			selectedCarIndex = currentIndex;
 			Select();
+			SaveProgress();
 		}
 
 		private void Choose() {
@@ -143,6 +144,7 @@ namespace Garage {
 			_podium.PlaySelectEffects();
 			selectedCarIndex = currentIndex;
 			Select();
+			SaveProgress();
 		}
 
 		private void SaveProgress() =>

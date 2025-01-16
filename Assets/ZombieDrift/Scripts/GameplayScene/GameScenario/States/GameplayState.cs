@@ -140,7 +140,7 @@ namespace Gameplay {
          //  var flyingCoinsCount = Mathf.Min(MAX_FLYING_COINS, comboCount);
              var comboRewardCount = comboCount * _gameplayCache.comboMultiplier;
             _flyingRewardSystem.SpawnInSphere(hitPosition, comboRewardCount);
-            _moneyWallet.AddCoins(comboCount);
+            _moneyWallet.AddCoins(comboRewardCount);
 
             _textHintSystem.ShowHint(hitPosition, _comboLocalizedString.GetLocalizedString(_comboSystem.count));
         }

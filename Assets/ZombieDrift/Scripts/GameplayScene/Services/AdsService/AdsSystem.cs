@@ -28,5 +28,9 @@ namespace Ads {
 		public UniTask<bool> ShowRewardVideo() {
 			return _currentStrategy.ShowRewardVideo();
 		}
+
+		public void ShowStickyBanner() {
+			_currentStrategy.ShowStickyBanner();
+		}
 	}
 }

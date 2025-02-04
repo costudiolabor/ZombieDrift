@@ -19,6 +19,10 @@ namespace Ads {
 			return await _fullscreenSource.Task;
 		}
 
+		public void ShowStickyBanner() {
+			GP_Ads.ShowSticky();
+		}
+
 		private void OnRewardedClose(bool success) {
 			Debug.Log($"Reward success {success}");
 			_fullscreenSource.TrySetResult(success);

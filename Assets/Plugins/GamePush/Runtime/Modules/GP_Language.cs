@@ -3,10 +3,8 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace GamePush
-{
-    public class GP_Language : GP_Module
-    {
+namespace GamePush {
+    public class GP_Language : GP_Module {
         private static void ConsoleLog(string log) => GP_Logger.ModuleLog(log, ModuleName.Language);
 
         public static event UnityAction<Language> OnChangeLanguage;
@@ -29,8 +27,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern string GP_Current_Language();
-        public static Language Current()
-        {
+
+        public static Language Current() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return ConvertToEnum(GP_Current_Language());
 #else
@@ -40,8 +38,8 @@ namespace GamePush
 #endif
         }
 
-        public static string CurrentISO()
-        {
+
+        public static string CurrentISO() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Current_Language();
 #else
@@ -51,10 +49,21 @@ namespace GamePush
 #endif
         }
 
+        //ext method 
+        public static SystemLanguage CurrentSystemLanguage() {
+#if !UNITY_EDITOR && UNITY_WEBGL
+            Debug.Log(GP_Current_Language());
+            return ConvertToSystemLanguage(GP_Current_Language());
+#else
+            ConsoleLog("CURRENT: " + GP_Settings.instance.GetLanguage().ToString());
+            return ConvertToSystemLanguage(GP_Settings.instance.GetLanguage().ToString());
+#endif
+        }
+
         [DllImport("__Internal")]
         private static extern void GP_ChangeLanguage(string lang);
-        public static void Change(Language lang, Action<Language> onLanguageChange = null)
-        {
+
+        public static void Change(Language lang, Action<Language> onLanguageChange = null) {
             _onChangeLanguage = onLanguageChange;
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_ChangeLanguage(ConvertToString(lang));
@@ -66,8 +75,7 @@ namespace GamePush
 #endif
         }
 
-        public static void Change(string lang, Action<Language> onLanguageChange = null)
-        {
+        public static void Change(string lang, Action<Language> onLanguageChange = null) {
             _onChangeLanguage = onLanguageChange;
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_ChangeLanguage(lang);
@@ -79,10 +87,12 @@ namespace GamePush
 #endif
         }
 
-        private void CallChangeLanguage(string lang) { _onChangeLanguage?.Invoke(ConvertToEnum(lang)); OnChangeLanguage?.Invoke(ConvertToEnum(lang)); }
+        private void CallChangeLanguage(string lang) {
+            _onChangeLanguage?.Invoke(ConvertToEnum(lang));
+            OnChangeLanguage?.Invoke(ConvertToEnum(lang));
+        }
 
-        private static Language ConvertToEnum(string lang)
-        {
+        private static Language ConvertToEnum(string lang) {
             if (lang == English)
                 return Language.English;
 
@@ -128,8 +138,29 @@ namespace GamePush
             return Language.English;
         }
 
-        private static string ConvertToString(Language lang)
-        {
+//ext
+        private static SystemLanguage ConvertToSystemLanguage(string lang) {
+            return lang switch {
+                "en" => SystemLanguage.English,
+                "ru" => SystemLanguage.Russian,
+                "tr" => SystemLanguage.Turkish,
+                "tr-TR" => SystemLanguage.Turkish,
+                "fr" => SystemLanguage.French,
+                "it" => SystemLanguage.Italian,
+                "de" => SystemLanguage.German,
+                "es" => SystemLanguage.Spanish,
+                "zh" => SystemLanguage.Chinese,
+                "pt" => SystemLanguage.Portuguese,
+                "ko" => SystemLanguage.Korean,
+                "ja" => SystemLanguage.Japanese,
+                "ar" => SystemLanguage.Arabic,
+                "hi" => SystemLanguage.Hindi,
+                "id" => SystemLanguage.Indonesian,
+                _ => SystemLanguage.English
+            };
+        }
+
+        private static string ConvertToString(Language lang) {
             if (lang == Language.English)
                 return English;
 
@@ -176,8 +207,7 @@ namespace GamePush
         }
     }
 
-    public enum Language : byte
-    {
+    public enum Language : byte {
         English,
         Russian,
         Turkish,

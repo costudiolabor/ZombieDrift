@@ -21,7 +21,7 @@ namespace Gameplay {
 		private GameplayScenario _gameplayScenario;
 
 		[Inject]
-		private void Construct(
+		private async void Construct(
 				GameplayScenario gameplayScenario,
 				CameraSystem cameraSystem,
 				MenuPresenter menuPresenter,
@@ -54,7 +54,7 @@ namespace Gameplay {
 
 			gameplaySounds.Initialize();
 
-			saveLoadSystem.RestoreObject(SaveType.PlayerPrefs, gameSettings);
+			await saveLoadSystem.RestoreObject(SaveType.PlayerPrefs, gameSettings);
 			uiSounds.isMute = gameSettings.isMute;
 			gameplaySounds.isMute = gameSettings.isMute;
 			

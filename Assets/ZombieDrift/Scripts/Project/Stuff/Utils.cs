@@ -14,5 +14,7 @@ namespace Project {
 
         public static void MoveToLayer(Transform transform, LayerMask layerMask) =>
             transform.gameObject.layer = (int)Mathf.Log(layerMask.value, 2);
+        
+        
     }
 }

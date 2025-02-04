@@ -64,7 +64,7 @@ namespace Gameplay {
 			_stagesConfig = stagesConfig;
 		}
 
-		public override void Enter() {
+		public override async void Enter() {
 			CalculateCurrentComboMultiplier();
 			LoadGameplayCache();
 			CreateGameplayObjects();
@@ -75,7 +75,8 @@ namespace Gameplay {
 			var mapsCount = _gameplayCache.mapsCount;
 			var mapIndex = _gameplayCache.mapIndex;
 			
-			_gameplayHudPresenter.stageIndex = _progress.stageIndex;
+			//_gameplayHudPresenter.stageIndex = _progress.stageIndex;
+			await _gameplayHudPresenter.SetStageIndex(_progress.stageIndex);
 			_gameplayHudPresenter.mapIndex = new Vector2Int(mapIndex, mapsCount);
 			_gameplayHudPresenter.moneyCount = _moneyWallet.count;
 			

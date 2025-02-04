@@ -91,6 +91,10 @@ MonoBehaviour:
     m_Key: watchKey
     m_Metadata:
       m_Items: []
+  - m_Id: 47910178413076480
+    m_Key: gameNameKey
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

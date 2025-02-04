@@ -12,5 +12,7 @@ namespace Ads {
 
 		public UniTask<bool> ShowFullscreen();
 		public UniTask<bool> ShowRewardVideo();
+		
+		public void ShowStickyBanner();
 	}
 }

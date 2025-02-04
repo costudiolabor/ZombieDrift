@@ -56,7 +56,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3509427269632
-    m_Localized: Location {0}/{1} cleared
+    m_Localized: 'Location cleared
+
+      {0}/{1} '
     m_Metadata:
       m_Items:
       - rid: 6684281387246944283
@@ -98,6 +100,10 @@ MonoBehaviour:
       - rid: 6684281387246944283
   - m_Id: 40688384887218176
     m_Localized: Watch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47910178413076480
+    m_Localized: DRIVE TO SURVIVE
     m_Metadata:
       m_Items: []
   references:

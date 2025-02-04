@@ -8,10 +8,14 @@ namespace Gameplay {
 		public event Action ContinueButtonClickedEvent;
 
 		[SerializeField] private TMP_Text _mapClearedCaption;
+		[SerializeField] private TMP_Text _mapClearedCaptionShadow;
 		[SerializeField] private Button _continueButton;
 	
 		public string mapText {
-			set => _mapClearedCaption.text = value;
+			set {
+				_mapClearedCaption.text = value;
+				_mapClearedCaptionShadow.text = value;
+			}
 		}
 
 		private void ContinueNotify() =>

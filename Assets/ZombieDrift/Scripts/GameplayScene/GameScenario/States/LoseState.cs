@@ -5,8 +5,8 @@ using UnityEngine;
 
 namespace Gameplay {
     public class LoseState : State {
-        private const int REPAIR_BASE_COST = 25; 
-        
+        private const int REPAIR_BASE_COST = 25;
+
         private readonly StateSwitcher _stateSwitcher;
         private readonly SaveLoadSystem _saveLoadSystem;
         private readonly GameplayCache _gameplayCache;
@@ -44,10 +44,10 @@ namespace Gameplay {
             _gameplayCache.loseInCurrentStageCount++;
             ShowCameraActions();
             SaveGame();
-            
-           
+
+
             _gameplayHudPresenter.presentState = StagePresentState.MoneyOnly;
-            
+
             _losePresenter.enabled = true;
             _losePresenter.repairCost = repairCost;
             _losePresenter.isRepairByMoneyInteractable = repairCost <= _moneyWallet.count;
@@ -56,10 +56,10 @@ namespace Gameplay {
             _losePresenter.RepairByMoneyEvent += OnRepairByMoneyClicked;
             _losePresenter.RestartEvent += OnStartFromScratchClicked;
         }
-        
+
         public override void Exit() {
             _gameplayHudPresenter.presentState = StagePresentState.None;
-            
+
             _losePresenter.enabled = false;
             _losePresenter.RepairByAdsEvent -= OnRepairByAdsClicked;
             _losePresenter.RepairByMoneyEvent -= OnRepairByMoneyClicked;
@@ -67,8 +67,14 @@ namespace Gameplay {
             _cameraSystem.isZoomed = false;
         }
 
-        private void SaveGame() => 
+        private void SaveGame() =>
+#if !UNITY_EDITOR && UNITY_WEBGL
+			_saveLoadSystem.SaveObject(SaveType.GamePushCloud, _progress);
+#else
             _saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
+#endif
+        // _saveLoadSystem.SaveObject(SaveType.GamePushCloud, _progress);
+        // _saveLoadSystem.SaveObject(SaveType.PlayerPrefs, _progress);
 
         private async void ShowCameraActions() {
             await _cameraSystem.Shake(1, 250);
@@ -96,10 +102,10 @@ namespace Gameplay {
         private void OnStartFromScratchClicked() {
             _gameplayCache.mapIndex = 0;
             _gameplayCache.loseInCurrentStageCount = 0;
-        //    _adsSystem.ShowFullscreen();
+            //    _adsSystem.ShowFullscreen();
             SwitchToRestartState();
         }
-  
+
         private void SwitchToRestartState() =>
             _stateSwitcher.SetState<FinalizeState>();
 

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: StringsTable_ru-RU
+  m_Name: StringsTable_ru
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: ru-RU
+    m_Code: ru
   m_SharedData: {fileID: 11400000, guid: d7be84d8ad09184468be55e0cb86401c, type: 2}
   m_Metadata:
     m_Items:
@@ -66,7 +66,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3509427269632
-    m_Localized: "\u041B\u043E\u043A\u0430\u0446\u0438\u044F {0}/{1} \u043E\u0447\u0438\u0449\u0435\u043D\u0430"
+    m_Localized: "\u041B\u043E\u043A\u0430\u0446\u0438\u044F \u043E\u0447\u0438\u0449\u0435\u043D\u0430\n{0}/{1}"
     m_Metadata:
       m_Items:
       - rid: 6684281387246944284
@@ -100,6 +100,10 @@ MonoBehaviour:
       - rid: 6684281387246944284
   - m_Id: 40688384887218176
     m_Localized: "\u0421\u043C\u043E\u0442\u0440\u0435\u0442\u044C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47910178413076480
+    m_Localized: "\u0417\u041E\u041C\u0411\u0418 \u0414\u0420\u0418\u0424\u0422"
     m_Metadata:
       m_Items: []
   references:

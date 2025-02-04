@@ -16,22 +16,25 @@ MonoBehaviour:
   m_GUID: 15cf0fe692b123d478f385619d9ae3e4
   m_SerializeEntries:
   - m_GUID: 0412ee91cca1cac46b3f1547c82ae278
-    m_Address: Russian (Russia) (ru-RU)
+    m_Address: Russian (Russia) (ru)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 20b65fc01a0770a43b30d69e199bcfb6
     m_Address: English (en)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d77a0215d33fd9e4d982ebd60d8efebb
-    m_Address: Turkish (Turkey) (tr-TR)
+    m_Address: Turkish (Turkey) (tr)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: eb8ef10d176308546b473d25e7821d34, type: 2}

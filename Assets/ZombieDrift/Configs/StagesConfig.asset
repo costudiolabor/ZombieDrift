@@ -45,7 +45,7 @@ MonoBehaviour:
     - {fileID: 5380572861800832726, guid: 2319574513400da41acd883cc90170f9, type: 3}
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
-    lightColor: {r: 1, g: 1, b: 1, a: 1}
+    lightColor: {r: 0.8764898, g: 0.9127815, b: 0.96981126, a: 1}
     maps:
     - {fileID: 5380572861800832726, guid: 943298bd7f948a44684bbfd74fb1b9a3, type: 3}
     - {fileID: 5380572861800832726, guid: becc47e003071dd4c9149a6c0a3ca75c, type: 3}

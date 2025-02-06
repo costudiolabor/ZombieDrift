@@ -67,6 +67,7 @@ namespace Gameplay {
         public override void Enter() {
             _gameplayHudPresenter.presentState = StagePresentState.All;
             _gameplayHudPresenter.viewActions.PauseClickedEvent += SwitchToPauseState;
+    
 
             _vehicleController.Start();
             _botNavigation.Start();
@@ -81,7 +82,7 @@ namespace Gameplay {
             _gameProcess.AllEnemiesDestroyedEvent += SwitchToWinState;
             _gameProcess.ZombieHitEvent += OnEnemyHit;
         }
-
+        
         public override void Exit() {
             _gameplayHudPresenter.presentState = StagePresentState.None;
             _gameplayHudPresenter.viewActions.PauseClickedEvent -= SwitchToPauseState;

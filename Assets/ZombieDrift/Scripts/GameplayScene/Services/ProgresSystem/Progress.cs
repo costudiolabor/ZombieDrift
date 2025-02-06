@@ -9,6 +9,9 @@ namespace Project {
 		public string objectKey { get; } = SAVE_KEY;
 		public HashSet<int> purchasedCars => _purchasedCars;
 
+		// костыль для Socials
+		public bool socialsEnabled { set; get; }
+
 		public int comboMultiplier => purchasedCars.Count;
 		public int stageIndex {
 			get => _progressData.stageIndex;

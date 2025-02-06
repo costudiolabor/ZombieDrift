@@ -17,6 +17,7 @@ namespace Gameplay {
         [SerializeField] private TMP_Text _coinsText;
         [SerializeField] private Transform _rewardTarget;
         [SerializeField] private Button _pauseButton;
+
         public Transform rewardTargetTransform => _rewardTarget;
 
         public string stageCaption {

@@ -38,9 +38,9 @@ namespace Project {
             Run();
 
         public async void Run() {
-#if UNITY_WEBG
-#endif
+#if UNITY_WEBGL
             GP_Initialization.Execute();
+#endif
             _adsSystem.type = AdsType.GamePush;
 
             await LoadSavedData();
@@ -50,12 +50,21 @@ namespace Project {
             InitializeUiSounds();
 
             TurnOnStickyBanner();
+#if UNITY_WEBGL
+            CheckSocialsEnabled();
+#endif
             SwitchToGameplayScene();
         }
-
-        private void TurnOnStickyBanner() {
-            _adsSystem.ShowStickyBanner();
+#if UNITY_WEBGL
+        private void CheckSocialsEnabled() {
+            var inviteSupported = GP_Socials.IsSupportsNativeInvite();
+            var sharingSupported = GP_Socials.IsSupportsNativeShare();
+            Debug.Log($"InviteSupported {inviteSupported} sharingSupported{ sharingSupported}");
+            _progress.socialsEnabled = inviteSupported && sharingSupported;
         }
+#endif
+        private void TurnOnStickyBanner()
+            => _adsSystem.ShowStickyBanner();
 
         private void InitializeUiSounds() {
             var soundsParent = new GameObject(POOL_SOUNDS_PARENT_NAME).transform;
@@ -66,24 +75,20 @@ namespace Project {
         private async UniTask SetSystemLocale() {
             await LocalizationSettings.InitializationOperation;
 
-            //  SystemLanguage language = Application.systemLanguage;
+#if UNITY_WEBGL
             SystemLanguage language = GP_Language.CurrentSystemLanguage();
-           Debug.Log("System lang "+language);
+#else
+            SystemLanguage language = Application.systemLanguage;
+#endif
             var localeIdentifier = new LocaleIdentifier(language);
-            Debug.Log("LocaleIdentifier"+localeIdentifier);
-            //  var localeIdentifier = new LocaleIdentifier("tr-TR");
-            //	var localeIdentifier = new LocaleIdentifier(SystemLanguage.Turkish);
-            var f = LocalizationSettings.AvailableLocales.GetLocale(localeIdentifier);
-            Debug.Log("Locale "+f);
-            LocalizationSettings.SelectedLocale = f;
-           
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale(localeIdentifier);
         }
 
         private async UniTask LoadSavedData() =>
 #if !UNITY_EDITOR && UNITY_WEBGL
-				await _saveLoadSystem.RestoreObject(SaveType.GamePushCloud, _progress);
+			await _saveLoadSystem.LoadObject(SaveType.GamePushCloud, _progress);
 #else
-            await _saveLoadSystem.RestoreObject(SaveType.PlayerPrefs, _progress);
+            await _saveLoadSystem.LoadObject(SaveType.PlayerPrefs, _progress);
 #endif
 
         private void SetUpProject() =>

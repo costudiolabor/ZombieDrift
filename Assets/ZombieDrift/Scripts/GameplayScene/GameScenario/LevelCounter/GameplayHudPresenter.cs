@@ -19,6 +19,19 @@ namespace Gameplay {
 
         public IGameplayHudActions viewActions => _view;
 
+        public Vector2Int mapIndex {
+            set => _view.mapNumber = new Vector2Int(value.x + 1, value.y);
+        }
+
+        public int moneyCount {
+            set {
+                _view.coinsText = value.ToString();
+                _moneyCount = value;
+            }
+        }
+
+ 
+
         private readonly UiSounds _uiSounds;
         private GameplayHudView _view;
         private int _moneyCount;
@@ -31,6 +44,7 @@ namespace Gameplay {
 
         public void Initialize(GameplayHudView gameplayHudView) {
             _view = gameplayHudView;
+            presentState = StagePresentState.None;
         }
 
         public async UniTask SetStageIndex(int index) {
@@ -38,16 +52,6 @@ namespace Gameplay {
             _view.stageCaption = $"{caption} {index + 1}";
         }
 
-        public Vector2Int mapIndex {
-            set => _view.mapNumber = new Vector2Int(value.x + 1, value.y);
-        }
-
-        public int moneyCount {
-            set {
-                _view.coinsText = value.ToString();
-                _moneyCount = value;
-            }
-        }
 
         public void IncreaseMoneyCount(int count = 1) {
             moneyCount = _moneyCount + count;

@@ -54,7 +54,7 @@ namespace Gameplay {
 
 			gameplaySounds.Initialize();
 
-			await saveLoadSystem.RestoreObject(SaveType.PlayerPrefs, gameSettings);
+			await saveLoadSystem.LoadObject(SaveType.PlayerPrefs, gameSettings);
 			uiSounds.isMute = gameSettings.isMute;
 			gameplaySounds.isMute = gameSettings.isMute;
 			

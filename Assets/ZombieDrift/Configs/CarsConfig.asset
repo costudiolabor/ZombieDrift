@@ -24,7 +24,7 @@ MonoBehaviour:
   - car: {fileID: 5359905678222414327, guid: 9174c7e59c4e4c24783113ce799247e7, type: 3}
     price: 350
   - car: {fileID: 3924639168025395000, guid: f81728550e5948d47b2789b65f7ffb5f, type: 3}
-    price: 550
+    price: 50
   - car: {fileID: 6421066535242330801, guid: dcc5b9f5df171de42a516f0f03aad24e, type: 3}
     price: 750
   - car: {fileID: 6151549275395355848, guid: f091d53a1ca390a4987c2380eee7aa4a, type: 3}

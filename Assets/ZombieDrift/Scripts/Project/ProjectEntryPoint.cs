@@ -1,3 +1,4 @@
+using System;
 using Ads;
 using Cysharp.Threading.Tasks;
 using GamePush;
@@ -7,6 +8,8 @@ using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using Zenject;
+using Console = System.Console;
+using Object = UnityEngine.Object;
 
 namespace Project {
     public class ProjectEntryPoint : IInitializable {
@@ -43,12 +46,15 @@ namespace Project {
 #endif
             _adsSystem.type = AdsType.GamePush;
 
-            await LoadSavedData();
-            SetUpProject();
             CreateLog();
-            await SetSystemLocale();
+            SetUpProject();
             InitializeUiSounds();
 
+            //Костыль чтобы этот ебаный Гей пуш работал нахуй
+            await UniTask.DelayFrame(3);
+
+            await SetSystemLocale();
+            await LoadSavedData();
             TurnOnStickyBanner();
 #if UNITY_WEBGL
             CheckSocialsEnabled();
@@ -59,7 +65,7 @@ namespace Project {
         private void CheckSocialsEnabled() {
             var inviteSupported = GP_Socials.IsSupportsNativeInvite();
             var sharingSupported = GP_Socials.IsSupportsNativeShare();
-            Debug.Log($"InviteSupported {inviteSupported} sharingSupported{ sharingSupported}");
+            Debug.Log($"InviteSupported {inviteSupported} sharingSupported{sharingSupported}");
             _progress.socialsEnabled = inviteSupported && sharingSupported;
         }
 #endif
@@ -76,7 +82,13 @@ namespace Project {
             await LocalizationSettings.InitializationOperation;
 
 #if UNITY_WEBGL
-            SystemLanguage language = GP_Language.CurrentSystemLanguage();
+            SystemLanguage language;
+            try {
+                language = GP_Language.CurrentSystemLanguage();
+            }
+            catch (Exception e) {
+                language = Application.systemLanguage;
+            }
 #else
             SystemLanguage language = Application.systemLanguage;
 #endif
@@ -84,12 +96,15 @@ namespace Project {
             LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale(localeIdentifier);
         }
 
-        private async UniTask LoadSavedData() =>
+        private async UniTask LoadSavedData() {
 #if !UNITY_EDITOR && UNITY_WEBGL
+            Debug.Log("Load GamePush -> progress");
 			await _saveLoadSystem.LoadObject(SaveType.GamePushCloud, _progress);
 #else
+            Debug.Log("Load prefs -> prefs");
             await _saveLoadSystem.LoadObject(SaveType.PlayerPrefs, _progress);
 #endif
+        }
 
         private void SetUpProject() =>
             Application.targetFrameRate = _config.targetFramerate;

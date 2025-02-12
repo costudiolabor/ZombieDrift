@@ -6,10 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="de5fc0b1-2905-4b1c-9891-21b72464e4be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Font/MisterBrush SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Font/MisterBrush SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Font/Raleway-SemiBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Font/Raleway-SemiBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GamePush/Runtime/Modules/GP_Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/GamePush/Runtime/Modules/GP_Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GamePush/Runtime/Utilities/GP_Initialization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/GamePush/Runtime/Utilities/GP_Initialization.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/PolygonStreetRacer_Mat_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/PolygonStreetRacer_Mat_01_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/PolygonStreetRacer_Mat_02_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/PolygonStreetRacer_Mat_02_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/PolygonStreetRacer_Mat_03_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/PolygonStreetRacer_Mat_03_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/PolygonStreetRacer_Mat_04_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/PolygonStreetRacer_Mat_04_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_03.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_04.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_04.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_05.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_05.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_06.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_06.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_07.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_07.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_08.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_08.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_09.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonStreetRacer/Materials/Roads/PolygonStreetRacer_Road_Mat_09.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonZombies/Materials/PolygonZombie_Texture_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonZombies/Materials/PolygonZombie_Texture_01_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonZombies/Materials/PolygonZombie_Texture_01_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonZombies/Materials/PolygonZombie_Texture_01_B.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PolygonZombies/Materials/PolygonZombie_Texture_01_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PolygonZombies/Materials/PolygonZombie_Texture_01_C.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/New Web Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/New Web Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/CarsConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/CarsConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ProgresSystem/Progress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/ProgresSystem/Progress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/SaveLoadSystem/GamePushStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/SaveLoadSystem/GamePushStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/SaveLoadSystem/SaveLoadSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/SaveLoadSystem/SaveLoadSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/ProjectEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/ProjectEntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,25 +97,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.49622437",
-    "git-widget-placeholder": "Anklbenz8",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.49622437&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Anklbenz8&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\DriveToSurvive.exe" />
@@ -226,6 +249,7 @@
       <workItem from="1738010460408" duration="21835000" />
       <workItem from="1738532388975" duration="14021000" />
       <workItem from="1738700293144" duration="17841000" />
+      <workItem from="1739305801142" duration="13304000" />
     </task>
     <servers />
   </component>
@@ -259,42 +283,29 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/SaveLoadSystem/GamePushStrategy.cs</url>
-          <line>16</line>
+          <line>20</line>
           <properties documentPath="D:\Git\ZmbDrift\ZombieDrift\Assets\ZombieDrift\Scripts\GameplayScene\Services\SaveLoadSystem\GamePushStrategy.cs" containingFunctionPresentation="Method 'Load'">
             <startOffsets>
-              <option value="610" />
+              <option value="862" />
             </startOffsets>
             <endOffsets>
-              <option value="655" />
+              <option value="907" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/SaveLoadSystem/GamePushStrategy.cs</url>
-          <line>21</line>
+          <line>27</line>
           <properties documentPath="D:\Git\ZmbDrift\ZombieDrift\Assets\ZombieDrift\Scripts\GameplayScene\Services\SaveLoadSystem\GamePushStrategy.cs" containingFunctionPresentation="Method 'UUU'">
             <startOffsets>
-              <option value="771" />
+              <option value="1119" />
             </startOffsets>
             <endOffsets>
-              <option value="816" />
+              <option value="1164" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/ProjectEntryPoint.cs</url>
-          <line>83</line>
-          <properties documentPath="D:\Git\ZmbDrift\ZombieDrift\Assets\ZombieDrift\Scripts\Project\ProjectEntryPoint.cs" containingFunctionPresentation="Method 'SetSystemLocale'">
-            <startOffsets>
-              <option value="2735" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2839" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

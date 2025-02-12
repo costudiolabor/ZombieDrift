@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Project {
 	public class Progress : ISaveLoadObject {
-		private const string SAVE_KEY = "Progress_Key";
+		private const string SAVE_KEY = "progress_key";
 		public string objectKey { get; } = SAVE_KEY;
 		public HashSet<int> purchasedCars => _purchasedCars;
 

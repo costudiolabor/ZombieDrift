@@ -4,13 +4,10 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-
 using GamePush.Utilities;
 
-namespace GamePush
-{
-    public class GP_Player : GP_Module
-    {
+namespace GamePush {
+    public class GP_Player : GP_Module {
         private static void ConsoleLog(string log) => GP_Logger.ModuleLog(log, ModuleName.Player);
 
         public static event UnityAction OnConnect;
@@ -38,8 +35,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern int GP_Player_GetID();
-        public static int GetID()
-        {
+
+        public static int GetID() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetID();
 #else
@@ -52,8 +49,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern float GP_Player_GetScore();
-        public static float GetScore()
-        {
+
+        public static float GetScore() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetScore();
 #else
@@ -66,8 +63,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern string GP_Player_GetName();
-        public static string GetName()
-        {
+
+        public static string GetName() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetName();
 #else
@@ -78,11 +75,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern string GP_Player_GetAvatar();
-        public static string GetAvatarUrl()
-        {
+
+        public static string GetAvatarUrl() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetAvatar();
 #else
@@ -91,19 +87,18 @@ namespace GamePush
             return "URL";
 #endif
         }
-        public async static void GetAvatar(Image image)
-        {
+
+        public async static void GetAvatar(Image image) {
             string avatar = GP_Player_GetAvatar();
             if (avatar == null || avatar == "") return;
             await UtilityImage.DownloadImageAsync(avatar, image);
         }
 
 
-
         [DllImport("__Internal")]
         private static extern string GP_Player_GetFieldName(string key);
-        public static string GetFieldName(string key)
-        {
+
+        public static string GetFieldName(string key) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetFieldName(key);
 #else
@@ -114,11 +109,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern string GP_Player_GetFieldVariantName(string key, string value);
-        public static string GetFieldVariantName(string key, string value)
-        {
+
+        public static string GetFieldVariantName(string key, string value) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetFieldVariantName(key, value);
 #else
@@ -129,11 +123,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern string GP_Player_GetFieldVariantAt(string key, string index);
-        public static string GetFieldVariantAt(string key, int index)
-        {
+
+        public static string GetFieldVariantAt(string key, int index) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetFieldVariantAt(key, index.ToString());
 #else
@@ -144,11 +137,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern string GP_Player_GetFieldVariantIndex(string key, string value);
-        public static string GetFieldVariantIndex(string key, string value)
-        {
+
+        public static string GetFieldVariantIndex(string key, string value) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetFieldVariantIndex(key, value);
 #else
@@ -159,11 +151,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern void GP_Player_SetName(string name);
-        public static void SetName(string name)
-        {
+
+        public static void SetName(string name) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_SetName(name);
 #else
@@ -173,11 +164,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern void GP_Player_SetAvatar(string src);
-        public static void SetAvatar(string src)
-        {
+
+        public static void SetAvatar(string src) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_SetAvatar(src);
 #else
@@ -187,20 +177,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern void GP_Player_SetScore(float score);
-        public static void SetScore(float score)
-        {
-#if !UNITY_EDITOR && UNITY_WEBGL
-            GP_Player_SetScore(score);
-#else
 
-            ConsoleLog("SET SCORE: " + score);
-#endif
-        }
-        public static void SetScore(int score)
-        {
+        public static void SetScore(float score) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_SetScore(score);
 #else
@@ -209,21 +189,20 @@ namespace GamePush
 #endif
         }
 
+        public static void SetScore(int score) {
+#if !UNITY_EDITOR && UNITY_WEBGL
+            GP_Player_SetScore(score);
+#else
+
+            ConsoleLog("SET SCORE: " + score);
+#endif
+        }
 
 
         [DllImport("__Internal")]
         private static extern void GP_Player_AddScore(float score);
-        public static void AddScore(float score)
-        {
-#if !UNITY_EDITOR && UNITY_WEBGL
-            GP_Player_AddScore(score);
-#else
 
-            ConsoleLog("ADD SCORE: " + score);
-#endif
-        }
-        public static void AddScore(int score)
-        {
+        public static void AddScore(float score) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_AddScore(score);
 #else
@@ -232,12 +211,20 @@ namespace GamePush
 #endif
         }
 
+        public static void AddScore(int score) {
+#if !UNITY_EDITOR && UNITY_WEBGL
+            GP_Player_AddScore(score);
+#else
+
+            ConsoleLog("ADD SCORE: " + score);
+#endif
+        }
 
 
         [DllImport("__Internal")]
         private static extern int GP_Player_GetNumberInt(string key);
-        public static int GetInt(string key)
-        {
+
+        public static int GetInt(string key) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetNumberInt(key);
 #else
@@ -248,11 +235,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern float GP_Player_GetNumberFloat(string key);
-        public static float GetFloat(string key)
-        {
+
+        public static float GetFloat(string key) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetNumberFloat(key);
 #else
@@ -264,8 +250,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern float GP_Player_GetMaxValue(string key);
-        public static float GetMaxValue(string key)
-        {
+
+        public static float GetMaxValue(string key) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetMaxValue(key);
 #else
@@ -277,8 +263,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern float GP_Player_GetMinValue(string key);
-        public static float GetMinValue(string key)
-        {
+
+        public static float GetMinValue(string key) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetMinValue(key);
 #else
@@ -288,10 +274,11 @@ namespace GamePush
 #endif
         }
 
+
         [DllImport("__Internal")]
         private static extern string GP_Player_GetString(string key);
-        public static string GetString(string key)
-        {
+
+        public static string GetString(string key) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetString(key);
 #else
@@ -305,8 +292,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern string GP_Player_GetBool(string key);
-        public static bool GetBool(string key)
-        {
+
+        public static bool GetBool(string key) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetBool(key) == "true";
 #else
@@ -319,13 +306,14 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern void GP_Player_Set_Number(string key, float value);
+
         [DllImport("__Internal")]
         private static extern void GP_Player_Set_Bool(string key, string value);
+
         [DllImport("__Internal")]
         private static extern void GP_Player_Set_String(string key, string value);
 
-        public static void Set(string key, string value)
-        {
+        public static void Set(string key, string value) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Set_String(key, value);
 #else
@@ -333,8 +321,8 @@ namespace GamePush
             ConsoleLog("SET: KEY: " + key + " VALUE: " + value);
 #endif
         }
-        public static void Set(string key, int value)
-        {
+
+        public static void Set(string key, int value) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Set_Number(key, value);
 #else
@@ -342,8 +330,8 @@ namespace GamePush
             ConsoleLog("SET: KEY: " + key + " VALUE: " + value);
 #endif
         }
-        public static void Set(string key, bool value)
-        {
+
+        public static void Set(string key, bool value) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Set_Bool(key, value.ToString());
 #else
@@ -351,8 +339,8 @@ namespace GamePush
             ConsoleLog("SET: KEY: " + key + " VALUE: " + value);
 #endif
         }
-        public static void Set(string key, float value)
-        {
+
+        public static void Set(string key, float value) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Set_Number(key, value);
 #else
@@ -362,11 +350,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern void GP_Player_SetFlag(string key, bool value);
-        public static void SetFlag(string key, bool value)
-        {
+
+        public static void SetFlag(string key, bool value) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_SetFlag(key, value);
 #else
@@ -376,20 +363,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern void GP_Player_Add(string key, string value);
-        public static void Add(string key, float value)
-        {
-#if !UNITY_EDITOR && UNITY_WEBGL
-            GP_Player_Add(key, value.ToString());
-#else
 
-            ConsoleLog("ADD: KEY: " + key + " VALUE: " + value);
-#endif
-        }
-        public static void Add(string key, int value)
-        {
+        public static void Add(string key, float value) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Add(key, value.ToString());
 #else
@@ -398,12 +375,20 @@ namespace GamePush
 #endif
         }
 
+        public static void Add(string key, int value) {
+#if !UNITY_EDITOR && UNITY_WEBGL
+            GP_Player_Add(key, value.ToString());
+#else
+
+            ConsoleLog("ADD: KEY: " + key + " VALUE: " + value);
+#endif
+        }
 
 
         [DllImport("__Internal")]
         private static extern void GP_Player_Toggle(string key);
-        public static void Toggle(string key)
-        {
+
+        public static void Toggle(string key) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Toggle(key);
 #else
@@ -413,11 +398,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern void GP_Player_Reset();
-        public static void ResetPlayer()
-        {
+
+        public static void ResetPlayer() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Reset();
 #else
@@ -427,11 +411,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern void GP_Player_Remove();
-        public static void Remove()
-        {
+
+        public static void Remove() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Remove();
 #else
@@ -442,8 +425,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern void GP_Player_Sync(bool forceOverride = false, string storage = "preferred");
-        public static void Sync(SyncStorageType storage = SyncStorageType.preffered, bool forceOverride = false)
-        {
+
+        public static void Sync(SyncStorageType storage = SyncStorageType.preffered, bool forceOverride = false) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Sync(forceOverride: forceOverride, storage: storage.ToString());
 #else
@@ -452,8 +435,7 @@ namespace GamePush
 #endif
         }
 
-        public static void Sync(bool forceOverride)
-        {
+        public static void Sync(bool forceOverride) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Sync(forceOverride: forceOverride);
 #else
@@ -464,8 +446,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern void GP_Player_EnableAutoSync(int interval = 10, string storage = "cloud");
-        public static void EnableAutoSync(int interval = 10, SyncStorageType storage = SyncStorageType.cloud)
-        {
+
+        public static void EnableAutoSync(int interval = 10, SyncStorageType storage = SyncStorageType.cloud) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_EnableAutoSync(interval, storage.ToString());
 #else
@@ -475,8 +457,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern void GP_Player_DisableAutoSync(string storage = "cloud");
-        public static void DisableAutoSync(SyncStorageType storage = SyncStorageType.cloud)
-        {
+
+        public static void DisableAutoSync(SyncStorageType storage = SyncStorageType.cloud) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_DisableAutoSync(storage.ToString());
 #else
@@ -486,8 +468,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern void GP_Player_Load();
-        public static void Load()
-        {
+
+        public static void Load() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Load();
 #else
@@ -497,11 +479,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern void GP_Player_Login();
-        public static void Login()
-        {
+
+        public static void Login() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Login();
 #else
@@ -512,8 +493,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern void GP_Player_Logout();
-        public static void Logout()
-        {
+
+        public static void Logout() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Player_Logout();
 #else
@@ -523,11 +504,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern void GP_Player_FetchFields();
-        public static void FetchFields(Action<List<PlayerFetchFieldsData>> onFetchFields = null)
-        {
+
+        public static void FetchFields(Action<List<PlayerFetchFieldsData>> onFetchFields = null) {
             _onFetchFields = onFetchFields;
 
 #if !UNITY_EDITOR && UNITY_WEBGL
@@ -539,11 +519,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern string GP_Player_Has(string key);
-        public static bool Has(string key)
-        {
+
+        public static bool Has(string key) {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_Has(key) == "true";
 #else
@@ -554,11 +533,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern string GP_Player_IsLoggedIn();
-        public static bool IsLoggedIn()
-        {
+
+        public static bool IsLoggedIn() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_IsLoggedIn() == "true";
 #else
@@ -569,11 +547,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern string GP_Player_HasAnyCredentials();
-        public static bool HasAnyCredentials()
-        {
+
+        public static bool HasAnyCredentials() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_HasAnyCredentials() == "true";
 #else
@@ -584,11 +561,10 @@ namespace GamePush
         }
 
 
-
         [DllImport("__Internal")]
         private static extern string GP_Player_IsStub();
-        public static bool IsStub()
-        {
+
+        public static bool IsStub() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_IsStub() == "true";
 #else
@@ -600,8 +576,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern int GP_Player_GetActiveDays();
-        public static int GetActiveDays()
-        {
+
+        public static int GetActiveDays() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetActiveDays();
 #else
@@ -613,8 +589,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern int GP_Player_GetActiveDaysConsecutive();
-        public static int GetActiveDaysConsecutive()
-        {
+
+        public static int GetActiveDaysConsecutive() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetActiveDaysConsecutive();
 #else
@@ -626,8 +602,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern int GP_Player_GetPlaytimeToday();
-        public static int GetPlaytimeToday()
-        {
+
+        public static int GetPlaytimeToday() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetPlaytimeToday();
 #else
@@ -639,8 +615,8 @@ namespace GamePush
 
         [DllImport("__Internal")]
         private static extern int GP_Player_GetPlaytimeAll();
-        public static int GetPlaytimeAll()
-        {
+
+        public static int GetPlaytimeAll() {
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Player_GetPlaytimeAll();
 #else
@@ -665,24 +641,25 @@ namespace GamePush
         private void CallPlayerLogoutComplete() => OnLogoutComplete?.Invoke();
         private void CallPlayerLogoutError() => OnLogoutError?.Invoke();
 
-        private void CallPlayerFetchFieldsComplete(string data)
-        {
+        private void CallPlayerFetchFieldsComplete(string data) {
             OnPlayerFetchFieldsComplete?.Invoke(UtilityJSON.GetList<PlayerFetchFieldsData>(data));
             _onFetchFields?.Invoke(UtilityJSON.GetList<PlayerFetchFieldsData>(data));
         }
+
         private void CallPlayerFetchFieldsError() => OnPlayerFetchFieldsError?.Invoke();
 
         private void CallPlayerFieldReachMaximum(string field) =>
             OnFieldMaximum?.Invoke(UtilityJSON.Get<PlayerFetchFieldsData>(field));
+
         private void CallPlayerFieldReachMinimum(string field) =>
             OnFieldMinimum?.Invoke(UtilityJSON.Get<PlayerFetchFieldsData>(field));
+
         private void CallPlayerFieldIncrement(string field) =>
             OnFieldIncrement?.Invoke(UtilityJSON.Get<PlayerFetchFieldsData>(field));
     }
 
     [System.Serializable]
-    public enum SyncStorageType
-    {
+    public enum SyncStorageType {
         preffered,
         local,
         platform,
@@ -690,8 +667,7 @@ namespace GamePush
     }
 
     [System.Serializable]
-    public class PlayerFetchFieldsData
-    {
+    public class PlayerFetchFieldsData {
         public string name;
         public string key;
         public string type;
@@ -704,23 +680,20 @@ namespace GamePush
     }
 
     [System.Serializable]
-    public class PlayerFieldIncrement
-    {
+    public class PlayerFieldIncrement {
         public float interval;
         public float increment;
     }
 
     [System.Serializable]
-    public class PlayerFieldLimits
-    {
+    public class PlayerFieldLimits {
         public float min;
         public float max;
         public bool couldGoOverLimit;
     }
 
     [System.Serializable]
-    public class PlayerFieldVariant
-    {
+    public class PlayerFieldVariant {
         public string value; // string | number
         public string name;
     }

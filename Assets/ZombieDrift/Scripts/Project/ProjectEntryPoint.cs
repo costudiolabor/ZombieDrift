@@ -8,7 +8,6 @@ using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using Zenject;
-using Console = System.Console;
 using Object = UnityEngine.Object;
 
 namespace Project {
@@ -37,8 +36,9 @@ namespace Project {
             _config = config;
         }
 
-        public void Initialize() =>
+        public void Initialize() {
             Run();
+        }
 
         public async void Run() {
 #if UNITY_WEBGL
@@ -51,13 +51,16 @@ namespace Project {
             InitializeUiSounds();
 
             //Костыль чтобы этот ебаный Гей пуш работал нахуй
-            await UniTask.DelayFrame(3);
+            //    await UniTask.DelayFrame(3);
 
             await SetSystemLocale();
             await LoadSavedData();
             TurnOnStickyBanner();
 #if UNITY_WEBGL
             CheckSocialsEnabled();
+        
+            while (!GP_Init.isReady)
+                await UniTask.Yield();
 #endif
             SwitchToGameplayScene();
         }

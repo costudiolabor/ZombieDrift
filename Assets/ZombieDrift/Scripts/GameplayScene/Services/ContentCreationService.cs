@@ -24,12 +24,13 @@ namespace Gameplay {
 
             var stage = _stagesConfig.stages[stageIndex];
 
-            if (mapIndex > stage.maps.Length - 1)
+            if (mapIndex > stage.count - 1)
                 throw new Exception($"Stage with index {stageIndex} out of bounds levelConfig");
 
-            var mapPrefab = stage.maps[mapIndex];
-            var mapRotation = Quaternion.Euler(0,stage.mapsRotationAxisY,0);//.transform.rotation;
-            var map = _factory.Create<Map>(mapPrefab, parent, Vector3.zero, mapRotation);
+            //  var mapPrefab = stage.maps[mapIndex];
+            var mapPrefabPath = stage.mapResourcePaths[mapIndex];
+            var mapRotation = Quaternion.Euler(0, stage.mapsRotationAxisY, 0); //.transform.rotation;
+            var map = _factory.Create<Map>(mapPrefabPath, parent, Vector3.zero, mapRotation);
             map.lightColor = stage.lightColor;
             map.lightDirection = stage.mapLightDirection;
             return map;
@@ -39,8 +40,9 @@ namespace Gameplay {
             if (carIndex > _carsConfig.cars.Length - 1)
                 throw new Exception($"Stage with index {carIndex} out of bounds levelConfig");
 
-            var carPrefab = _carsConfig.cars[carIndex].car;
-            return _factory.CreateAndBind<Car>(carPrefab, parent, point.position, point.rotation);
+            //  var carPrefab = _carsConfig.cars[carIndex].car;
+            string carPrefabPath = _carsConfig.cars[carIndex].carResourcesPath;
+            return _factory.CreateAndBind<Car>(carPrefabPath, parent, point.position, point.rotation);
         }
 
         public Zombie[] CreateZombies(Transform[] points, Transform parent = null) {

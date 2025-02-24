@@ -50,18 +50,18 @@ namespace Project {
             SetUpProject();
             InitializeUiSounds();
 
-            //Костыль чтобы этот ебаный Гей пуш работал нахуй
-            //    await UniTask.DelayFrame(3);
-
-            await SetSystemLocale();
-            await LoadSavedData();
-            TurnOnStickyBanner();
 #if UNITY_WEBGL
+	        while (!GP_Init.isReady) {
+		        Debug.Log("Init not ready");
+		        await UniTask.Yield();
+	        }
+		        Debug.Log("Init ready");
+	        
+            await SetSystemLocale();
             CheckSocialsEnabled();
-        
-            while (!GP_Init.isReady)
-                await UniTask.Yield();
+            TurnOnStickyBanner();
 #endif
+            await LoadSavedData();
             SwitchToGameplayScene();
         }
 #if UNITY_WEBGL

@@ -57,7 +57,7 @@ MonoBehaviour:
           rid: -2
         m_CustomTablePostprocessor:
           rid: -2
-        m_AsynchronousBehaviour: 0
+        m_AsynchronousBehaviour: 1
         m_UseFallback: 0
     - rid: 6684281387246944261
       type: {class: LocalizedStringDatabase, ns: UnityEngine.Localization.Settings, asm: Unity.Localization}

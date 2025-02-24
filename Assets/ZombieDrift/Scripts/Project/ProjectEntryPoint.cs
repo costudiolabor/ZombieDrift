@@ -40,7 +40,7 @@ namespace Project {
             Run();
         }
 
-        public async void Run() {
+        private async void Run() {
 #if UNITY_WEBGL
             GP_Initialization.Execute();
 #endif
@@ -52,10 +52,10 @@ namespace Project {
 
 #if UNITY_WEBGL
 	        while (!GP_Init.isReady) {
-		        Debug.Log("Init not ready");
+		        Debug.Log("GP Init not ready");
 		        await UniTask.Yield();
 	        }
-		        Debug.Log("Init ready");
+		        Debug.Log("GP Init ready");
 	        
             await SetSystemLocale();
             CheckSocialsEnabled();

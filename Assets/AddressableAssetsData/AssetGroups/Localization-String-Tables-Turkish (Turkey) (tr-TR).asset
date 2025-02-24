@@ -14,14 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Turkish (Turkey) (tr-TR)
   m_GUID: 0ea91f5ed41c72e46a6aeeaf982cbf5a
-  m_SerializeEntries:
-  - m_GUID: 3c2c208a767a79a4ebfbdce3b8bfb8d9
-    m_Address: StringsTable_tr
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-tr-TR
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: eb8ef10d176308546b473d25e7821d34, type: 2}
   m_SchemaSet:

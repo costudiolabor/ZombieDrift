@@ -3,10 +3,10 @@ using UnityEngine.SceneManagement;
 
 namespace Project {
 	public class ScenesLoader {
-		private FadeView _loading;
+		private LoadingScreen _loadingScreen;
 
 		public ScenesLoader(RootCanvas rootCanvas) =>
-				_loading = rootCanvas.loading;
+				_loadingScreen = rootCanvas.loadingScreen;
 
 		public void SwitchToShopScene() =>
 				SwitchSceneWithAnimation(SceneNames.GARAGE);
@@ -15,18 +15,20 @@ namespace Project {
 				SwitchSceneWithAnimation(SceneNames.GAMEPLAY);
 
 		private async void SwitchSceneWithAnimation(string sceneName) {
-			await _loading.AppearAsync();
+			await _loadingScreen.AppearAsync();
 
-		//	await SwitchTo(SceneNames.BOOT);
+			//	await SwitchTo(SceneNames.BOOT);
 			await SwitchTo(sceneName);
 
-			_loading.Disappear();
+			_loadingScreen.Disappear();
 		}
 
 		private async UniTask SwitchTo(string sceneName) {
 			var switchSceneAsyncOperation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
-			while (!switchSceneAsyncOperation.isDone)
+			while (!switchSceneAsyncOperation.isDone) {
+				_loadingScreen.SetProgress(switchSceneAsyncOperation.progress);
 				await UniTask.Yield();
+			}
 		}
 	}
 }

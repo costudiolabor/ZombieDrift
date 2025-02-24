@@ -106,6 +106,10 @@ MonoBehaviour:
     m_Localized: ZOMBI DRIFT
     m_Metadata:
       m_Items: []
+  - m_Id: 55392085983879168
+    m_Localized: "\rY\xFCkleniyor..."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

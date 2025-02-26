@@ -18,6 +18,7 @@ namespace Gameplay {
 		[SerializeField] private WinView winView;
 
 		[SerializeField] private PointersView _pointersView;
+		[SerializeField] private AudioListener _audioListener;
 		private GameplayScenario _gameplayScenario;
 
 		[Inject]
@@ -52,7 +53,7 @@ namespace Gameplay {
 			flyingRewardSystem.Initialize(_camera, _gameHudView.rewardTargetTransform);
 			textHintSystem.Initialize(_camera);
 
-			gameplaySounds.Initialize();
+			gameplaySounds.Initialize(_audioListener);
 
 			await saveLoadSystem.LoadObject(SaveType.PlayerPrefs, gameSettings);
 			uiSounds.isMute = gameSettings.isMute;

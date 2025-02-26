@@ -3010,6 +3010,7 @@ MonoBehaviour:
   _howToPlayView: {fileID: 532081165}
   winView: {fileID: 1241579480}
   _pointersView: {fileID: 1060799074}
+  _audioListener: {fileID: 1682426854}
 --- !u!114 &980120002 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8749785898860146266, guid: 28c30bda61c049445a7524e9822e5c81, type: 3}

@@ -12,7 +12,6 @@ namespace Gameplay {
 		private readonly SaveLoadSystem _saveLoadSystem;
 		private readonly PauseService _pauseService;
 
-
 		public PauseState(StateSwitcher stateSwitcher,
 				PausePresenter pausePresenter,
 				UiSounds uiSounds,

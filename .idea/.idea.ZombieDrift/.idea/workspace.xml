@@ -6,23 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="de5fc0b1-2905-4b1c-9891-21b72464e4be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieDrift/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Assets-Shared.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Assets-Shared.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Russian (Russia) (ru-RU).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Russian (Russia) (ru-RU).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Turkish (Turkey) (tr-TR).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Turkish (Turkey) (tr-TR).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/StringsTable Shared Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/StringsTable Shared Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/StringsTable_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/StringsTable_en.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/StringsTable_ru.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/StringsTable_ru.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/StringsTable_tr.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/StringsTable_tr.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/OldWeb Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/OldWeb Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/Mobile_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/Mobile_RPAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/Mobile_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/Mobile_Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/SampleSceneProfile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/ProjectConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Configs/ProjectConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Font/MisterBrush SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Font/MisterBrush SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Project/[RootCanvas].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Prefabs/Project/[RootCanvas].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Font/Raleway-SemiBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Font/Raleway-SemiBold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/ProjectEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/ProjectEntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/SceneManagemant/ScenesLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/SceneManagemant/ScenesLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/UI/RootCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/UI/RootCanvas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/EntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/LoseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/LoseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/PauseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/GameScenario/States/PauseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/AdsService/AdsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/AdsService/AdsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/AdsService/GamePushStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/AdsService/GamePushStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/Sound/GameplaySounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/Sound/GameplaySounds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/LoadingScreen/LoadingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieDrift/Scripts/Project/LoadingScreen/LoadingScreen.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,6 +242,9 @@
       <workItem from="1739305801142" duration="24944000" />
       <workItem from="1740148398430" duration="3569000" />
       <workItem from="1740394651789" duration="5918000" />
+      <workItem from="1740482967991" duration="3806000" />
+      <workItem from="1740489000535" duration="3981000" />
+      <workItem from="1740554096707" duration="3223000" />
     </task>
     <servers />
   </component>
@@ -284,6 +287,84 @@
           <line>27</line>
           <properties documentPath="D:\Git\ZmbDrift\ZombieDrift\Assets\ZombieDrift\Scripts\GameplayScene\Services\SaveLoadSystem\GamePushStrategy.cs" containingFunctionPresentation="Method 'UUU'" />
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/AdsService/GamePushStrategy.cs</url>
+          <line>27</line>
+          <properties documentPath="C:\Users\mariukh\Pet\ZmbDRF\ZombieDrift\Assets\ZombieDrift\Scripts\GameplayScene\Services\AdsService\GamePushStrategy.cs" containingFunctionPresentation="Method 'OnRewardedClose'">
+            <startOffsets>
+              <option value="894" />
+            </startOffsets>
+            <endOffsets>
+              <option value="933" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/AdsService/GamePushStrategy.cs</url>
+          <line>32</line>
+          <properties documentPath="C:\Users\mariukh\Pet\ZmbDRF\ZombieDrift\Assets\ZombieDrift\Scripts\GameplayScene\Services\AdsService\GamePushStrategy.cs" containingFunctionPresentation="Method 'OnRewardedStart'">
+            <startOffsets>
+              <option value="1022" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1053" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/AdsService/GamePushStrategy.cs</url>
+          <line>35</line>
+          <properties documentPath="C:\Users\mariukh\Pet\ZmbDRF\ZombieDrift\Assets\ZombieDrift\Scripts\GameplayScene\Services\AdsService\GamePushStrategy.cs" containingFunctionPresentation="Method 'OnFullscreenStart'">
+            <startOffsets>
+              <option value="1098" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1131" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/AdsService/GamePushStrategy.cs</url>
+          <line>38</line>
+          <properties documentPath="C:\Users\mariukh\Pet\ZmbDRF\ZombieDrift\Assets\ZombieDrift\Scripts\GameplayScene\Services\AdsService\GamePushStrategy.cs" containingFunctionPresentation="Method 'OnFullscreenClose'">
+            <startOffsets>
+              <option value="1188" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1225" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/ZombieDrift/Scripts/GameplayScene/Services/AdsService/GamePushStrategy.cs</url>
+          <line>18</line>
+          <properties documentPath="C:\Users\mariukh\Pet\ZmbDRF\ZombieDrift\Assets\ZombieDrift\Scripts\GameplayScene\Services\AdsService\GamePushStrategy.cs" containingFunctionPresentation="Method 'ShowRewardVideo'">
+            <startOffsets>
+              <option value="660" />
+            </startOffsets>
+            <endOffsets>
+              <option value="734" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Plugins/GamePush/Runtime/Modules/GP_Ads.cs</url>
+          <line>174</line>
+          <properties documentPath="C:\Users\mariukh\Pet\ZmbDRF\ZombieDrift\Assets\Plugins\GamePush\Runtime\Modules\GP_Ads.cs" containingFunctionPresentation="Method 'IsRewardedAvailable'">
+            <startOffsets>
+              <option value="5570" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5646" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

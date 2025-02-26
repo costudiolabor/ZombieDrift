@@ -8,7 +8,7 @@ namespace Ads {
 	}
 	public class AdsSystem : IAdsStrategy {
 		public bool isFullscreenAvailable => _currentStrategy.isFullscreenAvailable;
-		public bool isRewardedAvailable => _currentStrategy.isFullscreenAvailable;
+		public bool isRewardedAvailable => _currentStrategy.isRewardedAvailable;
 
 		private readonly IAdsStrategy _gamePush = new GamePushStrategy();
 		private IAdsStrategy _currentStrategy;

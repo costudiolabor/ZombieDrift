@@ -10,7 +10,10 @@ namespace Project {
 		private const string POOL_SOUNDS_PARENT_NAME = "SoundsParent";
 		private const float MIN_PINCH = 0.9f;
 		private const float MAX_PINCH = 1.1f;
-		public bool isMute { get; set; }
+		public bool isMute {
+			get => AudioListener.pause;
+			set => AudioListener.pause = value;
+		}
 
 		private readonly SoundConfig _soundConfig;
 		private PoolObjects<Sound> _poolOfSounds;
@@ -19,11 +22,13 @@ namespace Project {
 		private float randomPinchValue => Random.Range(MIN_PINCH, MAX_PINCH);
 
 		private bool _zombieVoicesPlaying;
+		private AudioListener _audioListener;
 
 		public GameplaySounds(SoundConfig soundConfig) =>
 				_soundConfig = soundConfig;
 
-		public void Initialize() {
+		public void Initialize(AudioListener audioListener) {
+			_audioListener = audioListener;
 			_soundsParent = new GameObject(POOL_SOUNDS_PARENT_NAME).transform;
 			_poolOfSounds = new PoolObjects<Sound>(_soundConfig.soundPrefab, _soundConfig.poolAmount, canExpand: true, _soundsParent);
 		}
@@ -75,17 +80,17 @@ namespace Project {
 
 		public void UpdateCarSounds(Vector3 position, float normalizedSpeed, float wheelAxis) {
 			_engineSound.position = position;
-			_engineSound.volume = isMute
+			_engineSound.volume = /*isMute
 					? 0
-					: 1;
-			
+					:*/ 1;
+
 			_engineSound.loopedPitch = normalizedSpeed;
 
 			_tyresSound.position = position;
 			//Half tyres volume from engine, another half from wheelAxis
-			_tyresSound.volume = isMute
+			_tyresSound.volume = /*isMute
 					? 0
-					: (normalizedSpeed + wheelAxis) * 0.5f;
+					:*/ (normalizedSpeed + wheelAxis) * 0.5f;
 		}
 
 		public void StopCarSounds() {
@@ -97,7 +102,7 @@ namespace Project {
 		}
 
 		private void PlayRandomSoundAtPosition(Vector3 position, AudioClip[] soundsArray, float pitch) {
-			if (soundsArray.Length == 0 || isMute)
+			if (soundsArray.Length == 0 /*|| isMute*/)
 				return;
 
 			int randomIndex = Random.Range(0, soundsArray.Length);

@@ -8,6 +8,6 @@ public class LoadingScreen : FadeView {
 		SetProgress(0);
 	}
 	public void SetProgress(float progress) {
-		loadingText.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, Mathf.Clamp(-1 + progress, -1, 0));
+		//loadingText.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, Mathf.Clamp(-1 + progress, -1, 0));
 	}
 }

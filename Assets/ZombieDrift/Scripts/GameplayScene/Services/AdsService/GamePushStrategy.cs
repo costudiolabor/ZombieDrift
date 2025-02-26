@@ -15,6 +15,7 @@ namespace Ads {
 
 		public async UniTask<bool> ShowRewardVideo() {
 			_fullscreenSource = new UniTaskCompletionSource<bool>();
+		
 			GP_Ads.ShowRewarded(string.Empty, null, OnRewardedStart, OnRewardedClose);
 			return await _fullscreenSource.Task;
 		}

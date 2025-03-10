@@ -16,395 +16,264 @@ MonoBehaviour:
   - mapsRotationAxisY: 45
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 3f2986500ef9e0a48afd278ea81237a1, type: 3}
-    - {fileID: 5380572861800832726, guid: d47e8b0185ae3f14c832693756873256, type: 3}
     mapResourcePaths:
     - Maps/01.1
     - Maps/01.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: b126a46776b584a4bbbd177e9f701e02, type: 3}
-    - {fileID: 5380572861800832726, guid: 12e97f3d349ac2f499c3bac6774a5ff6, type: 3}
     mapResourcePaths:
     - Maps/02.1
     - Maps/02.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 4557c85c00343a94abd69cd7aace174d, type: 3}
-    - {fileID: 5380572861800832726, guid: fd94c414e227024479075483f3c2de5b, type: 3}
     mapResourcePaths:
     - Maps/03.1
     - Maps/03.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 219f065ab4e55af4b8673fe12b51314d, type: 3}
-    - {fileID: 5380572861800832726, guid: f7b9a5c484cae834fa918b85877ecb8a, type: 3}
     mapResourcePaths:
     - Maps/04.1
     - Maps/04.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: f2869c38130b58c49a5fca9330895510, type: 3}
-    - {fileID: 5380572861800832726, guid: 2319574513400da41acd883cc90170f9, type: 3}
-    mapResourcePaths: []
+    mapResourcePaths:
+    - Maps/05.1
+    - Maps/05.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 943298bd7f948a44684bbfd74fb1b9a3, type: 3}
-    - {fileID: 5380572861800832726, guid: becc47e003071dd4c9149a6c0a3ca75c, type: 3}
     mapResourcePaths:
     - Maps/06.1
     - Maps/06.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: db6816564887dd3448a27674bcb3243d, type: 3}
-    - {fileID: 5380572861800832726, guid: f733e0ae0c6ccc84b92f381b5309b3b0, type: 3}
     mapResourcePaths:
     - Maps/07.1
     - Maps/07.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 494342ca6bd297749b50ccff0d9bf394, type: 3}
-    - {fileID: 5380572861800832726, guid: bd74d25d912ce8c4390bfd8eb5fc61a5, type: 3}
     mapResourcePaths:
     - Maps/08.1
     - Maps/08.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 2e7b758fedf93d248a3c5d4e73696941, type: 3}
-    - {fileID: 5380572861800832726, guid: 2c586362a3459f742ae7a48657b1a8cb, type: 3}
     mapResourcePaths:
     - Maps/09.1
     - Maps/09.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 504b3d0d7197a7c43b2046dc3d358f71, type: 3}
-    - {fileID: 5380572861800832726, guid: 6ee40d9177c584b4689c766b4824bf5f, type: 3}
     mapResourcePaths:
     - Maps/10.1
     - Maps/10.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: d2b451addd9057c4083aaf3dd47220d2, type: 3}
-    - {fileID: 5380572861800832726, guid: e4fe2ed50127e594aa6f6be210995260, type: 3}
     mapResourcePaths:
     - Maps/11.1
     - Maps/11.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 2d3e781358cb03544bad7881f0095578, type: 3}
-    - {fileID: 5380572861800832726, guid: 0f05ce81cafb9a3459708dae194d837f, type: 3}
     mapResourcePaths:
     - Maps/12.1
     - Maps/12.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: a8f265d2f8b774346a0f38e79cf95572, type: 3}
-    - {fileID: 5380572861800832726, guid: 7dafbfd8d0a556a4b834870e815ffe60, type: 3}
     mapResourcePaths:
     - Maps/13.1
     - Maps/13.2
   - mapsRotationAxisY: 0
     mapLightDirection: {x: 85, y: -195, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 40251d6519d878445b84277b6bb41231, type: 3}
-    - {fileID: 5380572861800832726, guid: f3be67573e16eaa4085deab326c6e5af, type: 3}
     mapResourcePaths:
     - Maps/14.2
     - Maps/14.1
   - mapsRotationAxisY: 45
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 219f065ab4e55af4b8673fe12b51314d, type: 3}
-    - {fileID: 5380572861800832726, guid: f7b9a5c484cae834fa918b85877ecb8a, type: 3}
     mapResourcePaths:
     - Maps/04.1
     - Maps/04.2
   - mapsRotationAxisY: 45
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 943298bd7f948a44684bbfd74fb1b9a3, type: 3}
-    - {fileID: 5380572861800832726, guid: becc47e003071dd4c9149a6c0a3ca75c, type: 3}
     mapResourcePaths:
     - Maps/06.1
     - Maps/06.2
   - mapsRotationAxisY: 45
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: db6816564887dd3448a27674bcb3243d, type: 3}
-    - {fileID: 5380572861800832726, guid: f733e0ae0c6ccc84b92f381b5309b3b0, type: 3}
     mapResourcePaths:
     - Maps/07.1
     - Maps/07.2
   - mapsRotationAxisY: 45
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 494342ca6bd297749b50ccff0d9bf394, type: 3}
-    - {fileID: 5380572861800832726, guid: bd74d25d912ce8c4390bfd8eb5fc61a5, type: 3}
     mapResourcePaths:
     - Maps/08.1
     - Maps/08.2
   - mapsRotationAxisY: 45
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 2e7b758fedf93d248a3c5d4e73696941, type: 3}
-    - {fileID: 5380572861800832726, guid: 2c586362a3459f742ae7a48657b1a8cb, type: 3}
     mapResourcePaths:
     - Maps/09.1
     - Maps/09.2
   - mapsRotationAxisY: 45
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 504b3d0d7197a7c43b2046dc3d358f71, type: 3}
-    - {fileID: 5380572861800832726, guid: 6ee40d9177c584b4689c766b4824bf5f, type: 3}
     mapResourcePaths:
     - Maps/10.1
     - Maps/10.2
   - mapsRotationAxisY: 45
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: d2b451addd9057c4083aaf3dd47220d2, type: 3}
-    - {fileID: 5380572861800832726, guid: e4fe2ed50127e594aa6f6be210995260, type: 3}
     mapResourcePaths:
     - Maps/11.1
     - Maps/11.2
   - mapsRotationAxisY: 45
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 2d3e781358cb03544bad7881f0095578, type: 3}
-    - {fileID: 5380572861800832726, guid: 0f05ce81cafb9a3459708dae194d837f, type: 3}
     mapResourcePaths:
     - Maps/12.1
     - Maps/12.2
   - mapsRotationAxisY: 45
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: a8f265d2f8b774346a0f38e79cf95572, type: 3}
-    - {fileID: 5380572861800832726, guid: 7dafbfd8d0a556a4b834870e815ffe60, type: 3}
     mapResourcePaths:
     - Maps/13.1
     - Maps/13.2
   - mapsRotationAxisY: 45
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: f3be67573e16eaa4085deab326c6e5af, type: 3}
-    - {fileID: 5380572861800832726, guid: 40251d6519d878445b84277b6bb41231, type: 3}
     mapResourcePaths:
     - Maps/14.1
     - Maps/14.2
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 0.3137255, g: 0.39607844, b: 0.5254902, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: bd74d25d912ce8c4390bfd8eb5fc61a5, type: 3}
-    - {fileID: 5380572861800832726, guid: db6816564887dd3448a27674bcb3243d, type: 3}
     mapResourcePaths:
     - Maps/08.2
     - Maps/07.1
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 0.3137255, g: 0.39607844, b: 0.5254902, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: f733e0ae0c6ccc84b92f381b5309b3b0, type: 3}
-    - {fileID: 5380572861800832726, guid: 494342ca6bd297749b50ccff0d9bf394, type: 3}
     mapResourcePaths:
     - Maps/07.2
     - Maps/08.1
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 0.3137255, g: 0.39607844, b: 0.5254902, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: becc47e003071dd4c9149a6c0a3ca75c, type: 3}
-    - {fileID: 5380572861800832726, guid: 2e7b758fedf93d248a3c5d4e73696941, type: 3}
     mapResourcePaths:
     - Maps/06.2
     - Maps/09.1
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 0.3137255, g: 0.39607844, b: 0.5254902, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 943298bd7f948a44684bbfd74fb1b9a3, type: 3}
-    - {fileID: 5380572861800832726, guid: 2c586362a3459f742ae7a48657b1a8cb, type: 3}
     mapResourcePaths:
     - Maps/06.1
     - Maps/09.2
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 0.3137255, g: 0.39607844, b: 0.5254902, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 504b3d0d7197a7c43b2046dc3d358f71, type: 3}
-    - {fileID: 5380572861800832726, guid: 2319574513400da41acd883cc90170f9, type: 3}
     mapResourcePaths:
     - Maps/10.1
     - Maps/05.2
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 0.3137255, g: 0.39607844, b: 0.5254902, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 6ee40d9177c584b4689c766b4824bf5f, type: 3}
-    - {fileID: 5380572861800832726, guid: f2869c38130b58c49a5fca9330895510, type: 3}
     mapResourcePaths:
     - Maps/10.2
     - Maps/05.1
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 0.3137255, g: 0.39607844, b: 0.5254902, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: d2b451addd9057c4083aaf3dd47220d2, type: 3}
-    - {fileID: 5380572861800832726, guid: f7b9a5c484cae834fa918b85877ecb8a, type: 3}
     mapResourcePaths:
     - Maps/11.1
     - Maps/04.2
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 0.3137255, g: 0.39607844, b: 0.5254902, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 219f065ab4e55af4b8673fe12b51314d, type: 3}
-    - {fileID: 5380572861800832726, guid: e4fe2ed50127e594aa6f6be210995260, type: 3}
     mapResourcePaths:
     - Maps/04.1
     - Maps/11.2
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 0.3137255, g: 0.39607844, b: 0.5254902, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 2d3e781358cb03544bad7881f0095578, type: 3}
-    - {fileID: 5380572861800832726, guid: fd94c414e227024479075483f3c2de5b, type: 3}
     mapResourcePaths:
     - Maps/12.1
     - Maps/03.2
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 0.3137255, g: 0.39607844, b: 0.5254902, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 0f05ce81cafb9a3459708dae194d837f, type: 3}
-    - {fileID: 5380572861800832726, guid: 4557c85c00343a94abd69cd7aace174d, type: 3}
     mapResourcePaths:
     - Maps/12.2
     - Maps/03.1
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 0.3137255, g: 0.39607844, b: 0.5254902, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 40251d6519d878445b84277b6bb41231, type: 3}
-    - {fileID: 5380572861800832726, guid: a8f265d2f8b774346a0f38e79cf95572, type: 3}
     mapResourcePaths:
     - Maps/14.2
     - Maps/13.1
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 0.3137255, g: 0.39607844, b: 0.5254902, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 7dafbfd8d0a556a4b834870e815ffe60, type: 3}
-    - {fileID: 5380572861800832726, guid: f3be67573e16eaa4085deab326c6e5af, type: 3}
     mapResourcePaths:
     - Maps/13.2
     - Maps/14.1
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 7dafbfd8d0a556a4b834870e815ffe60, type: 3}
-    - {fileID: 5380572861800832726, guid: f3be67573e16eaa4085deab326c6e5af, type: 3}
     mapResourcePaths:
     - Maps/10.2
     - Maps/11.1
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: f2869c38130b58c49a5fca9330895510, type: 3}
-    - {fileID: 5380572861800832726, guid: 0f05ce81cafb9a3459708dae194d837f, type: 3}
     mapResourcePaths:
     - Maps/05.1
     - Maps/12.2
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 6ee40d9177c584b4689c766b4824bf5f, type: 3}
-    - {fileID: 5380572861800832726, guid: 7dafbfd8d0a556a4b834870e815ffe60, type: 3}
     mapResourcePaths:
     - Maps/10.2
     - Maps/13.2
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: f7b9a5c484cae834fa918b85877ecb8a, type: 3}
-    - {fileID: 5380572861800832726, guid: f733e0ae0c6ccc84b92f381b5309b3b0, type: 3}
     mapResourcePaths:
     - Maps/04.2
     - Maps/07.2
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: d2b451addd9057c4083aaf3dd47220d2, type: 3}
-    - {fileID: 5380572861800832726, guid: 40251d6519d878445b84277b6bb41231, type: 3}
     mapResourcePaths:
     - Maps/11.1
     - Maps/14.2
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 95, y: -195, z: 0}
     lightColor: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 494342ca6bd297749b50ccff0d9bf394, type: 3}
-    - {fileID: 5380572861800832726, guid: 2c586362a3459f742ae7a48657b1a8cb, type: 3}
     mapResourcePaths:
     - Maps/08.1
     - Maps/09.2
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 2e7b758fedf93d248a3c5d4e73696941, type: 3}
-    - {fileID: 5380572861800832726, guid: 504b3d0d7197a7c43b2046dc3d358f71, type: 3}
     mapResourcePaths:
     - Maps/09.1
     - Maps/10.1
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 494342ca6bd297749b50ccff0d9bf394, type: 3}
-    - {fileID: 5380572861800832726, guid: db6816564887dd3448a27674bcb3243d, type: 3}
-    - {fileID: 5380572861800832726, guid: 2d3e781358cb03544bad7881f0095578, type: 3}
     mapResourcePaths:
     - Maps/08.1
     - Maps/07.1
@@ -412,9 +281,6 @@ MonoBehaviour:
   - mapsRotationAxisY: 90
     mapLightDirection: {x: 75, y: -175, z: 0}
     lightColor: {r: 1, g: 1, b: 1, a: 1}
-    maps:
-    - {fileID: 5380572861800832726, guid: 4557c85c00343a94abd69cd7aace174d, type: 3}
-    - {fileID: 5380572861800832726, guid: bd74d25d912ce8c4390bfd8eb5fc61a5, type: 3}
     mapResourcePaths:
     - Maps/03.1
     - Maps/08.2

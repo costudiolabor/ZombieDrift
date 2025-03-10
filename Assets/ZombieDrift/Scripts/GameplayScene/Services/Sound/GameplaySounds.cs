@@ -11,8 +11,8 @@ namespace Project {
 		private const float MIN_PINCH = 0.9f;
 		private const float MAX_PINCH = 1.1f;
 		public bool isMute {
-			get => AudioListener.pause;
-			set => AudioListener.pause = value;
+			get => !_audioListener.enabled;//AudioListener.pause;
+			set => _audioListener.enabled = !value;
 		}
 
 		private readonly SoundConfig _soundConfig;
@@ -24,8 +24,9 @@ namespace Project {
 		private bool _zombieVoicesPlaying;
 		private AudioListener _audioListener;
 
-		public GameplaySounds(SoundConfig soundConfig) =>
-				_soundConfig = soundConfig;
+		public GameplaySounds(SoundConfig soundConfig) {
+			_soundConfig = soundConfig;
+		}
 
 		public void Initialize(AudioListener audioListener) {
 			_audioListener = audioListener;

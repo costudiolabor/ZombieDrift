@@ -10,9 +10,12 @@ namespace Project {
 		private const string POOL_SOUNDS_PARENT_NAME = "SoundsParent";
 		private const float MIN_PINCH = 0.9f;
 		private const float MAX_PINCH = 1.1f;
+		private const float DEFAULT_VOLUME = 1f;
 		public bool isMute {
-			get => !_audioListener.enabled;//AudioListener.pause;
-			set => _audioListener.enabled = !value;
+			get => AudioListener.volume == 0; // !_audioListener;//AudioListener.pause;
+			set => AudioListener.volume = value 
+					? 0 
+					: DEFAULT_VOLUME; //_audioListener.enabled = !value;
 		}
 
 		private readonly SoundConfig _soundConfig;

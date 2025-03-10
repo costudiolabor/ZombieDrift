@@ -6,6 +6,9 @@ using Zenject;
 
 namespace Gameplay {
 	public class EntryPoint : MonoBehaviour, IInitializable {
+		private const float MOBILE_ORTHO_SIZE = 6.8f;
+		private const float DESKTOP_ORTHO_SIZE = 9;
+		
 		[SerializeField] private Camera _camera;
 		[SerializeField] private CinemachineCamera _mainCamera;
 		[SerializeField] private CinemachineCamera _zoomCamera;
@@ -41,6 +44,12 @@ namespace Gameplay {
 				SaveLoadSystem saveLoadSystem) {
 			cameraSystem.mainCamera = _mainCamera;
 			cameraSystem.zoomCamera = _zoomCamera;
+
+			if (Application.isMobilePlatform)
+				cameraSystem.mainCameraOrthoSize = MOBILE_ORTHO_SIZE;
+			else 
+				cameraSystem.mainCameraOrthoSize = DESKTOP_ORTHO_SIZE;
+			
 			menuPresenter.Initialize(_mainMenuView);
 			losePresenter.Initialize(_loseView);
 			gameplayHudPresenter.Initialize(_gameHudView);

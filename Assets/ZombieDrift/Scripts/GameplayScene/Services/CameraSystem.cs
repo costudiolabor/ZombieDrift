@@ -6,6 +6,11 @@ using UnityEngine;
 namespace Gameplay {
 
    public class CameraSystem {
+
+	   public float mainCameraOrthoSize {
+		   set=> _mainCamera.Lens.OrthographicSize = value;
+		   get => _mainCamera.Lens.OrthographicSize;
+	   }
       public CinemachineCamera mainCamera {
          set {
             if (value == null)
